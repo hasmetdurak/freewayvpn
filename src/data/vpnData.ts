@@ -170,7 +170,7 @@ export const vpnData: VPN[] = [
   {
     id: 11,
     name: "Hotspot Shield",
-    logo: "🔥",
+    logo: "🛡️",
     description: "Fast VPN with proprietary Hydra protocol and malware protection",
     serverCount: 3200,
     speed: 92,
