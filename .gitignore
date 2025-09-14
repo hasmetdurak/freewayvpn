@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+
+# CRITICAL: Ignore parent directories and system files
+../*
+../../*
+../CLLSOFT/
+../kalkulotor.no/
+../BONUSIGNAL.json
+../CONVERT UNIT APP/
+../ONLINE EĞITIM/
+../HAŞMET/
+../fotolar/
+../projeler/
+
+# System directories
+../../.android/
+../../.aws/
+../../.cache/
+../../.cargo/
+../../.config/
+../../.cursor/
+../../.vscode/
+../../AppData/
+../../Documents/
+../../Downloads/
+../../Pictures/
+../../Videos/
+
+# All parent directory files
+../*.png
+../*.exe
+../*.lnk
+../*.pdf
+../*.docx
+../*.txt
+../*.html
+../*.json
+../*.zip
+../*.apk
+
+# User home directory
+../../*
