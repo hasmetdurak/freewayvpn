@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import VPNsPage from './pages/VPNsPage';
@@ -25,13 +26,15 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <main className="flex-grow">
-        {renderPage()}
-      </main>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen bg-gray-50 flex flex-col">
+        <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <main className="flex-grow">
+          {renderPage()}
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 }
 

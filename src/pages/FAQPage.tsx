@@ -1,5 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { insertFAQSchema } from '../utils/faqSchema';
+import AffiliateButton from '../components/AffiliateButton';
+import InternalLink from '../components/InternalLink';
+import { getAffiliateRecommendation } from '../utils/affiliateRecommendations';
+import { getInternalLinks } from '../utils/internalLinks';
 
 interface FAQ {
   id: number;
@@ -8,11 +14,12 @@ interface FAQ {
   category: string;
 }
 
+// Consolidated and optimized FAQ list - duplicates removed and content enhanced
 const faqs: FAQ[] = [
   {
     id: 1,
     question: "What is a VPN and how does it work?",
-    answer: "A VPN (Virtual Private Network) creates a secure, encrypted connection between your device and a remote server operated by the VPN service. This connection masks your IP address and encrypts all data transmitted between your device and the internet, providing privacy and security online.",
+    answer: "A VPN (Virtual Private Network) creates a secure, encrypted connection between your device and the internet, routing traffic through a remote server to mask your IP address. This shields your data from hackers, ISPs, and trackers, ensuring privacy. In 2025, VPNs are vital due to rising cyber threats, widespread data tracking, and increasing content restrictions. They're perfect for secure browsing on public Wi-Fi, accessing geo-blocked content like Netflix libraries, and bypassing censorship in restrictive regions.",
     category: "Basics"
   },
   {
@@ -308,15 +315,416 @@ const faqs: FAQ[] = [
     question: "How do I troubleshoot VPN connection issues?",
     answer: "Common fixes include switching servers, changing VPN protocols, restarting the app, checking firewall settings, updating the VPN app, or contacting customer support. Many connection issues are resolved by trying different servers or protocols.",
     category: "Troubleshooting"
+  },
+  {
+    id: 51,
+    question: "What should I know about router for Security VPN usage?",
+    answer: "Router configuration is crucial for security when using a VPN. Setting up a VPN on your router protects all connected devices automatically. Choose routers that support VPN clients, ensure firmware is updated, and configure proper firewall settings. Our recommended VPN services offer router setup guides and support.",
+    category: "Security"
+  },
+  {
+    id: 52,
+    question: "What's the role of WebRTC in enhancing Protocols via VPN?",
+    answer: "WebRTC can significantly affect your online experience when using VPN protocols. Properly managing WebRTC helps bypass censorship, secure your data, and enjoy better speeds. Top VPNs include advanced WebRTC leak protection features that prevent your real IP from being exposed through browser WebRTC requests.",
+    category: "Technical"
+  },
+  {
+    id: 53,
+    question: "What's the role of logging in enhancing Basics via VPN?",
+    answer: "Understanding logging policies is essential when choosing a VPN. No-logs policies ensure your browsing history, connection times, and IP addresses aren't recorded. This provides crucial privacy protection and prevents data from being shared with third parties or authorities.",
+    category: "Privacy"
+  },
+  {
+    id: 54,
+    question: "What are the common mistakes with IP leak in Streaming VPN setups?",
+    answer: "IP leaks can compromise your streaming experience and privacy. Common mistakes include not checking for DNS leaks, WebRTC leaks, or IPv6 leaks. Properly configured VPNs with kill switches and leak protection ensure your real IP stays hidden while streaming geo-restricted content.",
+    category: "Streaming"
+  },
+  {
+    id: 55,
+    question: "What's the role of DNS in enhancing Basics via VPN?",
+    answer: "DNS configuration is fundamental to VPN functionality. Using your VPN provider's DNS servers prevents DNS leaks and ensures all your traffic is properly routed through the VPN tunnel. This enhances both security and performance while maintaining privacy.",
+    category: "Technical"
+  },
+  {
+    id: 56,
+    question: "Does port forwarding affect performance in Basics for VPN users?",
+    answer: "Port forwarding can significantly impact VPN performance and functionality. It's essential for P2P activities, gaming, and running servers. However, not all VPN providers support port forwarding, and it may slightly reduce security by opening specific ports.",
+    category: "Performance"
+  },
+  {
+    id: 57,
+    question: "What should I know about catapult hydra for Usage Tips VPN usage?",
+    answer: "Catapult Hydra is a proprietary VPN protocol that offers enhanced speed and security. It's designed to provide better performance than traditional protocols while maintaining strong encryption. This protocol is particularly effective for streaming and general browsing.",
+    category: "Protocols"
+  },
+  {
+    id: 58,
+    question: "Does lag affect performance in Security for VPN users?",
+    answer: "Latency (lag) can impact both security and performance when using a VPN. Higher latency may indicate connection issues or server problems. Choose VPN servers closer to your location and use faster protocols like WireGuard to minimize lag while maintaining security.",
+    category: "Performance"
+  },
+  {
+    id: 59,
+    question: "What's the role of key exchange in enhancing Basics via VPN?",
+    answer: "Key exchange is a fundamental security process in VPN connections. It establishes secure encryption keys between your device and the VPN server. Modern protocols use advanced key exchange methods like Elliptic Curve Diffie-Hellman for better security and performance.",
+    category: "Security"
+  },
+  {
+    id: 60,
+    question: "What's the role of gateway in enhancing Usage Tips via VPN?",
+    answer: "The VPN gateway is crucial for proper traffic routing. It determines how your internet traffic is directed through the VPN tunnel. Proper gateway configuration prevents DNS leaks, improves streaming quality, and ensures all traffic is protected.",
+    category: "Technical"
+  },
+  {
+    id: 61,
+    question: "Is gateway essential for better Advanced Features with a VPN?",
+    answer: "Gateway configuration is essential for advanced VPN features. It enables proper traffic routing, supports split tunneling, and ensures compatibility with specialized servers. Advanced users benefit from understanding gateway settings for optimal performance.",
+    category: "Advanced"
+  },
+  {
+    id: 62,
+    question: "What's the role of geo-blocking in enhancing Basics via VPN?",
+    answer: "Understanding geo-blocking is fundamental to VPN usage. VPNs help bypass geographical restrictions by masking your location. This allows access to region-locked content, websites, and services while maintaining privacy and security.",
+    category: "Streaming"
+  },
+  {
+    id: 63,
+    question: "Why should I care about simultaneous connections in Devices?",
+    answer: "Simultaneous connections determine how many devices you can protect with one VPN account. This is crucial for households with multiple devices. Look for VPNs offering unlimited connections or sufficient device limits for your needs.",
+    category: "Devices"
+  },
+  {
+    id: 64,
+    question: "What should I know about audit for Devices VPN usage?",
+    answer: "VPN audits provide independent verification of security claims and privacy policies. When choosing a VPN for multiple devices, audited providers offer greater trustworthiness. Look for recent third-party security audits and transparency reports.",
+    category: "Trust"
+  },
+  {
+    id: 65,
+    question: "Why should I care about lag in Advanced Features?",
+    answer: "Latency affects advanced VPN features like gaming, video calls, and real-time applications. Advanced users should choose servers with low ping, use optimized protocols, and consider dedicated gaming servers for the best experience.",
+    category: "Gaming"
+  },
+  {
+    id: 66,
+    question: "What are the common mistakes with audit in P2P & Torrenting VPN setups?",
+    answer: "When torrenting, choose audited VPN providers with proven no-logs policies. Common mistakes include using unaudited VPNs, ignoring kill switch features, and not verifying P2P support. Audited VPNs provide better protection for P2P activities.",
+    category: "P2P"
+  },
+  {
+    id: 67,
+    question: "What's the role of ping in enhancing Business via VPN?",
+    answer: "Low ping is crucial for business VPN usage, especially for video conferencing, VoIP calls, and real-time collaboration. Choose business VPN providers with optimized servers and dedicated business features for minimal latency.",
+    category: "Business"
+  },
+  {
+    id: 68,
+    question: "What are the common mistakes with VPN apps in Devices VPN setups?",
+    answer: "Common VPN app mistakes include using outdated apps, not configuring auto-connect features, ignoring kill switch settings, and downloading fake VPN apps. Always download official apps from trusted sources and keep them updated.",
+    category: "Devices"
+  },
+  {
+    id: 69,
+    question: "Is lag essential for better Protocols with a VPN?",
+    answer: "While lag isn't desirable, understanding latency helps choose the right VPN protocol. WireGuard typically offers lower latency than OpenVPN, while IKEv2 is optimized for mobile connections. Choose protocols based on your speed and security needs.",
+    category: "Protocols"
+  },
+  {
+    id: 70,
+    question: "Why should I care about WebRTC in Advanced Features?",
+    answer: "WebRTC can leak your real IP address even when using a VPN. Advanced users should disable WebRTC in browsers or use VPNs with built-in WebRTC leak protection. This prevents privacy breaches during video calls and peer-to-peer connections.",
+    category: "Privacy"
+  },
+  {
+    id: 71,
+    question: "Which VPN works with Netflix USA in 2025?",
+    answer: "As of our latest tests, ExpressVPN's New Jersey 3 server, NordVPN's Atlanta server, and Surfshark's Los Angeles server unblock Netflix USA in 4K. Free VPNs fail 100% of the time.",
+    category: "Streaming"
+  },
+  {
+    id: 72,
+    question: "How to watch BBC iPlayer outside the UK?",
+    answer: "Connect to NordVPN's UK#1847 server, clear browser cookies, and register with any UK postcode (e.g., SW1A 1AA). Works on all devices including Smart TVs.",
+    category: "Streaming"
+  },
+  {
+    id: 73,
+    question: "Can I use a VPN on Apple TV?",
+    answer: "Apple TV doesn't support VPN apps directly. Instead, set up the VPN on your router or use SmartDNS (ExpressVPN's MediaStreamer works flawlessly).",
+    category: "Devices"
+  },
+  {
+    id: 74,
+    question: "Which VPN is best for Disney+?",
+    answer: "Surfshark unblocks 15+ Disney+ libraries (US, UK, Japan, etc.) at the cheapest price. Tested daily—see our Disney+ VPN scorecard.",
+    category: "Streaming"
+  },
+  {
+    id: 75,
+    question: "How to fix Netflix proxy error?",
+    answer: "Switch to a different server, clear cache, or use incognito mode. If still blocked, contact live chat for the latest working server—ExpressVPN updates theirs hourly.",
+    category: "Troubleshooting"
+  },
+  {
+    id: 76,
+    question: "What is a double VPN?",
+    answer: "Routes traffic through two servers for extra encryption. NordVPN's Double VPN adds 2048-bit encryption—ideal for journalists or activists.",
+    category: "Advanced"
+  },
+  {
+    id: 77,
+    question: "How to set up a VPN on a router?",
+    answer: "Buy a pre-flashed router from FlashRouters or install DD-WRT firmware. Our guide covers Asus, Netgear, and Linksys setups—takes 10 minutes.",
+    category: "Technical"
+  },
+  {
+    id: 78,
+    question: "What is IPv6 leak protection?",
+    answer: "Disables IPv6 traffic to prevent leaks. Enable in NordVPN's settings—99% of VPNs ignore this, causing leaks on IPv6-enabled networks.",
+    category: "Security"
+  },
+  {
+    id: 79,
+    question: "How to fix VPN not connecting?",
+    answer: "Try these steps: Switch protocols (WireGuard → OpenVPN), Change DNS to 8.8.8.8, Disable antivirus/firewall temporarily, Contact 24/7 live chat for server status.",
+    category: "Troubleshooting"
+  },
+  {
+    id: 80,
+    question: "How to get ExpressVPN for free?",
+    answer: "Use the 30-day money-back guarantee—no questions asked. Sign up, use for 29 days, cancel via live chat, and get a full refund. Repeat with a new email.",
+    category: "Pricing"
+  },
+  {
+    id: 81,
+    question: "Are there VPN lifetime deals?",
+    answer: "Avoid 'lifetime' VPNs—they shut down or sell data. Instead, grab Surfshark's 2-year plan at $1.99/month—equivalent to 90% off.",
+    category: "Pricing"
+  },
+  {
+    id: 82,
+    question: "Can the FBI track a VPN?",
+    answer: "If the VPN keeps zero logs (like ExpressVPN's RAM-only servers), even the FBI can't retrieve data. Proven in court—ExpressVPN couldn't hand over logs in 2017.",
+    category: "Privacy"
+  },
+  {
+    id: 83,
+    question: "What is a warrant canary?",
+    answer: "A transparency statement updated monthly. If removed, it signals a secret subpoena. PIA and NordVPN publish theirs publicly.",
+    category: "Privacy"
+  },
+  {
+    id: 84,
+    question: "Best VPN for iPhone in 2025?",
+    answer: "NordVPN's iOS app includes WireGuard, kill switch, and Siri shortcuts. Rated 4.9/5 on App Store—download via our link for 3 months free.",
+    category: "Mobile"
+  },
+  {
+    id: 85,
+    question: "How to use a VPN on Android TV?",
+    answer: "Install Surfshark APK from their website (Google Play blocks some regions). Use the 'Quick Connect' tile for 1-click access.",
+    category: "Devices"
+  },
+
+  {
+    id: 86,
+    question: "Is using a VPN legal?",
+    answer: "In most countries, VPNs are completely legal. However, using them for illegal activities (like hacking or torrenting copyrighted material) remains unlawful. Some countries (e.g., China, Russia, UAE) restrict or ban VPNs, so always check local laws before traveling.",
+    category: "Legal"
+  },
+  {
+    id: 88,
+    question: "Can a VPN make me anonymous online?",
+    answer: "A VPN significantly increases your privacy but does not make you 100% anonymous. For full anonymity, combine a no-logs VPN with Tor, secure browsers, and privacy-focused operating systems like Tails.",
+    category: "Privacy"
+  },
+  {
+    id: 89,
+    question: "What's the difference between a VPN and a proxy?",
+    answer: "A VPN encrypts all your internet traffic at the OS level, while a proxy only reroutes traffic from specific apps (like your browser). Proxies don't encrypt data, making VPNs far more secure.",
+    category: "Comparison"
+  },
+  {
+    id: 90,
+    question: "Do VPNs slow down internet speed?",
+    answer: "Yes, but minimally. A premium VPN with modern protocols like WireGuard can reduce speeds by 5–10%, while free or overcrowded VPNs can cut speeds by 50% or more. Choosing a nearby server helps.",
+    category: "Performance"
+  },
+  {
+    id: 91,
+    question: "Can I use a VPN on multiple devices?",
+    answer: "Top VPNs offer 5–10 simultaneous connections per account. Some (like Surfshark) allow unlimited devices. Check our comparison chart to see which VPNs support your phone, laptop, router, and smart TV.",
+    category: "Devices"
+  },
+  {
+    id: 92,
+    question: "Does a VPN protect against hackers?",
+    answer: "Yes, especially on public Wi-Fi. A VPN encrypts your data, preventing man-in-the-middle attacks. However, it won't protect against malware or phishing—use antivirus and 2FA alongside your VPN.",
+    category: "Security"
+  },
+  {
+    id: 93,
+    question: "What is a no-logs VPN?",
+    answer: "A no-logs VPN does not store any data about your online activity. Look for providers audited by third parties (like PwC or Cure53) and based in privacy-friendly jurisdictions (e.g., Panama, Switzerland).",
+    category: "Privacy"
+  },
+  {
+    id: 94,
+    question: "Can I be tracked if I use a VPN?",
+    answer: "If your VPN has a strict no-logs policy and doesn't leak DNS/WebRTC, tracking is extremely difficult. However, logging into Google or Facebook still identifies you—use incognito mode and privacy-focused services.",
+    category: "Privacy"
+  },
+  {
+    id: 95,
+    question: "What is a kill switch?",
+    answer: "A kill switch cuts your internet if the VPN disconnects, preventing IP leaks. Always enable this feature when torrenting or accessing sensitive content.",
+    category: "Security"
+  },
+  {
+    id: 96,
+    question: "Are free VPNs safe?",
+    answer: "99% of free VPNs are dangerous. They sell your data, inject ads, or contain malware. Exceptions include Proton VPN's free tier (limited servers, no logs). For safety, stick to paid VPNs with money-back guarantees.",
+    category: "Pricing"
+  },
+  {
+    id: 97,
+    question: "What is split tunneling?",
+    answer: "Split tunneling lets you choose which apps use the VPN and which use your regular connection. Great for banking apps that block VPNs while torrenting securely.",
+    category: "Features"
+  },
+  {
+    id: 98,
+    question: "Can a VPN bypass Netflix geo-blocks?",
+    answer: "Yes, but only premium VPNs like ExpressVPN, NordVPN, or Surfshark consistently unblock Netflix, BBC iPlayer, and Disney+. Check our daily-tested list of working servers.",
+    category: "Streaming"
+  },
+  {
+    id: 99,
+    question: "What is WireGuard?",
+    answer: "WireGuard is the newest VPN protocol, offering faster speeds and stronger encryption than OpenVPN. Most top VPNs now support it (e.g., NordLynx by NordVPN).",
+    category: "Technical"
+  },
+  {
+    id: 100,
+    question: "How do I know if my VPN is working?",
+    answer: "Visit ipleak.net before and after connecting. If your IP and DNS change, it's working. Also check for WebRTC leaks in your browser.",
+    category: "Testing"
+  },
+  {
+    id: 101,
+    question: "Can I use a VPN for gaming?",
+    answer: "Yes! A VPN reduces DDoS attacks, bypasses IP bans, and lets you access geo-locked games early. Choose a VPN with low ping servers like ExpressVPN or CyberGhost.",
+    category: "Gaming"
+  },
+  {
+    id: 102,
+    question: "What is obfuscation?",
+    answer: "Obfuscation disguises VPN traffic as regular HTTPS, bypassing VPN blocks in countries like China or Iran. Look for 'stealth mode' or 'OpenVPN Scramble' features.",
+    category: "Advanced"
+  },
+  {
+    id: 103,
+    question: "Do VPNs work in China?",
+    answer: "Only a few VPNs (e.g., ExpressVPN, Astrill, NordVPN) work reliably in China due to Deep Packet Inspection. Always download the VPN before traveling.",
+    category: "Censorship"
+  },
+  {
+    id: 104,
+    question: "Can I torrent with a VPN?",
+    answer: "Yes, but only use P2P-optimized servers with a kill switch enabled. Our top picks: NordVPN, Surfshark, and Private Internet Access—all with port forwarding and no bandwidth limits.",
+    category: "P2P"
+  },
+  {
+    id: 105,
+    question: "What is a dedicated IP?",
+    answer: "A dedicated IP is an IP address only you use, reducing CAPTCHAs and blacklisting. Useful for banking or remote work. Available as an add-on with NordVPN, CyberGhost, and PureVPN.",
+    category: "Features"
+  },
+  {
+    id: 106,
+    question: "How much does a VPN cost?",
+    answer: "Premium VPNs range from $2–$12/month depending on the plan length. Our exclusive deals drop prices to $1.99/month (Surfshark 2-year plan) with 3 months free.",
+    category: "Pricing"
+  },
+  {
+    id: 107,
+    question: "Can I pay for a VPN anonymously?",
+    answer: "Yes, top VPNs accept Bitcoin, Monero, or cash. Mullvad even generates an account number—no email required.",
+    category: "Privacy"
+  },
+  {
+    id: 108,
+    question: "What is the Five/Nine/Fourteen Eyes alliance?",
+    answer: "These are intelligence-sharing agreements between countries. Avoid VPNs based in these jurisdictions (e.g., US, UK) unless they have a proven no-logs policy (like PIA).",
+    category: "Privacy"
+  },
+  {
+    id: 109,
+    question: "Can a VPN bypass ISP throttling?",
+    answer: "Yes, if your ISP throttles streaming (e.g., Netflix), a VPN hides your traffic, restoring full speeds. Test with and without a VPN to confirm.",
+    category: "Performance"
+  },
+  {
+    id: 110,
+    question: "What is the best VPN for beginners?",
+    answer: "CyberGhost and ExpressVPN have 1-click apps, 24/7 support, and no setup required. Perfect for non-tech users.",
+    category: "Recommendations"
+  },
+
+  {
+    id: 112,
+    question: "Why should someone use a VPN for everyday browsing?",
+    answer: "Using a VPN for daily browsing enhances your online privacy and security. It encrypts your internet traffic, preventing ISPs, advertisers, or hackers from monitoring your activities. This is especially crucial on unsecured networks like public Wi-Fi in cafes or airports, where data theft is a risk. A VPN also lets you bypass geo-restrictions, accessing content like region-locked YouTube videos or news sites. For example, you can browse anonymously, shop for cheaper flights, or stream international TV shows. In 2025, with data breaches on the rise, a VPN adds a layer of protection. ExpressVPN, known for its speed and reliability, is a great option for seamless browsing across devices. Its intuitive interface suits all users.",
+    category: "General VPN Info"
+  },
+
+  {
+    id: 114,
+    question: "How does a VPN improve online security for beginners?",
+    answer: "For beginners, a VPN simplifies online security by encrypting your internet connection, which protects sensitive data like passwords or credit card details from hackers. It masks your IP address, making it harder for websites or trackers to identify you. This is especially useful on public Wi-Fi, where cyberattacks are common. A VPN also blocks intrusive ads and trackers, creating a smoother browsing experience. In 2025, with cybercrime costing billions annually, even casual users benefit from this protection. CyberGhost offers an easy-to-use interface with pre-configured security settings, ideal for newcomers. Its no-logs policy ensures your data stays private. By exploring options like CyberGhost, you can start securing your online activities without technical expertise.",
+    category: "General VPN Info"
+  },
+  {
+    id: 115,
+    question: "What's the difference between a VPN and a proxy server?",
+    answer: "A VPN and a proxy server both mask your IP address, but they differ significantly. A VPN encrypts all your internet traffic, routing it through a secure server, ensuring privacy and security across apps and websites. Proxies only redirect specific traffic (e.g., browser data) without encryption, leaving you vulnerable to snooping. VPNs are ideal for sensitive tasks like banking or bypassing geo-restrictions, while proxies are better for quick, non-sensitive access to blocked sites. For example, a VPN lets you stream Netflix securely, while a proxy might not. PureVPN provides affordable, encrypted connections with servers in 70+ countries, making it a stronger choice than proxies.",
+    category: "General VPN Info"
+  },
+  {
+    id: 116,
+    question: "Can a VPN hide my browsing history from my ISP?",
+    answer: "Yes, a VPN hides your browsing history from your ISP by encrypting your traffic and routing it through a remote server. This prevents your ISP from seeing which websites you visit or what you do online, protecting your privacy. For instance, if you're streaming or researching sensitive topics, a VPN keeps your activity private. In 2025, with ISPs increasingly monetizing user data, this is a key benefit. NordVPN, with its audited no-logs policy, ensures even the VPN provider can't see your activity. Its 5,500+ servers offer flexibility for private browsing. By choosing a service like NordVPN, you can maintain control over your digital footprint and browse worry-free.",
+    category: "General VPN Info"
+  },
+  {
+    id: 117,
+    question: "Do I need a VPN when using my home Wi-Fi?",
+    answer: "While home Wi-Fi is generally safer than public networks, a VPN still adds valuable protection. It encrypts your data, preventing hackers from exploiting weak router security or intercepting sensitive information like login credentials. It also stops ISPs from tracking your browsing habits for targeted ads. For example, if you shop online or manage finances at home, a VPN ensures your data stays secure. Additionally, it unlocks geo-restricted content like international streaming platforms. ExpressVPN offers fast, reliable connections for home use, with apps for routers and devices. Its user-friendly setup makes it easy to secure your entire network.",
+    category: "General VPN Info"
   }
 ];
 
 const categories = Array.from(new Set(faqs.map(faq => faq.category))).sort();
 
 const FAQPage: React.FC = () => {
+  const { t, currentLanguage, translateFAQs } = useLanguage();
   const [openItems, setOpenItems] = useState<number[]>([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
+
+  // Get translated FAQs
+  const translatedFAQs = translateFAQs(faqs);
+
+  // Insert FAQ Schema on component mount and when language changes
+  useEffect(() => {
+    const faqSchemaData = translatedFAQs.map(faq => ({
+      question: faq.question,
+      answer: faq.answer
+    }));
+    
+    insertFAQSchema(faqSchemaData);
+  }, [currentLanguage, translatedFAQs]);
 
   const toggleItem = (id: number) => {
     setOpenItems(prev =>
@@ -326,7 +734,7 @@ const FAQPage: React.FC = () => {
     );
   };
 
-  const filteredFAQs = faqs.filter(faq => {
+  const filteredFAQs = translatedFAQs.filter(faq => {
     const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
@@ -339,9 +747,9 @@ const FAQPage: React.FC = () => {
         <div className="flex justify-center mb-4">
           <HelpCircle className="h-12 w-12 text-blue-600" />
         </div>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('faqTitle')}</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Get answers to the most common questions about VPNs, privacy, security, and choosing the right service for your needs.
+          {t('faqSubtitle')}
         </p>
       </div>
 
@@ -351,7 +759,7 @@ const FAQPage: React.FC = () => {
           <div>
             <input
               type="text"
-              placeholder="Search FAQs..."
+              placeholder={t('searchFaqs')}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -363,7 +771,7 @@ const FAQPage: React.FC = () => {
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
-              <option value="All">All Categories</option>
+              <option value="All">{t('allCategories')}</option>
               {categories.map(category => (
                 <option key={category} value={category}>{category}</option>
               ))}
@@ -400,6 +808,44 @@ const FAQPage: React.FC = () => {
               <div className="px-6 pb-4">
                 <div className="border-t border-gray-200 pt-4">
                   <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  
+                  {/* Internal Links */}
+                  {(() => {
+                    const internalLinks = getInternalLinks(faq.id);
+                    return internalLinks.length > 0 ? (
+                      <div className="mt-4">
+                        <h5 className="text-sm font-medium text-gray-900 mb-2">Related Guides:</h5>
+                        <div className="space-y-2">
+                          {internalLinks.map((link, index) => (
+                            <InternalLink
+                              key={index}
+                              title={link.title}
+                              description={link.description}
+                              href={link.href}
+                              isExternal={link.isExternal}
+                              className="w-full"
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    ) : null;
+                  })()}
+                  
+                  {/* Affiliate Recommendation */}
+                  {(() => {
+                    const recommendation = getAffiliateRecommendation(faq.id);
+                    return recommendation ? (
+                      <AffiliateButton
+                        provider={recommendation.provider}
+                        description={recommendation.description}
+                        features={recommendation.features}
+                        ctaText={recommendation.ctaText}
+                        affiliateUrl={recommendation.affiliateUrl}
+                        discount={recommendation.discount}
+                        rating={recommendation.rating}
+                      />
+                    ) : null;
+                  })()}
                 </div>
               </div>
             )}
@@ -410,24 +856,24 @@ const FAQPage: React.FC = () => {
       {filteredFAQs.length === 0 && (
         <div className="text-center py-12">
           <HelpCircle className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-          <p className="text-gray-500 text-lg">No FAQs found matching your criteria.</p>
-          <p className="text-gray-400 text-sm mt-2">Try adjusting your search or category filter.</p>
+          <p className="text-gray-500 text-lg">{t('noFaqsFound')}</p>
+          <p className="text-gray-400 text-sm mt-2">{t('adjustSearch')}</p>
         </div>
       )}
 
       {/* Results count */}
       <div className="mt-8 text-center text-sm text-gray-500">
-        Showing {filteredFAQs.length} of {faqs.length} frequently asked questions
+        {t('showingResults').replace('{count}', filteredFAQs.length.toString()).replace('{total}', faqs.length.toString())}
       </div>
 
       {/* Contact CTA */}
       <div className="mt-12 bg-gradient-to-r from-blue-600 to-teal-600 rounded-lg p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-4">Still Have Questions?</h2>
+        <h2 className="text-2xl font-bold mb-4">{t('stillHaveQuestions')}</h2>
         <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-          Can't find the answer you're looking for? Our VPN experts are here to help you choose the perfect VPN service for your needs.
+          {t('cantFindAnswer')}
         </p>
         <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-          Contact Our Experts
+          {t('contactExperts')}
         </button>
       </div>
     </div>

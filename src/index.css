@@ -1,3 +1,112 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* RTL Language Support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .rtl\:text-right {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl\:text-left {
+  text-align: left;
+}
+
+[dir="rtl"] .rtl\:ml-auto {
+  margin-left: auto;
+}
+
+[dir="rtl"] .rtl\:mr-auto {
+  margin-right: auto;
+}
+
+[dir="rtl"] .rtl\:flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Language-specific font improvements */
+[lang="ar"] {
+  font-family: 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+}
+
+[lang="hi"] {
+  font-family: 'Segoe UI', 'Noto Sans Devanagari', 'Arial Unicode MS', sans-serif;
+}
+
+[lang="zh"] {
+  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+}
+
+[lang="id"] {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+/* Smooth language transitions */
+.language-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Language selector animations */
+.language-dropdown {
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile language selector */
+@media (max-width: 640px) {
+  .language-dropdown {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: 0;
+  }
+}
+
+/* Language Selector Custom Styles */
+.language-dropdown {
+  @apply relative;
+}
+
+.language-dropdown:hover .language-options {
+  @apply opacity-100 visible;
+}
+
+.language-option:hover {
+  @apply bg-blue-50 text-blue-600;
+}
+
+/* Smooth animations */
+.language-options {
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Flag icons spacing */
+.flag-icon {
+  @apply inline-block w-5 h-5 rounded-sm;
+}

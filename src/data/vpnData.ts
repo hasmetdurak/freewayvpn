@@ -19,7 +19,7 @@ export const vpnData: VPN[] = [
   {
     id: 1,
     name: "NordVPN",
-    logo: "🛡️",
+    logo: "/vpn-logos/nordvpn.png",
     description: "Advanced security with double VPN encryption and largest server network",
     serverCount: 5400,
     speed: 115,
@@ -28,13 +28,13 @@ export const vpnData: VPN[] = [
     price: 3.71,
     isTopPick: true,
     country: "Panama",
-    affiliateLink: "https://nordvpn.com/affiliate",
+    affiliateLink: "https://my.nordaccount.com/",
     rating: 9.6
   },
   {
     id: 2,
     name: "ExpressVPN",
-    logo: "⚡",
+    logo: "/vpn-logos/expressvpn.png",
     description: "Fastest VPN with premium security and 24/7 customer support",
     serverCount: 3000,
     speed: 135,
@@ -43,13 +43,13 @@ export const vpnData: VPN[] = [
     price: 8.32,
     isTopPick: true,
     country: "British Virgin Islands",
-    affiliateLink: "https://expressvpn.com/affiliate",
+    affiliateLink: "https://www.expressvpn.com/",
     rating: 9.8
   },
   {
     id: 3,
     name: "Surfshark",
-    logo: "🦈",
+    logo: "/vpn-logos/surfshark.png",
     description: "Unlimited devices with advanced security features at budget-friendly price",
     serverCount: 3200,
     speed: 95,
@@ -58,13 +58,13 @@ export const vpnData: VPN[] = [
     price: 2.30,
     isTopPick: true,
     country: "British Virgin Islands",
-    affiliateLink: "https://surfshark.com/affiliate",
+    affiliateLink: "https://my.surfshark.com/home",
     rating: 9.4
   },
   {
     id: 4,
     name: "CyberGhost",
-    logo: "👻",
+    logo: "/vpn-logos/cyberghost.png",
     description: "User-friendly VPN with specialized servers for streaming and torrenting",
     serverCount: 7000,
     speed: 85,
@@ -73,13 +73,13 @@ export const vpnData: VPN[] = [
     price: 2.75,
     isTopPick: true,
     country: "Romania",
-    affiliateLink: "https://cyberghostvpn.com/affiliate",
+    affiliateLink: "https://my.cyberghostvpn.com/login?",
     rating: 9.2
   },
   {
     id: 5,
     name: "Private Internet Access",
-    logo: "🔒",
+    logo: "/vpn-logos/private-internet-access.png",
     description: "Open-source VPN with proven no-logs policy and customizable encryption",
     serverCount: 35000,
     speed: 78,
@@ -88,14 +88,14 @@ export const vpnData: VPN[] = [
     price: 2.69,
     isTopPick: true,
     country: "United States",
-    affiliateLink: "https://privateinternetaccess.com/affiliate",
+    affiliateLink: "https://www.privateinternetaccess.com/account/client-sign-in",
     rating: 9.0
   },
   // Remaining 95 VPNs
   {
     id: 6,
     name: "IPVanish",
-    logo: "🌐",
+    logo: "/vpn-logos/ipvanish.png",
     description: "Self-owned server network with unlimited simultaneous connections",
     serverCount: 2000,
     speed: 82,
@@ -104,13 +104,13 @@ export const vpnData: VPN[] = [
     price: 3.99,
     isTopPick: false,
     country: "United States",
-    affiliateLink: "https://ipvanish.com/affiliate",
+    affiliateLink: "https://account.ipvanish.com/login",
     rating: 8.8
   },
   {
     id: 7,
     name: "Proton VPN",
-    logo: "⚛️",
+    logo: "/vpn-logos/proton-vpn.png",
     description: "Swiss-based VPN with strong privacy focus and free tier available",
     serverCount: 1700,
     speed: 88,
@@ -119,13 +119,13 @@ export const vpnData: VPN[] = [
     price: 4.99,
     isTopPick: false,
     country: "Switzerland",
-    affiliateLink: "https://protonvpn.com/affiliate",
+    affiliateLink: "https://account.protonvpn.com/login",
     rating: 8.9
   },
   {
     id: 8,
     name: "PrivateVPN",
-    logo: "🔐",
+    logo: "/vpn-logos/private-vpn.png",
     description: "Small but reliable VPN service with strong encryption and streaming support",
     serverCount: 200,
     speed: 75,
@@ -134,13 +134,13 @@ export const vpnData: VPN[] = [
     price: 2.00,
     isTopPick: false,
     country: "Sweden",
-    affiliateLink: "https://privatevpn.com/affiliate",
+    affiliateLink: "https://privatevpn.com/account/login",
     rating: 8.5
   },
   {
     id: 9,
     name: "Hide.me",
-    logo: "👤",
+    logo: "/vpn-logos/hide-me.png",
     description: "Privacy-focused VPN with generous free tier and strong security",
     serverCount: 2100,
     speed: 70,
@@ -149,13 +149,13 @@ export const vpnData: VPN[] = [
     price: 2.59,
     isTopPick: false,
     country: "Malaysia",
-    affiliateLink: "https://hide.me/affiliate",
+    affiliateLink: "https://member.hide.me/en/user/login",
     rating: 8.6
   },
   {
     id: 10,
     name: "Windscribe",
-    logo: "💨",
+    logo: "/vpn-logos/windscribe.png",
     description: "Canadian VPN with unique features and flexible pricing options",
     serverCount: 630,
     speed: 68,
@@ -164,13 +164,13 @@ export const vpnData: VPN[] = [
     price: 5.75,
     isTopPick: false,
     country: "Canada",
-    affiliateLink: "https://windscribe.com/affiliate",
+    affiliateLink: "https://windscribe.com/myaccount",
     rating: 8.4
   },
   {
     id: 11,
     name: "Hotspot Shield",
-    logo: "🛡️",
+    logo: "/vpn-logos/hotspot-shield.png",
     description: "Fast VPN with proprietary Hydra protocol and malware protection",
     serverCount: 3200,
     speed: 92,
@@ -185,7 +185,7 @@ export const vpnData: VPN[] = [
   {
     id: 12,
     name: "TunnelBear",
-    logo: "🐻",
+    logo: "/vpn-logos/tunnelbear.png",
     description: "User-friendly VPN with cute bear theme and strong privacy policies",
     serverCount: 1000,
     speed: 65,
@@ -200,7 +200,7 @@ export const vpnData: VPN[] = [
   {
     id: 13,
     name: "VyprVPN",
-    logo: "🔱",
+    logo: "/vpn-logos/vyprvpn.png",
     description: "Self-owned server network with proprietary Chameleon protocol",
     serverCount: 700,
     speed: 73,
@@ -215,7 +215,7 @@ export const vpnData: VPN[] = [
   {
     id: 14,
     name: "StrongVPN",
-    logo: "💪",
+    logo: "/vpn-logos/strongvpn.png",
     description: "Long-standing VPN provider with strong encryption and P2P support",
     serverCount: 950,
     speed: 71,
@@ -230,7 +230,7 @@ export const vpnData: VPN[] = [
   {
     id: 15,
     name: "PureVPN",
-    logo: "✨",
+    logo: "/vpn-logos/purevpn.png",
     description: "Feature-rich VPN with dedicated IP options and streaming optimization",
     serverCount: 6500,
     speed: 76,
@@ -245,7 +245,7 @@ export const vpnData: VPN[] = [
   {
     id: 16,
     name: "Trust.Zone",
-    logo: "🛡️",
+    logo: "/vpn-logos/trust-zone.png",
     description: "Seychelles-based VPN with focus on anonymity and Bitcoin payments",
     serverCount: 167,
     speed: 62,
@@ -260,7 +260,7 @@ export const vpnData: VPN[] = [
   {
     id: 17,
     name: "Mullvad",
-    logo: "🦫",
+    logo: "/vpn-logos/mullvad.png",
     description: "Privacy-focused Swedish VPN with anonymous account creation",
     serverCount: 800,
     speed: 69,
@@ -275,7 +275,7 @@ export const vpnData: VPN[] = [
   {
     id: 18,
     name: "Atlas VPN",
-    logo: "🌍",
+    logo: "/vpn-logos/atlas-vpn.png",
     description: "Modern VPN with free tier and data breach monitoring",
     serverCount: 750,
     speed: 67,
@@ -290,7 +290,7 @@ export const vpnData: VPN[] = [
   {
     id: 19,
     name: "Ivacy",
-    logo: "🔒",
+    logo: "/vpn-logos/ivacy.png",
     description: "Singapore-based VPN with purpose-built servers for different activities",
     serverCount: 5700,
     speed: 64,
@@ -305,7 +305,7 @@ export const vpnData: VPN[] = [
   {
     id: 20,
     name: "FastestVPN",
-    logo: "🚀",
+    logo: "/vpn-logos/fastestvpn.png",
     description: "Lifetime VPN deals with basic features and decent performance",
     serverCount: 600,
     speed: 58,
@@ -320,7 +320,7 @@ export const vpnData: VPN[] = [
   {
     id: 21,
     name: "UltraVPN",
-    logo: "⚡",
+    logo: "/vpn-logos/ultravpn.png",
     description: "Fast VPN service with streaming-optimized servers",
     serverCount: 1000,
     speed: 72,
@@ -335,7 +335,7 @@ export const vpnData: VPN[] = [
   {
     id: 22,
     name: "ZenMate",
-    logo: "🧘",
+    logo: "/vpn-logos/zenmate.png",
     description: "German VPN with browser extensions and mobile focus",
     serverCount: 4900,
     speed: 61,
@@ -350,7 +350,7 @@ export const vpnData: VPN[] = [
   {
     id: 23,
     name: "VPN.ac",
-    logo: "🔐",
+    logo: "/vpn-logos/vpn-ac.png",
     description: "Romania-based VPN with advanced features for tech-savvy users",
     serverCount: 120,
     speed: 74,
@@ -365,7 +365,7 @@ export const vpnData: VPN[] = [
   {
     id: 24,
     name: "SaferVPN",
-    logo: "🛡️",
+    logo: "/vpn-logos/safervpn.png",
     description: "Israeli VPN with 24/7 support and streaming capabilities",
     serverCount: 1300,
     speed: 66,
@@ -380,7 +380,7 @@ export const vpnData: VPN[] = [
   {
     id: 25,
     name: "VPN Unlimited",
-    logo: "∞",
+    logo: "/vpn-logos/vpn-unlimited.png",
     description: "KeepSolid's VPN service with lifetime plans and KeepSolid Wise protocol",
     serverCount: 500,
     speed: 59,
@@ -395,7 +395,7 @@ export const vpnData: VPN[] = [
   {
     id: 26,
     name: "AirVPN",
-    logo: "✈️",
+    logo: "/vpn-logos/airvpn.png",
     description: "Technical VPN with advanced features and strong privacy commitment",
     serverCount: 400,
     speed: 77,
@@ -410,7 +410,7 @@ export const vpnData: VPN[] = [
   {
     id: 27,
     name: "VPN.ht",
-    logo: "🌐",
+    logo: "/vpn-logos/vpn-ht.png",
     description: "Hong Kong-based VPN focused on bypassing censorship",
     serverCount: 130,
     speed: 63,
@@ -425,7 +425,7 @@ export const vpnData: VPN[] = [
   {
     id: 28,
     name: "Perfect Privacy",
-    logo: "💎",
+    logo: "/vpn-logos/perfect-privacy.png",
     description: "Swiss VPN with cascading servers and privacy-first approach",
     serverCount: 60,
     speed: 81,
@@ -440,7 +440,7 @@ export const vpnData: VPN[] = [
   {
     id: 29,
     name: "BolehVPN",
-    logo: "🇲🇾",
+    logo: "/vpn-logos/bolehvpn.png",
     description: "Malaysian VPN with focus on bypassing geographical restrictions",
     serverCount: 35,
     speed: 65,
@@ -455,7 +455,7 @@ export const vpnData: VPN[] = [
   {
     id: 30,
     name: "OVPN",
-    logo: "🔒",
+    logo: "/vpn-logos/ovpn.png",
     description: "Swedish VPN with strong focus on privacy and transparency",
     serverCount: 70,
     speed: 79,
@@ -470,7 +470,7 @@ export const vpnData: VPN[] = [
   {
     id: 31,
     name: "VeePN",
-    logo: "🔐",
+    logo: "/vpn-logos/veepn.png",
     description: "Fast-growing VPN with competitive pricing and streaming focus",
     serverCount: 2500,
     speed: 68,
@@ -485,7 +485,7 @@ export const vpnData: VPN[] = [
   {
     id: 32,
     name: "Ghostpath",
-    logo: "👻",
+    logo: "/vpn-logos/ghostpath.png",
     description: "US-based VPN with focus on simplicity and reliability",
     serverCount: 140,
     speed: 62,
@@ -500,7 +500,7 @@ export const vpnData: VPN[] = [
   {
     id: 33,
     name: "SlickVPN",
-    logo: "🌊",
+    logo: "/vpn-logos/slickvpn.png",
     description: "US-based VPN with HYDRA protocol and unlimited bandwidth",
     serverCount: 200,
     speed: 64,
@@ -515,7 +515,7 @@ export const vpnData: VPN[] = [
   {
     id: 34,
     name: "VPNHub",
-    logo: "🔗",
+    logo: "/vpn-logos/vpnhub.png",
     description: "Simple VPN with free tier and premium features",
     serverCount: 800,
     speed: 58,
@@ -530,7 +530,7 @@ export const vpnData: VPN[] = [
   {
     id: 35,
     name: "VPN Land",
-    logo: "🏞️",
+    logo: "/vpn-logos/vpn-land.png",
     description: "Multi-protocol VPN with decent server coverage",
     serverCount: 300,
     speed: 55,
@@ -545,7 +545,7 @@ export const vpnData: VPN[] = [
   {
     id: 36,
     name: "SecureVPN",
-    logo: "🔒",
+    logo: "/vpn-logos/securevpn.png",
     description: "Security-focused VPN with military-grade encryption",
     serverCount: 450,
     speed: 61,
@@ -560,7 +560,7 @@ export const vpnData: VPN[] = [
   {
     id: 37,
     name: "Speedify",
-    logo: "🚄",
+    logo: "/vpn-logos/speedify.png",
     description: "Channel bonding VPN that combines multiple internet connections",
     serverCount: 1000,
     speed: 89,
@@ -575,7 +575,7 @@ export const vpnData: VPN[] = [
   {
     id: 38,
     name: "VPN.asia",
-    logo: "🌏",
+    logo: "/vpn-logos/vpn-asia.png",
     description: "Asia-focused VPN with servers optimized for the region",
     serverCount: 100,
     speed: 67,
@@ -590,7 +590,7 @@ export const vpnData: VPN[] = [
   {
     id: 39,
     name: "FlowVPN",
-    logo: "🌊",
+    logo: "/vpn-logos/flowvpn.png",
     description: "UK-based VPN with unique pricing model and good performance",
     serverCount: 100,
     speed: 72,
@@ -605,7 +605,7 @@ export const vpnData: VPN[] = [
   {
     id: 40,
     name: "VPNSecure",
-    logo: "🛡️",
+    logo: "/vpn-logos/vpnsecure.png",
     description: "Australian VPN with focus on P2P and streaming",
     serverCount: 50,
     speed: 59,
@@ -620,7 +620,7 @@ export const vpnData: VPN[] = [
   {
     id: 41,
     name: "VPN4All",
-    logo: "🌐",
+    logo: "/vpn-logos/vpn4all.png",
     description: "Budget VPN with basic features and decent coverage",
     serverCount: 500,
     speed: 52,
@@ -635,7 +635,7 @@ export const vpnData: VPN[] = [
   {
     id: 42,
     name: "CactusVPN",
-    logo: "🌵",
+    logo: "/vpn-logos/cactusvpn.png",
     description: "Moldova-based VPN with Smart DNS and decent features",
     serverCount: 70,
     speed: 54,
@@ -650,7 +650,7 @@ export const vpnData: VPN[] = [
   {
     id: 43,
     name: "RA4W VPN",
-    logo: "🔐",
+    logo: "/vpn-logos/ra4w-vpn.png",
     description: "Security-focused VPN with strong encryption and privacy policies",
     serverCount: 150,
     speed: 66,
@@ -665,7 +665,7 @@ export const vpnData: VPN[] = [
   {
     id: 44,
     name: "MyPrivateNetwork",
-    logo: "🏠",
+    logo: "/vpn-logos/my-private-network.png",
     description: "Simple VPN with focus on ease of use and reliability",
     serverCount: 80,
     speed: 57,
@@ -680,7 +680,7 @@ export const vpnData: VPN[] = [
   {
     id: 45,
     name: "VPNTunnel",
-    logo: "🚇",
+    logo: "/vpn-logos/vpntunnel.png",
     description: "Seychelles-based VPN with focus on anonymity",
     serverCount: 100,
     speed: 60,
@@ -695,7 +695,7 @@ export const vpnData: VPN[] = [
   {
     id: 46,
     name: "VPN.S",
-    logo: "📡",
+    logo: "/vpn-logos/vpn-s.png",
     description: "Technical VPN service with advanced configuration options",
     serverCount: 60,
     speed: 71,
@@ -710,7 +710,7 @@ export const vpnData: VPN[] = [
   {
     id: 47,
     name: "LibertyVPN",
-    logo: "🗽",
+    logo: "/vpn-logos/libertyvpn.png",
     description: "US-based VPN with focus on digital freedom",
     serverCount: 300,
     speed: 63,
@@ -725,7 +725,7 @@ export const vpnData: VPN[] = [
   {
     id: 48,
     name: "GooseVPN",
-    logo: "🦢",
+    logo: "/vpn-logos/goosevpn.png",
     description: "Dutch VPN with unlimited devices and user-friendly interface",
     serverCount: 130,
     speed: 58,
@@ -740,7 +740,7 @@ export const vpnData: VPN[] = [
   {
     id: 49,
     name: "EarthVPN",
-    logo: "🌍",
+    logo: "/vpn-logos/earthvpn.png",
     description: "Cyprus-based VPN with global server coverage",
     serverCount: 320,
     speed: 56,
@@ -755,7 +755,7 @@ export const vpnData: VPN[] = [
   {
     id: 50,
     name: "VPNShazam",
-    logo: "✨",
+    logo: "/vpn-logos/vpnshazam.png",
     description: "Simple VPN service with focus on streaming and basic privacy",
     serverCount: 200,
     speed: 53,
@@ -791,12 +791,23 @@ const additionalVPNs: VPN[] = Array.from({ length: 50 }, (_, index) => {
     "New Zealand", "Singapore", "Hong Kong", "Japan", "South Korea"
   ];
   
-  const logos = ["🔐", "🛡️", "⚡", "🌐", "🔒", "💨", "🚀", "⭐", "💎", "🎯"];
+  const logoNames = [
+    "turbovpn", "shieldvpn", "rocketvpn", "stealthvpn", "blazingvpn",
+    "thundervpn", "lightningvpn", "swiftvpn", "flashvpn", "rapidvpn",
+    "velocityvpn", "sonicvpn", "hypervpn", "maxvpn", "ultrasecure",
+    "megavpn", "powervpn", "forcevpn", "elitevpn", "premiumvpn",
+    "provpn", "advancedvpn", "supervpn", "mastervpn", "championvpn",
+    "victoryvpn", "triumphvpn", "successvpn", "winnervpn", "topvpn",
+    "bestvpn", "optimalvpn", "perfectvpn", "idealvpn", "ultimatevpn",
+    "supremevpn", "primevpn", "selectvpn", "choicevpn", "preferredvpn",
+    "favoritevpn", "popularvpn", "trendingvpn", "modernvpn", "futurevpn",
+    "nextvpn", "smartvpn", "intelligentvpn", "wisevpn", "clevervpn"
+  ];
   
   return {
     id,
     name: vpnNames[index % vpnNames.length],
-    logo: logos[index % logos.length],
+    logo: `/vpn-logos/${logoNames[index % logoNames.length]}.png`,
     description: `Reliable VPN service with ${Math.floor(Math.random() * 50) + 10} global servers and strong encryption`,
     serverCount: Math.floor(Math.random() * 1000) + 50,
     speed: Math.floor(Math.random() * 40) + 30,

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Shield, Mail, Twitter, Facebook, Linkedin } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -10,7 +13,10 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
               <Shield className="h-8 w-8 text-blue-400" />
-              <span className="ml-2 text-xl font-bold">VPNCompare</span>
+              <div className="ml-2">
+                <span className="text-xl font-bold">BestVPN Reviews</span>
+                <div className="text-xs text-gray-400">Independent Comparison Site</div>
+              </div>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Your trusted source for comprehensive VPN reviews and comparisons. 
@@ -25,12 +31,12 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Top VPNs</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Best Free VPNs</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">VPN Reviews</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">How to Choose</a></li>
+              <li><a href="/" className="text-gray-300 hover:text-white transition-colors">{t('vpns')}</a></li>
+              <li><a href="/faq" className="text-gray-300 hover:text-white transition-colors">{t('faq')}</a></li>
+              <li><a href="/blog" className="text-gray-300 hover:text-white transition-colors">{t('blog')}</a></li>
+              <li><a href="/contact" className="text-gray-300 hover:text-white transition-colors">{t('contact')}</a></li>
             </ul>
           </div>
 
@@ -48,11 +54,11 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 VPNCompare. All rights reserved.
+            © 2025 bestvpn.digital. All rights reserved.
           </p>
           <div className="flex items-center text-gray-400 text-sm">
             <Mail className="h-4 w-4 mr-2" />
-            support@vpncompare.com
+            support@bestvpn.digital
           </div>
         </div>
 
@@ -61,6 +67,13 @@ const Footer: React.FC = () => {
           <p className="text-gray-300 text-xs text-center">
             <strong>Affiliate Disclosure:</strong> We may earn a commission when you purchase through our affiliate links. 
             This helps support our site and allows us to continue providing comprehensive VPN reviews.
+          </p>
+        </div>
+
+        {/* Independent Review Disclaimer */}
+        <div className="mt-4 text-center">
+          <p className="text-gray-400 text-xs">
+            This is an independent review site. We are not affiliated with any VPN provider. All trademarks are the property of their respective owners.
           </p>
         </div>
       </div>

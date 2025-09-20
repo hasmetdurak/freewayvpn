@@ -1,0 +1,9 @@
+This is a placeholder file. 
+
+Please replace this with actual VPN logo images in PNG format, following the naming conventions specified in the README.md file in this directory.
+
+For example:
+- nordvpn.png
+- expressvpn.png
+- surfshark.png
+- etc.

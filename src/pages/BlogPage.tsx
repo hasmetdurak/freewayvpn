@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Tag, User, Search, TrendingUp } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface BlogPost {
   id: number;
@@ -129,6 +130,7 @@ const categories = Array.from(new Set(blogPosts.map(post => post.category))).sor
 const allTags = Array.from(new Set(blogPosts.flatMap(post => post.tags))).sort();
 
 const BlogPage: React.FC = () => {
+  const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedTag, setSelectedTag] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -156,9 +158,9 @@ const BlogPage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">VPN Blog & Guides</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('blogTitle')}</h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Stay informed with the latest VPN news, in-depth guides, security tips, and expert reviews to help you make the best decisions for your online privacy.
+          {t('blogSubtitle')}
         </p>
       </div>
 

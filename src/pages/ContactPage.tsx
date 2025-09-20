@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, MessageCircle, Shield } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface FormData {
   name: string;
@@ -9,6 +10,7 @@ interface FormData {
 }
 
 const ContactPage: React.FC = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -65,9 +67,9 @@ const ContactPage: React.FC = () => {
         <div className="flex justify-center mb-4">
           <MessageCircle className="h-12 w-12 text-blue-600" />
         </div>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Our VPN Experts</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('contactTitle')}</h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Have questions about VPNs or need personalized recommendations? Our team of privacy experts is here to help you find the perfect VPN solution for your needs.
+          {t('contactSubtitle')}
         </p>
       </div>
 
@@ -78,28 +80,27 @@ const ContactPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
             
             <div className="space-y-6">
-              <div className="flex items-start">
-                <Mail className="h-6 w-6 text-blue-600 mt-1 mr-4 flex-shrink-0" />
+              <div className="flex items-center">
+                <Mail className="h-5 w-5 text-blue-600 mr-3" />
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">Email Us</h3>
-                  <p className="text-gray-600">support@vpncompare.com</p>
-                  <p className="text-sm text-gray-500 mt-1">We respond within 24 hours</p>
+                  <p className="font-medium text-gray-900">Email Support</p>
+                  <p className="text-gray-600">support@bestvpn.digital</p>
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <Phone className="h-6 w-6 text-blue-600 mt-1 mr-4 flex-shrink-0" />
+              <div className="flex items-center">
+                <Phone className="h-5 w-5 text-blue-600 mr-3" />
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">Phone Support</h3>
+                  <p className="font-medium text-gray-900">Phone Support</p>
                   <p className="text-gray-600">+1 (555) 123-4567</p>
                   <p className="text-sm text-gray-500 mt-1">Mon-Fri, 9AM-6PM EST</p>
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <MapPin className="h-6 w-6 text-blue-600 mt-1 mr-4 flex-shrink-0" />
+              <div className="flex items-center">
+                <MapPin className="h-5 w-5 text-blue-600 mr-3" />
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">Office</h3>
+                  <p className="font-medium text-gray-900">Office</p>
                   <p className="text-gray-600">
                     123 Privacy Street<br />
                     Security City, SC 12345<br />
@@ -302,19 +303,15 @@ const ContactPage: React.FC = () => {
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
         <div className="flex justify-center space-x-6">
           <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-            <span className="text-2xl">📧</span>
             <div className="text-sm mt-1">Newsletter</div>
           </a>
           <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-            <span className="text-2xl">🐦</span>
             <div className="text-sm mt-1">Twitter</div>
           </a>
           <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-            <span className="text-2xl">📘</span>
             <div className="text-sm mt-1">Facebook</div>
           </a>
           <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-            <span className="text-2xl">💼</span>
             <div className="text-sm mt-1">LinkedIn</div>
           </a>
         </div>

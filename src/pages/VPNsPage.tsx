@@ -1,8 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { Search, Filter, ArrowUpDown, Star, Shield, Zap, Users, DollarSign, ExternalLink, TrendingUp, Award } from 'lucide-react';
 import { allVPNs, VPN } from '../data/vpnData';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const VPNsPage: React.FC = () => {
+  const { t } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'speed' | 'price' | 'servers' | 'rating'>('rating');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
@@ -82,12 +84,12 @@ const VPNsPage: React.FC = () => {
       {/* Hero Section */}
       <div className="mb-8 text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Compare <span className="text-blue-600">100+ Top VPN Services</span> in 2025
+          {t('compareVpns')}
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
-          Find the perfect VPN for your needs. Compare features, prices, and performance of the world's leading VPN services.
+          {t('findPerfectVpn')}
           <span className="block mt-2 text-sm text-orange-600 font-medium">
-            🔥 Exclusive deals available - Save up to 70% on premium VPNs!
+            {t('exclusiveDeals')}
           </span>
         </p>
         
@@ -178,9 +180,6 @@ const VPNsPage: React.FC = () => {
                   Devices
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Security
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   <button
                     onClick={() => handleSort('price')}
                     className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
@@ -206,7 +205,18 @@ const VPNsPage: React.FC = () => {
                 >
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
-                      <span className="text-2xl mr-3">{vpn.logo}</span>
+                      <img 
+                        src={vpn.logo} 
+                        alt={`${vpn.name} logo`} 
+                        className="w-10 h-10 mr-3 object-contain"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          target.nextSibling?.addEventListener('load', () => {
+                            target.style.display = 'block';
+                          });
+                        }}
+                      />
                       <div>
                         <div className="flex items-center">
                           <h3 className="text-sm font-medium text-gray-900">{vpn.name}</h3>
@@ -242,7 +252,15 @@ const VPNsPage: React.FC = () => {
                     {hoveredVPN === vpn.id && (
                       <div className="absolute z-10 left-0 mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-xl p-4">
                         <div className="flex items-start">
-                          <span className="text-3xl mr-3">{vpn.logo}</span>
+                          <img 
+                            src={vpn.logo} 
+                            alt={`${vpn.name} logo`} 
+                            className="w-12 h-12 mr-3 object-contain"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = 'none';
+                            }}
+                          />
                           <div>
                             <h4 className="font-semibold text-gray-900">{vpn.name}</h4>
                             <p className="text-sm text-gray-600 mt-1">{vpn.description}</p>
@@ -251,7 +269,7 @@ const VPNsPage: React.FC = () => {
                             </div>
                             {vpn.isTopPick && (
                               <div className="mt-2 text-xs text-orange-600 font-medium">
-                                🔥 Exclusive deal available!
+                                Exclusive deal available!
                               </div>
                             )}
                           </div>
@@ -277,23 +295,6 @@ const VPNsPage: React.FC = () => {
                       <span className="text-sm text-gray-900">
                         {vpn.deviceSupport === 999 ? 'Unlimited' : vpn.deviceSupport}
                       </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex flex-wrap gap-1">
-                      {vpn.securityFeatures.slice(0, 2).map((feature, idx) => (
-                        <span
-                          key={idx}
-                          className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800"
-                        >
-                          {feature}
-                        </span>
-                      ))}
-                      {vpn.securityFeatures.length > 2 && (
-                        <span className="text-xs text-gray-500">
-                          +{vpn.securityFeatures.length - 2} more
-                        </span>
-                      )}
                     </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
@@ -322,7 +323,7 @@ const VPNsPage: React.FC = () => {
                         }`}
                       >
                         <span className="flex items-center">
-                          {vpn.isTopPick ? '🔥 Get Deal' : 'Get VPN'}
+                          {vpn.isTopPick ? 'Get Deal' : 'Get VPN'}
                           <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                         </span>
                         {vpn.isTopPick && (
