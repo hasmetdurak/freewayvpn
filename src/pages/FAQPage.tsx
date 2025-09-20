@@ -6,6 +6,7 @@ import AffiliateButton from '../components/AffiliateButton';
 import InternalLink from '../components/InternalLink';
 import { getAffiliateRecommendation } from '../utils/affiliateRecommendations';
 import { getInternalLinks } from '../utils/internalLinks';
+import { getTranslation } from '../utils/translations';
 
 interface FAQ {
   id: number;
@@ -15,186 +16,186 @@ interface FAQ {
 }
 
 // Consolidated and optimized FAQ list - duplicates removed and content enhanced
-const faqs: FAQ[] = [
+const getFAQs = (language: string): FAQ[] => [
   {
     id: 1,
-    question: "What is a VPN and how does it work?",
-    answer: "A VPN (Virtual Private Network) creates a secure, encrypted connection between your device and the internet, routing traffic through a remote server to mask your IP address. This shields your data from hackers, ISPs, and trackers, ensuring privacy. In 2025, VPNs are vital due to rising cyber threats, widespread data tracking, and increasing content restrictions. They're perfect for secure browsing on public Wi-Fi, accessing geo-blocked content like Netflix libraries, and bypassing censorship in restrictive regions.",
-    category: "Basics"
+    question: getTranslation('faq.question.1', language),
+    answer: getTranslation('faq.answer.1', language),
+    category: getTranslation('faq.category.basics', language)
   },
   {
     id: 2,
-    question: "Are VPNs legal to use?",
-    answer: "VPNs are legal in most countries around the world, including the United States, Canada, UK, and most European countries. However, some countries like China, Russia, and Iran have restrictions or bans on VPN usage. Always check local laws before using a VPN.",
-    category: "Legal"
+    question: getTranslation('faq.question.2', language),
+    answer: getTranslation('faq.answer.2', language),
+    category: getTranslation('faq.category.legal', language)
   },
   {
     id: 3,
-    question: "Do VPNs slow down internet speed?",
-    answer: "VPNs can reduce internet speed due to encryption overhead and the additional distance data travels through VPN servers. However, premium VPNs typically cause minimal speed loss (5-15%), and some may even improve speeds by bypassing ISP throttling.",
-    category: "Performance"
+    question: getTranslation('faq.question.3', language),
+    answer: getTranslation('faq.answer.3', language),
+    category: getTranslation('faq.category.performance', language)
   },
   {
     id: 4,
-    question: "Can I use a VPN for streaming Netflix, Hulu, and other services?",
-    answer: "Many VPNs can access geo-restricted content on streaming platforms, but not all VPNs work reliably with every streaming service. Look for VPNs that specifically advertise streaming capabilities and have servers optimized for popular platforms.",
-    category: "Streaming"
+    question: getTranslation('faq.question.4', language),
+    answer: getTranslation('faq.answer.4', language),
+    category: getTranslation('faq.category.streaming', language)
   },
   {
     id: 5,
-    question: "What's the difference between free and paid VPNs?",
-    answer: "Free VPNs typically have limited servers, slower speeds, data caps, and fewer security features. They may also log user data or show ads. Paid VPNs offer better security, faster speeds, more servers, and stronger privacy policies with no-logs guarantees.",
-    category: "Pricing"
+    question: getTranslation('faq.question.5', language),
+    answer: getTranslation('faq.answer.5', language),
+    category: getTranslation('faq.category.pricing', language)
   },
   {
     id: 6,
-    question: "How many devices can I connect to a VPN?",
-    answer: "This varies by provider. Some VPNs allow 5-10 simultaneous connections, while others like Surfshark and IPVanish offer unlimited connections. Check the device limit before choosing a VPN if you have many devices.",
-    category: "Devices"
+    question: getTranslation('faq.question.6', language),
+    answer: getTranslation('faq.answer.6', language),
+    category: getTranslation('faq.category.devices', language)
   },
   {
     id: 7,
-    question: "What is a no-logs VPN policy?",
-    answer: "A no-logs policy means the VPN provider doesn't record or store any information about your online activities, connection times, IP addresses, or browsing history. This ensures your privacy even if the VPN company is compromised or legally compelled to share data.",
-    category: "Privacy"
+    question: getTranslation('faq.question.7', language),
+    answer: getTranslation('faq.answer.7', language),
+    category: getTranslation('faq.category.privacy', language)
   },
   {
     id: 8,
-    question: "Which VPN protocol should I use?",
-    answer: "The best protocols are WireGuard (fastest and most modern), OpenVPN (most secure and widely supported), and IKEv2 (great for mobile). Avoid PPTP as it's outdated and insecure. Most users should choose WireGuard when available.",
-    category: "Technical"
+    question: getTranslation('faq.question.8', language),
+    answer: getTranslation('faq.answer.8', language),
+    category: getTranslation('faq.category.technical', language)
   },
   {
     id: 9,
-    question: "Can I use a VPN on my router?",
-    answer: "Yes, many VPN providers support router installation, which protects all devices on your network. You'll need a compatible router that supports VPN clients, or you can buy a pre-configured VPN router. This counts as one connection for device limits.",
-    category: "Technical"
+    question: getTranslation('faq.question.9', language),
+    answer: getTranslation('faq.answer.9', language),
+    category: getTranslation('faq.category.technical', language)
   },
   {
     id: 10,
-    question: "Do I need a VPN for mobile devices?",
-    answer: "Yes, mobile VPNs are important for protecting your data on public Wi-Fi, preventing mobile tracking, and accessing geo-restricted content. Most VPN providers offer dedicated mobile apps for iOS and Android with the same security features as desktop versions.",
-    category: "Mobile"
+    question: getTranslation('faq.question.10', language),
+    answer: getTranslation('faq.answer.10', language),
+    category: getTranslation('faq.category.mobile', language)
   },
   {
     id: 11,
-    question: "What is split tunneling?",
-    answer: "Split tunneling allows you to route some of your internet traffic through the VPN while letting other traffic access the internet directly. This is useful for accessing local services while maintaining VPN protection for sensitive activities.",
-    category: "Features"
+    question: getTranslation('faq.question.11', language),
+    answer: getTranslation('faq.answer.11', language),
+    category: getTranslation('faq.category.features', language)
   },
   {
     id: 12,
-    question: "How do I choose the best VPN server location?",
-    answer: "Choose servers closest to your physical location for best speeds. For streaming, choose servers in the country whose content you want to access. For maximum privacy, choose servers in privacy-friendly countries like Switzerland or Iceland.",
-    category: "Usage"
+    question: getTranslation('faq.question.12', language),
+    answer: getTranslation('faq.answer.12', language),
+    category: getTranslation('faq.category.usage', language)
   },
   {
     id: 13,
-    question: "What is a kill switch and why do I need it?",
-    answer: "A kill switch automatically cuts your internet connection if the VPN connection drops unexpectedly. This prevents your real IP address and unencrypted data from being exposed. It's essential for maintaining privacy and security.",
-    category: "Security"
+    question: getTranslation('faq.question.13', language),
+    answer: getTranslation('faq.answer.13', language),
+    category: getTranslation('faq.category.security', language)
   },
   {
     id: 14,
-    question: "Can VPNs be detected?",
-    answer: "Yes, VPNs can sometimes be detected through various methods including IP blacklists, deep packet inspection, and behavioral analysis. Some VPNs offer obfuscation features to hide VPN usage, making detection much harder.",
-    category: "Privacy"
+    question: getTranslation('faq.question.14', language),
+    answer: getTranslation('faq.answer.14', language),
+    category: getTranslation('faq.category.privacy', language)
   },
   {
     id: 15,
-    question: "Are there any risks to using a VPN?",
-    answer: "Risks include choosing an untrustworthy provider that logs data, malware in fake VPN apps, slower internet speeds, and potential incompatibility with some services. Always choose reputable, audited VPN providers with strong privacy policies.",
-    category: "Security"
+    question: getTranslation('faq.question.15', language),
+    answer: getTranslation('faq.answer.15', language),
+    category: getTranslation('faq.category.security', language)
   },
   {
     id: 16,
-    question: "How much should I pay for a VPN?",
-    answer: "Quality VPNs typically cost $2-12 per month, with longer subscriptions offering better value. Prices under $2/month may indicate compromise on security or features. Consider annual plans for savings, but start with shorter terms to test the service.",
-    category: "Pricing"
+    question: getTranslation('faq.question.16', language),
+    answer: getTranslation('faq.answer.16', language),
+    category: getTranslation('faq.category.pricing', language)
   },
   {
     id: 17,
-    question: "Can I use a VPN for torrenting?",
-    answer: "Many VPNs support P2P traffic and torrenting, but not all. Look for VPNs with dedicated P2P servers, strong encryption, no-logs policies, and kill switches. Some providers specifically allow torrenting while others prohibit it.",
-    category: "P2P"
+    question: getTranslation('faq.question.17', language),
+    answer: getTranslation('faq.answer.17', language),
+    category: getTranslation('faq.category.p2p', language)
   },
   {
     id: 18,
-    question: "What's the difference between VPN and proxy?",
-    answer: "VPNs encrypt all your internet traffic and work system-wide, while proxies only redirect traffic from specific applications without encryption. VPNs provide much better security and privacy protection than proxies.",
-    category: "Comparison"
+    question: getTranslation('faq.question.18', language),
+    answer: getTranslation('faq.answer.18', language),
+    category: getTranslation('faq.category.comparison', language)
   },
   {
     id: 19,
-    question: "Do VPNs work in China?",
-    answer: "VPN usage is restricted in China, and the Great Firewall blocks many VPN services. Some VPNs still work with special obfuscation technology, but reliability can be inconsistent. Check current reports and choose VPNs with proven China bypass capabilities.",
-    category: "Censorship"
+    question: getTranslation('faq.question.19', language),
+    answer: getTranslation('faq.answer.19', language),
+    category: getTranslation('faq.category.censorship', language)
   },
   {
     id: 20,
-    question: "Can I get a dedicated IP with a VPN?",
-    answer: "Yes, some VPN providers offer dedicated/static IP addresses for an additional fee. This gives you the same IP address every time you connect, which can be useful for accessing IP-restricted services or avoiding CAPTCHAs.",
-    category: "Features"
+    question: getTranslation('faq.question.20', language),
+    answer: getTranslation('faq.answer.20', language),
+    category: getTranslation('faq.category.features', language)
   },
   {
     id: 21,
-    question: "How do I test if my VPN is working?",
-    answer: "Check your IP address before and after connecting to ensure it changes. Test for DNS leaks using online tools, verify your location appears as the VPN server location, and confirm the kill switch works by disconnecting the VPN.",
-    category: "Testing"
+    question: getTranslation('faq.question.21', language),
+    answer: getTranslation('faq.answer.21', language),
+    category: getTranslation('faq.category.testing', language)
   },
   {
     id: 22,
-    question: "What happens if I forget to turn on my VPN?",
-    answer: "Your real IP address and location will be visible, your ISP can see your traffic, and you won't have VPN protection. Some VPNs offer auto-connect features that automatically start the VPN when you connect to the internet or untrusted networks.",
-    category: "Usage"
+    question: getTranslation('faq.question.22', language),
+    answer: getTranslation('faq.answer.22', language),
+    category: getTranslation('faq.category.usage', language)
   },
   {
     id: 23,
-    question: "Can employers see my internet activity with a VPN?",
-    answer: "If you're using company equipment or networks, employers may still monitor your activity through other methods like endpoint monitoring software, even with a VPN. Personal VPNs on personal devices provide better privacy from employer monitoring.",
-    category: "Privacy"
+    question: getTranslation('faq.question.23', language),
+    answer: getTranslation('faq.answer.23', language),
+    category: getTranslation('faq.category.privacy', language)
   },
   {
     id: 24,
-    question: "Do I need antivirus if I have a VPN?",
-    answer: "VPNs and antivirus serve different purposes. VPNs protect privacy and data in transit, while antivirus protects against malware and malicious files. You should use both for comprehensive protection - they complement each other.",
-    category: "Security"
+    question: getTranslation('faq.question.24', language),
+    answer: getTranslation('faq.answer.24', language),
+    category: getTranslation('faq.category.security', language)
   },
   {
     id: 25,
-    question: "What is double VPN or multi-hop?",
-    answer: "Double VPN routes your traffic through two VPN servers instead of one, adding an extra layer of encryption and making your online activity extremely difficult to trace. However, it significantly reduces speed and is usually overkill for most users.",
-    category: "Advanced"
+    question: getTranslation('faq.question.25', language),
+    answer: getTranslation('faq.answer.25', language),
+    category: getTranslation('faq.category.advanced', language)
   },
   {
     id: 26,
-    question: "Can I use a VPN with smart TVs?",
-    answer: "Yes, you can use VPNs with smart TVs by installing the VPN on your router, sharing VPN connection from your computer, or using VPN-enabled fire sticks/Apple TVs. Some smart TVs also support VPN apps directly.",
-    category: "Devices"
+    question: getTranslation('faq.question.26', language),
+    answer: getTranslation('faq.answer.26', language),
+    category: getTranslation('faq.category.devices', language)
   },
   {
     id: 27,
-    question: "What is obfuscation in VPNs?",
-    answer: "Obfuscation disguises VPN traffic to make it look like regular HTTPS traffic, helping bypass VPN blocks in restrictive countries or networks. It's also called stealth mode and is useful in countries with internet censorship.",
-    category: "Advanced"
+    question: getTranslation('faq.question.27', language),
+    answer: getTranslation('faq.answer.27', language),
+    category: getTranslation('faq.category.advanced', language)
   },
   {
     id: 28,
-    question: "How often should I change VPN servers?",
-    answer: "There's no set rule, but you might want to change servers if experiencing slow speeds, if the server is blocked by a service you're trying to access, or periodically for additional privacy. Many users find a few preferred servers and stick with them.",
-    category: "Usage"
+    question: getTranslation('faq.question.28', language),
+    answer: getTranslation('faq.answer.28', language),
+    category: getTranslation('faq.category.usage', language)
   },
   {
     id: 29,
-    question: "Can I use a VPN for gaming?",
-    answer: "VPNs can be used for gaming to reduce ping to certain servers, bypass geo-restrictions, avoid DDoS attacks, or access games early in different regions. However, VPNs may increase latency, so choose servers close to game servers.",
-    category: "Gaming"
+    question: getTranslation('faq.question.29', language),
+    answer: getTranslation('faq.answer.29', language),
+    category: getTranslation('faq.category.gaming', language)
   },
   {
     id: 30,
-    question: "What is DNS leak and how do I prevent it?",
-    answer: "DNS leak occurs when your DNS requests bypass the VPN tunnel, revealing your browsing activity to your ISP. Prevent it by using VPNs with built-in DNS leak protection, changing your DNS settings, or using the VPN's DNS servers.",
-    category: "Security"
+    question: getTranslation('faq.question.30', language),
+    answer: getTranslation('faq.answer.30', language),
+    category: getTranslation('faq.category.security', language)
   },
   {
     id: 31,
@@ -396,316 +397,314 @@ const faqs: FAQ[] = [
   },
   {
     id: 64,
-    question: "What should I know about audit for Devices VPN usage?",
-    answer: "VPN audits provide independent verification of security claims and privacy policies. When choosing a VPN for multiple devices, audited providers offer greater trustworthiness. Look for recent third-party security audits and transparency reports.",
-    category: "Trust"
+    question: getTranslation(currentLanguage, 'faq.question64'),
+    answer: getTranslation(currentLanguage, 'faq.answer64'),
+    category: getTranslation(currentLanguage, 'faq.category.trust')
   },
   {
     id: 65,
-    question: "Why should I care about lag in Advanced Features?",
-    answer: "Latency affects advanced VPN features like gaming, video calls, and real-time applications. Advanced users should choose servers with low ping, use optimized protocols, and consider dedicated gaming servers for the best experience.",
-    category: "Gaming"
+    question: getTranslation(currentLanguage, 'faq.question65'),
+    answer: getTranslation(currentLanguage, 'faq.answer65'),
+    category: getTranslation(currentLanguage, 'faq.category.gaming')
   },
   {
     id: 66,
-    question: "What are the common mistakes with audit in P2P & Torrenting VPN setups?",
-    answer: "When torrenting, choose audited VPN providers with proven no-logs policies. Common mistakes include using unaudited VPNs, ignoring kill switch features, and not verifying P2P support. Audited VPNs provide better protection for P2P activities.",
-    category: "P2P"
+    question: getTranslation(currentLanguage, 'faq.question66'),
+    answer: getTranslation(currentLanguage, 'faq.answer66'),
+    category: getTranslation(currentLanguage, 'faq.category.p2p')
   },
   {
     id: 67,
-    question: "What's the role of ping in enhancing Business via VPN?",
-    answer: "Low ping is crucial for business VPN usage, especially for video conferencing, VoIP calls, and real-time collaboration. Choose business VPN providers with optimized servers and dedicated business features for minimal latency.",
-    category: "Business"
+    question: getTranslation(currentLanguage, 'faq.question67'),
+    answer: getTranslation(currentLanguage, 'faq.answer67'),
+    category: getTranslation(currentLanguage, 'faq.category.business')
   },
   {
     id: 68,
-    question: "What are the common mistakes with VPN apps in Devices VPN setups?",
-    answer: "Common VPN app mistakes include using outdated apps, not configuring auto-connect features, ignoring kill switch settings, and downloading fake VPN apps. Always download official apps from trusted sources and keep them updated.",
-    category: "Devices"
+    question: getTranslation(currentLanguage, 'faq.question68'),
+    answer: getTranslation(currentLanguage, 'faq.answer68'),
+    category: getTranslation(currentLanguage, 'faq.category.devices')
   },
   {
     id: 69,
-    question: "Is lag essential for better Protocols with a VPN?",
-    answer: "While lag isn't desirable, understanding latency helps choose the right VPN protocol. WireGuard typically offers lower latency than OpenVPN, while IKEv2 is optimized for mobile connections. Choose protocols based on your speed and security needs.",
-    category: "Protocols"
+    question: getTranslation(currentLanguage, 'faq.question69'),
+    answer: getTranslation(currentLanguage, 'faq.answer69'),
+    category: getTranslation(currentLanguage, 'faq.category.protocols')
   },
   {
     id: 70,
-    question: "Why should I care about WebRTC in Advanced Features?",
-    answer: "WebRTC can leak your real IP address even when using a VPN. Advanced users should disable WebRTC in browsers or use VPNs with built-in WebRTC leak protection. This prevents privacy breaches during video calls and peer-to-peer connections.",
-    category: "Privacy"
+    question: getTranslation(currentLanguage, 'faq.question70'),
+    answer: getTranslation(currentLanguage, 'faq.answer70'),
+    category: getTranslation(currentLanguage, 'faq.category.privacy')
   },
   {
     id: 71,
-    question: "Which VPN works with Netflix USA in 2025?",
-    answer: "As of our latest tests, ExpressVPN's New Jersey 3 server, NordVPN's Atlanta server, and Surfshark's Los Angeles server unblock Netflix USA in 4K. Free VPNs fail 100% of the time.",
-    category: "Streaming"
+    question: getTranslation(currentLanguage, 'faq.question71'),
+    answer: getTranslation(currentLanguage, 'faq.answer71'),
+    category: getTranslation(currentLanguage, 'faq.category.streaming')
   },
   {
     id: 72,
-    question: "How to watch BBC iPlayer outside the UK?",
-    answer: "Connect to NordVPN's UK#1847 server, clear browser cookies, and register with any UK postcode (e.g., SW1A 1AA). Works on all devices including Smart TVs.",
-    category: "Streaming"
+    question: getTranslation(currentLanguage, 'faq.question72'),
+    answer: getTranslation(currentLanguage, 'faq.answer72'),
+    category: getTranslation(currentLanguage, 'faq.category.streaming')
   },
   {
     id: 73,
-    question: "Can I use a VPN on Apple TV?",
-    answer: "Apple TV doesn't support VPN apps directly. Instead, set up the VPN on your router or use SmartDNS (ExpressVPN's MediaStreamer works flawlessly).",
-    category: "Devices"
+    question: getTranslation(currentLanguage, 'faq.question73'),
+    answer: getTranslation(currentLanguage, 'faq.answer73'),
+    category: getTranslation(currentLanguage, 'faq.category.devices')
   },
   {
     id: 74,
-    question: "Which VPN is best for Disney+?",
-    answer: "Surfshark unblocks 15+ Disney+ libraries (US, UK, Japan, etc.) at the cheapest price. Tested daily—see our Disney+ VPN scorecard.",
-    category: "Streaming"
+    question: getTranslation(currentLanguage, 'faq.question74'),
+    answer: getTranslation(currentLanguage, 'faq.answer74'),
+    category: getTranslation(currentLanguage, 'faq.category.streaming')
   },
   {
     id: 75,
-    question: "How to fix Netflix proxy error?",
-    answer: "Switch to a different server, clear cache, or use incognito mode. If still blocked, contact live chat for the latest working server—ExpressVPN updates theirs hourly.",
-    category: "Troubleshooting"
+    question: getTranslation(currentLanguage, 'faq.question75'),
+    answer: getTranslation(currentLanguage, 'faq.answer75'),
+    category: getTranslation(currentLanguage, 'faq.category.troubleshooting')
   },
   {
     id: 76,
-    question: "What is a double VPN?",
-    answer: "Routes traffic through two servers for extra encryption. NordVPN's Double VPN adds 2048-bit encryption—ideal for journalists or activists.",
-    category: "Advanced"
+    question: getTranslation(currentLanguage, 'faq.question76'),
+    answer: getTranslation(currentLanguage, 'faq.answer76'),
+    category: getTranslation(currentLanguage, 'faq.category.advanced')
   },
   {
     id: 77,
-    question: "How to set up a VPN on a router?",
-    answer: "Buy a pre-flashed router from FlashRouters or install DD-WRT firmware. Our guide covers Asus, Netgear, and Linksys setups—takes 10 minutes.",
-    category: "Technical"
+    question: getTranslation(currentLanguage, 'faq.question77'),
+    answer: getTranslation(currentLanguage, 'faq.answer77'),
+    category: getTranslation(currentLanguage, 'faq.category.technical')
   },
   {
     id: 78,
-    question: "What is IPv6 leak protection?",
-    answer: "Disables IPv6 traffic to prevent leaks. Enable in NordVPN's settings—99% of VPNs ignore this, causing leaks on IPv6-enabled networks.",
-    category: "Security"
+    question: getTranslation(currentLanguage, 'faq.question78'),
+    answer: getTranslation(currentLanguage, 'faq.answer78'),
+    category: getTranslation(currentLanguage, 'faq.category.security')
   },
   {
     id: 79,
-    question: "How to fix VPN not connecting?",
-    answer: "Try these steps: Switch protocols (WireGuard → OpenVPN), Change DNS to 8.8.8.8, Disable antivirus/firewall temporarily, Contact 24/7 live chat for server status.",
-    category: "Troubleshooting"
+    question: getTranslation(currentLanguage, 'faq.question79'),
+    answer: getTranslation(currentLanguage, 'faq.answer79'),
+    category: getTranslation(currentLanguage, 'faq.category.troubleshooting')
   },
   {
     id: 80,
-    question: "How to get ExpressVPN for free?",
-    answer: "Use the 30-day money-back guarantee—no questions asked. Sign up, use for 29 days, cancel via live chat, and get a full refund. Repeat with a new email.",
-    category: "Pricing"
+    question: getTranslation(currentLanguage, 'faq.question80'),
+    answer: getTranslation(currentLanguage, 'faq.answer80'),
+    category: getTranslation(currentLanguage, 'faq.category.pricing')
   },
   {
     id: 81,
-    question: "Are there VPN lifetime deals?",
-    answer: "Avoid 'lifetime' VPNs—they shut down or sell data. Instead, grab Surfshark's 2-year plan at $1.99/month—equivalent to 90% off.",
-    category: "Pricing"
+    question: getTranslation(currentLanguage, 'faq.question81'),
+    answer: getTranslation(currentLanguage, 'faq.answer81'),
+    category: getTranslation(currentLanguage, 'faq.category.pricing')
   },
   {
     id: 82,
-    question: "Can the FBI track a VPN?",
-    answer: "If the VPN keeps zero logs (like ExpressVPN's RAM-only servers), even the FBI can't retrieve data. Proven in court—ExpressVPN couldn't hand over logs in 2017.",
-    category: "Privacy"
+    question: getTranslation(currentLanguage, 'faq.question82'),
+    answer: getTranslation(currentLanguage, 'faq.answer82'),
+    category: getTranslation(currentLanguage, 'faq.category.privacy')
   },
   {
     id: 83,
-    question: "What is a warrant canary?",
-    answer: "A transparency statement updated monthly. If removed, it signals a secret subpoena. PIA and NordVPN publish theirs publicly.",
-    category: "Privacy"
+    question: getTranslation(currentLanguage, 'faq.question83'),
+    answer: getTranslation(currentLanguage, 'faq.answer83'),
+    category: getTranslation(currentLanguage, 'faq.category.privacy')
   },
   {
     id: 84,
-    question: "Best VPN for iPhone in 2025?",
-    answer: "NordVPN's iOS app includes WireGuard, kill switch, and Siri shortcuts. Rated 4.9/5 on App Store—download via our link for 3 months free.",
-    category: "Mobile"
+    question: getTranslation(currentLanguage, 'faq.question84'),
+    answer: getTranslation(currentLanguage, 'faq.answer84'),
+    category: getTranslation(currentLanguage, 'faq.category.mobile')
   },
   {
     id: 85,
-    question: "How to use a VPN on Android TV?",
-    answer: "Install Surfshark APK from their website (Google Play blocks some regions). Use the 'Quick Connect' tile for 1-click access.",
-    category: "Devices"
+    question: getTranslation(currentLanguage, 'faq.question85'),
+    answer: getTranslation(currentLanguage, 'faq.answer85'),
+    category: getTranslation(currentLanguage, 'faq.category.devices')
   },
 
   {
     id: 86,
-    question: "Is using a VPN legal?",
-    answer: "In most countries, VPNs are completely legal. However, using them for illegal activities (like hacking or torrenting copyrighted material) remains unlawful. Some countries (e.g., China, Russia, UAE) restrict or ban VPNs, so always check local laws before traveling.",
-    category: "Legal"
+    question: getTranslation(currentLanguage, 'faq.question86'),
+    answer: getTranslation(currentLanguage, 'faq.answer86'),
+    category: getTranslation(currentLanguage, 'faq.category.legal')
   },
   {
     id: 88,
-    question: "Can a VPN make me anonymous online?",
-    answer: "A VPN significantly increases your privacy but does not make you 100% anonymous. For full anonymity, combine a no-logs VPN with Tor, secure browsers, and privacy-focused operating systems like Tails.",
-    category: "Privacy"
+    question: getTranslation(currentLanguage, 'faq.question88'),
+    answer: getTranslation(currentLanguage, 'faq.answer88'),
+    category: getTranslation(currentLanguage, 'faq.category.privacy')
   },
   {
     id: 89,
-    question: "What's the difference between a VPN and a proxy?",
-    answer: "A VPN encrypts all your internet traffic at the OS level, while a proxy only reroutes traffic from specific apps (like your browser). Proxies don't encrypt data, making VPNs far more secure.",
-    category: "Comparison"
+    question: getTranslation(currentLanguage, 'faq.question89'),
+    answer: getTranslation(currentLanguage, 'faq.answer89'),
+    category: getTranslation(currentLanguage, 'faq.category.comparison')
   },
   {
     id: 90,
-    question: "Do VPNs slow down internet speed?",
-    answer: "Yes, but minimally. A premium VPN with modern protocols like WireGuard can reduce speeds by 5–10%, while free or overcrowded VPNs can cut speeds by 50% or more. Choosing a nearby server helps.",
-    category: "Performance"
+    question: getTranslation(currentLanguage, 'faq.question90'),
+    answer: getTranslation(currentLanguage, 'faq.answer90'),
+    category: getTranslation(currentLanguage, 'faq.category.performance')
   },
   {
     id: 91,
-    question: "Can I use a VPN on multiple devices?",
-    answer: "Top VPNs offer 5–10 simultaneous connections per account. Some (like Surfshark) allow unlimited devices. Check our comparison chart to see which VPNs support your phone, laptop, router, and smart TV.",
-    category: "Devices"
+    question: getTranslation(currentLanguage, 'faq.question91'),
+    answer: getTranslation(currentLanguage, 'faq.answer91'),
+    category: getTranslation(currentLanguage, 'faq.category.devices')
   },
   {
     id: 92,
-    question: "Does a VPN protect against hackers?",
-    answer: "Yes, especially on public Wi-Fi. A VPN encrypts your data, preventing man-in-the-middle attacks. However, it won't protect against malware or phishing—use antivirus and 2FA alongside your VPN.",
-    category: "Security"
+    question: getTranslation(currentLanguage, 'faq.question92'),
+    answer: getTranslation(currentLanguage, 'faq.answer92'),
+    category: getTranslation(currentLanguage, 'faq.category.security')
   },
   {
     id: 93,
-    question: "What is a no-logs VPN?",
-    answer: "A no-logs VPN does not store any data about your online activity. Look for providers audited by third parties (like PwC or Cure53) and based in privacy-friendly jurisdictions (e.g., Panama, Switzerland).",
-    category: "Privacy"
+    question: getTranslation(currentLanguage, 'faq.question93'),
+    answer: getTranslation(currentLanguage, 'faq.answer93'),
+    category: getTranslation(currentLanguage, 'faq.category.privacy')
   },
   {
     id: 94,
-    question: "Can I be tracked if I use a VPN?",
-    answer: "If your VPN has a strict no-logs policy and doesn't leak DNS/WebRTC, tracking is extremely difficult. However, logging into Google or Facebook still identifies you—use incognito mode and privacy-focused services.",
-    category: "Privacy"
+    question: getTranslation(currentLanguage, 'faq.question94'),
+    answer: getTranslation(currentLanguage, 'faq.answer94'),
+    category: getTranslation(currentLanguage, 'faq.category.privacy')
   },
   {
     id: 95,
-    question: "What is a kill switch?",
-    answer: "A kill switch cuts your internet if the VPN disconnects, preventing IP leaks. Always enable this feature when torrenting or accessing sensitive content.",
-    category: "Security"
+    question: getTranslation(currentLanguage, 'faq.question95'),
+    answer: getTranslation(currentLanguage, 'faq.answer95'),
+    category: getTranslation(currentLanguage, 'faq.category.security')
   },
   {
     id: 96,
-    question: "Are free VPNs safe?",
-    answer: "99% of free VPNs are dangerous. They sell your data, inject ads, or contain malware. Exceptions include Proton VPN's free tier (limited servers, no logs). For safety, stick to paid VPNs with money-back guarantees.",
-    category: "Pricing"
+    question: getTranslation(currentLanguage, 'faq.question96'),
+    answer: getTranslation(currentLanguage, 'faq.answer96'),
+    category: getTranslation(currentLanguage, 'faq.category.pricing')
   },
   {
     id: 97,
-    question: "What is split tunneling?",
-    answer: "Split tunneling lets you choose which apps use the VPN and which use your regular connection. Great for banking apps that block VPNs while torrenting securely.",
-    category: "Features"
+    question: getTranslation(currentLanguage, 'faq.question97'),
+    answer: getTranslation(currentLanguage, 'faq.answer97'),
+    category: getTranslation(currentLanguage, 'faq.category.features')
   },
   {
     id: 98,
-    question: "Can a VPN bypass Netflix geo-blocks?",
-    answer: "Yes, but only premium VPNs like ExpressVPN, NordVPN, or Surfshark consistently unblock Netflix, BBC iPlayer, and Disney+. Check our daily-tested list of working servers.",
-    category: "Streaming"
+    question: getTranslation(currentLanguage, 'faq.question98'),
+    answer: getTranslation(currentLanguage, 'faq.answer98'),
+    category: getTranslation(currentLanguage, 'faq.category.streaming')
   },
   {
     id: 99,
-    question: "What is WireGuard?",
-    answer: "WireGuard is the newest VPN protocol, offering faster speeds and stronger encryption than OpenVPN. Most top VPNs now support it (e.g., NordLynx by NordVPN).",
-    category: "Technical"
+    question: getTranslation(currentLanguage, 'faq.question99'),
+    answer: getTranslation(currentLanguage, 'faq.answer99'),
+    category: getTranslation(currentLanguage, 'faq.category.technical')
   },
   {
     id: 100,
-    question: "How do I know if my VPN is working?",
-    answer: "Visit ipleak.net before and after connecting. If your IP and DNS change, it's working. Also check for WebRTC leaks in your browser.",
-    category: "Testing"
+    question: getTranslation(currentLanguage, 'faq.question100'),
+    answer: getTranslation(currentLanguage, 'faq.answer100'),
+    category: getTranslation(currentLanguage, 'faq.category.testing')
   },
   {
     id: 101,
-    question: "Can I use a VPN for gaming?",
-    answer: "Yes! A VPN reduces DDoS attacks, bypasses IP bans, and lets you access geo-locked games early. Choose a VPN with low ping servers like ExpressVPN or CyberGhost.",
-    category: "Gaming"
+    question: getTranslation(currentLanguage, 'faq.question101'),
+    answer: getTranslation(currentLanguage, 'faq.answer101'),
+    category: getTranslation(currentLanguage, 'faq.category.gaming')
   },
   {
     id: 102,
-    question: "What is obfuscation?",
-    answer: "Obfuscation disguises VPN traffic as regular HTTPS, bypassing VPN blocks in countries like China or Iran. Look for 'stealth mode' or 'OpenVPN Scramble' features.",
-    category: "Advanced"
+    question: getTranslation(currentLanguage, 'faq.question102'),
+    answer: getTranslation(currentLanguage, 'faq.answer102'),
+    category: getTranslation(currentLanguage, 'faq.category.advanced')
   },
   {
     id: 103,
-    question: "Do VPNs work in China?",
-    answer: "Only a few VPNs (e.g., ExpressVPN, Astrill, NordVPN) work reliably in China due to Deep Packet Inspection. Always download the VPN before traveling.",
-    category: "Censorship"
+    question: getTranslation(currentLanguage, 'faq.question103'),
+    answer: getTranslation(currentLanguage, 'faq.answer103'),
+    category: getTranslation(currentLanguage, 'faq.category.censorship')
   },
   {
     id: 104,
-    question: "Can I torrent with a VPN?",
-    answer: "Yes, but only use P2P-optimized servers with a kill switch enabled. Our top picks: NordVPN, Surfshark, and Private Internet Access—all with port forwarding and no bandwidth limits.",
-    category: "P2P"
+    question: getTranslation(currentLanguage, 'faq.question104'),
+    answer: getTranslation(currentLanguage, 'faq.answer104'),
+    category: getTranslation(currentLanguage, 'faq.category.p2p')
   },
   {
     id: 105,
-    question: "What is a dedicated IP?",
-    answer: "A dedicated IP is an IP address only you use, reducing CAPTCHAs and blacklisting. Useful for banking or remote work. Available as an add-on with NordVPN, CyberGhost, and PureVPN.",
-    category: "Features"
+    question: getTranslation(currentLanguage, 'faq.question105'),
+    answer: getTranslation(currentLanguage, 'faq.answer105'),
+    category: getTranslation(currentLanguage, 'faq.category.features')
   },
   {
     id: 106,
-    question: "How much does a VPN cost?",
-    answer: "Premium VPNs range from $2–$12/month depending on the plan length. Our exclusive deals drop prices to $1.99/month (Surfshark 2-year plan) with 3 months free.",
-    category: "Pricing"
+    question: getTranslation(currentLanguage, 'faq.question106'),
+    answer: getTranslation(currentLanguage, 'faq.answer106'),
+    category: getTranslation(currentLanguage, 'faq.category.pricing')
   },
   {
     id: 107,
-    question: "Can I pay for a VPN anonymously?",
-    answer: "Yes, top VPNs accept Bitcoin, Monero, or cash. Mullvad even generates an account number—no email required.",
-    category: "Privacy"
+    question: getTranslation(currentLanguage, 'faq.question107'),
+    answer: getTranslation(currentLanguage, 'faq.answer107'),
+    category: getTranslation(currentLanguage, 'faq.category.privacy')
   },
   {
     id: 108,
-    question: "What is the Five/Nine/Fourteen Eyes alliance?",
-    answer: "These are intelligence-sharing agreements between countries. Avoid VPNs based in these jurisdictions (e.g., US, UK) unless they have a proven no-logs policy (like PIA).",
-    category: "Privacy"
+    question: getTranslation(currentLanguage, 'faq.question108'),
+    answer: getTranslation(currentLanguage, 'faq.answer108'),
+    category: getTranslation(currentLanguage, 'faq.category.privacy')
   },
   {
     id: 109,
-    question: "Can a VPN bypass ISP throttling?",
-    answer: "Yes, if your ISP throttles streaming (e.g., Netflix), a VPN hides your traffic, restoring full speeds. Test with and without a VPN to confirm.",
-    category: "Performance"
+    question: getTranslation(currentLanguage, 'faq.question109'),
+    answer: getTranslation(currentLanguage, 'faq.answer109'),
+    category: getTranslation(currentLanguage, 'faq.category.performance')
   },
   {
     id: 110,
-    question: "What is the best VPN for beginners?",
-    answer: "CyberGhost and ExpressVPN have 1-click apps, 24/7 support, and no setup required. Perfect for non-tech users.",
-    category: "Recommendations"
+    question: getTranslation(currentLanguage, 'faq.question110'),
+    answer: getTranslation(currentLanguage, 'faq.answer110'),
+    category: getTranslation(currentLanguage, 'faq.category.recommendations')
   },
 
   {
     id: 112,
-    question: "Why should someone use a VPN for everyday browsing?",
-    answer: "Using a VPN for daily browsing enhances your online privacy and security. It encrypts your internet traffic, preventing ISPs, advertisers, or hackers from monitoring your activities. This is especially crucial on unsecured networks like public Wi-Fi in cafes or airports, where data theft is a risk. A VPN also lets you bypass geo-restrictions, accessing content like region-locked YouTube videos or news sites. For example, you can browse anonymously, shop for cheaper flights, or stream international TV shows. In 2025, with data breaches on the rise, a VPN adds a layer of protection. ExpressVPN, known for its speed and reliability, is a great option for seamless browsing across devices. Its intuitive interface suits all users.",
-    category: "General VPN Info"
+    question: getTranslation(currentLanguage, 'faq.question112'),
+    answer: getTranslation(currentLanguage, 'faq.answer112'),
+    category: getTranslation(currentLanguage, 'faq.category.general')
   },
 
   {
     id: 114,
-    question: "How does a VPN improve online security for beginners?",
-    answer: "For beginners, a VPN simplifies online security by encrypting your internet connection, which protects sensitive data like passwords or credit card details from hackers. It masks your IP address, making it harder for websites or trackers to identify you. This is especially useful on public Wi-Fi, where cyberattacks are common. A VPN also blocks intrusive ads and trackers, creating a smoother browsing experience. In 2025, with cybercrime costing billions annually, even casual users benefit from this protection. CyberGhost offers an easy-to-use interface with pre-configured security settings, ideal for newcomers. Its no-logs policy ensures your data stays private. By exploring options like CyberGhost, you can start securing your online activities without technical expertise.",
-    category: "General VPN Info"
+    question: getTranslation(currentLanguage, 'faq.question114'),
+    answer: getTranslation(currentLanguage, 'faq.answer114'),
+    category: getTranslation(currentLanguage, 'faq.category.general')
   },
   {
     id: 115,
-    question: "What's the difference between a VPN and a proxy server?",
-    answer: "A VPN and a proxy server both mask your IP address, but they differ significantly. A VPN encrypts all your internet traffic, routing it through a secure server, ensuring privacy and security across apps and websites. Proxies only redirect specific traffic (e.g., browser data) without encryption, leaving you vulnerable to snooping. VPNs are ideal for sensitive tasks like banking or bypassing geo-restrictions, while proxies are better for quick, non-sensitive access to blocked sites. For example, a VPN lets you stream Netflix securely, while a proxy might not. PureVPN provides affordable, encrypted connections with servers in 70+ countries, making it a stronger choice than proxies.",
-    category: "General VPN Info"
+    question: getTranslation(currentLanguage, 'faq.question115'),
+    answer: getTranslation(currentLanguage, 'faq.answer115'),
+    category: getTranslation(currentLanguage, 'faq.category.general')
   },
   {
     id: 116,
-    question: "Can a VPN hide my browsing history from my ISP?",
-    answer: "Yes, a VPN hides your browsing history from your ISP by encrypting your traffic and routing it through a remote server. This prevents your ISP from seeing which websites you visit or what you do online, protecting your privacy. For instance, if you're streaming or researching sensitive topics, a VPN keeps your activity private. In 2025, with ISPs increasingly monetizing user data, this is a key benefit. NordVPN, with its audited no-logs policy, ensures even the VPN provider can't see your activity. Its 5,500+ servers offer flexibility for private browsing. By choosing a service like NordVPN, you can maintain control over your digital footprint and browse worry-free.",
-    category: "General VPN Info"
+    question: getTranslation(currentLanguage, 'faq.question116'),
+    answer: getTranslation(currentLanguage, 'faq.answer116'),
+    category: getTranslation(currentLanguage, 'faq.category.general')
   },
   {
     id: 117,
-    question: "Do I need a VPN when using my home Wi-Fi?",
-    answer: "While home Wi-Fi is generally safer than public networks, a VPN still adds valuable protection. It encrypts your data, preventing hackers from exploiting weak router security or intercepting sensitive information like login credentials. It also stops ISPs from tracking your browsing habits for targeted ads. For example, if you shop online or manage finances at home, a VPN ensures your data stays secure. Additionally, it unlocks geo-restricted content like international streaming platforms. ExpressVPN offers fast, reliable connections for home use, with apps for routers and devices. Its user-friendly setup makes it easy to secure your entire network.",
-    category: "General VPN Info"
+    question: getTranslation(currentLanguage, 'faq.question117'),
+    answer: getTranslation(currentLanguage, 'faq.answer117'),
+    category: getTranslation(currentLanguage, 'faq.category.general')
   }
 ];
-
-const categories = Array.from(new Set(faqs.map(faq => faq.category))).sort();
 
 const FAQPage: React.FC = () => {
   const { t, currentLanguage, translateFAQs } = useLanguage();
@@ -713,8 +712,11 @@ const FAQPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Get translated FAQs
+  // Get translated FAQs - this will return localized content if available, otherwise fallback to English
   const translatedFAQs = translateFAQs(faqs);
+  
+  // Get categories from translated FAQs to ensure they're also localized
+  const categories = Array.from(new Set(translatedFAQs.map(faq => faq.category))).sort();
 
   // Insert FAQ Schema on component mount and when language changes
   useEffect(() => {
@@ -811,10 +813,10 @@ const FAQPage: React.FC = () => {
                   
                   {/* Internal Links */}
                   {(() => {
-                    const internalLinks = getInternalLinks(faq.id);
+                    const internalLinks = getInternalLinks(faq.id, currentLanguage);
                     return internalLinks.length > 0 ? (
                       <div className="mt-4">
-                        <h5 className="text-sm font-medium text-gray-900 mb-2">Related Guides:</h5>
+                        <h5 className="text-sm font-medium text-gray-900 mb-2">{getTranslation(currentLanguage, 'faq.relatedGuides')}</h5>
                         <div className="space-y-2">
                           {internalLinks.map((link, index) => (
                             <InternalLink
@@ -833,7 +835,7 @@ const FAQPage: React.FC = () => {
                   
                   {/* Affiliate Recommendation */}
                   {(() => {
-                    const recommendation = getAffiliateRecommendation(faq.id);
+                    const recommendation = getAffiliateRecommendation(faq.id, currentLanguage);
                     return recommendation ? (
                       <AffiliateButton
                         provider={recommendation.provider}

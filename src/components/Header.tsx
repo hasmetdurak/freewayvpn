@@ -1,30 +1,32 @@
 import React, { useState } from 'react';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { Menu, X, Shield, ChevronDown, Languages } from 'lucide-react';
 import { useLanguage, supportedLanguages } from '../contexts/LanguageContext';
 
-interface HeaderProps {
-  currentPage: string;
-  setCurrentPage: (page: string) => void;
-}
-
-
-
-const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const { currentLanguage, setLanguage, t } = useLanguage();
+  const location = useLocation();
+  const { lang } = useParams<{ lang: string }>();
 
   const navigation = [
-    { name: t('vpns'), key: 'vpns' },
-    { name: t('faq'), key: 'faq' },
-    { name: t('blog'), key: 'blog' },
-    { name: t('contact'), key: 'contact' },
+    { name: t('vpns'), key: 'vpns', path: '/' },
+    { name: t('faq'), key: 'faq', path: '/faq' },
+    { name: t('blog'), key: 'blog', path: '/blog' },
+    { name: t('contact'), key: 'contact', path: '/contact' },
   ];
 
-  const handleNavClick = (page: string) => {
-    setCurrentPage(page);
-    setIsMenuOpen(false);
+  const getCurrentPage = () => {
+    const path = location.pathname.replace(/^\/[a-z]{2,3}/, '');
+    if (path === '/' || path === '/vpns') return 'vpns';
+    if (path === '/faq') return 'faq';
+    if (path === '/blog') return 'blog';
+    if (path === '/contact') return 'contact';
+    return 'vpns';
   };
+
+  const currentPage = getCurrentPage();
 
   const handleLanguageSelect = (language: any) => {
     setLanguage(language);
@@ -36,9 +38,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div
+          <Link
+            to={`/${lang}/`}
             className="flex items-center cursor-pointer group"
-            onClick={() => handleNavClick('vpns')}
           >
             <Shield className="h-8 w-8 text-blue-600 group-hover:text-blue-700 transition-colors" />
             <div className="ml-2">
@@ -47,14 +49,14 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
               </span>
               <div className="text-xs text-gray-500">Independent Comparison Site</div>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              <button
+              <Link
                 key={item.key}
-                onClick={() => handleNavClick(item.key)}
+                to={`/${lang}${item.path}`}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   currentPage === item.key
                     ? 'text-blue-600 bg-blue-50'
@@ -62,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
                 }`}
               >
                 {item.name}
-              </button>
+              </Link>
             ))}
           </nav>
 
@@ -138,9 +140,10 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
           <div className="md:hidden border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
               {navigation.map((item) => (
-                <button
+                <Link
                   key={item.key}
-                  onClick={() => handleNavClick(item.key)}
+                  to={`/${lang}${item.path}`}
+                  onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
                     currentPage === item.key
                       ? 'text-blue-600 bg-blue-50'
@@ -148,7 +151,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
                   }`}
                 >
                   {item.name}
-                </button>
+                </Link>
               ))}
             </div>
           </div>

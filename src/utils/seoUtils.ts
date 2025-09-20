@@ -22,11 +22,12 @@ export const supportedLanguages = [
 export const generateHrefLangTags = (currentPath: string = '', baseUrl: string = 'https://bestvpn.digital'): HrefLangTag[] => {
   const hrefLangTags: HrefLangTag[] = [];
   
+  // Clean path by removing language prefix if present
+  const cleanPath = currentPath.replace(/^\/[a-z]{2,3}/, '') || '/';
+  
   // Add hreflang tags for all supported languages
   supportedLanguages.forEach(lang => {
-    const href = lang.code === 'en' 
-      ? `${baseUrl}${currentPath}` 
-      : `${baseUrl}/${lang.code}${currentPath}`;
+    const href = `${baseUrl}/${lang.code}${cleanPath}`;
     
     hrefLangTags.push({
       hreflang: lang.code,
@@ -37,7 +38,7 @@ export const generateHrefLangTags = (currentPath: string = '', baseUrl: string =
   // Add x-default for English
   hrefLangTags.push({
     hreflang: 'x-default',
-    href: `${baseUrl}${currentPath}`
+    href: `${baseUrl}/en${cleanPath}`
   });
   
   return hrefLangTags;

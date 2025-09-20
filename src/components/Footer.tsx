@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { Shield, Mail, Twitter, Facebook, Linkedin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
+  const { lang } = useParams<{ lang: string }>();
   
   return (
     <footer className="bg-gray-900 text-white">
@@ -33,10 +35,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-300 hover:text-white transition-colors">{t('vpns')}</a></li>
-              <li><a href="/faq" className="text-gray-300 hover:text-white transition-colors">{t('faq')}</a></li>
-              <li><a href="/blog" className="text-gray-300 hover:text-white transition-colors">{t('blog')}</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-white transition-colors">{t('contact')}</a></li>
+              <li><Link to={`/${lang}/`} className="text-gray-300 hover:text-white transition-colors">{t('vpns')}</Link></li>
+              <li><Link to={`/${lang}/faq`} className="text-gray-300 hover:text-white transition-colors">{t('faq')}</Link></li>
+              <li><Link to={`/${lang}/blog`} className="text-gray-300 hover:text-white transition-colors">{t('blog')}</Link></li>
+              <li><Link to={`/${lang}/contact`} className="text-gray-300 hover:text-white transition-colors">{t('contact')}</Link></li>
             </ul>
           </div>
 

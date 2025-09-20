@@ -1,4 +1,16 @@
 // Affiliate recommendations for specific FAQ questions
+import { getTranslation } from './translations';
+
+export interface AffiliateRecommendationData {
+  faqId: number;
+  provider: string;
+  descriptionKey: string;
+  featuresKeys: string[];
+  ctaTextKey: string;
+  affiliateUrl: string;
+  discountKey?: string;
+  rating?: number;
+}
 
 export interface AffiliateRecommendation {
   faqId: number;
@@ -11,109 +23,121 @@ export interface AffiliateRecommendation {
   rating?: number;
 }
 
-export const affiliateRecommendations: AffiliateRecommendation[] = [
+export const affiliateRecommendationsData: AffiliateRecommendationData[] = [
   {
     faqId: 1, // "What is a VPN and how does it work?"
     provider: "ExpressVPN",
-    description: "Industry-leading VPN with military-grade encryption and lightning-fast speeds across 94+ countries.",
-    features: ["30-day guarantee", "24/7 support", "No-logs policy", "5 devices"],
-    ctaText: "Try ExpressVPN Risk-Free",
+    descriptionKey: "affiliates.expressvpn.description1",
+    featuresKeys: ["affiliates.expressvpn.feature1", "affiliates.expressvpn.feature2", "affiliates.expressvpn.feature3", "affiliates.expressvpn.feature4"],
+    ctaTextKey: "affiliates.expressvpn.cta1",
     affiliateUrl: "https://expressvpn.com/order",
-    discount: "Save 49% + 3 months free",
+    discountKey: "affiliates.expressvpn.discount1",
     rating: 4.9
   },
   {
     faqId: 2, // "Are VPNs legal to use?"
     provider: "NordVPN",
-    description: "Audited no-logs VPN with advanced security features and global server network.",
-    features: ["Double VPN", "CyberSec", "Kill switch", "6 devices"],
-    ctaText: "Get NordVPN Now",
+    descriptionKey: "affiliates.nordvpn.description1",
+    featuresKeys: ["affiliates.nordvpn.feature1", "affiliates.nordvpn.feature2", "affiliates.nordvpn.feature3", "affiliates.nordvpn.feature4"],
+    ctaTextKey: "affiliates.nordvpn.cta1",
     affiliateUrl: "https://nordvpn.com/order",
-    discount: "Save 68% + 3 months free",
+    discountKey: "affiliates.nordvpn.discount1",
     rating: 4.8
   },
   {
     faqId: 3, // "Do VPNs slow down internet speed?"
     provider: "Surfshark",
-    description: "Unlimited devices with WireGuard protocol for maximum speed and security.",
-    features: ["Unlimited devices", "WireGuard", "CleanWeb", "MultiHop"],
-    ctaText: "Start with Surfshark",
+    descriptionKey: "affiliates.surfshark.description1",
+    featuresKeys: ["affiliates.surfshark.feature1", "affiliates.surfshark.feature2", "affiliates.surfshark.feature3", "affiliates.surfshark.feature4"],
+    ctaTextKey: "affiliates.surfshark.cta1",
     affiliateUrl: "https://surfshark.com/order",
-    discount: "Save 82% + 2 months free",
+    discountKey: "affiliates.surfshark.discount1",
     rating: 4.7
   },
   {
     faqId: 4, // "Can I use a VPN for streaming Netflix?"
     provider: "ExpressVPN",
-    description: "Best VPN for Netflix with optimized streaming servers and 4K support.",
-    features: ["Netflix unblocking", "4K streaming", "Smart DNS", "Router support"],
-    ctaText: "Stream Netflix with ExpressVPN",
+    descriptionKey: "affiliates.expressvpn.description2",
+    featuresKeys: ["affiliates.expressvpn.feature5", "affiliates.expressvpn.feature6", "affiliates.expressvpn.feature7", "affiliates.expressvpn.feature8"],
+    ctaTextKey: "affiliates.expressvpn.cta2",
     affiliateUrl: "https://expressvpn.com/order",
-    discount: "Save 49% + 3 months free",
+    discountKey: "affiliates.expressvpn.discount1",
     rating: 4.9
   },
   {
     faqId: 5, // "What is the best VPN protocol?"
     provider: "NordVPN",
-    description: "Advanced protocol selection including NordLynx (WireGuard) for optimal performance.",
-    features: ["NordLynx protocol", "OpenVPN", "IKEv2", "Custom protocols"],
-    ctaText: "Choose NordVPN Protocols",
+    descriptionKey: "affiliates.nordvpn.description2",
+    featuresKeys: ["affiliates.nordvpn.feature5", "affiliates.nordvpn.feature6", "affiliates.nordvpn.feature7", "affiliates.nordvpn.feature8"],
+    ctaTextKey: "affiliates.nordvpn.cta2",
     affiliateUrl: "https://nordvpn.com/order",
-    discount: "Save 68% + 3 months free",
+    discountKey: "affiliates.nordvpn.discount1",
     rating: 4.8
   },
   {
     faqId: 6, // "Can I use a VPN on my phone?"
     provider: "CyberGhost",
-    description: "User-friendly mobile apps with one-click connection and optimized servers.",
-    features: ["Easy mobile apps", "Auto-connect", "7 devices", "45-day guarantee"],
-    ctaText: "Get CyberGhost Mobile",
+    descriptionKey: "affiliates.cyberghost.description1",
+    featuresKeys: ["affiliates.cyberghost.feature1", "affiliates.cyberghost.feature2", "affiliates.cyberghost.feature3", "affiliates.cyberghost.feature4"],
+    ctaTextKey: "affiliates.cyberghost.cta1",
     affiliateUrl: "https://cyberghostvpn.com/order",
-    discount: "Save 84% + 4 months free",
+    discountKey: "affiliates.cyberghost.discount1",
     rating: 4.6
   },
   {
     faqId: 7, // "How much does a VPN cost?"
     provider: "Surfshark",
-    description: "Most affordable premium VPN with unlimited devices and all features included.",
-    features: ["Unlimited devices", "All features", "30-day guarantee", "24/7 support"],
-    ctaText: "Get Best VPN Deal",
+    descriptionKey: "affiliates.surfshark.description2",
+    featuresKeys: ["affiliates.surfshark.feature5", "affiliates.surfshark.feature6", "affiliates.surfshark.feature7", "affiliates.surfshark.feature8"],
+    ctaTextKey: "affiliates.surfshark.cta2",
     affiliateUrl: "https://surfshark.com/order",
-    discount: "Save 82% + 2 months free",
+    discountKey: "affiliates.surfshark.discount1",
     rating: 4.7
   },
   {
     faqId: 8, // "Can I use a VPN for torrenting?"
     provider: "ExpressVPN",
-    description: "P2P-optimized servers with port forwarding and strict no-logs policy for safe torrenting.",
-    features: ["P2P servers", "Port forwarding", "Kill switch", "No-logs audited"],
-    ctaText: "Torrent Safely with ExpressVPN",
+    descriptionKey: "affiliates.expressvpn.description3",
+    featuresKeys: ["affiliates.expressvpn.feature9", "affiliates.expressvpn.feature10", "affiliates.expressvpn.feature11", "affiliates.expressvpn.feature12"],
+    ctaTextKey: "affiliates.expressvpn.cta3",
     affiliateUrl: "https://expressvpn.com/order",
-    discount: "Save 49% + 3 months free",
+    discountKey: "affiliates.expressvpn.discount1",
     rating: 4.9
   },
   {
     faqId: 9, // "What is a kill switch?"
     provider: "NordVPN",
-    description: "Advanced kill switch technology that instantly blocks internet if VPN disconnects.",
-    features: ["App kill switch", "System kill switch", "Auto-reconnect", "DNS leak protection"],
-    ctaText: "Secure with NordVPN Kill Switch",
+    descriptionKey: "affiliates.nordvpn.description3",
+    featuresKeys: ["affiliates.nordvpn.feature9", "affiliates.nordvpn.feature10", "affiliates.nordvpn.feature11", "affiliates.nordvpn.feature12"],
+    ctaTextKey: "affiliates.nordvpn.cta3",
     affiliateUrl: "https://nordvpn.com/order",
-    discount: "Save 68% + 3 months free",
+    discountKey: "affiliates.nordvpn.discount1",
     rating: 4.8
   },
   {
     faqId: 10, // "Can I get a free VPN?"
     provider: "CyberGhost",
-    description: "Premium VPN with 45-day money-back guarantee - longer than any free trial.",
-    features: ["45-day guarantee", "No data limits", "Full features", "7 devices"],
-    ctaText: "Try CyberGhost Risk-Free",
+    descriptionKey: "affiliates.cyberghost.description2",
+    featuresKeys: ["affiliates.cyberghost.feature5", "affiliates.cyberghost.feature6", "affiliates.cyberghost.feature7", "affiliates.cyberghost.feature8"],
+    ctaTextKey: "affiliates.cyberghost.cta2",
     affiliateUrl: "https://cyberghostvpn.com/order",
-    discount: "Save 84% + 4 months free",
+    discountKey: "affiliates.cyberghost.discount1",
     rating: 4.6
   }
 ];
 
-export const getAffiliateRecommendation = (faqId: number): AffiliateRecommendation | null => {
-  return affiliateRecommendations.find(rec => rec.faqId === faqId) || null;
+export const getAffiliateRecommendation = (faqId: number, language: string): AffiliateRecommendation | null => {
+  const data = affiliateRecommendationsData.find(rec => rec.faqId === faqId);
+  if (!data) return null;
+  
+  return {
+    faqId: data.faqId,
+    provider: data.provider,
+    description: getTranslation(language, data.descriptionKey),
+    features: data.featuresKeys.map(key => getTranslation(language, key)),
+    ctaText: getTranslation(language, data.ctaTextKey),
+    affiliateUrl: data.affiliateUrl,
+    discount: data.discountKey ? getTranslation(language, data.discountKey) : undefined,
+    rating: data.rating
+  };
 };
