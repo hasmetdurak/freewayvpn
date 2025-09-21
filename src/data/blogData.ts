@@ -273,6 +273,20 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg?auto=compress&cs=tinysrgb&w=800",
     featured: true,
     component: "NetflixJapanVPNBlogPost"
+  },
+  {
+    id: 20,
+    slug: 'korean-drama-vpn-2025',
+    title: 'Best VPN for Streaming Korean Dramas Abroad in 2025 [Complete Guide for K-Drama Fans]',
+    excerpt: 'Discover the best VPN for streaming Korean dramas abroad in 2025. Complete guide to watch K-dramas on Netflix Korea, Viki, TVING from anywhere with ExpressVPN, NordVPN, and Surfshark.',
+    author: 'VPN Expert',
+    date: '2025-01-15',
+    readTime: '12 min read',
+    category: 'Streaming',
+    tags: ['Korean Drama', 'K-Drama', 'VPN', 'Streaming', 'Netflix Korea', 'Viki', 'TVING'],
+    image: '/vpn-logos/korean-drama.png',
+    featured: true,
+    component: 'KoreanDramaVPNBlogPost'
   }
 ];
 
