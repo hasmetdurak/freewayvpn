@@ -1,11 +1,12 @@
 import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Search, Filter, Calendar, Clock, User, Tag, TrendingUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { blogPosts, categories, allTags, type BlogPost } from '../data/blogData';
 
 const BlogPage: React.FC = () => {
   const { t } = useLanguage();
+  const { lang } = useParams<{ lang: string }>();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedTag, setSelectedTag] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -91,7 +92,7 @@ const BlogPage: React.FC = () => {
             {featuredPosts.map((post) => (
               <Link
                 key={post.id}
-                to={`/blog/${post.slug}`}
+                to={`/${lang}/blog/${post.slug}`}
                 className="block"
               >
                 <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
@@ -167,7 +168,7 @@ const BlogPage: React.FC = () => {
             {regularPosts.map((post) => (
               <Link
                 key={post.id}
-                to={`/blog/${post.slug}`}
+                to={`/${lang}/blog/${post.slug}`}
                 className="block"
               >
                 <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
