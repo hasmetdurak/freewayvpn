@@ -100,7 +100,8 @@ const VPNsPage: React.FC = () => {
             <span className="font-bold text-lg">Editor's Top 5 Picks</span>
           </div>
           <p className="text-sm opacity-90">
-            Highest affiliate commissions = Best value for you! These VPNs offer exclusive deals.
+            Expert Verified Winners<br />
+            Independently tested so you don't have to gamble.
           </p>
         </div>
       </div>

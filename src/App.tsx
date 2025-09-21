@@ -7,6 +7,7 @@ import VPNsPage from './pages/VPNsPage';
 import FAQPage from './pages/FAQPage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
+import DynamicBlogPost from './components/DynamicBlogPost';
 
 // Component to handle language-based routing
 function LanguageRouter() {
@@ -32,6 +33,7 @@ function LanguageRouter() {
             <Route path="/vpns" element={<VPNsPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<DynamicBlogPost />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
