@@ -259,6 +259,20 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800",
     featured: true,
     component: "LinuxCLIVPNBlogPost"
+  },
+  {
+    id: 19,
+    slug: "netflix-japan-vpn-2025",
+    title: "Best VPN for Netflix Japan in 2025 [Complete Setup Guide + Working Servers]",
+    excerpt: "Unlock Netflix Japan's exclusive anime, dramas, and movies with our tested VPN guide. Complete setup instructions, working servers, and troubleshooting tips for 2025.",
+    author: "Streaming VPN Team",
+    date: "2025-01-27",
+    readTime: "12 min read",
+    category: "Streaming",
+    tags: ["Netflix Japan", "Anime", "VPN", "Streaming", "ExpressVPN", "NordVPN", "Surfshark", "Japanese Content", "Setup Guide"],
+    image: "https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg?auto=compress&cs=tinysrgb&w=800",
+    featured: true,
+    component: "NetflixJapanVPNBlogPost"
   }
 ];
 
