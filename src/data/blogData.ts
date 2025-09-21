@@ -278,15 +278,33 @@ export const blogPosts: BlogPost[] = [
     id: 20,
     slug: 'korean-drama-vpn-2025',
     title: 'Best VPN for Streaming Korean Dramas Abroad in 2025 [Complete Guide for K-Drama Fans]',
-    excerpt: 'Discover the best VPN for streaming Korean dramas abroad in 2025. Complete guide to watch K-dramas on Netflix Korea, Viki, TVING from anywhere with ExpressVPN, NordVPN, and Surfshark.',
+    excerpt: 'Discover the best VPNs for streaming Korean dramas from anywhere in the world. Access Viki, Kocowa, Netflix Korea, and more with our complete K-drama streaming guide.',
+    content: 'Complete guide content here...',
     author: 'VPN Expert',
-    date: '2025-01-15',
-    readTime: '12 min read',
+    publishDate: '2025-01-20',
+    readTime: '7 min read',
+    tags: ['Korean Drama', 'Streaming', 'VPN', 'K-Drama', 'Netflix Korea'],
     category: 'Streaming',
-    tags: ['Korean Drama', 'K-Drama', 'VPN', 'Streaming', 'Netflix Korea', 'Viki', 'TVING'],
-    image: '/vpn-logos/korean-drama.png',
     featured: true,
+    seoTitle: 'Best VPN for Korean Dramas 2025 | Stream K-Dramas Anywhere',
+    seoDescription: 'Stream Korean dramas from anywhere with the best VPNs for K-drama fans. Access Viki, Kocowa, Netflix Korea, and more platforms safely.',
     component: 'KoreanDramaVPNBlogPost'
+  },
+  {
+    id: 21,
+    slug: 'gaming-vpn-2025',
+    title: 'Fastest VPN for Online Gaming in 2025 [Low Ping & No Lag Guide]',
+    excerpt: 'Discover the fastest VPN for online gaming in 2025. Reduce ping, eliminate lag, and unlock region-locked servers for Valorant, PUBG, Fortnite, and more games.',
+    content: 'Complete gaming VPN guide with low ping solutions...',
+    author: 'Gaming VPN Expert',
+    publishDate: '2025-01-20',
+    readTime: '8 min read',
+    tags: ['Gaming VPN', 'Low Ping', 'No Lag', 'Valorant', 'PUBG', 'Gaming Servers'],
+    category: 'Gaming',
+    featured: true,
+    seoTitle: 'Fastest VPN for Gaming 2025 | Low Ping & No Lag Guide',
+    seoDescription: 'Get the fastest VPN for online gaming in 2025. Reduce ping, prevent lag, and access global game servers for Valorant, PUBG, Fortnite, and more.',
+    component: 'GamingVPNBlogPost'
   }
 ];
 
