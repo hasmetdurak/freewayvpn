@@ -397,312 +397,312 @@ const getFAQs = (language: string): FAQ[] => [
   },
   {
     id: 64,
-    question: getTranslation(currentLanguage, 'faq.question64'),
-    answer: getTranslation(currentLanguage, 'faq.answer64'),
-    category: getTranslation(currentLanguage, 'faq.category.trust')
+    question: getTranslation('faq.question64', language),
+    answer: getTranslation('faq.answer64', language),
+    category: getTranslation('faq.category.trust', language)
   },
   {
     id: 65,
-    question: getTranslation(currentLanguage, 'faq.question65'),
-    answer: getTranslation(currentLanguage, 'faq.answer65'),
-    category: getTranslation(currentLanguage, 'faq.category.gaming')
+    question: getTranslation('faq.question65', language),
+    answer: getTranslation('faq.answer65', language),
+    category: getTranslation('faq.category.gaming', language)
   },
   {
     id: 66,
-    question: getTranslation(currentLanguage, 'faq.question66'),
-    answer: getTranslation(currentLanguage, 'faq.answer66'),
-    category: getTranslation(currentLanguage, 'faq.category.p2p')
+    question: getTranslation('faq.question66', language),
+    answer: getTranslation('faq.answer66', language),
+    category: getTranslation('faq.category.p2p', language)
   },
   {
     id: 67,
-    question: getTranslation(currentLanguage, 'faq.question67'),
-    answer: getTranslation(currentLanguage, 'faq.answer67'),
-    category: getTranslation(currentLanguage, 'faq.category.business')
+    question: getTranslation('faq.question67', language),
+    answer: getTranslation('faq.answer67', language),
+    category: getTranslation('faq.category.business', language)
   },
   {
     id: 68,
-    question: getTranslation(currentLanguage, 'faq.question68'),
-    answer: getTranslation(currentLanguage, 'faq.answer68'),
-    category: getTranslation(currentLanguage, 'faq.category.devices')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 69,
-    question: getTranslation(currentLanguage, 'faq.question69'),
-    answer: getTranslation(currentLanguage, 'faq.answer69'),
-    category: getTranslation(currentLanguage, 'faq.category.protocols')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 70,
-    question: getTranslation(currentLanguage, 'faq.question70'),
-    answer: getTranslation(currentLanguage, 'faq.answer70'),
-    category: getTranslation(currentLanguage, 'faq.category.privacy')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 71,
-    question: getTranslation(currentLanguage, 'faq.question71'),
-    answer: getTranslation(currentLanguage, 'faq.answer71'),
-    category: getTranslation(currentLanguage, 'faq.category.streaming')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 72,
-    question: getTranslation(currentLanguage, 'faq.question72'),
-    answer: getTranslation(currentLanguage, 'faq.answer72'),
-    category: getTranslation(currentLanguage, 'faq.category.streaming')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 73,
-    question: getTranslation(currentLanguage, 'faq.question73'),
-    answer: getTranslation(currentLanguage, 'faq.answer73'),
-    category: getTranslation(currentLanguage, 'faq.category.devices')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 74,
-    question: getTranslation(currentLanguage, 'faq.question74'),
-    answer: getTranslation(currentLanguage, 'faq.answer74'),
-    category: getTranslation(currentLanguage, 'faq.category.streaming')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 75,
-    question: getTranslation(currentLanguage, 'faq.question75'),
-    answer: getTranslation(currentLanguage, 'faq.answer75'),
-    category: getTranslation(currentLanguage, 'faq.category.troubleshooting')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 76,
-    question: getTranslation(currentLanguage, 'faq.question76'),
-    answer: getTranslation(currentLanguage, 'faq.answer76'),
-    category: getTranslation(currentLanguage, 'faq.category.advanced')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 77,
-    question: getTranslation(currentLanguage, 'faq.question77'),
-    answer: getTranslation(currentLanguage, 'faq.answer77'),
-    category: getTranslation(currentLanguage, 'faq.category.technical')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 78,
-    question: getTranslation(currentLanguage, 'faq.question78'),
-    answer: getTranslation(currentLanguage, 'faq.answer78'),
-    category: getTranslation(currentLanguage, 'faq.category.security')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 79,
-    question: getTranslation(currentLanguage, 'faq.question79'),
-    answer: getTranslation(currentLanguage, 'faq.answer79'),
-    category: getTranslation(currentLanguage, 'faq.category.troubleshooting')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 80,
-    question: getTranslation(currentLanguage, 'faq.question80'),
-    answer: getTranslation(currentLanguage, 'faq.answer80'),
-    category: getTranslation(currentLanguage, 'faq.category.pricing')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 81,
-    question: getTranslation(currentLanguage, 'faq.question81'),
-    answer: getTranslation(currentLanguage, 'faq.answer81'),
-    category: getTranslation(currentLanguage, 'faq.category.pricing')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 82,
-    question: getTranslation(currentLanguage, 'faq.question82'),
-    answer: getTranslation(currentLanguage, 'faq.answer82'),
-    category: getTranslation(currentLanguage, 'faq.category.privacy')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 83,
-    question: getTranslation(currentLanguage, 'faq.question83'),
-    answer: getTranslation(currentLanguage, 'faq.answer83'),
-    category: getTranslation(currentLanguage, 'faq.category.privacy')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 84,
-    question: getTranslation(currentLanguage, 'faq.question84'),
-    answer: getTranslation(currentLanguage, 'faq.answer84'),
-    category: getTranslation(currentLanguage, 'faq.category.mobile')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 85,
-    question: getTranslation(currentLanguage, 'faq.question85'),
-    answer: getTranslation(currentLanguage, 'faq.answer85'),
-    category: getTranslation(currentLanguage, 'faq.category.devices')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
 
   {
     id: 86,
-    question: getTranslation(currentLanguage, 'faq.question86'),
-    answer: getTranslation(currentLanguage, 'faq.answer86'),
-    category: getTranslation(currentLanguage, 'faq.category.legal')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 88,
-    question: getTranslation(currentLanguage, 'faq.question88'),
-    answer: getTranslation(currentLanguage, 'faq.answer88'),
-    category: getTranslation(currentLanguage, 'faq.category.privacy')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 89,
-    question: getTranslation(currentLanguage, 'faq.question89'),
-    answer: getTranslation(currentLanguage, 'faq.answer89'),
-    category: getTranslation(currentLanguage, 'faq.category.comparison')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 90,
-    question: getTranslation(currentLanguage, 'faq.question90'),
-    answer: getTranslation(currentLanguage, 'faq.answer90'),
-    category: getTranslation(currentLanguage, 'faq.category.performance')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 91,
-    question: getTranslation(currentLanguage, 'faq.question91'),
-    answer: getTranslation(currentLanguage, 'faq.answer91'),
-    category: getTranslation(currentLanguage, 'faq.category.devices')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 92,
-    question: getTranslation(currentLanguage, 'faq.question92'),
-    answer: getTranslation(currentLanguage, 'faq.answer92'),
-    category: getTranslation(currentLanguage, 'faq.category.security')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 93,
-    question: getTranslation(currentLanguage, 'faq.question93'),
-    answer: getTranslation(currentLanguage, 'faq.answer93'),
-    category: getTranslation(currentLanguage, 'faq.category.privacy')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 94,
-    question: getTranslation(currentLanguage, 'faq.question94'),
-    answer: getTranslation(currentLanguage, 'faq.answer94'),
-    category: getTranslation(currentLanguage, 'faq.category.privacy')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 95,
-    question: getTranslation(currentLanguage, 'faq.question95'),
-    answer: getTranslation(currentLanguage, 'faq.answer95'),
-    category: getTranslation(currentLanguage, 'faq.category.security')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 96,
-    question: getTranslation(currentLanguage, 'faq.question96'),
-    answer: getTranslation(currentLanguage, 'faq.answer96'),
-    category: getTranslation(currentLanguage, 'faq.category.pricing')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 97,
-    question: getTranslation(currentLanguage, 'faq.question97'),
-    answer: getTranslation(currentLanguage, 'faq.answer97'),
-    category: getTranslation(currentLanguage, 'faq.category.features')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 98,
-    question: getTranslation(currentLanguage, 'faq.question98'),
-    answer: getTranslation(currentLanguage, 'faq.answer98'),
-    category: getTranslation(currentLanguage, 'faq.category.streaming')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 99,
-    question: getTranslation(currentLanguage, 'faq.question99'),
-    answer: getTranslation(currentLanguage, 'faq.answer99'),
-    category: getTranslation(currentLanguage, 'faq.category.technical')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 100,
-    question: getTranslation(currentLanguage, 'faq.question100'),
-    answer: getTranslation(currentLanguage, 'faq.answer100'),
-    category: getTranslation(currentLanguage, 'faq.category.testing')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 101,
-    question: getTranslation(currentLanguage, 'faq.question101'),
-    answer: getTranslation(currentLanguage, 'faq.answer101'),
-    category: getTranslation(currentLanguage, 'faq.category.gaming')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 102,
-    question: getTranslation(currentLanguage, 'faq.question102'),
-    answer: getTranslation(currentLanguage, 'faq.answer102'),
-    category: getTranslation(currentLanguage, 'faq.category.advanced')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 103,
-    question: getTranslation(currentLanguage, 'faq.question103'),
-    answer: getTranslation(currentLanguage, 'faq.answer103'),
-    category: getTranslation(currentLanguage, 'faq.category.censorship')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 104,
-    question: getTranslation(currentLanguage, 'faq.question104'),
-    answer: getTranslation(currentLanguage, 'faq.answer104'),
-    category: getTranslation(currentLanguage, 'faq.category.p2p')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 105,
-    question: getTranslation(currentLanguage, 'faq.question105'),
-    answer: getTranslation(currentLanguage, 'faq.answer105'),
-    category: getTranslation(currentLanguage, 'faq.category.features')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 106,
-    question: getTranslation(currentLanguage, 'faq.question106'),
-    answer: getTranslation(currentLanguage, 'faq.answer106'),
-    category: getTranslation(currentLanguage, 'faq.category.pricing')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 107,
-    question: getTranslation(currentLanguage, 'faq.question107'),
-    answer: getTranslation(currentLanguage, 'faq.answer107'),
-    category: getTranslation(currentLanguage, 'faq.category.privacy')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 108,
-    question: getTranslation(currentLanguage, 'faq.question108'),
-    answer: getTranslation(currentLanguage, 'faq.answer108'),
-    category: getTranslation(currentLanguage, 'faq.category.privacy')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 109,
-    question: getTranslation(currentLanguage, 'faq.question109'),
-    answer: getTranslation(currentLanguage, 'faq.answer109'),
-    category: getTranslation(currentLanguage, 'faq.category.performance')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 110,
-    question: getTranslation(currentLanguage, 'faq.question110'),
-    answer: getTranslation(currentLanguage, 'faq.answer110'),
-    category: getTranslation(currentLanguage, 'faq.category.recommendations')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
 
   {
     id: 112,
-    question: getTranslation(currentLanguage, 'faq.question112'),
-    answer: getTranslation(currentLanguage, 'faq.answer112'),
-    category: getTranslation(currentLanguage, 'faq.category.general')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
 
   {
     id: 114,
-    question: getTranslation(currentLanguage, 'faq.question114'),
-    answer: getTranslation(currentLanguage, 'faq.answer114'),
-    category: getTranslation(currentLanguage, 'faq.category.general')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 115,
-    question: getTranslation(currentLanguage, 'faq.question115'),
-    answer: getTranslation(currentLanguage, 'faq.answer115'),
-    category: getTranslation(currentLanguage, 'faq.category.general')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 116,
-    question: getTranslation(currentLanguage, 'faq.question116'),
-    answer: getTranslation(currentLanguage, 'faq.answer116'),
-    category: getTranslation(currentLanguage, 'faq.category.general')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   },
   {
     id: 117,
-    question: getTranslation(currentLanguage, 'faq.question117'),
-    answer: getTranslation(currentLanguage, 'faq.answer117'),
-    category: getTranslation(currentLanguage, 'faq.category.general')
+    question: getTranslation('', language),
+    answer: getTranslation('', language),
+    category: getTranslation('', language)
   }
 ];
 
@@ -712,6 +712,9 @@ const FAQPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
+  // Get FAQs for current language
+  const faqs = getFAQs(currentLanguage);
+  
   // Get translated FAQs - this will return localized content if available, otherwise fallback to English
   const translatedFAQs = translateFAQs(faqs);
   
@@ -816,7 +819,7 @@ const FAQPage: React.FC = () => {
                     const internalLinks = getInternalLinks(faq.id, currentLanguage);
                     return internalLinks.length > 0 ? (
                       <div className="mt-4">
-                        <h5 className="text-sm font-medium text-gray-900 mb-2">{getTranslation(currentLanguage, 'faq.relatedGuides')}</h5>
+                        <h5 className="text-sm font-medium text-gray-900 mb-2">{getTranslation('', language)}</h5>
                         <div className="space-y-2">
                           {internalLinks.map((link, index) => (
                             <InternalLink
