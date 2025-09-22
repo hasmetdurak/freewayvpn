@@ -25,22 +25,12 @@ export interface AffiliateRecommendation {
 
 export const affiliateRecommendationsData: AffiliateRecommendationData[] = [
   {
-    faqId: 1, // "What is a VPN and how does it work?"
-    provider: "ExpressVPN",
-    descriptionKey: "affiliates.expressvpn.description1",
-    featuresKeys: ["affiliates.expressvpn.feature1", "affiliates.expressvpn.feature2", "affiliates.expressvpn.feature3", "affiliates.expressvpn.feature4"],
-    ctaTextKey: "affiliates.expressvpn.cta1",
-    affiliateUrl: "https://expressvpn.com/order",
-    discountKey: "affiliates.expressvpn.discount1",
-    rating: 4.9
-  },
-  {
     faqId: 2, // "Are VPNs legal to use?"
     provider: "NordVPN",
     descriptionKey: "affiliates.nordvpn.description1",
     featuresKeys: ["affiliates.nordvpn.feature1", "affiliates.nordvpn.feature2", "affiliates.nordvpn.feature3", "affiliates.nordvpn.feature4"],
     ctaTextKey: "affiliates.nordvpn.cta1",
-    affiliateUrl: "https://nordvpn.com/order",
+    affiliateUrl: "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902",
     discountKey: "affiliates.nordvpn.discount1",
     rating: 4.8
   },
@@ -55,34 +45,14 @@ export const affiliateRecommendationsData: AffiliateRecommendationData[] = [
     rating: 4.7
   },
   {
-    faqId: 4, // "Can I use a VPN for streaming Netflix?"
-    provider: "ExpressVPN",
-    descriptionKey: "affiliates.expressvpn.description2",
-    featuresKeys: ["affiliates.expressvpn.feature5", "affiliates.expressvpn.feature6", "affiliates.expressvpn.feature7", "affiliates.expressvpn.feature8"],
-    ctaTextKey: "affiliates.expressvpn.cta2",
-    affiliateUrl: "https://expressvpn.com/order",
-    discountKey: "affiliates.expressvpn.discount1",
-    rating: 4.9
-  },
-  {
     faqId: 5, // "What is the best VPN protocol?"
     provider: "NordVPN",
     descriptionKey: "affiliates.nordvpn.description2",
     featuresKeys: ["affiliates.nordvpn.feature5", "affiliates.nordvpn.feature6", "affiliates.nordvpn.feature7", "affiliates.nordvpn.feature8"],
     ctaTextKey: "affiliates.nordvpn.cta2",
-    affiliateUrl: "https://nordvpn.com/order",
+    affiliateUrl: "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902",
     discountKey: "affiliates.nordvpn.discount1",
     rating: 4.8
-  },
-  {
-    faqId: 6, // "Can I use a VPN on my phone?"
-    provider: "CyberGhost",
-    descriptionKey: "affiliates.cyberghost.description1",
-    featuresKeys: ["affiliates.cyberghost.feature1", "affiliates.cyberghost.feature2", "affiliates.cyberghost.feature3", "affiliates.cyberghost.feature4"],
-    ctaTextKey: "affiliates.cyberghost.cta1",
-    affiliateUrl: "https://cyberghostvpn.com/order",
-    discountKey: "affiliates.cyberghost.discount1",
-    rating: 4.6
   },
   {
     faqId: 7, // "How much does a VPN cost?"
@@ -95,36 +65,15 @@ export const affiliateRecommendationsData: AffiliateRecommendationData[] = [
     rating: 4.7
   },
   {
-    faqId: 8, // "Can I use a VPN for torrenting?"
-    provider: "ExpressVPN",
-    descriptionKey: "affiliates.expressvpn.description3",
-    featuresKeys: ["affiliates.expressvpn.feature9", "affiliates.expressvpn.feature10", "affiliates.expressvpn.feature11", "affiliates.expressvpn.feature12"],
-    ctaTextKey: "affiliates.expressvpn.cta3",
-    affiliateUrl: "https://expressvpn.com/order",
-    discountKey: "affiliates.expressvpn.discount1",
-    rating: 4.9
-  },
-  {
     faqId: 9, // "What is a kill switch?"
     provider: "NordVPN",
     descriptionKey: "affiliates.nordvpn.description3",
     featuresKeys: ["affiliates.nordvpn.feature9", "affiliates.nordvpn.feature10", "affiliates.nordvpn.feature11", "affiliates.nordvpn.feature12"],
     ctaTextKey: "affiliates.nordvpn.cta3",
-    affiliateUrl: "https://nordvpn.com/order",
+    affiliateUrl: "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902",
     discountKey: "affiliates.nordvpn.discount1",
     rating: 4.8
-  },
-  {
-    faqId: 10, // "Can I get a free VPN?"
-    provider: "CyberGhost",
-    descriptionKey: "affiliates.cyberghost.description2",
-    featuresKeys: ["affiliates.cyberghost.feature5", "affiliates.cyberghost.feature6", "affiliates.cyberghost.feature7", "affiliates.cyberghost.feature8"],
-    ctaTextKey: "affiliates.cyberghost.cta2",
-    affiliateUrl: "https://cyberghostvpn.com/order",
-    discountKey: "affiliates.cyberghost.discount1",
-    rating: 4.6
-  }
-];
+  }];
 
 export const getAffiliateRecommendation = (faqId: number, language: string): AffiliateRecommendation | null => {
   const data = affiliateRecommendationsData.find(rec => rec.faqId === faqId);

@@ -1,0 +1,8 @@
+<svg width="728" height="90" xmlns="http://www.w3.org/2000/svg">
+        <rect width="728" height="90" fill="#4687ff"/>
+        <text x="100" y="35" fill="white" font-size="24" font-weight="bold">NordVPN</text>
+        <text x="100" y="55" fill="white" font-size="12">Premium VPN Protection</text>
+        <text x="100" y="75" fill="white" font-size="14" font-weight="bold">68% OFF + 3 months FREE</text>
+        <rect x="580" y="25" width="120" height="40" fill="#00d4aa" rx="20"/>
+        <text x="640" y="48" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Get Deal</text>
+    </svg>

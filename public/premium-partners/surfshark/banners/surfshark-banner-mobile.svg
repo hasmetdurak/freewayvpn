@@ -1,0 +1,33 @@
+<svg width="320" height="100" viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="surfsharksGradientMobile" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4AA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099CC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="320" height="100" fill="url(#surfsharksGradientMobile)" rx="8"/>
+  
+  <!-- Surfshark Logo Area -->
+  <circle cx="40" cy="50" r="20" fill="white" opacity="0.9"/>
+  <path d="M28 42 Q40 35 52 42 Q52 50 40 58 Q28 50 28 42 Z" fill="#0099CC"/>
+  <text x="40" y="54" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">🦈</text>
+  
+  <!-- Main Text -->
+  <text x="75" y="35" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Surfshark VPN
+  </text>
+  <text x="75" y="52" fill="white" font-family="Arial, sans-serif" font-size="10">
+    Unlimited Devices
+  </text>
+  <text x="75" y="68" fill="white" font-family="Arial, sans-serif" font-size="10">
+    83% OFF Deal
+  </text>
+  
+  <!-- CTA Button -->
+  <rect x="220" y="30" width="80" height="40" fill="white" rx="20"/>
+  <text x="260" y="53" text-anchor="middle" fill="#0099CC" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+    Get Deal
+  </text>
+</svg>

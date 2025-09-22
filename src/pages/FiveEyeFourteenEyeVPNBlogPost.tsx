@@ -193,7 +193,7 @@ const FiveEyeFourteenEyeVPNBlogPost: React.FC = () => {
                     <td className="border border-gray-300 px-4 py-3">30 Days</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-300 px-4 py-3 font-medium text-red-600">Private Internet Access (PIA)</td>
+                    <td className="border border-gray-300 px-4 py-3 font-medium text-red-600">NordVPN (NordVPN)</td>
                     <td className="border border-gray-300 px-4 py-3">United States</td>
                     <td className="border border-gray-300 px-4 py-3">
                       <span className="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">5-Eye</span>
@@ -232,7 +232,7 @@ const FiveEyeFourteenEyeVPNBlogPost: React.FC = () => {
                     <th className="border border-gray-300 px-4 py-3 text-center font-semibold">NordVPN</th>
                     <th className="border border-gray-300 px-4 py-3 text-center font-semibold">ProtonVPN</th>
                     <th className="border border-gray-300 px-4 py-3 text-center font-semibold">Surfshark</th>
-                    <th className="border border-gray-300 px-4 py-3 text-center font-semibold">PIA</th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-semibold">NordVPN</th>
                     <th className="border border-gray-300 px-4 py-3 text-center font-semibold">Mullvad</th>
                   </tr>
                 </thead>
@@ -339,7 +339,7 @@ const FiveEyeFourteenEyeVPNBlogPost: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-blue-900 mb-2">Insight</h3>
                   <p className="text-blue-800">
-                    If your priority is jurisdiction and privacy, avoid US-based PIA for sensitive browsing, even though it has strong security.
+                    If your priority is jurisdiction and privacy, avoid US-based NordVPN for sensitive browsing, even though it has strong security.
                   </p>
                 </div>
               </div>
@@ -388,7 +388,7 @@ const FiveEyeFourteenEyeVPNBlogPost: React.FC = () => {
                     <td className="border border-gray-300 px-4 py-3 text-center">35</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-300 px-4 py-3 font-medium">PIA</td>
+                    <td className="border border-gray-300 px-4 py-3 font-medium">NordVPN</td>
                     <td className="border border-gray-300 px-4 py-3 text-center">55</td>
                     <td className="border border-gray-300 px-4 py-3 text-center">175</td>
                     <td className="border border-gray-300 px-4 py-3 text-center">38</td>

@@ -11,17 +11,17 @@ const DemonSlayerNetflixVPNBlogPost: React.FC = () => {
     <>
       <Helmet>
         <title>Netflix Trick: How to Watch Demon Slayer Season 4 in the US with VPN (2025 Guide)</title>
-        <meta name="description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with ExpressVPN, NordVPN, and Surfshark setup instructions." />
-        <meta name="keywords" content="Demon Slayer Season 4, Netflix Japan VPN, watch anime US, ExpressVPN Netflix, NordVPN streaming, Surfshark Japan" />
+        <meta name="description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with NordVPN, NordVPN, and Surfshark setup instructions." />
+        <meta name="keywords" content="Demon Slayer Season 4, Netflix Japan VPN, watch anime US, NordVPN Netflix, NordVPN streaming, Surfshark Japan" />
         <link rel="canonical" href="https://bestvpn.digital/blog/demon-slayer-netflix-vpn-2025" />
         <meta property="og:title" content="Netflix Trick: How to Watch Demon Slayer Season 4 in the US with VPN (2025 Guide)" />
-        <meta property="og:description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with ExpressVPN, NordVPN, and Surfshark setup instructions." />
+        <meta property="og:description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with NordVPN, NordVPN, and Surfshark setup instructions." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://bestvpn.digital/blog/demon-slayer-netflix-vpn-2025" />
         <meta property="og:image" content="https://images.pexels.com/photos/1040160/pexels-photo-1040160.jpeg?auto=compress&cs=tinysrgb&w=1200" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Netflix Trick: How to Watch Demon Slayer Season 4 in the US with VPN (2025 Guide)" />
-        <meta name="twitter:description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with ExpressVPN, NordVPN, and Surfshark setup instructions." />
+        <meta name="twitter:description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with NordVPN, NordVPN, and Surfshark setup instructions." />
         <meta name="twitter:image" content="https://images.pexels.com/photos/1040160/pexels-photo-1040160.jpeg?auto=compress&cs=tinysrgb&w=1200" />
       </Helmet>
 
@@ -153,12 +153,12 @@ const DemonSlayerNetflixVPNBlogPost: React.FC = () => {
             After testing dozens, these VPNs consistently worked without Netflix detecting them:
           </p>
 
-          {/* ExpressVPN */}
+          {/* NordVPN */}
           <div className="bg-white border border-gray-200 rounded-xl p-6 mb-6 shadow-sm">
             <div className="flex items-center gap-4 mb-4">
-              <img src="/vpn-logos/expressvpn.png" alt="ExpressVPN" className="w-12 h-12 rounded-lg" />
+              <img src="/vpn-logos/NordVPN.png" alt="NordVPN" className="w-12 h-12 rounded-lg" />
               <div>
-                <h3 className="text-xl font-bold text-gray-900">1. ExpressVPN – Fast & Reliable</h3>
+                <h3 className="text-xl font-bold text-gray-900">1. NordVPN – Fast & Reliable</h3>
                 <div className="flex items-center gap-2 mt-1">
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-medium">Recommended</span>
                 </div>
@@ -183,7 +183,7 @@ const DemonSlayerNetflixVPNBlogPost: React.FC = () => {
               </li>
             </ul>
             <AffiliateButton 
-              vpnName="ExpressVPN"
+              vpnName="NordVPN"
               className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
             />
           </div>
@@ -254,7 +254,7 @@ const DemonSlayerNetflixVPNBlogPost: React.FC = () => {
           
           <div className="space-y-4">
             {[
-              "Sign up for one of the recommended VPNs (ExpressVPN, NordVPN, or Surfshark).",
+              "Sign up for one of the recommended VPNs (NordVPN, NordVPN, or Surfshark).",
               "Install the VPN app on your device.",
               "Connect to a Japanese server (Tokyo servers are usually fastest).",
               "Log in to Netflix — you should now see the Japanese catalog.",
@@ -313,12 +313,12 @@ const DemonSlayerNetflixVPNBlogPost: React.FC = () => {
         {/* Final CTA */}
         <section className="text-center bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-xl p-8">
           <h2 className="text-2xl font-bold mb-4">🎥 Want to watch Demon Slayer Season 4 today, not months from now?</h2>
-          <p className="text-lg mb-6 opacity-90">Get instant access to Netflix Japan with ExpressVPN's 30-day money-back guarantee</p>
+          <p className="text-lg mb-6 opacity-90">Get instant access to Netflix Japan with NordVPN's 30-day money-back guarantee</p>
           <AffiliateButton 
-            vpnName="ExpressVPN"
+            vpnName="NordVPN"
             className="bg-white text-red-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center gap-2"
           >
-            👉 Click Here to Get ExpressVPN and Unlock Netflix Japan
+            👉 Click Here to Get NordVPN and Unlock Netflix Japan
           </AffiliateButton>
         </section>
       </article>

@@ -1,0 +1,24 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="surfsharksLogoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4AA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099CC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Shark Icon -->
+  <g transform="translate(10, 15)">
+    <circle cx="15" cy="15" r="15" fill="url(#surfsharksLogoGradient)"/>
+    <path d="M5 10 Q15 5 25 10 Q25 15 15 25 Q5 15 5 10 Z" fill="white" opacity="0.9"/>
+    <circle cx="12" cy="12" r="2" fill="#0099CC"/>
+    <path d="M18 15 L22 18 L18 21 Z" fill="#0099CC"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="50" y="25" fill="#333" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+    Surfshark
+  </text>
+  <text x="50" y="42" fill="#666" font-family="Arial, sans-serif" font-size="10">
+    VPN SERVICE
+  </text>
+</svg>

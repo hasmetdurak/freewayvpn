@@ -52,7 +52,7 @@ const VPNProxyBlogPost: React.FC = () => {
 
   const misconceptions = [
     '"A proxy is as secure as a VPN." Not true. Proxies usually lack encryption and are not a reliable privacy tool.',
-    '"VPNs are slow." Modern VPNs like ExpressVPN or NordVPN offer fast speeds suitable for streaming in HD and even 4K.',
+    '"VPNs are slow." Modern VPNs like NordVPN or NordVPN offer fast speeds suitable for streaming in HD and even 4K.',
     '"Free VPNs are safe." Free VPNs may log your data or sell it to third parties, so choose reputable providers.'
   ];
 

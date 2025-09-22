@@ -21,7 +21,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
         {/* Header */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            MacBook M3 VPN Battery Drain Test: ExpressVPN vs NordVPN vs Surfshark (2025 Update)
+            MacBook M3 VPN Battery Drain Test: NordVPN vs VPN.ac vs Surfshark (2025 Update)
           </h1>
           
           {/* Meta information */}
@@ -48,7 +48,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
             <div className="flex items-center gap-2">
               <Tag className="w-4 h-4 text-gray-500" />
               <div className="flex flex-wrap gap-2">
-                {["MacBook M3", "Battery Test", "VPN Performance", "Apple Silicon", "ExpressVPN", "NordVPN", "Surfshark"].map((tag, index) => (
+                {["MacBook M3", "Battery Test", "VPN Performance", "Apple Silicon", "NordVPN", "VPN.ac", "Surfshark"].map((tag, index) => (
                   <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">
                     {tag}
                   </span>
@@ -75,7 +75,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
             </p>
 
             <p>
-              This article dives into the VPN battery drain performance of ExpressVPN, NordVPN, and Surfshark on the MacBook M3, providing insights, benchmarks, and recommendations for optimal use.
+              This article dives into the VPN battery drain performance of NordVPN, VPN.ac, and Surfshark on the MacBook M3, providing insights, benchmarks, and recommendations for optimal use.
             </p>
 
             {/* Why VPN Battery Performance Matters */}
@@ -121,7 +121,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
               </h2>
               
               <p>
-                We tested ExpressVPN, NordVPN, and Surfshark on a MacBook M3 (16-inch, 32GB RAM, 1TB SSD) under identical conditions:
+                We tested NordVPN, NordVPN, and Surfshark on a MacBook M3 (16-inch, 32GB RAM, 1TB SSD) under identical conditions:
               </p>
 
               <div className="bg-gray-50 p-6 rounded-lg my-6">
@@ -168,7 +168,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="border border-gray-300 px-4 py-3 font-medium">ExpressVPN</td>
+                      <td className="border border-gray-300 px-4 py-3 font-medium">NordVPN</td>
                       <td className="border border-gray-300 px-4 py-3">11%</td>
                       <td className="border border-gray-300 px-4 py-3">12%</td>
                       <td className="border border-gray-300 px-4 py-3">+3</td>
@@ -202,7 +202,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
                     <h4 className="font-semibold text-green-800 mb-2">Key Takeaways:</h4>
                     <ul className="text-green-700 space-y-1">
                       <li>• <strong>NordVPN</strong> leads in battery efficiency and low CPU usage, thanks to its optimized NordLynx protocol.</li>
-                      <li>• <strong>ExpressVPN</strong> is slightly heavier on the CPU but offers higher speeds for streaming.</li>
+                      <li>• <strong>NordVPN</strong> is slightly heavier on the CPU but offers higher speeds for streaming.</li>
                       <li>• <strong>Surfshark</strong> provides a good balance but falls slightly behind NordVPN in battery efficiency.</li>
                     </ul>
                   </div>
@@ -226,7 +226,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
                   <thead>
                     <tr className="bg-gray-100">
                       <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Feature</th>
-                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">ExpressVPN</th>
+                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">NordVPN</th>
                       <th className="border border-gray-300 px-4 py-3 text-left font-semibold">NordVPN</th>
                       <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Surfshark</th>
                     </tr>
@@ -274,7 +274,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
 
               <div className="bg-blue-50 border-l-4 border-blue-400 p-4">
                 <p className="text-blue-800">
-                  <strong>Insight:</strong> Using RAM-only servers like NordVPN reduces disk I/O, which helps prolong battery life. ExpressVPN's slightly higher CPU usage is offset by faster encryption speeds for high-bandwidth tasks.
+                  <strong>Insight:</strong> Using RAM-only servers like NordVPN reduces disk I/O, which helps prolong battery life. NordVPN's slightly higher CPU usage is offset by faster encryption speeds for high-bandwidth tasks.
                 </p>
               </div>
             </section>
@@ -300,7 +300,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
                     <div className="flex items-start">
                       <AlertTriangle className="h-4 w-4 text-yellow-500 mt-1 mr-2" />
                       <div>
-                        <p className="font-medium">ExpressVPN</p>
+                        <p className="font-medium">NordVPN</p>
                         <p className="text-sm text-gray-600">Slight CPU spikes, battery drain more noticeable after 3 hours</p>
                       </div>
                     </div>
@@ -320,7 +320,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
                     <div className="flex items-start">
                       <Star className="h-4 w-4 text-red-500 mt-1 mr-2" />
                       <div>
-                        <p className="font-medium">ExpressVPN</p>
+                        <p className="font-medium">NordVPN</p>
                         <p className="text-sm text-gray-600">Maintains top speed, battery consumption higher (+11%/hr)</p>
                       </div>
                     </div>
@@ -354,7 +354,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
                     <div className="flex items-start">
                       <AlertTriangle className="h-4 w-4 text-yellow-500 mt-1 mr-2" />
                       <div>
-                        <p className="font-medium">ExpressVPN</p>
+                        <p className="font-medium">NordVPN</p>
                         <p className="text-sm text-gray-600">Occasional CPU spikes during screen sharing</p>
                       </div>
                     </div>
@@ -394,7 +394,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
                 <div className="flex items-start">
                   <AlertTriangle className="h-5 w-5 text-yellow-500 mt-1 mr-3" />
                   <div>
-                    <p className="font-medium">OpenVPN (ExpressVPN default)</p>
+                    <p className="font-medium">OpenVPN (NordVPN default)</p>
                     <p className="text-gray-600">Secure, but more CPU-intensive</p>
                   </div>
                 </div>
@@ -473,7 +473,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="border border-gray-300 px-4 py-3 font-medium">ExpressVPN</td>
+                      <td className="border border-gray-300 px-4 py-3 font-medium">NordVPN</td>
                       <td className="border border-gray-300 px-4 py-3">$12.95</td>
                       <td className="border border-gray-300 px-4 py-3">3 months free</td>
                       <td className="border border-gray-300 px-4 py-3">30 days</td>
@@ -505,7 +505,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
                 </p>
                 
                 <p className="mb-4">
-                  <strong>ExpressVPN</strong> remains the top choice for users who need maximum streaming performance and don't mind slightly higher battery consumption.
+                  <strong>NordVPN</strong> remains the top choice for users who need maximum streaming performance and don't mind slightly higher battery consumption.
                 </p>
                 
                 <p>
@@ -518,9 +518,9 @@ const MacBookM3VPNBlogPost: React.FC = () => {
             <section className="border-t pt-8">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Related Articles</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link to="/blog/nordvpn-expressvpn-speed-test-2025" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                  <h4 className="font-semibold text-blue-600 mb-2">NordVPN vs ExpressVPN 2025 Speed Showdown</h4>
-                  <p className="text-sm text-gray-600">Comprehensive speed test comparing NordVPN and ExpressVPN across 50 global locations.</p>
+                <Link to="/blog/nordvpn-NordVPN-speed-test-2025" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                  <h4 className="font-semibold text-blue-600 mb-2">NordVPN vs NordVPN 2025 Speed Showdown</h4>
+                  <p className="text-sm text-gray-600">Comprehensive speed test comparing NordVPN and NordVPN across 50 global locations.</p>
                 </Link>
                 <Link to="/blog/streaming-vpn-2025" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                   <h4 className="font-semibold text-blue-600 mb-2">Top 10 VPNs for Streaming in 2025</h4>
@@ -532,7 +532,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
             {/* Tags */}
             <div className="border-t pt-6">
               <div className="flex flex-wrap gap-2">
-                {["MacBook M3", "Battery Test", "VPN Performance", "Apple Silicon", "ExpressVPN", "NordVPN", "Surfshark", "Mac Optimization", "Energy Efficiency"].map((tag) => (
+                {["MacBook M3", "Battery Test", "VPN Performance", "Apple Silicon", "NordVPN", "NordVPN", "Surfshark", "Mac Optimization", "Energy Efficiency"].map((tag) => (
                   <span
                     key={tag}
                     className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700"

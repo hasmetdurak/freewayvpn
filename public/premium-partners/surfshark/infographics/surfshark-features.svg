@@ -1,0 +1,120 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="surfsharksFeaturesBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4AA;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#0099CC;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#surfsharksFeaturesBg)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="80" fill="#0099CC"/>
+  <text x="400" y="30" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">
+    Surfshark VPN Features
+  </text>
+  <text x="400" y="55" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">
+    Complete Privacy & Security Solution
+  </text>
+  
+  <!-- Feature Grid -->
+  <!-- Row 1 -->
+  <g transform="translate(50, 120)">
+    <!-- Unlimited Devices -->
+    <rect x="0" y="0" width="200" height="120" fill="white" rx="10" stroke="#00D4AA" stroke-width="2"/>
+    <circle cx="100" cy="40" r="20" fill="#00D4AA"/>
+    <text x="100" y="46" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">∞</text>
+    <text x="100" y="75" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      Unlimited Devices
+    </text>
+    <text x="100" y="95" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="10">
+      Connect all your devices
+    </text>
+  </g>
+  
+  <g transform="translate(300, 120)">
+    <!-- CleanWeb -->
+    <rect x="0" y="0" width="200" height="120" fill="white" rx="10" stroke="#00D4AA" stroke-width="2"/>
+    <circle cx="100" cy="40" r="20" fill="#00D4AA"/>
+    <text x="100" y="46" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">🛡️</text>
+    <text x="100" y="75" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      CleanWeb
+    </text>
+    <text x="100" y="95" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="10">
+      Ad & malware blocker
+    </text>
+  </g>
+  
+  <g transform="translate(550, 120)">
+    <!-- MultiHop -->
+    <rect x="0" y="0" width="200" height="120" fill="white" rx="10" stroke="#00D4AA" stroke-width="2"/>
+    <circle cx="100" cy="40" r="20" fill="#00D4AA"/>
+    <text x="100" y="46" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">🔗</text>
+    <text x="100" y="75" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      MultiHop
+    </text>
+    <text x="100" y="95" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="10">
+      Double VPN protection
+    </text>
+  </g>
+  
+  <!-- Row 2 -->
+  <g transform="translate(50, 270)">
+    <!-- Kill Switch -->
+    <rect x="0" y="0" width="200" height="120" fill="white" rx="10" stroke="#0099CC" stroke-width="2"/>
+    <circle cx="100" cy="40" r="20" fill="#0099CC"/>
+    <text x="100" y="46" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">⚡</text>
+    <text x="100" y="75" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      Kill Switch
+    </text>
+    <text x="100" y="95" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="10">
+      Auto-disconnect protection
+    </text>
+  </g>
+  
+  <g transform="translate(300, 270)">
+    <!-- No Logs -->
+    <rect x="0" y="0" width="200" height="120" fill="white" rx="10" stroke="#0099CC" stroke-width="2"/>
+    <circle cx="100" cy="40" r="20" fill="#0099CC"/>
+    <text x="100" y="46" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">🔒</text>
+    <text x="100" y="75" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      No-Logs Policy
+    </text>
+    <text x="100" y="95" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="10">
+      Complete privacy
+    </text>
+  </g>
+  
+  <g transform="translate(550, 270)">
+    <!-- Global Servers -->
+    <rect x="0" y="0" width="200" height="120" fill="white" rx="10" stroke="#0099CC" stroke-width="2"/>
+    <circle cx="100" cy="40" r="20" fill="#0099CC"/>
+    <text x="100" y="46" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">🌍</text>
+    <text x="100" y="75" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      3200+ Servers
+    </text>
+    <text x="100" y="95" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="10">
+      100+ countries
+    </text>
+  </g>
+  
+  <!-- Bottom Stats -->
+  <rect x="50" y="450" width="700" height="100" fill="white" rx="10" stroke="#00D4AA" stroke-width="2"/>
+  <text x="400" y="480" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+    Why Choose Surfshark?
+  </text>
+  <text x="200" y="510" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="14">
+    ⭐ 4.8/5 Rating
+  </text>
+  <text x="400" y="510" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="14">
+    💰 30-Day Money Back
+  </text>
+  <text x="600" y="510" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="14">
+    🏆 Award-Winning VPN
+  </text>
+  
+  <text x="400" y="535" text-anchor="middle" fill="#00D4AA" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Get 83% OFF + 2 Months FREE
+  </text>
+</svg>

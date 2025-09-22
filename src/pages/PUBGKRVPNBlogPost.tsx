@@ -69,6 +69,13 @@ const PUBGKRVPNBlogPost: React.FC = () => {
             </div>
             <span>January 22, 2025</span>
           </div>
+          
+          {/* Hero Image */}
+          <img 
+            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            alt="PUBG Mobile KR VPN Gaming Setup" 
+            className="w-full h-64 object-cover rounded-xl mb-6"
+          />
         </header>
 
         <div className="prose prose-lg max-w-none">
@@ -79,7 +86,7 @@ const PUBGKRVPNBlogPost: React.FC = () => {
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">Quick Summary</h3>
                 <p className="text-blue-800 mb-0">
                   PUBG Mobile KR offers exclusive features and early updates but is region-locked. 
-                  Use ExpressVPN, NordVPN, or Surfshark to access Korean servers safely with low ping and stable connections.
+                  Use NordVPN, VPN.ac, or Surfshark to access Korean servers safely with low ping and stable connections.
                 </p>
               </div>
             </div>
@@ -237,7 +244,7 @@ const PUBGKRVPNBlogPost: React.FC = () => {
             <div className="border border-gray-200 rounded-lg p-6 bg-gradient-to-r from-blue-50 to-indigo-50">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">#1</div>
-                <h3 className="text-xl font-bold text-gray-900">ExpressVPN – Fastest & Most Reliable</h3>
+                <h3 className="text-xl font-bold text-gray-900">NordVPN – Fastest & Most Reliable</h3>
               </div>
               <ul className="mb-4 space-y-2">
                 <li className="flex items-center gap-2">
@@ -258,7 +265,7 @@ const PUBGKRVPNBlogPost: React.FC = () => {
                 </li>
               </ul>
               <AffiliateButton 
-                vpnName="ExpressVPN"
+                vpnName="NordVPN"
                 discount="49% Off"
                 className="bg-blue-600 hover:bg-blue-700"
               />
@@ -335,7 +342,7 @@ const PUBGKRVPNBlogPost: React.FC = () => {
                 <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-semibold flex-shrink-0">1</div>
                 <div>
                   <h4 className="font-semibold mb-1">Choose a VPN</h4>
-                  <p className="text-gray-600">(ExpressVPN, NordVPN, or Surfshark recommended).</p>
+                  <p className="text-gray-600">(NordVPN, VPN.ac, or Surfshark recommended).</p>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -385,7 +392,7 @@ const PUBGKRVPNBlogPost: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-4 mb-8">
             <div className="bg-blue-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-blue-900 mb-2">ExpressVPN</h4>
+              <h4 className="font-semibold text-blue-900 mb-2">NordVPN</h4>
               <ul className="text-blue-800 text-sm space-y-1">
                 <li>• Seoul-1</li>
                 <li>• Tokyo-1</li>
@@ -481,9 +488,9 @@ const PUBGKRVPNBlogPost: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4 text-center">🏆 Top Recommendations:</h3>
             <div className="space-y-3">
               <div className="flex items-center justify-between bg-white p-3 rounded-lg">
-                <span><strong>ExpressVPN</strong> – fastest, most reliable, low-latency servers</span>
+                <span><strong>NordVPN</strong> – fastest, most reliable, low-latency servers</span>
                 <AffiliateButton 
-                  vpnName="ExpressVPN"
+                  vpnName="NordVPN"
                   discount="Get Deal"
                   className="bg-blue-600 hover:bg-blue-700 text-sm px-4 py-2"
                 />
@@ -513,3 +520,41 @@ const PUBGKRVPNBlogPost: React.FC = () => {
 };
 
 export default PUBGKRVPNBlogPost;
+
+// Header */
+            <header className="text-center mb-12">
+              <div className="flex justify-center items-center mb-6">
+                <Shield className="w-16 h-16 text-blue-500 mr-4" />
+                <Gamepad2 className="w-12 h-12 text-green-400" />
+              </div>
+              
+              {/* Hero Image */}
+              <div className="mb-8">
+                <img 
+                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  alt="PUBG gaming setup with Korean elements and VPN security shield" 
+                  className="w-full h-64 md:h-80 object-cover rounded-xl shadow-2xl"
+                />
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Best VPN for PUBG Korea in 2025
+                <span className="block text-2xl md:text-3xl text-green-400 mt-2">
+                  [Lower Ping + Bypass Restrictions]
+                </span>
+              </h1>
+          {/* Hero Image */}
+          <div className="mb-8">
+            <img 
+              src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+              alt="PUBG gaming setup with Korean elements and VPN security shield" 
+              className="w-full h-64 md:h-80 object-cover rounded-xl shadow-2xl"
+            />
+          </div>
+          
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            Best VPN for PUBG Korea in 2025
+            <span className="block text-2xl md:text-3xl text-green-400 mt-2">
+              [Lower Ping + Bypass Restrictions]
+            </span>
+          </h1>

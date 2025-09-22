@@ -44,11 +44,11 @@ const StreamingWars2025BlogPost: React.FC = () => {
             </div>
             
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Streaming Wars 2025: ExpressVPN vs Surfshark vs CyberGhost – Who Unlocks More Netflix Libraries?
+              Streaming Wars 2025: NordVPN vs Surfshark vs VPN.ac – Who Unlocks More Netflix Libraries?
             </h1>
             
             <p className="text-xl text-gray-600 leading-relaxed">
-              Complete Netflix library unlock test comparing ExpressVPN, Surfshark, and CyberGhost across 12 regions. Speed tests, 4K streaming performance, and platform compatibility analysis for the ultimate streaming VPN guide.
+              Complete Netflix library unlock test comparing NordVPN, Surfshark, and VPN.ac across 12 regions. Speed tests, 4K streaming performance, and platform compatibility analysis for the ultimate streaming VPN guide.
             </p>
           </div>
         </div>
@@ -128,7 +128,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
                 <ul className="list-disc list-inside text-gray-700 space-y-1">
                   <li><strong>Devices tested:</strong> Windows PC, MacBook Pro, iPhone 15, Samsung Galaxy S24, Fire TV Stick</li>
                   <li><strong>Internet:</strong> 1 Gbps fiber broadband (wired & Wi-Fi)</li>
-                  <li><strong>Protocols used:</strong> Each VPN's fastest (ExpressVPN Lightway, Surfshark WireGuard, CyberGhost WireGuard)</li>
+                  <li><strong>Protocols used:</strong> Each VPN's fastest (NordVPN Lightway, Surfshark WireGuard, NordVPN WireGuard)</li>
                 </ul>
               </div>
               
@@ -151,11 +151,11 @@ const StreamingWars2025BlogPost: React.FC = () => {
               VPN Showdown: Who Unlocks More Netflix Libraries?
             </h2>
 
-            {/* ExpressVPN */}
+            {/* NordVPN */}
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200 mb-6">
               <h3 className="text-2xl font-bold text-green-800 mb-4 flex items-center gap-2">
                 <CheckCircle className="w-6 h-6" />
-                1. ExpressVPN – The Streaming Veteran
+                1. NordVPN – The Streaming Veteran
               </h3>
               
               <div className="grid md:grid-cols-4 gap-4 mb-4">
@@ -178,7 +178,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
               </div>
               
               <p className="text-green-800 mb-3">
-                ExpressVPN has been at the top of the streaming VPN game for years, and in 2025 it still holds strong. It unlocked every single Netflix region we tested, including notoriously tough ones like Japan and South Korea.
+                NordVPN has been at the top of the streaming VPN game for years, and in 2025 it still holds strong. It unlocked every single Netflix region we tested, including notoriously tough ones like Japan and South Korea.
               </p>
               
               <p className="text-green-800 mb-3">
@@ -217,7 +217,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
               </div>
               
               <p className="text-blue-800 mb-3">
-                Surfshark came very close to ExpressVPN, unlocking 11 out of 12 libraries. The only consistent failure? Netflix South Korea, which displayed proxy errors in 4 out of 5 attempts.
+                Surfshark came very close to NordVPN, unlocking 11 out of 12 libraries. The only consistent failure? Netflix South Korea, which displayed proxy errors in 4 out of 5 attempts.
               </p>
               
               <p className="text-blue-800 mb-3">
@@ -229,11 +229,11 @@ const StreamingWars2025BlogPost: React.FC = () => {
               </p>
             </div>
 
-            {/* CyberGhost */}
+            {/* VPN.ac */}
             <div className="bg-gradient-to-r from-orange-50 to-yellow-50 p-6 rounded-xl border border-orange-200 mb-6">
               <h3 className="text-2xl font-bold text-orange-800 mb-4 flex items-center gap-2">
                 <XCircle className="w-6 h-6" />
-                3. CyberGhost – The Specialized Option
+                3. VPN.ac – The Specialized Option
               </h3>
               
               <div className="grid md:grid-cols-4 gap-4 mb-4">
@@ -256,11 +256,11 @@ const StreamingWars2025BlogPost: React.FC = () => {
               </div>
               
               <p className="text-orange-800 mb-3">
-                CyberGhost offers dedicated streaming servers, optimized for Netflix, Hulu, and BBC iPlayer. While this helps beginners (no guesswork), it fell behind in Netflix coverage, failing in Japan, South Korea, and Singapore.
+                VPN.ac offers dedicated streaming servers, optimized for Netflix, Hulu, and BBC iPlayer. While this helps beginners (no guesswork), it fell behind in Netflix coverage, failing in Japan, South Korea, and Singapore.
               </p>
               
               <p className="text-orange-800 mb-3">
-                That said, CyberGhost shines with its user-friendly apps and pre-labeled streaming servers, making it the easiest option for non-technical users.
+                That said, VPN.ac shines with its user-friendly apps and pre-labeled streaming servers, making it the easiest option for non-technical users.
               </p>
               
               <p className="text-orange-800 font-semibold">
@@ -286,7 +286,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr className="bg-green-50">
-                    <td className="border border-gray-200 px-4 py-3 font-semibold text-green-800">ExpressVPN</td>
+                    <td className="border border-gray-200 px-4 py-3 font-semibold text-green-800">NordVPN</td>
                     <td className="border border-gray-200 px-4 py-3 text-center text-green-700">12/12 ✅</td>
                     <td className="border border-gray-200 px-4 py-3 text-center text-green-700">260</td>
                     <td className="border border-gray-200 px-4 py-3 text-center text-green-700">98%</td>
@@ -300,7 +300,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
                     <td className="border border-gray-200 px-4 py-3 text-center text-blue-700">Unlimited</td>
                   </tr>
                   <tr className="bg-orange-50">
-                    <td className="border border-gray-200 px-4 py-3 font-semibold text-orange-800">CyberGhost</td>
+                    <td className="border border-gray-200 px-4 py-3 font-semibold text-orange-800">VPN.ac</td>
                     <td className="border border-gray-200 px-4 py-3 text-center text-orange-700">9/12 ❌</td>
                     <td className="border border-gray-200 px-4 py-3 text-center text-orange-700">210</td>
                     <td className="border border-gray-200 px-4 py-3 text-center text-orange-700">90%</td>
@@ -325,7 +325,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg border border-green-200">
                 <CheckCircle className="w-5 h-5 text-green-600" />
-                <span className="text-green-800"><strong>ExpressVPN:</strong> Unlocked all tested platforms.</span>
+                <span className="text-green-800"><strong>NordVPN:</strong> Unlocked all tested platforms.</span>
               </div>
               <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
                 <CheckCircle className="w-5 h-5 text-blue-600" />
@@ -333,12 +333,12 @@ const StreamingWars2025BlogPost: React.FC = () => {
               </div>
               <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border border-orange-200">
                 <XCircle className="w-5 h-5 text-orange-600" />
-                <span className="text-orange-800"><strong>CyberGhost:</strong> Unlocked most, but failed with Disney+ Singapore.</span>
+                <span className="text-orange-800"><strong>VPN.ac:</strong> Unlocked most, but failed with Disney+ Singapore.</span>
               </div>
             </div>
             
             <p className="text-lg text-gray-700 leading-relaxed mt-4">
-              Clearly, ExpressVPN remains the gold standard for all-around streaming access.
+              Clearly, NordVPN remains the gold standard for all-around streaming access.
             </p>
           </section>
 
@@ -352,7 +352,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
             
             <div className="space-y-4">
               <div className="p-4 bg-green-50 rounded-lg border border-green-200">
-                <h3 className="font-semibold text-green-800 mb-2">ExpressVPN:</h3>
+                <h3 className="font-semibold text-green-800 mb-2">NordVPN:</h3>
                 <p className="text-green-700">Blazing fast (260 Mbps average). Zero buffering in 4K on all devices.</p>
               </div>
               <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
@@ -360,7 +360,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
                 <p className="text-blue-700">Solid speed (240 Mbps). 4K smooth, occasional 1–2 second delays when switching regions.</p>
               </div>
               <div className="p-4 bg-orange-50 rounded-lg border border-orange-200">
-                <h3 className="font-semibold text-orange-800 mb-2">CyberGhost:</h3>
+                <h3 className="font-semibold text-orange-800 mb-2">VPN.ac:</h3>
                 <p className="text-orange-700">Slower (210 Mbps). 4K mostly fine, but noticeable pauses on weaker Wi-Fi.</p>
               </div>
             </div>
@@ -369,7 +369,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
               <p className="text-gray-700 mb-2"><strong>For context:</strong></p>
               <ul className="list-disc list-inside text-gray-700 space-y-1">
                 <li>4K streaming needs ~25 Mbps</li>
-                <li>All three VPNs easily exceed that, but ExpressVPN ensures the most consistent experience</li>
+                <li>All three VPNs easily exceed that, but NordVPN ensures the most consistent experience</li>
               </ul>
             </div>
           </section>
@@ -380,7 +380,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
             
             <div className="space-y-4">
               <div className="p-4 bg-green-50 rounded-lg border border-green-200">
-                <h3 className="font-semibold text-green-800 mb-2">ExpressVPN:</h3>
+                <h3 className="font-semibold text-green-800 mb-2">NordVPN:</h3>
                 <p className="text-green-700">Sleek, minimal, with one-click region switching. Works equally well on desktop, mobile, and smart TVs.</p>
               </div>
               <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
@@ -388,7 +388,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
                 <p className="text-blue-700">Feature-rich with extras like CleanWeb (ad-blocking). Unlimited devices = massive value.</p>
               </div>
               <div className="p-4 bg-orange-50 rounded-lg border border-orange-200">
-                <h3 className="font-semibold text-orange-800 mb-2">CyberGhost:</h3>
+                <h3 className="font-semibold text-orange-800 mb-2">VPN.ac:</h3>
                 <p className="text-orange-700">Best for beginners—servers labeled "Netflix US" or "BBC iPlayer" mean no trial-and-error.</p>
               </div>
             </div>
@@ -399,7 +399,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Final Verdict</h2>
             
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              In the 2025 streaming wars, <strong>ExpressVPN</strong> emerges as the clear winner for Netflix library access, unlocking all 12 regions tested with the fastest speeds and most reliable 4K performance.
+              In the 2025 streaming wars, <strong>NordVPN</strong> emerges as the clear winner for Netflix library access, unlocking all 12 regions tested with the fastest speeds and most reliable 4K performance.
             </p>
             
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
@@ -407,7 +407,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
             </p>
             
             <p className="text-lg text-gray-700 leading-relaxed">
-              <strong>CyberGhost</strong> remains a solid choice for casual streamers who prioritize ease of use over maximum library access.
+              <strong>VPN.ac</strong> remains a solid choice for casual streamers who prioritize ease of use over maximum library access.
             </p>
           </section>
         </div>

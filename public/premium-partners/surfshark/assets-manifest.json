@@ -1,0 +1,91 @@
+{
+  "partner": {
+    "name": "Surfshark",
+    "slug": "surfshark",
+    "website": "https://surfshark.com",
+    "description": "Award-winning VPN service with unlimited device connections and advanced security features",
+    "category": "premium-vpn",
+    "tier": "premium",
+    "rating": 4.8,
+    "features": [
+      "Unlimited simultaneous connections",
+      "CleanWeb ad blocker",
+      "MultiHop double VPN",
+      "Camouflage Mode",
+      "Kill Switch",
+      "No-logs policy",
+      "3200+ servers in 100+ countries"
+    ]
+  },
+  "assets": {
+    "infographics": [
+      {
+        "name": "surfshark-features.svg",
+        "title": "Surfshark Key Features",
+        "description": "Comprehensive overview of Surfshark's main features",
+        "dimensions": "800x600",
+        "format": "svg",
+        "category": "features"
+      },
+      {
+        "name": "surfshark-security.svg",
+        "title": "Surfshark Security Features",
+        "description": "Security and privacy features overview",
+        "dimensions": "800x600",
+        "format": "svg",
+        "category": "security"
+      },
+      {
+        "name": "surfshark-unlimited.svg",
+        "title": "Unlimited Connections",
+        "description": "Highlighting unlimited device connections feature",
+        "dimensions": "800x600",
+        "format": "svg",
+        "category": "features"
+      }
+    ],
+    "banners": [
+      {
+        "name": "surfshark-banner-728x90.svg",
+        "title": "Surfshark Leaderboard Banner",
+        "description": "Standard leaderboard banner for desktop",
+        "dimensions": "728x90",
+        "format": "svg",
+        "placement": "desktop"
+      },
+      {
+        "name": "surfshark-banner-mobile.svg",
+        "title": "Surfshark Mobile Banner",
+        "description": "Mobile-optimized banner",
+        "dimensions": "320x100",
+        "format": "svg",
+        "placement": "mobile"
+      }
+    ],
+    "logos": [
+      {
+        "name": "surfshark-logo.svg",
+        "title": "Surfshark Logo",
+        "description": "Official Surfshark logo",
+        "dimensions": "200x60",
+        "format": "svg",
+        "variants": ["light", "dark"]
+      }
+    ]
+  },
+  "affiliate": {
+    "program": "HasOffers",
+    "signup_url": "https://surfshark.hasoffers.com/signup/41263",
+    "commission_rate": "Variable",
+    "cookie_duration": "30 days",
+    "tracking_method": "HasOffers",
+    "payment_terms": "Net 30",
+    "minimum_payout": "$100"
+  },
+  "metadata": {
+    "created_at": "2025-01-22T20:41:00Z",
+    "updated_at": "2025-01-22T20:41:00Z",
+    "version": "1.0.0",
+    "status": "active"
+  }
+}

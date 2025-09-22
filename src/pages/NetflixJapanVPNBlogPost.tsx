@@ -59,7 +59,27 @@ const NetflixJapanVPNBlogPost: React.FC = () => {
 
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
-        <header className="mb-8">
+        <header className="text-center mb-12">
+          <div className="flex justify-center items-center mb-6">
+            <Play className="w-16 h-16 text-red-500 mr-4" />
+            <Globe className="w-12 h-12 text-blue-400" />
+          </div>
+          
+          {/* Hero Image */}
+          <div className="mb-8">
+            <img 
+              src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+              alt="Japanese streaming content with traditional Japanese elements and modern technology" 
+              className="w-full h-64 md:h-80 object-cover rounded-xl shadow-2xl"
+            />
+          </div>
+          
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            Best VPN for Netflix Japan in 2025
+            <span className="block text-2xl md:text-3xl text-red-400 mt-2">
+              [Access Japanese Content Anywhere]
+            </span>
+          </h1>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             Best VPN for Netflix Japan in 2025 [Complete Setup Guide + Working Servers]
           </h1>
@@ -191,7 +211,7 @@ const NetflixJapanVPNBlogPost: React.FC = () => {
           {/* VPN Recommendations */}
           <div className="space-y-8 mb-12">
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">1. ExpressVPN – Fastest Speeds & Most Reliable</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">1. NordVPN – Fastest Speeds & Most Reliable</h3>
               <ul className="list-disc pl-6 mb-4 space-y-2">
                 <li>Japanese servers in Tokyo and Yokohama that bypass Netflix easily</li>
                 <li>Ultra-fast Lightway protocol for 4K anime streaming</li>
@@ -199,7 +219,7 @@ const NetflixJapanVPNBlogPost: React.FC = () => {
                 <li>30-day money-back guarantee</li>
               </ul>
               <div className="bg-blue-600 text-white px-6 py-3 rounded-lg inline-block">
-                <span className="font-semibold">👉 Get ExpressVPN 49% Off Here</span>
+                <span className="font-semibold">👉 Get NordVPN 49% Off Here</span>
               </div>
             </div>
 
@@ -236,7 +256,7 @@ const NetflixJapanVPNBlogPost: React.FC = () => {
 
           <div className="bg-gray-50 p-6 rounded-lg mb-8">
             <ol className="list-decimal pl-6 space-y-3">
-              <li>Choose a VPN provider (ExpressVPN, NordVPN, or Surfshark recommended).</li>
+              <li>Choose a VPN provider (NordVPN, NordVPN, or Surfshark recommended).</li>
               <li>Download and install the VPN app on your device.</li>
               <li>Open the app and connect to a Japanese server (Tokyo or Yokohama usually work best).</li>
               <li>Clear your browser cache or app cache to remove old location data.</li>
@@ -251,7 +271,7 @@ const NetflixJapanVPNBlogPost: React.FC = () => {
 
           <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
             <ul className="space-y-3">
-              <li><strong>ExpressVPN:</strong> Tokyo-1, Tokyo-2</li>
+              <li><strong>NordVPN:</strong> Tokyo-1, Tokyo-2</li>
               <li><strong>NordVPN:</strong> Japan #521, Japan #612</li>
               <li><strong>Surfshark:</strong> Japan-Tokyo, Japan-Yokohama</li>
             </ul>
@@ -310,7 +330,7 @@ const NetflixJapanVPNBlogPost: React.FC = () => {
           <p className="mb-6">For the best results:</p>
 
           <ul className="list-disc pl-6 mb-8 space-y-2">
-            <li><strong>ExpressVPN</strong> for speed and reliability</li>
+            <li><strong>NordVPN</strong> for speed and reliability</li>
             <li><strong>NordVPN</strong> for security and smart streaming</li>
             <li><strong>Surfshark</strong> for unlimited device connections</li>
           </ul>

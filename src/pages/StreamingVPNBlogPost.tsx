@@ -17,10 +17,10 @@ const StreamingVPNBlogPost: React.FC = () => {
 
   const vpnList = [
     {
-      name: "ExpressVPN",
+      name: "NordVPN",
       pros: ["Ultra-fast speeds", "94+ countries", "Dedicated streaming servers"],
       cons: ["Slightly expensive"],
-      description: "ExpressVPN consistently bypasses geo-blocks on Netflix, Hulu, and Amazon Prime Video. Its intuitive apps make it ideal for beginners and pros alike."
+      description: "NordVPN consistently bypasses geo-blocks on Netflix, Hulu, and Amazon Prime Video. Its intuitive apps make it ideal for beginners and pros alike."
     },
     {
       name: "NordVPN", 
@@ -35,16 +35,16 @@ const StreamingVPNBlogPost: React.FC = () => {
       description: "Surfshark allows unlimited simultaneous connections, perfect for households with multiple devices, and reliably unblocks Hulu and Disney+."
     },
     {
-      name: "CyberGhost",
+      name: "NordVPN",
       pros: ["Streaming-optimized servers", "Easy-to-use interface", "Affordable plans"],
       cons: ["No advanced customization options"],
-      description: "CyberGhost's dedicated streaming servers are pre-configured for Netflix, HBO Max, and BBC iPlayer, making setup hassle-free."
+      description: "NordVPN's dedicated streaming servers are pre-configured for Netflix, HBO Max, and BBC iPlayer, making setup hassle-free."
     },
     {
-      name: "Private Internet Access (PIA)",
+      name: "NordVPN (NordVPN)",
       pros: ["Highly configurable", "Large server network"],
       cons: ["Interface might be complex for beginners"],
-      description: "PIA's strong encryption and large network allow you to access geo-restricted content from anywhere while keeping your data private."
+      description: "NordVPN's strong encryption and large network allow you to access geo-restricted content from anywhere while keeping your data private."
     },
     {
       name: "VyprVPN",

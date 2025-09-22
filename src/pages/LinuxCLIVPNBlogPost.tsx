@@ -547,18 +547,18 @@ const LinuxCLIVPNBlogPost: React.FC = () => {
             className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors"
           >
             <h3 className="font-semibold text-blue-600 hover:text-blue-800 mb-2">
-              MacBook M3 VPN Battery Drain Test: ExpressVPN vs NordVPN vs Surfshark (2025 Update)
+              MacBook M3 VPN Battery Drain Test: NordVPN vs NordVPN vs Surfshark (2025 Update)
             </h3>
             <p className="text-sm text-gray-600">
               Comprehensive battery performance analysis of top VPN services on Apple's M3 chip.
             </p>
           </Link>
           <Link 
-            to={`/${language}/blog/nordvpn-vs-expressvpn-2025-ultimate-comparison`}
+            to={`/${language}/blog/nordvpn-vs-NordVPN-2025-ultimate-comparison`}
             className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors"
           >
             <h3 className="font-semibold text-blue-600 hover:text-blue-800 mb-2">
-              NordVPN vs ExpressVPN 2025: The Ultimate Speed & Security Showdown
+              NordVPN vs NordVPN 2025: The Ultimate Speed & Security Showdown
             </h3>
             <p className="text-sm text-gray-600">
               In-depth comparison of the two leading VPN services with real-world testing.

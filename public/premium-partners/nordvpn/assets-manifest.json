@@ -1,0 +1,70 @@
+{
+  "partner": "nordvpn",
+  "name": "NordVPN",
+  "type": "premium",
+  "assets": {
+    "infographics": [
+      {
+        "name": "nordvpn-features.svg",
+        "title": "NordVPN Features",
+        "description": "Comprehensive feature overview infographic",
+        "size": "800x600",
+        "format": "svg",
+        "category": "features",
+        "path": "/premium-partners/nordvpn/infographics/nordvpn-features.svg"
+      },
+      {
+        "name": "nordvpn-security.svg",
+        "title": "NordVPN Security",
+        "description": "Security features and encryption details",
+        "size": "800x600",
+        "format": "svg",
+        "category": "security",
+        "path": "/premium-partners/nordvpn/infographics/nordvpn-security.svg"
+      },
+      {
+        "name": "nordvpn-speed.svg",
+        "title": "NordVPN Speed",
+        "description": "Speed and performance highlights",
+        "size": "800x600",
+        "format": "svg",
+        "category": "performance",
+        "path": "/premium-partners/nordvpn/infographics/nordvpn-speed.svg"
+      }
+    ],
+    "banners": [
+      {
+        "name": "nordvpn-banner-728x90.svg",
+        "title": "NordVPN Desktop Banner",
+        "description": "Standard desktop banner for promotions",
+        "size": "728x90",
+        "format": "svg",
+        "category": "desktop",
+        "path": "/premium-partners/nordvpn/banners/nordvpn-banner-728x90.svg"
+      },
+      {
+        "name": "nordvpn-banner-mobile.svg",
+        "title": "NordVPN Mobile Banner",
+        "description": "Mobile-optimized banner",
+        "size": "320x100",
+        "format": "svg",
+        "category": "mobile",
+        "path": "/premium-partners/nordvpn/banners/nordvpn-banner-mobile.svg"
+      }
+    ],
+    "logos": []
+  },
+  "affiliate": {
+    "commission": "68% discount + 3 months free",
+    "tracking": "nordvpn-premium-partner",
+    "baseUrl": "https://nordvpn.com",
+    "affiliateParams": "?utm_source=bestvpn&utm_medium=affiliate&utm_campaign=premium"
+  },
+  "metadata": {
+    "created": "2025-01-22",
+    "lastUpdated": "2025-01-22",
+    "version": "1.0.0",
+    "totalAssets": 5,
+    "categories": ["features", "security", "performance", "desktop", "mobile"]
+  }
+}

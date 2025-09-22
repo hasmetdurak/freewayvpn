@@ -236,7 +236,7 @@ const getFAQs = (language: string): FAQ[] => [
   {
     id: 37,
     question: "What is the best VPN for beginners?",
-    answer: "Beginner-friendly VPNs should have easy-to-use apps, reliable connections, good customer support, and clear privacy policies. ExpressVPN, NordVPN, and Surfshark are popular choices for beginners due to their user-friendly interfaces.",
+    answer: "Beginner-friendly VPNs should have easy-to-use apps, reliable connections, good customer support, and clear privacy policies. NordVPN, NordVPN, and Surfshark are popular choices for beginners due to their user-friendly interfaces.",
     category: "Recommendations"
   },
   {
@@ -748,14 +748,24 @@ const FAQPage: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="text-center mb-8">
-        <div className="flex justify-center mb-4">
-          <HelpCircle className="h-12 w-12 text-blue-600" />
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16 px-4 rounded-2xl mb-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <HelpCircle className="w-16 h-16 mx-auto mb-6 text-blue-200" />
+          <h1 className="text-4xl font-bold mb-4">
+            {t('faqTitle')}
+          </h1>
+          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+            {t('faqSubtitle')}
+          </p>
+          
+          {/* Hero Image */}
+          <img 
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            alt="VPN FAQ Help Center" 
+            className="w-full max-w-2xl mx-auto mt-8 rounded-xl shadow-2xl"
+          />
         </div>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('faqTitle')}</h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          {t('faqSubtitle')}
-        </p>
       </div>
 
       {/* Search and Category Filter */}

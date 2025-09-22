@@ -197,7 +197,7 @@ const VPNChinaBlogPost: React.FC = () => {
           <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
             <h3 className="font-semibold text-green-900 mb-2">Top VPNs for China in 2025</h3>
             <p className="text-green-800">
-              ExpressVPN, NordVPN, Surfshark, and VyprVPN all have a proven track record of 
+              NordVPN, VPN.ac, Surfshark, and VyprVPN all have a proven track record of 
               bypassing the Great Firewall with reliable performance and strong security features.
             </p>
           </div>

@@ -1,0 +1,36 @@
+<svg width="728" height="90" viewBox="0 0 728 90" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="surfsharksGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4AA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099CC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="728" height="90" fill="url(#surfsharksGradient)" rx="8"/>
+  
+  <!-- Surfshark Logo Area -->
+  <circle cx="60" cy="45" r="25" fill="white" opacity="0.9"/>
+  <path d="M45 35 Q60 25 75 35 Q75 45 60 55 Q45 45 45 35 Z" fill="#0099CC"/>
+  <text x="60" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">🦈</text>
+  
+  <!-- Main Text -->
+  <text x="100" y="35" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+    Surfshark VPN
+  </text>
+  <text x="100" y="55" fill="white" font-family="Arial, sans-serif" font-size="12">
+    Unlimited Devices • Advanced Security • 30-Day Money-Back
+  </text>
+  
+  <!-- CTA Button -->
+  <rect x="580" y="25" width="120" height="40" fill="white" rx="20"/>
+  <text x="640" y="48" text-anchor="middle" fill="#0099CC" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    Get Deal
+  </text>
+  
+  <!-- Discount Badge -->
+  <circle cx="680" cy="20" r="15" fill="#FF6B35"/>
+  <text x="680" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+    83%
+  </text>
+</svg>
