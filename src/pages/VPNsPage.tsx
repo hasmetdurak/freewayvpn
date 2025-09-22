@@ -1,10 +1,11 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, ArrowUpDown, Star, Shield, Zap, Users, DollarSign, ExternalLink, TrendingUp, Award } from 'lucide-react';
-import { allVPNs, VPN } from '../data/vpnData';
+import { Search, Filter, Star, Award, Shield, Zap, Users, Globe, ChevronDown, ChevronUp } from 'lucide-react';
+import { vpnData, VPN } from '../data/vpnData';
 import { useLanguage } from '../contexts/LanguageContext';
+import AffiliateButton from '../components/AffiliateButton';
 
 const VPNsPage: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'speed' | 'price' | 'servers' | 'rating'>('rating');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
@@ -12,10 +13,25 @@ const VPNsPage: React.FC = () => {
   const [filterPrice, setFilterPrice] = useState('all');
   const [hoveredVPN, setHoveredVPN] = useState<number | null>(null);
 
-  const countries = Array.from(new Set(allVPNs.map(vpn => vpn.country))).sort();
+  const countries = Array.from(new Set(vpnData.map(vpn => vpn.country))).sort();
+  
+  // Localize VPN data
+  const localizedVPNs = useMemo(() => {
+    return vpnData.map(vpn => {
+      const translation = vpn.translations?.[currentLanguage.code];
+      if (translation) {
+        return {
+          ...vpn,
+          description: translation.description,
+          securityFeatures: translation.securityFeatures
+        };
+      }
+      return vpn;
+    });
+  }, [currentLanguage.code]);
   
   const filteredAndSortedVPNs = useMemo(() => {
-    let filtered = allVPNs.filter(vpn => {
+    let filtered = localizedVPNs.filter(vpn => {
       const matchesSearch = vpn.name.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCountry = filterCountry === 'all' || vpn.country === filterCountry;
       const matchesPrice = filterPrice === 'all' || 
@@ -56,7 +72,7 @@ const VPNsPage: React.FC = () => {
     });
 
     return filtered;
-  }, [searchTerm, sortBy, sortOrder, filterCountry, filterPrice]);
+  }, [searchTerm, sortBy, sortOrder, filterCountry, filterPrice, localizedVPNs]);
 
   const handleSort = (field: typeof sortBy) => {
     if (sortBy === field) {

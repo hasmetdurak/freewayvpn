@@ -1,8 +1,9 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useMemo } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { getBlogPostBySlug } from '../data/blogData';
 import { Clock, User, Calendar, Tag } from 'lucide-react';
 import { generateAutoImage } from '../utils/autoImageUtils';
+import { useLanguage } from '../contexts/LanguageContext';
 
 // Lazy load all blog components
 const StreamingVPNBlogPost = lazy(() => import('../pages/StreamingVPNBlogPost'));
@@ -159,6 +160,7 @@ const GenericBlogPost: React.FC<{ post: any }> = ({ post }) => {
 
 const DynamicBlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { currentLanguage } = useLanguage();
   
   if (!slug) {
     return <Navigate to="/blog" replace />;
@@ -170,6 +172,21 @@ const DynamicBlogPost: React.FC = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  // Get localized post data
+  const localizedPost = useMemo(() => {
+    const translation = post.translations?.[currentLanguage.code];
+    if (translation) {
+      return {
+        ...post,
+        title: translation.title,
+        excerpt: translation.excerpt,
+        category: translation.category,
+        tags: translation.tags
+      };
+    }
+    return post;
+  }, [post, currentLanguage.code]);
+
   // If post has a specific component, render it
   if (post.component && componentMap[post.component]) {
     const Component = componentMap[post.component];
@@ -180,8 +197,8 @@ const DynamicBlogPost: React.FC = () => {
     );
   }
 
-  // Otherwise, render generic template
-  return <GenericBlogPost post={post} />;
+  // Otherwise, render generic template with localized data
+  return <GenericBlogPost post={localizedPost} />;
 };
 
 export default DynamicBlogPost;

@@ -10,7 +10,7 @@ const KoreanDramaVPNBlogPost: React.FC = () => {
     <>
       <Helmet>
         <title>Best VPN for Streaming Korean Dramas Abroad in 2025 [Complete Guide for K-Drama Fans]</title>
-        <meta name="description" content="Discover the best VPN for streaming Korean dramas abroad in 2025. Complete guide to watch K-dramas on Netflix Korea, Viki, TVING from anywhere with NordVPN, NordVPN, and Surfshark." />
+        <meta name="description" content="Discover the best VPN for streaming Korean dramas abroad in 2025. Complete guide to watch K-dramas on Netflix Korea, Viki, TVING from anywhere with NordVPN and Surfshark." />
         <meta name="keywords" content="VPN Korean dramas, stream K-dramas abroad, Netflix Korea VPN, Viki VPN, TVING VPN, Korean drama streaming 2025" />
         <link rel="canonical" href="https://bestvpn.digital/blog/korean-drama-vpn-2025" />
         <meta property="og:title" content="Best VPN for Streaming Korean Dramas Abroad in 2025 [Complete Guide for K-Drama Fans]" />

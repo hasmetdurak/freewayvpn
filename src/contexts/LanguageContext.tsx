@@ -5084,15 +5084,22 @@ const faqTranslations: FAQTranslations = {
 
 export const supportedLanguages: Language[] = [
   { code: 'en', name: 'English', nativeName: 'English', flag: '🇺🇸', dir: 'ltr' },
-  { code: 'tr', name: 'Turkish', nativeName: 'Türkçe', flag: '🇹🇷', dir: 'ltr' },
-  { code: 'pt', name: 'Portuguese', nativeName: 'Português', flag: '🇵🇹', dir: 'ltr' },
-  { code: 'vi', name: 'Vietnamese', nativeName: 'Tiếng Việt', flag: '🇻🇳', dir: 'ltr' },
-  { code: 'th', name: 'Thai', nativeName: 'ไทย', flag: '🇹🇭', dir: 'ltr' },
-  { code: 'id', name: 'Indonesian', nativeName: 'Bahasa Indonesia', flag: '🇮🇩', dir: 'ltr' },
   { code: 'es', name: 'Spanish', nativeName: 'Español', flag: '🇪🇸', dir: 'ltr' },
-  { code: 'pl', name: 'Polish', nativeName: 'Polski', flag: '🇵🇱', dir: 'ltr' },
-  { code: 'fa', name: 'Persian', nativeName: 'فارسی', flag: '🇮🇷', dir: 'rtl' },
+  { code: 'de', name: 'German', nativeName: 'Deutsch', flag: '🇩🇪', dir: 'ltr' },
+  { code: 'pt', name: 'Portuguese', nativeName: 'Português', flag: '🇵🇹', dir: 'ltr' },
+  { code: 'hi', name: 'Hindi', nativeName: 'हिन्दी', flag: '🇮🇳', dir: 'ltr' },
   { code: 'ar', name: 'Arabic', nativeName: 'العربية', flag: '🇸🇦', dir: 'rtl' },
+  { code: 'id', name: 'Indonesian', nativeName: 'Bahasa Indonesia', flag: '🇮🇩', dir: 'ltr' },
+  { code: 'ja', name: 'Japanese', nativeName: '日本語', flag: '🇯🇵', dir: 'ltr' },
+  { code: 'ko', name: 'Korean', nativeName: '한국어', flag: '🇰🇷', dir: 'ltr' },
+  { code: 'vi', name: 'Vietnamese', nativeName: 'Tiếng Việt', flag: '🇻🇳', dir: 'ltr' },
+  { code: 'tr', name: 'Turkish', nativeName: 'Türkçe', flag: '🇹🇷', dir: 'ltr' },
+  { code: 'nb', name: 'Norwegian', nativeName: 'Norsk', flag: '🇳🇴', dir: 'ltr' },
+  { code: 'sv', name: 'Swedish', nativeName: 'Svenska', flag: '🇸🇪', dir: 'ltr' },
+  { code: 'fi', name: 'Finnish', nativeName: 'Suomi', flag: '🇫🇮', dir: 'ltr' },
+  { code: 'pl', name: 'Polish', nativeName: 'Polski', flag: '🇵🇱', dir: 'ltr' },
+  { code: 'th', name: 'Thai', nativeName: 'ไทย', flag: '🇹🇭', dir: 'ltr' },
+  { code: 'fa', name: 'Persian', nativeName: 'فارسی', flag: '🇮🇷', dir: 'rtl' },
   { code: 'fil', name: 'Filipino', nativeName: 'Filipino', flag: '🇵🇭', dir: 'ltr' }
 ];
 
@@ -5601,6 +5608,336 @@ const translations: TranslationsObject = {
     cantFindAnswer: 'لا يمكنك العثور على الإجابة التي تبحث عنها؟ خبراء VPN لدينا هنا لمساعدتك في اختيار خدمة VPN المثالية لاحتياجاتك.',
     contactExperts: 'اتصل بخبرائنا'
   },
+  de: {
+    // Navigation
+    vpns: 'VPNs',
+    faq: 'FAQ',
+    blog: 'Blog',
+    contact: 'Kontakt',
+    
+    // Language selector
+    selectLanguage: 'Sprache auswählen',
+    moreLanguages: 'Weitere Sprachen folgen bald',
+    
+    // Hero section
+    heroTitle: 'Vergleichen Sie die besten VPN-Dienste 2025',
+    heroSubtitle: 'Finden Sie das perfekte VPN für Ihre Bedürfnisse mit unserem umfassenden Vergleich',
+    exclusiveDeals: 'Exklusive Angebote verfügbar - Sparen Sie bis zu 70% bei Premium-VPNs!',
+    
+    // VPN Page
+    compareVpns: 'Vergleichen Sie 100+ Top VPN-Dienste 2025',
+    findPerfectVpn: 'Finden Sie das perfekte VPN für Ihre Bedürfnisse. Vergleichen Sie Funktionen, Preise und Leistung der weltweit führenden VPN-Dienste.',
+    
+    // Blog Page
+    blogTitle: 'VPN News & Anleitungen',
+    blogSubtitle: 'Bleiben Sie auf dem Laufenden mit den neuesten VPN-Nachrichten, Sicherheitstipps und umfassenden Anleitungen.',
+    
+    // Contact Page
+    contactTitle: 'Kontakt',
+    contactSubtitle: 'Haben Sie Fragen? Wir helfen Ihnen dabei, die perfekte VPN-Lösung zu finden.',
+    
+    // Footer
+    quickLinks: 'Schnelle Links',
+    
+    // Common UI elements
+    getStarted: 'Loslegen',
+    learnMore: 'Mehr erfahren',
+    readMore: 'Weiterlesen',
+    viewAll: 'Alle anzeigen',
+    search: 'Suchen',
+    filter: 'Filter',
+    category: 'Kategorie',
+    allCategories: 'Alle Kategorien',
+    loading: 'Laden...',
+    error: 'Fehler',
+    tryAgain: 'Erneut versuchen',
+    
+    // FAQ Page
+    faqTitle: 'Häufig gestellte Fragen',
+    faqSubtitle: 'Erhalten Sie Antworten auf die häufigsten Fragen zu VPNs, Datenschutz, Sicherheit und der Auswahl des richtigen Dienstes für Ihre Bedürfnisse.',
+    searchFaqs: 'FAQs durchsuchen...',
+    noFaqsFound: 'Keine FAQs gefunden, die Ihren Kriterien entsprechen.',
+    adjustSearch: 'Versuchen Sie, Ihre Suche oder den Kategoriefilter anzupassen.',
+    showingResults: 'Zeige {count} von {total} häufig gestellten Fragen',
+    stillHaveQuestions: 'Haben Sie noch Fragen?',
+    cantFindAnswer: 'Können Sie die gesuchte Antwort nicht finden? Unsere VPN-Experten helfen Ihnen dabei, den perfekten VPN-Dienst für Ihre Bedürfnisse zu wählen.',
+    contactExperts: 'Kontaktieren Sie unsere Experten'
+  },
+  ja: {
+    // Navigation
+    vpns: 'VPN',
+    faq: 'よくある質問',
+    blog: 'ブログ',
+    contact: 'お問い合わせ',
+    
+    // Language selector
+    selectLanguage: '言語を選択',
+    moreLanguages: 'より多くの言語が近日公開',
+    
+    // Hero section
+    heroTitle: '2025年最高のVPNサービスを比較',
+    heroSubtitle: '包括的な比較であなたのニーズに最適なVPNを見つけましょう',
+    exclusiveDeals: '限定オファー利用可能 - プレミアムVPNで最大70%節約！',
+    
+    // VPN Page
+    compareVpns: '2025年トップVPNサービス100+を比較',
+    findPerfectVpn: 'あなたのニーズに最適なVPNを見つけましょう。世界をリードするVPNサービスの機能、価格、パフォーマンスを比較します。',
+    
+    // Blog Page
+    blogTitle: 'VPNニュース＆ガイド',
+    blogSubtitle: '最新のVPNニュース、セキュリティのヒント、包括的なガイドで最新情報を入手しましょう。',
+    
+    // Contact Page
+    contactTitle: 'お問い合わせ',
+    contactSubtitle: 'ご質問がありますか？完璧なVPNソリューションを見つけるお手伝いをします。',
+    
+    // Footer
+    quickLinks: 'クイックリンク',
+    
+    // Common UI elements
+    getStarted: '始める',
+    learnMore: '詳細を見る',
+    readMore: '続きを読む',
+    viewAll: 'すべて表示',
+    search: '検索',
+    filter: 'フィルター',
+    category: 'カテゴリー',
+    allCategories: 'すべてのカテゴリー',
+    loading: '読み込み中...',
+    error: 'エラー',
+    tryAgain: '再試行',
+    
+    // FAQ Page
+    faqTitle: 'よくある質問',
+    faqSubtitle: 'VPN、プライバシー、セキュリティ、そしてあなたのニーズに適したサービスの選び方について、最もよくある質問への回答を得ましょう。',
+    searchFaqs: 'FAQを検索...',
+    noFaqsFound: '条件に一致するFAQが見つかりませんでした。',
+    adjustSearch: '検索またはカテゴリーフィルターを調整してみてください。',
+    showingResults: '{total}件中{count}件のよくある質問を表示',
+    stillHaveQuestions: 'まだ質問がありますか？',
+    cantFindAnswer: 'お探しの回答が見つかりませんか？私たちのVPN専門家があなたのニーズに最適なVPNサービスを選ぶお手伝いをします。',
+    contactExperts: '専門家にお問い合わせ'
+  },
+  ko: {
+    // Navigation
+    vpns: 'VPN',
+    faq: '자주 묻는 질문',
+    blog: '블로그',
+    contact: '문의하기',
+    
+    // Language selector
+    selectLanguage: '언어 선택',
+    moreLanguages: '더 많은 언어가 곧 제공됩니다',
+    
+    // Hero section
+    heroTitle: '2025년 최고의 VPN 서비스 비교',
+    heroSubtitle: '포괄적인 비교를 통해 귀하의 필요에 완벽한 VPN을 찾으세요',
+    exclusiveDeals: '독점 할인 제공 - 프리미엄 VPN에서 최대 70% 절약!',
+    
+    // VPN Page
+    compareVpns: '2025년 상위 VPN 서비스 100+ 비교',
+    findPerfectVpn: '귀하의 필요에 완벽한 VPN을 찾으세요. 세계 최고의 VPN 서비스의 기능, 가격 및 성능을 비교하세요.',
+    
+    // Blog Page
+    blogTitle: 'VPN 뉴스 & 가이드',
+    blogSubtitle: '최신 VPN 뉴스, 보안 팁 및 포괄적인 가이드로 최신 정보를 받아보세요.',
+    
+    // Contact Page
+    contactTitle: '문의하기',
+    contactSubtitle: '질문이 있으신가요? 완벽한 VPN 솔루션을 찾는 데 도움을 드리겠습니다.',
+    
+    // Footer
+    quickLinks: '빠른 링크',
+    
+    // Common UI elements
+    getStarted: '시작하기',
+    learnMore: '더 알아보기',
+    readMore: '더 읽기',
+    viewAll: '모두 보기',
+    search: '검색',
+    filter: '필터',
+    category: '카테고리',
+    allCategories: '모든 카테고리',
+    loading: '로딩 중...',
+    error: '오류',
+    tryAgain: '다시 시도',
+    
+    // FAQ Page
+    faqTitle: '자주 묻는 질문',
+    faqSubtitle: 'VPN, 개인정보 보호, 보안 및 귀하의 필요에 적합한 서비스 선택에 대한 가장 일반적인 질문에 대한 답변을 얻으세요.',
+    searchFaqs: 'FAQ 검색...',
+    noFaqsFound: '조건에 맞는 FAQ를 찾을 수 없습니다.',
+    adjustSearch: '검색어나 카테고리 필터를 조정해 보세요.',
+    showingResults: '{total}개 중 {count}개의 자주 묻는 질문 표시',
+    stillHaveQuestions: '아직 질문이 있으신가요?',
+    cantFindAnswer: '찾고 있는 답변을 찾을 수 없나요? 저희 VPN 전문가들이 귀하의 필요에 완벽한 VPN 서비스를 선택하는 데 도움을 드리겠습니다.',
+    contactExperts: '전문가에게 문의하기'
+  },
+  nb: {
+    // Navigation
+    vpns: 'VPN-er',
+    faq: 'FAQ',
+    blog: 'Blogg',
+    contact: 'Kontakt oss',
+    
+    // Language selector
+    selectLanguage: 'Velg språk',
+    moreLanguages: 'Flere språk kommer snart',
+    
+    // Hero section
+    heroTitle: 'Sammenlign de beste VPN-tjenestene i 2025',
+    heroSubtitle: 'Finn den perfekte VPN-en for dine behov med vår omfattende sammenligning',
+    exclusiveDeals: 'Eksklusive tilbud tilgjengelig - Spar opptil 70% på premium VPN-er!',
+    
+    // VPN Page
+    compareVpns: 'Sammenlign 100+ topp VPN-tjenester i 2025',
+    findPerfectVpn: 'Finn den perfekte VPN-en for dine behov. Sammenlign funksjoner, priser og ytelse til verdens ledende VPN-tjenester.',
+    
+    // Blog Page
+    blogTitle: 'VPN-nyheter og guider',
+    blogSubtitle: 'Hold deg oppdatert med de siste VPN-nyhetene, sikkerhetstips og omfattende guider.',
+    
+    // Contact Page
+    contactTitle: 'Kontakt oss',
+    contactSubtitle: 'Har du spørsmål? Vi er her for å hjelpe deg med å finne den perfekte VPN-løsningen.',
+    
+    // Footer
+    quickLinks: 'Hurtiglenker',
+    
+    // Common UI elements
+    getStarted: 'Kom i gang',
+    learnMore: 'Lær mer',
+    readMore: 'Les mer',
+    viewAll: 'Se alle',
+    search: 'Søk',
+    filter: 'Filter',
+    category: 'Kategori',
+    allCategories: 'Alle kategorier',
+    loading: 'Laster...',
+    error: 'Feil',
+    tryAgain: 'Prøv igjen',
+    
+    // FAQ Page
+    faqTitle: 'Ofte stilte spørsmål',
+    faqSubtitle: 'Få svar på de vanligste spørsmålene om VPN-er, personvern, sikkerhet og valg av riktig tjeneste for dine behov.',
+    searchFaqs: 'Søk i FAQ...',
+    noFaqsFound: 'Ingen FAQ-er funnet som matcher dine kriterier.',
+    adjustSearch: 'Prøv å justere søket eller kategorifilteret.',
+    showingResults: 'Viser {count} av {total} ofte stilte spørsmål',
+    stillHaveQuestions: 'Har du fortsatt spørsmål?',
+    cantFindAnswer: 'Kan ikke finne svaret du leter etter? Våre VPN-eksperter er her for å hjelpe deg med å velge den perfekte VPN-tjenesten for dine behov.',
+    contactExperts: 'Kontakt våre eksperter'
+  },
+  sv: {
+    // Navigation
+    vpns: 'VPN:er',
+    faq: 'FAQ',
+    blog: 'Blogg',
+    contact: 'Kontakta oss',
+    
+    // Language selector
+    selectLanguage: 'Välj språk',
+    moreLanguages: 'Fler språk kommer snart',
+    
+    // Hero section
+    heroTitle: 'Jämför de bästa VPN-tjänsterna 2025',
+    heroSubtitle: 'Hitta den perfekta VPN:en för dina behov med vår omfattande jämförelse',
+    exclusiveDeals: 'Exklusiva erbjudanden tillgängliga - Spara upp till 70% på premium VPN:er!',
+    
+    // VPN Page
+    compareVpns: 'Jämför 100+ topp VPN-tjänster 2025',
+    findPerfectVpn: 'Hitta den perfekta VPN:en för dina behov. Jämför funktioner, priser och prestanda hos världens ledande VPN-tjänster.',
+    
+    // Blog Page
+    blogTitle: 'VPN-nyheter och guider',
+    blogSubtitle: 'Håll dig uppdaterad med de senaste VPN-nyheterna, säkerhetstips och omfattande guider.',
+    
+    // Contact Page
+    contactTitle: 'Kontakta oss',
+    contactSubtitle: 'Har du frågor? Vi är här för att hjälpa dig hitta den perfekta VPN-lösningen.',
+    
+    // Footer
+    quickLinks: 'Snabblänkar',
+    
+    // Common UI elements
+    getStarted: 'Kom igång',
+    learnMore: 'Läs mer',
+    readMore: 'Läs mer',
+    viewAll: 'Visa alla',
+    search: 'Sök',
+    filter: 'Filter',
+    category: 'Kategori',
+    allCategories: 'Alla kategorier',
+    loading: 'Laddar...',
+    error: 'Fel',
+    tryAgain: 'Försök igen',
+    
+    // FAQ Page
+    faqTitle: 'Vanliga frågor',
+    faqSubtitle: 'Få svar på de vanligaste frågorna om VPN:er, integritet, säkerhet och att välja rätt tjänst för dina behov.',
+    searchFaqs: 'Sök FAQ...',
+    noFaqsFound: 'Inga FAQ:er hittades som matchar dina kriterier.',
+    adjustSearch: 'Försök justera din sökning eller kategorifilter.',
+    showingResults: 'Visar {count} av {total} vanliga frågor',
+    stillHaveQuestions: 'Har du fortfarande frågor?',
+    cantFindAnswer: 'Kan inte hitta svaret du letar efter? Våra VPN-experter är här för att hjälpa dig välja den perfekta VPN-tjänsten för dina behov.',
+    contactExperts: 'Kontakta våra experter'
+  },
+  fi: {
+    // Navigation
+    vpns: 'VPN:t',
+    faq: 'UKK',
+    blog: 'Blogi',
+    contact: 'Ota yhteyttä',
+    
+    // Language selector
+    selectLanguage: 'Valitse kieli',
+    moreLanguages: 'Lisää kieliä tulossa pian',
+    
+    // Hero section
+    heroTitle: 'Vertaile parhaita VPN-palveluita vuonna 2025',
+    heroSubtitle: 'Löydä täydellinen VPN tarpeisiisi kattavan vertailumme avulla',
+    exclusiveDeals: 'Eksklusiivisia tarjouksia saatavilla - Säästä jopa 70% premium VPN:istä!',
+    
+    // VPN Page
+    compareVpns: 'Vertaile 100+ huippuluokan VPN-palvelua vuonna 2025',
+    findPerfectVpn: 'Löydä täydellinen VPN tarpeisiisi. Vertaile maailman johtavien VPN-palveluiden ominaisuuksia, hintoja ja suorituskykyä.',
+    
+    // Blog Page
+    blogTitle: 'VPN-uutiset ja oppaat',
+    blogSubtitle: 'Pysy ajan tasalla uusimmista VPN-uutisista, turvallisuusvinkeistä ja kattavista oppaista.',
+    
+    // Contact Page
+    contactTitle: 'Ota yhteyttä',
+    contactSubtitle: 'Onko sinulla kysymyksiä? Olemme täällä auttamassa sinua löytämään täydellisen VPN-ratkaisun.',
+    
+    // Footer
+    quickLinks: 'Pikalinkit',
+    
+    // Common UI elements
+    getStarted: 'Aloita',
+    learnMore: 'Lue lisää',
+    readMore: 'Lue lisää',
+    viewAll: 'Näytä kaikki',
+    search: 'Haku',
+    filter: 'Suodatin',
+    category: 'Kategoria',
+    allCategories: 'Kaikki kategoriat',
+    loading: 'Ladataan...',
+    error: 'Virhe',
+    tryAgain: 'Yritä uudelleen',
+    
+    // FAQ Page
+    faqTitle: 'Usein kysytyt kysymykset',
+    faqSubtitle: 'Saa vastauksia yleisimpiin kysymyksiin VPN:istä, yksityisyydestä, turvallisuudesta ja oikean palvelun valinnasta tarpeisiisi.',
+    searchFaqs: 'Hae UKK:sta...',
+    noFaqsFound: 'Kriteereitäsi vastaavia UKK:ita ei löytynyt.',
+    adjustSearch: 'Kokeile säätää hakuasi tai kategorisuodatinta.',
+    showingResults: 'Näytetään {count} / {total} usein kysyttyä kysymystä',
+    stillHaveQuestions: 'Onko sinulla vielä kysymyksiä?',
+    cantFindAnswer: 'Etkö löydä etsimääsi vastausta? VPN-asiantuntijamme ovat täällä auttamassa sinua valitsemaan täydellisen VPN-palvelun tarpeisiisi.',
+    contactExperts: 'Ota yhteyttä asiantuntijoihimme'
+  },
   tr: {
     // Navigation
     vpns: 'VPN\'ler',
@@ -5719,13 +6056,23 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children, initialLanguage }) => {
-  // Initialize language from prop, localStorage, or default to English
+  // Initialize language from prop, URL, localStorage, or default to English
   const getInitialLanguage = (): Language => {
+    // First priority: initialLanguage prop (from URL)
     if (initialLanguage) {
       const langFromParam = supportedLanguages.find(lang => lang.code === initialLanguage);
       if (langFromParam) return langFromParam;
     }
     
+    // Second priority: URL path
+    const urlPath = window.location.pathname;
+    const langFromUrl = urlPath.split('/')[1];
+    if (langFromUrl) {
+      const langFromPath = supportedLanguages.find(lang => lang.code === langFromUrl);
+      if (langFromPath) return langFromPath;
+    }
+    
+    // Third priority: localStorage
     const savedLanguage = localStorage.getItem('preferred-language');
     if (savedLanguage) {
       const langFromStorage = supportedLanguages.find(lang => lang.code === savedLanguage);
@@ -5738,24 +6085,20 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children, in
   const [currentLanguage, setCurrentLanguage] = useState<Language>(getInitialLanguage);
 
   useEffect(() => {
-    // Get language from localStorage or browser preference
-    const savedLanguage = localStorage.getItem('preferred-language');
-    if (savedLanguage) {
-      const language = supportedLanguages.find(lang => lang.code === savedLanguage);
-      if (language) {
-        setCurrentLanguage(language);
-        updateDocumentLanguage(language);
-      }
-    } else {
-      // Detect browser language
-      const browserLang = navigator.language.split('-')[0];
-      const language = supportedLanguages.find(lang => lang.code === browserLang);
-      if (language) {
-        setCurrentLanguage(language);
-        updateDocumentLanguage(language);
-      }
-    }
-  }, []);
+    // Listen for language change events
+    const handleLanguageChange = (event: CustomEvent) => {
+      setCurrentLanguage(event.detail);
+    };
+
+    window.addEventListener('languageChanged', handleLanguageChange as EventListener);
+    
+    // Update document language on mount
+    updateDocumentLanguage(currentLanguage);
+
+    return () => {
+      window.removeEventListener('languageChanged', handleLanguageChange as EventListener);
+    };
+  }, [currentLanguage]);
 
   const updateDocumentLanguage = (language: Language) => {
     document.documentElement.lang = language.code;
@@ -5789,9 +6132,15 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children, in
     updateDocumentLanguage(language);
     
     // Navigate to subdirectory URL
-    const currentPath = window.location.pathname.replace(/^\/[a-z]{2,3}/, '') || '/';
-    const newUrl = `/${language.code}${currentPath}`;
-    window.location.href = newUrl;
+    const currentPath = window.location.pathname;
+    const pathWithoutLang = currentPath.replace(/^\/[a-z]{2,3}/, '') || '/';
+    const newUrl = `/${language.code}${pathWithoutLang}`;
+    
+    // Use history API to avoid page reload
+    window.history.pushState({}, '', newUrl);
+    
+    // Trigger a custom event to notify components of language change
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: language }));
   };
 
   const t = (key: string): string => {

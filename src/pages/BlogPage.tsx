@@ -5,13 +5,30 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { blogPosts, categories, allTags, type BlogPost } from '../data/blogData';
 
 const BlogPage: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const { lang } = useParams<{ lang: string }>();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedTag, setSelectedTag] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredPosts = blogPosts.filter(post => {
+  // Get localized blog posts
+  const localizedPosts = useMemo(() => {
+    return blogPosts.map(post => {
+      const translation = post.translations?.[currentLanguage.code];
+      if (translation) {
+        return {
+          ...post,
+          title: translation.title,
+          excerpt: translation.excerpt,
+          category: translation.category,
+          tags: translation.tags
+        };
+      }
+      return post;
+    });
+  }, [currentLanguage.code]);
+
+  const filteredPosts = localizedPosts.filter(post => {
     const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
     const matchesTag = selectedTag === 'All' || post.tags.includes(selectedTag);
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

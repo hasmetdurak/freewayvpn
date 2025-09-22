@@ -11,17 +11,17 @@ const DemonSlayerNetflixVPNBlogPost: React.FC = () => {
     <>
       <Helmet>
         <title>Netflix Trick: How to Watch Demon Slayer Season 4 in the US with VPN (2025 Guide)</title>
-        <meta name="description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with NordVPN, NordVPN, and Surfshark setup instructions." />
+        <meta name="description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with NordVPN and Surfshark setup instructions." />
         <meta name="keywords" content="Demon Slayer Season 4, Netflix Japan VPN, watch anime US, NordVPN Netflix, NordVPN streaming, Surfshark Japan" />
         <link rel="canonical" href="https://bestvpn.digital/blog/demon-slayer-netflix-vpn-2025" />
         <meta property="og:title" content="Netflix Trick: How to Watch Demon Slayer Season 4 in the US with VPN (2025 Guide)" />
-        <meta property="og:description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with NordVPN, NordVPN, and Surfshark setup instructions." />
+        <meta property="og:description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with NordVPN and Surfshark setup instructions." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://bestvpn.digital/blog/demon-slayer-netflix-vpn-2025" />
         <meta property="og:image" content="https://images.pexels.com/photos/1040160/pexels-photo-1040160.jpeg?auto=compress&cs=tinysrgb&w=1200" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Netflix Trick: How to Watch Demon Slayer Season 4 in the US with VPN (2025 Guide)" />
-        <meta name="twitter:description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with NordVPN, NordVPN, and Surfshark setup instructions." />
+        <meta name="twitter:description" content="Watch Demon Slayer Season 4 in the US using VPN for Netflix Japan. Complete 2025 guide with NordVPN and Surfshark setup instructions." />
         <meta name="twitter:image" content="https://images.pexels.com/photos/1040160/pexels-photo-1040160.jpeg?auto=compress&cs=tinysrgb&w=1200" />
       </Helmet>
 

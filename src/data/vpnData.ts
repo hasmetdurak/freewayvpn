@@ -12,6 +12,12 @@ export interface VPN {
   country: string;
   affiliateLink: string;
   rating: number;
+  translations?: {
+    [languageCode: string]: {
+      description: string;
+      securityFeatures: string[];
+    };
+  };
 }
 
 export const vpnData: VPN[] = [
@@ -29,7 +35,17 @@ export const vpnData: VPN[] = [
     isTopPick: true,
     country: "Panama",
     affiliateLink: "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902",
-    rating: 9.9
+    rating: 9.9,
+    translations: {
+      tr: {
+        description: "🏆 #1 Premium VPN - Çift VPN şifreleme ve en büyük sunucu ağı ile gelişmiş güvenlik",
+        securityFeatures: ["AES-256", "Kill Switch", "Çift VPN", "Onion over VPN"]
+      },
+      hi: {
+        description: "🏆 #1 प्रीमियम VPN - डबल VPN एन्क्रिप्शन और सबसे बड़े सर्वर नेटवर्क के साथ उन्नत सुरक्षा",
+        securityFeatures: ["AES-256", "Kill Switch", "डबल VPN", "Onion over VPN"]
+      }
+    }
   },
   {
     id: 2,
@@ -44,7 +60,42 @@ export const vpnData: VPN[] = [
     isTopPick: true,
     country: "British Virgin Islands",
     affiliateLink: "https://my.surfshark.com/home",
-    rating: 9.8
+    rating: 9.8,
+    translations: {
+      tr: {
+        description: "🥈 #2 Premium VPN - Bütçe dostu fiyatla sınırsız cihaz ve gelişmiş güvenlik özellikleri",
+        securityFeatures: ["AES-256", "Kill Switch", "CleanWeb", "MultiHop"]
+      },
+      hi: {
+        description: "🥈 #2 प्रीमियम VPN - बजट-फ्रेंडली कीमत पर असीमित डिवाइस और उन्नत सुरक्षा सुविधाएं",
+        securityFeatures: ["AES-256", "Kill Switch", "CleanWeb", "MultiHop"]
+      }
+    }
+  },
+  {
+    id: 3,
+    name: "VPN.ac",
+    logo: "/vpn-logos/vpn-ac.png",
+    description: "🥉 #3 Premium VPN - Professional-grade security with advanced privacy features and excellent performance",
+    serverCount: 2800,
+    speed: 105,
+    deviceSupport: 6,
+    securityFeatures: ["AES-256", "Kill Switch", "Perfect Forward Secrecy", "Multi-hop"],
+    price: 3.75,
+    isTopPick: true,
+    country: "Romania",
+    affiliateLink: "https://vpn.ac/aff.php?aff=1337",
+    rating: 9.7,
+    translations: {
+      tr: {
+        description: "🥉 #3 Premium VPN - Gelişmiş gizlilik özellikleri ve mükemmel performans ile profesyonel düzeyde güvenlik",
+        securityFeatures: ["AES-256", "Kill Switch", "Perfect Forward Secrecy", "Multi-hop"]
+      },
+      hi: {
+        description: "🥉 #3 प्रीमियम VPN - उन्नत गोपनीयता सुविधाओं और उत्कृष्ट प्रदर्शन के साथ पेशेवर-ग्रेड सुरक्षा",
+        securityFeatures: ["AES-256", "Kill Switch", "Perfect Forward Secrecy", "Multi-hop"]
+      }
+    }
   },
   // Remaining 95 VPNs
   {
@@ -60,7 +111,17 @@ export const vpnData: VPN[] = [
     isTopPick: false,
     country: "United States",
     affiliateLink: "https://account.ipvanish.com/login",
-    rating: 8.8
+    rating: 8.8,
+    translations: {
+      tr: {
+        description: "Sınırsız eşzamanlı bağlantı ile kendi sunucu ağına sahip VPN",
+        securityFeatures: ["AES-256", "Kill Switch", "SugarSync", "SOCKS5 Proxy"]
+      },
+      hi: {
+        description: "असीमित समानांतर कनेक्शन के साथ स्व-स्वामित्व सर्वर नेटवर्क",
+        securityFeatures: ["AES-256", "Kill Switch", "SugarSync", "SOCKS5 Proxy"]
+      }
+    }
   },
   {
     id: 7,
@@ -75,7 +136,17 @@ export const vpnData: VPN[] = [
     isTopPick: false,
     country: "Switzerland",
     affiliateLink: "https://account.protonvpn.com/login",
-    rating: 8.9
+    rating: 8.9,
+    translations: {
+      tr: {
+        description: "Güçlü gizlilik odaklı ve ücretsiz katman mevcut İsviçre merkezli VPN",
+        securityFeatures: ["AES-256", "Kill Switch", "Secure Core", "Tor over VPN"]
+      },
+      hi: {
+        description: "मजबूत गोपनीयता फोकस और मुफ्त टियर उपलब्ध स्विस-आधारित VPN",
+        securityFeatures: ["AES-256", "Kill Switch", "Secure Core", "Tor over VPN"]
+      }
+    }
   },
   {
     id: 8,
@@ -90,7 +161,17 @@ export const vpnData: VPN[] = [
     isTopPick: false,
     country: "Sweden",
     affiliateLink: "https://privatevpn.com/account/login",
-    rating: 8.5
+    rating: 8.5,
+    translations: {
+      tr: {
+        description: "Güçlü şifreleme ve streaming desteği ile küçük ama güvenilir VPN hizmeti",
+        securityFeatures: ["AES-256", "Kill Switch", "IPv6 Sızıntı Koruması", "Port Yönlendirme"]
+      },
+      hi: {
+        description: "मजबूत एन्क्रिप्शन और स्ट्रीमिंग समर्थन के साथ छोटी लेकिन विश्वसनीय VPN सेवा",
+        securityFeatures: ["AES-256", "Kill Switch", "IPv6 लीक प्रोटेक्शन", "पोर्ट फॉरवर्डिंग"]
+      }
+    }
   },
   {
     id: 9,
@@ -289,23 +370,21 @@ export const vpnData: VPN[] = [
   },
   {
     id: 22,
-  {
-    id: 23,
-    name: "VPN.ac",
-    logo: "/vpn-logos/vpn-ac.png",
-    description: "🥉 #3 Premium VPN - Professional-grade security with advanced encryption and no-logs policy",
-    serverCount: 120,
-    speed: 85,
-    deviceSupport: 12,
-    securityFeatures: ["AES-256", "Kill Switch", "Perfect Forward Secrecy", "XOR Obfuscation", "WireGuard", "ECC Encryption"],
-    price: 3.75,
-    isTopPick: true,
-    country: "Romania",
-    affiliateLink: "https://vpn.ac/aff.php?aff=3464",
-    rating: 9.5
+    name: "UltraVPN",
+    logo: "/vpn-logos/ultravpn.png",
+    description: "High-speed VPN with unlimited bandwidth and strong encryption",
+    serverCount: 100,
+    speed: 78,
+    deviceSupport: 5,
+    securityFeatures: ["AES-256", "Kill Switch", "DNS Leak Protection"],
+    price: 2.99,
+    isTopPick: false,
+    country: "United States",
+    affiliateLink: "https://ultravpn.com/affiliate",
+    rating: 7.8
   },
   {
-    id: 24,
+    id: 23,
     name: "SaferVPN",
     logo: "/vpn-logos/safervpn.png",
     description: "Israeli VPN with 24/7 support and streaming capabilities",
@@ -320,7 +399,7 @@ export const vpnData: VPN[] = [
     rating: 7.9
   },
   {
-    id: 25,
+    id: 24,
     name: "VPN Unlimited",
     logo: "/vpn-logos/vpn-unlimited.png",
     description: "KeepSolid's VPN service with lifetime plans and KeepSolid Wise protocol",
