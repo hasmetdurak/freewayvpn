@@ -42,7 +42,7 @@ export const premiumPartners: AffiliatePartner[] = [
     id: 'surfshark',
     name: 'Surfshark',
     displayName: 'Surfshark',
-    affiliateLink: 'https://surfshark.com/?aid=bestvpndigital',
+    affiliateLink: 'https://surfshark.hasoffers.com/signup/41263',
     commission: 'Premium Commission',
     tier: 'premium',
     isActive: true,
@@ -54,7 +54,7 @@ export const premiumPartners: AffiliatePartner[] = [
       'CleanWeb ad blocker included'
     ],
     trackingParams: {
-      aid: 'bestvpndigital'
+      signup: '41263'
     }
   },
   {

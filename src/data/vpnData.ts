@@ -59,7 +59,7 @@ export const vpnData: VPN[] = [
     price: 2.30,
     isTopPick: true,
     country: "British Virgin Islands",
-    affiliateLink: "https://surfshark.com/?aid=bestvpndigital",
+    affiliateLink: "https://surfshark.hasoffers.com/signup/41263",
     rating: 9.7,
     translations: {
       tr: {
@@ -84,7 +84,7 @@ export const vpnData: VPN[] = [
     price: 3.75,
     isTopPick: true,
     country: "Romania",
-    affiliateLink: "https://vpn.ac/aff.php?aff=1337",
+    affiliateLink: "https://vpn.ac/aff.php?aff=3464",
     rating: 9.7,
     translations: {
       tr: {

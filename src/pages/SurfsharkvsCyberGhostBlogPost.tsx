@@ -183,7 +183,7 @@ const SurfsharkNordVPNComparisonBlogPost: React.FC = () => {
                 </div>
               </div>
               <a 
-                href="https://my.surfshark.com/home"
+                href="https://surfshark.hasoffers.com/signup/41263"
                 className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-200 inline-block"
                 target="_blank"
                 rel="noopener noreferrer"

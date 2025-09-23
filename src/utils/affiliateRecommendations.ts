@@ -40,7 +40,7 @@ export const affiliateRecommendationsData: AffiliateRecommendationData[] = [
     descriptionKey: "affiliates.surfshark.description1",
     featuresKeys: ["affiliates.surfshark.feature1", "affiliates.surfshark.feature2", "affiliates.surfshark.feature3", "affiliates.surfshark.feature4"],
     ctaTextKey: "affiliates.surfshark.cta1",
-    affiliateUrl: "https://surfshark.com/order",
+    affiliateUrl: "https://surfshark.hasoffers.com/signup/41263",
     discountKey: "affiliates.surfshark.discount1",
     rating: 4.7
   },
@@ -60,7 +60,7 @@ export const affiliateRecommendationsData: AffiliateRecommendationData[] = [
     descriptionKey: "affiliates.surfshark.description2",
     featuresKeys: ["affiliates.surfshark.feature5", "affiliates.surfshark.feature6", "affiliates.surfshark.feature7", "affiliates.surfshark.feature8"],
     ctaTextKey: "affiliates.surfshark.cta2",
-    affiliateUrl: "https://surfshark.com/order",
+    affiliateUrl: "https://surfshark.hasoffers.com/signup/41263",
     discountKey: "affiliates.surfshark.discount1",
     rating: 4.7
   },

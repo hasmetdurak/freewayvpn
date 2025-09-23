@@ -110,19 +110,15 @@ export const faqTranslations: AllTranslations = {
     
     'faq.question.13': 'Are free VPNs safe?',
     'faq.answer.13': 'Free VPNs often have limitations and may compromise your privacy. Premium VPNs offer better security, speed, and features.',
-    'faq.category.privacy': 'Privacy',
     
     'faq.question.14': 'What is a dedicated IP?',
     'faq.answer.14': 'A dedicated IP is an IP address assigned only to you, reducing the chance of being blocked by websites and services.',
-    'faq.category.features': 'Features',
     
     'faq.question.15': 'Can I use a VPN for gaming?',
     'faq.answer.15': 'Yes, VPNs can reduce DDoS attacks, help you access region-locked games, and provide better ping to gaming servers.',
-    'faq.category.gaming': 'Gaming',
     
     'faq.question.16': 'What is the best VPN protocol?',
     'faq.answer.16': 'WireGuard is the fastest and most secure modern protocol. OpenVPN is the most established, while IKEv2 is best for mobile devices.',
-    'faq.category.technical': 'Technical',
     
     'faq.question.17': 'Can I use a VPN in China?',
     'faq.answer.17': 'Only a few VPNs work reliably in China due to the Great Firewall. Look for VPNs with obfuscated servers and stealth technology.',
@@ -134,11 +130,9 @@ export const faqTranslations: AllTranslations = {
     
     'faq.question.19': 'Do VPNs work on public Wi-Fi?',
     'faq.answer.19': 'Yes, using a VPN on public Wi-Fi is highly recommended. It encrypts your connection and protects your data from hackers.',
-    'faq.category.security': 'Security',
     
     'faq.question.20': 'What is obfuscated servers?',
     'faq.answer.20': 'Obfuscated servers disguise VPN traffic as regular internet traffic, helping bypass VPN blocks in restrictive countries.',
-    'faq.category.features': 'Features',
     
     'faq.question.21': 'How do I test if my VPN is working?',
     'faq.answer.21': 'Visit ipleak.net or whatismyipaddress.com before and after connecting. If your IP and location change, your VPN is working.',
@@ -146,11 +140,9 @@ export const faqTranslations: AllTranslations = {
     
     'faq.question.22': 'Can I use a VPN for online banking?',
     'faq.answer.22': 'Yes, VPNs can enhance banking security by encrypting your connection. However, some banks may block VPN traffic.',
-    'faq.category.usage': 'Usage',
     
     'faq.question.23': 'What is a VPN server?',
     'faq.answer.23': 'A VPN server is a computer that acts as an intermediary between your device and the internet, routing your traffic through an encrypted tunnel.',
-    'faq.category.technical': 'Technical',
     
     'faq.question.24': 'Can I use multiple VPNs at once?',
     'faq.answer.24': 'While technically possible, using multiple VPNs simultaneously significantly reduces speed and is usually unnecessary.',
@@ -158,27 +150,21 @@ export const faqTranslations: AllTranslations = {
     
     'faq.question.25': 'What is a VPN tunnel?',
     'faq.answer.25': 'A VPN tunnel is an encrypted connection between your device and the VPN server that protects your data from being intercepted.',
-    'faq.category.technical': 'Technical',
     
     'faq.question.26': 'Can I use a VPN on my router?',
     'faq.answer.26': 'Yes, you can install a VPN on your router to protect all devices on your network with a single connection.',
-    'faq.category.devices': 'Devices',
     
     'faq.question.27': 'What is VPN chaining?',
     'faq.answer.27': 'VPN chaining routes your traffic through multiple VPN servers for extra security, though it significantly reduces speed.',
-    'faq.category.advanced': 'Advanced',
     
     'faq.question.28': 'Can I use a VPN for work?',
     'faq.answer.28': 'Yes, VPNs can secure remote work connections and access company resources. Check with your employer\'s IT policy first.',
-    'faq.category.usage': 'Usage',
     
     'faq.question.29': 'What is the best VPN for beginners?',
     'faq.answer.29': 'NordVPN and Surfshark are excellent for beginners with easy-to-use apps, reliable connections, and good customer support.',
-    'faq.category.gaming': 'Gaming',
     
     'faq.question.30': 'Do VPNs protect against malware?',
-    'faq.answer.30': 'VPNs primarily protect data in transit through encryption, not against malware. You still need separate antivirus protection.',
-    'faq.category.security': 'Security'
+    'faq.answer.30': 'VPNs primarily protect data in transit through encryption, not against malware. You still need separate antivirus protection.'
   },
   tr: {
     // FAQ Page UI
@@ -281,19 +267,15 @@ export const faqTranslations: AllTranslations = {
     
     'faq.question.13': 'Ücretsiz VPN\'ler güvenli mi?',
     'faq.answer.13': 'Ücretsiz VPN\'ler genellikle sınırlamalara sahiptir ve gizliliğinizi tehlikeye atabilir. Premium VPN\'ler daha iyi güvenlik, hız ve özellikler sunar.',
-    'faq.category.privacy': 'Gizlilik',
     
     'faq.question.14': 'Özel IP nedir?',
     'faq.answer.14': 'Özel IP, sadece size atanan bir IP adresidir, web siteleri ve hizmetler tarafından engellenme şansınızı azaltır.',
-    'faq.category.features': 'Özellikler',
     
     'faq.question.15': 'Oyun için VPN kullanabilir miyim?',
     'faq.answer.15': 'Evet, VPN\'ler DDoS saldırılarını azaltabilir, bölge kilitli oyunlara erişmenize yardımcı olabilir ve oyun sunucularına daha iyi ping sağlayabilir.',
-    'faq.category.gaming': 'Oyun',
     
     'faq.question.16': 'En iyi VPN protokolü hangisi?',
     'faq.answer.16': 'WireGuard en hızlı ve en güvenli modern protokoldür. OpenVPN en yerleşik olanıdır, IKEv2 ise mobil cihazlar için en iyisidir.',
-    'faq.category.technical': 'Teknik',
     
     'faq.question.17': 'Çin\'de VPN kullanabilir miyim?',
     'faq.answer.17': 'Sadece birkaç VPN, Büyük Güvenlik Duvarı nedeniyle Çin\'de güvenilir şekilde çalışır. Gizlenmiş sunuculara ve stealth teknolojisine sahip VPN\'leri arayın.',
@@ -305,11 +287,9 @@ export const faqTranslations: AllTranslations = {
     
     'faq.question.19': 'VPN\'ler halka açık Wi-Fi\'da çalışır mı?',
     'faq.answer.19': 'Evet, halka açık Wi-Fi\'da VPN kullanmak şiddetle tavsiye edilir. Bağlantınızı şifreler ve verilerinizi hackerlerden korur.',
-    'faq.category.security': 'Güvenlik',
     
     'faq.question.20': 'Gizlenmiş sunucular nedir?',
     'faq.answer.20': 'Gizlenmiş sunucular VPN trafiğini normal internet trafiği gibi gösterir, kısıtlayıcı ülkelerde VPN engellerini aşmaya yardımcı olur.',
-    'faq.category.features': 'Özellikler',
     
     'faq.question.21': 'VPN\'imin çalışıp çalışmadığını nasıl test ederim?',
     'faq.answer.21': 'Bağlanmadan önce ve sonra ipleak.net veya whatismyipaddress.com\'u ziyaret edin. IP ve konumunuz değişirse, VPN\'iniz çalışıyor demektir.',
@@ -317,39 +297,30 @@ export const faqTranslations: AllTranslations = {
     
     'faq.question.22': 'Online bankacılık için VPN kullanabilir miyim?',
     'faq.answer.22': 'Evet, VPN\'ler bağlantınızı şifreleyerek bankacılık güvenliğini artırabilir. Ancak bazı bankalar VPN trafiğini engelleyebilir.',
-    'faq.category.usage': 'Kullanım',
     
     'faq.question.23': 'VPN sunucusu nedir?',
     'faq.answer.23': 'VPN sunucusu, cihazınız ile internet arasında aracı olarak hareket eden, trafiğinizi şifrelenmiş bir tünel üzerinden yönlendiren bir bilgisayardır.',
-    'faq.category.technical': 'Teknik',
     
     'faq.question.24': 'Aynı anda birden fazla VPN kullanabilir miyim?',
     'faq.answer.24': 'Teknik olarak mümkün olsa da, aynı anda birden fazla VPN kullanmak hızı önemli ölçüde azaltır ve genellikle gereksizdir.',
-    'faq.category.advanced': 'Gelişmiş',
     
     'faq.question.25': 'VPN tüneli nedir?',
     'faq.answer.25': 'VPN tüneli, verilerinizin ele geçirilmesini önleyen cihazınız ile VPN sunucusu arasındaki şifrelenmiş bir bağlantıdır.',
-    'faq.category.technical': 'Teknik',
     
     'faq.question.26': 'Router\'ımda VPN kullanabilir miyim?',
     'faq.answer.26': 'Evet, ağınızdaki tüm cihazları tek bir bağlantıyla korumak için router\'ınıza VPN kurabilirsiniz.',
-    'faq.category.devices': 'Cihazlar',
     
     'faq.question.27': 'VPN zincirleme nedir?',
     'faq.answer.27': 'VPN zincirleme, trafiğinizi ekstra güvenlik için birden fazla VPN sunucusu üzerinden yönlendirir, ancak hızı önemli ölçüde azaltır.',
-    'faq.category.advanced': 'Gelişmiş',
     
     'faq.question.28': 'İş için VPN kullanabilir miyim?',
     'faq.answer.28': 'Evet, VPN\'ler uzaktan çalışma bağlantılarını güvence altına alabilir ve şirket kaynaklarına erişim sağlayabilir. Önce işvereninizin BT politikasını kontrol edin.',
-    'faq.category.usage': 'Kullanım',
     
     'faq.question.29': 'Yeni başlayanlar için en iyi VPN hangisi?',
     'faq.answer.29': 'NordVPN ve Surfshark, kullanımı kolay uygulamalar, güvenilir bağlantılar ve iyi müşteri desteği ile yeni başlayanlar için mükemmeldir.',
-    'faq.category.gaming': 'Oyun',
     
     'faq.question.30': 'VPN\'ler malware\'e karşı korur mu?',
-    'faq.answer.30': 'VPN\'ler öncelikle şifreleme yoluyla veri aktarımını korur, malware\'e karşı değil. Hala ayrı antivirüs korumasına ihtiyacınız var.',
-    'faq.category.security': 'Güvenlik'
+    'faq.answer.30': 'VPN\'ler öncelikle şifreleme yoluyla veri aktarımını korur, malware\'e karşı değil. Hala ayrı antivirüs korumasına ihtiyacınız var.'
   },
   nb: {
     // FAQ Page UI
