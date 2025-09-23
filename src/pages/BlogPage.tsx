@@ -7,38 +7,38 @@ import { blogPosts, categories, allTags, type BlogPost } from '../data/blogData'
 const BlogPage: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
   const { lang } = useParams<{ lang: string }>();
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedTag, setSelectedTag] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
 
   // Get localized blog posts
   const localizedPosts = useMemo(() => {
-    return blogPosts.map(post => {
-      const translation = post.translations?.[currentLanguage.code];
-      if (translation) {
-        return {
-          ...post,
-          title: translation.title,
-          excerpt: translation.excerpt,
-          category: translation.category,
-          tags: translation.tags
-        };
+    try {
+      if (!blogPosts || !Array.isArray(blogPosts)) {
+        console.error('Blog posts data is not available or not an array');
+        return [];
       }
-      return post;
-    });
+      
+      return blogPosts.map(post => {
+        if (!post) return post;
+        
+        const translation = post.translations?.[currentLanguage.code];
+        if (translation) {
+          return {
+            ...post,
+            title: translation.title,
+            excerpt: translation.excerpt,
+            category: translation.category,
+            tags: translation.tags
+          };
+        }
+        return post;
+      });
+    } catch (error) {
+      console.error('Error processing localized posts:', error);
+      return [];
+    }
   }, [currentLanguage.code]);
 
-  const filteredPosts = localizedPosts.filter(post => {
-    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
-    const matchesTag = selectedTag === 'All' || post.tags.includes(selectedTag);
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    return matchesCategory && matchesTag && matchesSearch;
-  });
-
-  const featuredPosts = filteredPosts.filter(post => post.featured);
-  const regularPosts = filteredPosts.filter(post => !post.featured);
+  const featuredPosts = localizedPosts.filter(post => post.featured);
+  const regularPosts = localizedPosts.filter(post => !post.featured);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -51,50 +51,10 @@ const BlogPage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('blogTitle')}</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('blog.title')}</h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          {t('blogSubtitle')}
+          {t('blog.subtitle')}
         </p>
-      </div>
-
-      {/* Search and Filters */}
-      <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="relative">
-            <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search articles..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-          <div>
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            >
-              <option value="All">All Categories</option>
-              {categories.map(category => (
-                <option key={category} value={category}>{category}</option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <select
-              value={selectedTag}
-              onChange={(e) => setSelectedTag(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            >
-              <option value="All">All Tags</option>
-              {allTags.map(tag => (
-                <option key={tag} value={tag}>{tag}</option>
-              ))}
-            </select>
-          </div>
-        </div>
       </div>
 
       {/* Featured Posts */}
@@ -246,7 +206,7 @@ const BlogPage: React.FC = () => {
         </div>
       )}
 
-      {filteredPosts.length === 0 && (
+      {localizedPosts.length === 0 && (
         <div className="text-center py-12">
           <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
           <p className="text-gray-500 text-lg">No articles found matching your criteria.</p>
@@ -256,7 +216,7 @@ const BlogPage: React.FC = () => {
 
       {/* Results count */}
       <div className="mt-8 text-center text-sm text-gray-500">
-        Showing {filteredPosts.length} of {blogPosts.length} articles
+        Showing {localizedPosts.length} of {blogPosts.length} articles
       </div>
 
       {/* Newsletter CTA */}

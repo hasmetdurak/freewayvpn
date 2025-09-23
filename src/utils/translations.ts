@@ -29,15 +29,15 @@ export const faqTranslations: AllTranslations = {
     'faq.question100': 'How do I know if my VPN is working?',
     'faq.answer100': 'Visit ipleak.net before and after connecting. If your IP and DNS change, it\'s working. Also check for WebRTC leaks in your browser.',
     'faq.question101': 'Can I use a VPN for gaming?',
-    'faq.answer101': 'Yes! A VPN reduces DDoS attacks, bypasses IP bans, and lets you access geo-locked games early. Choose a VPN with low ping servers like NordVPN or Surfshark or NordVPN or Surfshark.',
+    'faq.answer101': 'Yes! A VPN reduces DDoS attacks, bypasses IP bans, and lets you access geo-locked games early. Choose a VPN with low ping servers like NordVPN or Surfshark.',
     'faq.question102': 'What is obfuscation?',
     'faq.answer102': 'Obfuscation disguises VPN traffic as regular HTTPS, bypassing VPN blocks in countries like China or Iran. Look for \'stealth mode\' or \'OpenVPN Scramble\' features.',
     'faq.question103': 'Do VPNs work in China?',
-    'faq.answer103': 'Only a few VPNs (e.g., NordVPN or Surfshark, Astrill, NordVPN) work reliably in China due to Deep Packet Inspection. Always download the VPN before traveling.',
+    'faq.answer103': 'Only a few VPNs (e.g., NordVPN, Surfshark, Astrill) work reliably in China due to Deep Packet Inspection. Always download the VPN before traveling.',
     'faq.question104': 'Can I torrent with a VPN?',
-    'faq.answer104': 'Yes, but only use P2P-optimized servers with a kill switch enabled. Our top picks: NordVPN, Surfshark, and NordVPN or Surfshark—all with port forwarding and no bandwidth limits.',
+    'faq.answer104': 'Yes, but only use P2P-optimized servers with a kill switch enabled. Our top picks: NordVPN, Surfshark—all with port forwarding and no bandwidth limits.',
     'faq.question105': 'What is a dedicated IP?',
-    'faq.answer105': 'A dedicated IP is an IP address only you use, reducing CAPTCHAs and blacklisting. Useful for banking or remote work. Available as an add-on with NordVPN, NordVPN or Surfshark, and PureVPN.',
+    'faq.answer105': 'A dedicated IP is an IP address only you use, reducing CAPTCHAs and blacklisting. Useful for banking or remote work. Available as an add-on with NordVPN, Surfshark, and PureVPN.',
     'faq.question106': 'How much does a VPN cost?',
     'faq.answer106': 'Premium VPNs range from $2–$12/month depending on the plan length. Our exclusive deals drop prices to $1.99/month (Surfshark 2-year plan) with 3 months free.',
     'faq.question107': 'Can I pay for a VPN anonymously?',
@@ -47,17 +47,138 @@ export const faqTranslations: AllTranslations = {
     'faq.question109': 'Can a VPN bypass ISP throttling?',
     'faq.answer109': 'Yes, if your ISP throttles streaming (e.g., Netflix), a VPN hides your traffic, restoring full speeds. Test with and without a VPN to confirm.',
     'faq.question110': 'What is the best VPN for beginners?',
-    'faq.answer110': 'NordVPN or Surfshark and NordVPN or Surfshark have 1-click apps, 24/7 support, and no setup required. Perfect for non-tech users.',
+    'faq.answer110': 'NordVPN and Surfshark have 1-click apps, 24/7 support, and no setup required. Perfect for non-tech users.',
     'faq.question112': 'Why should someone use a VPN for everyday browsing?',
-    'faq.answer112': 'Using a VPN for daily browsing enhances your online privacy and security. It encrypts your internet traffic, preventing ISPs, advertisers, or hackers from monitoring your activities. This is especially crucial on unsecured networks like public Wi-Fi in cafes or airports, where data theft is a risk. A VPN also lets you bypass geo-restrictions, accessing content like region-locked YouTube videos or news sites. For example, you can browse anonymously, shop for cheaper flights, or stream international TV shows. In 2025, with data breaches on the rise, a VPN adds a layer of protection. NordVPN or Surfshark, known for its speed and reliability, is a great option for seamless browsing across devices. Its intuitive interface suits all users.',
+    'faq.answer112': 'Using a VPN for daily browsing enhances your online privacy and security. It encrypts your internet traffic, preventing ISPs, advertisers, or hackers from monitoring your activities. This is especially crucial on unsecured networks like public Wi-Fi in cafes or airports, where data theft is a risk. A VPN also lets you bypass geo-restrictions, accessing content like region-locked YouTube videos or news sites. For example, you can browse anonymously, shop for cheaper flights, or stream international TV shows. In 2025, with data breaches on the rise, a VPN adds a layer of protection. NordVPN, known for its speed and reliability, is a great option for seamless browsing across devices. Its intuitive interface suits all users.',
     'faq.question114': 'How does a VPN improve online security for beginners?',
-    'faq.answer114': 'For beginners, a VPN simplifies online security by encrypting your internet connection, which protects sensitive data like passwords or credit card details from hackers. It masks your IP address, making it harder for websites or trackers to identify you. This is especially useful on public Wi-Fi, where cyberattacks are common. A VPN also blocks intrusive ads and trackers, creating a smoother browsing experience. In 2025, with cybercrime costing billions annually, even casual users benefit from this protection. NordVPN or Surfshark offers an easy-to-use interface with pre-configured security settings, ideal for newcomers. Its no-logs policy ensures your data stays private. By exploring options like NordVPN or Surfshark, you can start securing your online activities without technical expertise.',
+    'faq.answer114': 'For beginners, a VPN simplifies online security by encrypting your internet connection, which protects sensitive data like passwords or credit card details from hackers. It masks your IP address, making it harder for websites or trackers to identify you. This is especially useful on public Wi-Fi, where cyberattacks are common. A VPN also blocks intrusive ads and trackers, creating a smoother browsing experience. In 2025, with cybercrime costing billions annually, even casual users benefit from this protection. NordVPN offers an easy-to-use interface with pre-configured security settings, ideal for newcomers. Its no-logs policy ensures your data stays private. By exploring options like NordVPN, you can start securing your online activities without technical expertise.',
     'faq.question115': 'What\'s the difference between a VPN and a proxy server?',
     'faq.answer115': 'A VPN and a proxy server both mask your IP address, but they differ significantly. A VPN encrypts all your internet traffic, routing it through a secure server, ensuring privacy and security across apps and websites. Proxies only redirect specific traffic (e.g., browser data) without encryption, leaving you vulnerable to snooping. VPNs are ideal for sensitive tasks like banking or bypassing geo-restrictions, while proxies are better for quick, non-sensitive access to blocked sites. For example, a VPN lets you stream Netflix securely, while a proxy might not. PureVPN provides affordable, encrypted connections with servers in 70+ countries, making it a stronger choice than proxies.',
     'faq.question116': 'Can a VPN hide my browsing history from my ISP?',
     'faq.answer116': 'Yes, a VPN hides your browsing history from your ISP by encrypting your traffic and routing it through a remote server. This prevents your ISP from seeing which websites you visit or what you do online, protecting your privacy. For instance, if you\'re streaming or researching sensitive topics, a VPN keeps your activity private. In 2025, with ISPs increasingly monetizing user data, this is a key benefit. NordVPN, with its audited no-logs policy, ensures even the VPN provider can\'t see your activity. Its 5,500+ servers offer flexibility for private browsing. By choosing a service like NordVPN, you can maintain control over your digital footprint and browse worry-free.',
     'faq.question117': 'Do I need a VPN when using my home Wi-Fi?',
-    'faq.answer117': 'While home Wi-Fi is generally safer than public networks, a VPN still offers benefits. It prevents your ISP from tracking your browsing habits, protects against potential router vulnerabilities, and allows access to geo-blocked content. If privacy is important to you, using a VPN at home is recommended.'
+    'faq.answer117': 'While home Wi-Fi is generally safer than public networks, a VPN still offers benefits. It prevents your ISP from tracking your browsing habits, protects against potential router vulnerabilities, and allows access to geo-blocked content. If privacy is important to you, using a VPN at home is recommended.',
+    
+    // FAQ Questions and Answers
+    'faq.question.1': 'What is a VPN?',
+    'faq.answer.1': 'A VPN (Virtual Private Network) is a service that encrypts your internet connection and routes it through a secure server, protecting your privacy and allowing you to access geo-restricted content.',
+    'faq.category.basics': 'Basics',
+    
+    'faq.question.2': 'Is using a VPN legal?',
+    'faq.answer.2': 'Yes, VPNs are legal in most countries. However, using a VPN for illegal activities remains illegal. Always check your local laws and use VPNs responsibly.',
+    'faq.category.legal': 'Legal',
+    
+    'faq.question.3': 'Do VPNs slow down internet speed?',
+    'faq.answer.3': 'VPNs can reduce speed by 5-20% due to encryption overhead and server distance. However, premium VPNs with optimized servers often provide speeds close to your original connection.',
+    'faq.category.performance': 'Performance',
+    
+    'faq.question.4': 'Can I use a VPN for streaming?',
+    'faq.answer.4': 'Yes, VPNs can help you access geo-restricted streaming content. However, some streaming services actively block VPN traffic, so choose a VPN with dedicated streaming servers.',
+    'faq.category.streaming': 'Streaming',
+    
+    'faq.question.5': 'How much does a VPN cost?',
+    'faq.answer.5': 'VPN prices vary from free to $15+ per month. Premium VPNs typically cost $3-12 per month, with longer subscriptions offering better value.',
+    'faq.category.pricing': 'Pricing',
+    
+    'faq.question.6': 'How many devices can I use with one VPN?',
+    'faq.answer.6': 'Most VPNs allow 5-10 simultaneous connections, while some offer unlimited connections. Check the provider\'s policy before subscribing.',
+    'faq.category.devices': 'Devices',
+    
+    'faq.question.7': 'Do VPNs keep logs?',
+    'faq.answer.7': 'Reputable VPNs have strict no-logs policies, meaning they don\'t record your browsing activity, connection times, or IP addresses.',
+    'faq.category.privacy': 'Privacy',
+    
+    'faq.question.8': 'What is a VPN kill switch?',
+    'faq.answer.8': 'A kill switch automatically disconnects your internet if the VPN connection drops, preventing your real IP address from being exposed.',
+    'faq.category.technical': 'Technical',
+    
+    'faq.question.9': 'Can I use a VPN on my phone?',
+    'faq.answer.9': 'Yes, most VPNs offer mobile apps for iOS and Android. Mobile VPNs are essential for protecting your data on public Wi-Fi.',
+    'faq.category.mobile': 'Mobile',
+    
+    'faq.question.10': 'What is split tunneling?',
+    'faq.answer.10': 'Split tunneling allows you to route some traffic through the VPN while other traffic uses your regular internet connection.',
+    'faq.category.features': 'Features',
+    
+    'faq.question.11': 'Can I use a VPN for torrenting?',
+    'faq.answer.11': 'Yes, but choose VPNs that explicitly allow P2P traffic and have servers optimized for torrenting with features like port forwarding.',
+    'faq.category.usage': 'Usage',
+    
+    'faq.question.12': 'What is DNS leak protection?',
+    'faq.answer.12': 'DNS leak protection ensures your DNS queries go through the VPN\'s secure servers instead of your ISP\'s servers, preventing tracking.',
+    'faq.category.security': 'Security',
+    
+    'faq.question.13': 'Are free VPNs safe?',
+    'faq.answer.13': 'Free VPNs often have limitations and may compromise your privacy. Premium VPNs offer better security, speed, and features.',
+    'faq.category.privacy': 'Privacy',
+    
+    'faq.question.14': 'What is a dedicated IP?',
+    'faq.answer.14': 'A dedicated IP is an IP address assigned only to you, reducing the chance of being blocked by websites and services.',
+    'faq.category.features': 'Features',
+    
+    'faq.question.15': 'Can I use a VPN for gaming?',
+    'faq.answer.15': 'Yes, VPNs can reduce DDoS attacks, help you access region-locked games, and provide better ping to gaming servers.',
+    'faq.category.gaming': 'Gaming',
+    
+    'faq.question.16': 'What is the best VPN protocol?',
+    'faq.answer.16': 'WireGuard is the fastest and most secure modern protocol. OpenVPN is the most established, while IKEv2 is best for mobile devices.',
+    'faq.category.technical': 'Technical',
+    
+    'faq.question.17': 'Can I use a VPN in China?',
+    'faq.answer.17': 'Only a few VPNs work reliably in China due to the Great Firewall. Look for VPNs with obfuscated servers and stealth technology.',
+    'faq.category.censorship': 'Censorship',
+    
+    'faq.question.18': 'What is the difference between VPN and proxy?',
+    'faq.answer.18': 'VPNs encrypt all your traffic and work at the operating system level, while proxies only handle browser traffic without encryption.',
+    'faq.category.comparison': 'Comparison',
+    
+    'faq.question.19': 'Do VPNs work on public Wi-Fi?',
+    'faq.answer.19': 'Yes, using a VPN on public Wi-Fi is highly recommended. It encrypts your connection and protects your data from hackers.',
+    'faq.category.security': 'Security',
+    
+    'faq.question.20': 'What is obfuscated servers?',
+    'faq.answer.20': 'Obfuscated servers disguise VPN traffic as regular internet traffic, helping bypass VPN blocks in restrictive countries.',
+    'faq.category.features': 'Features',
+    
+    'faq.question.21': 'How do I test if my VPN is working?',
+    'faq.answer.21': 'Visit ipleak.net or whatismyipaddress.com before and after connecting. If your IP and location change, your VPN is working.',
+    'faq.category.testing': 'Testing',
+    
+    'faq.question.22': 'Can I use a VPN for online banking?',
+    'faq.answer.22': 'Yes, VPNs can enhance banking security by encrypting your connection. However, some banks may block VPN traffic.',
+    'faq.category.usage': 'Usage',
+    
+    'faq.question.23': 'What is a VPN server?',
+    'faq.answer.23': 'A VPN server is a computer that acts as an intermediary between your device and the internet, routing your traffic through an encrypted tunnel.',
+    'faq.category.technical': 'Technical',
+    
+    'faq.question.24': 'Can I use multiple VPNs at once?',
+    'faq.answer.24': 'While technically possible, using multiple VPNs simultaneously significantly reduces speed and is usually unnecessary.',
+    'faq.category.advanced': 'Advanced',
+    
+    'faq.question.25': 'What is a VPN tunnel?',
+    'faq.answer.25': 'A VPN tunnel is an encrypted connection between your device and the VPN server that protects your data from being intercepted.',
+    'faq.category.technical': 'Technical',
+    
+    'faq.question.26': 'Can I use a VPN on my router?',
+    'faq.answer.26': 'Yes, you can install a VPN on your router to protect all devices on your network with a single connection.',
+    'faq.category.devices': 'Devices',
+    
+    'faq.question.27': 'What is VPN chaining?',
+    'faq.answer.27': 'VPN chaining routes your traffic through multiple VPN servers for extra security, though it significantly reduces speed.',
+    'faq.category.advanced': 'Advanced',
+    
+    'faq.question.28': 'Can I use a VPN for work?',
+    'faq.answer.28': 'Yes, VPNs can secure remote work connections and access company resources. Check with your employer\'s IT policy first.',
+    'faq.category.usage': 'Usage',
+    
+    'faq.question.29': 'What is the best VPN for beginners?',
+    'faq.answer.29': 'NordVPN and Surfshark are excellent for beginners with easy-to-use apps, reliable connections, and good customer support.',
+    'faq.category.gaming': 'Gaming',
+    
+    'faq.question.30': 'Do VPNs protect against malware?',
+    'faq.answer.30': 'VPNs primarily protect data in transit through encryption, not against malware. You still need separate antivirus protection.',
+    'faq.category.security': 'Security'
   },
   tr: {
     // FAQ Page UI
@@ -107,7 +228,128 @@ export const faqTranslations: AllTranslations = {
     'faq.question116': 'VPN tarama geçmişimi ISS\'mden gizleyebilir mi?',
     'faq.answer116': 'Evet, VPN trafiğinizi şifreleyip uzak sunucu üzerinden yönlendirerek tarama geçmişinizi ISS\'nizden gizler. Bu ISS\'nizin hangi web sitelerini ziyaret ettiğinizi veya çevrimiçi ne yaptığınızı görmesini engeller, gizliliğinizi korur. Örneğin streaming yapıyorsanız veya hassas konuları araştırıyorsanız, VPN aktivitenizi gizli tutar. 2025\'te ISS\'ler kullanıcı verilerini giderek daha fazla para kazanmak için kullanırken, bu önemli bir faydadır. NordVPN denetlenmiş kayıt tutmama politikası ile VPN sağlayıcısının bile aktivitenizi göremeyeceğini garanti eder.',
     'faq.question117': 'Ev Wi-Fi\'ımı kullanırken VPN\'e ihtiyacım var mı?',
-    'faq.answer117': 'Ev Wi-Fi\'ı genellikle halka açık ağlardan daha güvenli olsa da, VPN hala faydalar sunar. ISS\'nizin tarama alışkanlıklarınızı takip etmesini engeller, potansiyel router güvenlik açıklarına karşı korur ve coğrafi engellenmiş içeriğe erişim sağlar. Gizlilik sizin için önemliyse, evde VPN kullanmanız önerilir.'
+    'faq.answer117': 'Ev Wi-Fi\'ı genellikle halka açık ağlardan daha güvenli olsa da, VPN hala faydalar sunar. ISS\'nizin tarama alışkanlıklarınızı takip etmesini engeller, potansiyel router güvenlik açıklarına karşı korur ve coğrafi engellenmiş içeriğe erişim sağlar. Gizlilik sizin için önemliyse, evde VPN kullanmanız önerilir.',
+    
+    // FAQ Questions and Answers - Turkish
+    'faq.question.1': 'VPN nedir?',
+    'faq.answer.1': 'VPN (Sanal Özel Ağ), internet bağlantınızı şifreleyen ve güvenli bir sunucu üzerinden yönlendiren, gizliliğinizi koruyan ve coğrafi kısıtlamalı içeriğe erişim sağlayan bir hizmettir.',
+    'faq.category.basics': 'Temel Bilgiler',
+    
+    'faq.question.2': 'VPN kullanmak yasal mı?',
+    'faq.answer.2': 'Evet, VPN\'ler çoğu ülkede yasaldır. Ancak yasadışı faaliyetler için VPN kullanmak yasadışı kalmaya devam eder. Yerel yasalarınızı kontrol edin ve VPN\'leri sorumlu bir şekilde kullanın.',
+    'faq.category.legal': 'Yasal',
+    
+    'faq.question.3': 'VPN\'ler internet hızını yavaşlatır mı?',
+    'faq.answer.3': 'VPN\'ler şifreleme ek yükü ve sunucu mesafesi nedeniyle hızı %5-20 azaltabilir. Ancak optimize edilmiş sunuculara sahip premium VPN\'ler genellikle orijinal bağlantınıza yakın hızlar sağlar.',
+    'faq.category.performance': 'Performans',
+    
+    'faq.question.4': 'Streaming için VPN kullanabilir miyim?',
+    'faq.answer.4': 'Evet, VPN\'ler coğrafi kısıtlamalı streaming içeriğine erişmenize yardımcı olabilir. Ancak bazı streaming hizmetleri VPN trafiğini aktif olarak engeller, bu yüzden özel streaming sunucularına sahip bir VPN seçin.',
+    'faq.category.streaming': 'Streaming',
+    
+    'faq.question.5': 'VPN ne kadar tutar?',
+    'faq.answer.5': 'VPN fiyatları ücretsizden aylık 15$+ kadar değişir. Premium VPN\'ler genellikle aylık 3-12$ tutar, daha uzun abonelikler daha iyi değer sunar.',
+    'faq.category.pricing': 'Fiyatlandırma',
+    
+    'faq.question.6': 'Bir VPN ile kaç cihaz kullanabilirim?',
+    'faq.answer.6': 'Çoğu VPN 5-10 eşzamanlı bağlantıya izin verir, bazıları ise sınırsız bağlantı sunar. Abone olmadan önce sağlayıcının politikasını kontrol edin.',
+    'faq.category.devices': 'Cihazlar',
+    
+    'faq.question.7': 'VPN\'ler log tutar mı?',
+    'faq.answer.7': 'Saygın VPN\'lerin katı kayıt tutmama politikaları vardır, yani tarama aktivitenizi, bağlantı sürelerinizi veya IP adreslerinizi kaydetmezler.',
+    'faq.category.privacy': 'Gizlilik',
+    
+    'faq.question.8': 'VPN kill switch nedir?',
+    'faq.answer.8': 'Kill switch, VPN bağlantısı kesilirse internetinizi otomatik olarak keser, gerçek IP adresinizin açığa çıkmasını önler.',
+    'faq.category.technical': 'Teknik',
+    
+    'faq.question.9': 'Telefonumda VPN kullanabilir miyim?',
+    'faq.answer.9': 'Evet, çoğu VPN iOS ve Android için mobil uygulamalar sunar. Mobil VPN\'ler halka açık Wi-Fi\'da verilerinizi korumak için gereklidir.',
+    'faq.category.mobile': 'Mobil',
+    
+    'faq.question.10': 'Split tunneling nedir?',
+    'faq.answer.10': 'Split tunneling, bazı trafiği VPN üzerinden yönlendirmenize, diğer trafiğin ise normal internet bağlantınızı kullanmasına olanak tanır.',
+    'faq.category.features': 'Özellikler',
+    
+    'faq.question.11': 'Torrent için VPN kullanabilir miyim?',
+    'faq.answer.11': 'Evet, ancak açıkça P2P trafiğine izin veren ve port yönlendirme gibi özelliklerle torrent için optimize edilmiş sunuculara sahip VPN\'leri seçin.',
+    'faq.category.usage': 'Kullanım',
+    
+    'faq.question.12': 'DNS leak koruması nedir?',
+    'faq.answer.12': 'DNS leak koruması, DNS sorgularınızın ISS\'nizin sunucuları yerine VPN\'in güvenli sunucuları üzerinden gitmesini sağlar, takibi önler.',
+    'faq.category.security': 'Güvenlik',
+    
+    'faq.question.13': 'Ücretsiz VPN\'ler güvenli mi?',
+    'faq.answer.13': 'Ücretsiz VPN\'ler genellikle sınırlamalara sahiptir ve gizliliğinizi tehlikeye atabilir. Premium VPN\'ler daha iyi güvenlik, hız ve özellikler sunar.',
+    'faq.category.privacy': 'Gizlilik',
+    
+    'faq.question.14': 'Özel IP nedir?',
+    'faq.answer.14': 'Özel IP, sadece size atanan bir IP adresidir, web siteleri ve hizmetler tarafından engellenme şansınızı azaltır.',
+    'faq.category.features': 'Özellikler',
+    
+    'faq.question.15': 'Oyun için VPN kullanabilir miyim?',
+    'faq.answer.15': 'Evet, VPN\'ler DDoS saldırılarını azaltabilir, bölge kilitli oyunlara erişmenize yardımcı olabilir ve oyun sunucularına daha iyi ping sağlayabilir.',
+    'faq.category.gaming': 'Oyun',
+    
+    'faq.question.16': 'En iyi VPN protokolü hangisi?',
+    'faq.answer.16': 'WireGuard en hızlı ve en güvenli modern protokoldür. OpenVPN en yerleşik olanıdır, IKEv2 ise mobil cihazlar için en iyisidir.',
+    'faq.category.technical': 'Teknik',
+    
+    'faq.question.17': 'Çin\'de VPN kullanabilir miyim?',
+    'faq.answer.17': 'Sadece birkaç VPN, Büyük Güvenlik Duvarı nedeniyle Çin\'de güvenilir şekilde çalışır. Gizlenmiş sunuculara ve stealth teknolojisine sahip VPN\'leri arayın.',
+    'faq.category.censorship': 'Sansür',
+    
+    'faq.question.18': 'VPN ile proxy arasındaki fark nedir?',
+    'faq.answer.18': 'VPN\'ler tüm trafiğinizi şifreler ve işletim sistemi seviyesinde çalışır, proxy\'ler ise sadece şifreleme olmadan tarayıcı trafiğini işler.',
+    'faq.category.comparison': 'Karşılaştırma',
+    
+    'faq.question.19': 'VPN\'ler halka açık Wi-Fi\'da çalışır mı?',
+    'faq.answer.19': 'Evet, halka açık Wi-Fi\'da VPN kullanmak şiddetle tavsiye edilir. Bağlantınızı şifreler ve verilerinizi hackerlerden korur.',
+    'faq.category.security': 'Güvenlik',
+    
+    'faq.question.20': 'Gizlenmiş sunucular nedir?',
+    'faq.answer.20': 'Gizlenmiş sunucular VPN trafiğini normal internet trafiği gibi gösterir, kısıtlayıcı ülkelerde VPN engellerini aşmaya yardımcı olur.',
+    'faq.category.features': 'Özellikler',
+    
+    'faq.question.21': 'VPN\'imin çalışıp çalışmadığını nasıl test ederim?',
+    'faq.answer.21': 'Bağlanmadan önce ve sonra ipleak.net veya whatismyipaddress.com\'u ziyaret edin. IP ve konumunuz değişirse, VPN\'iniz çalışıyor demektir.',
+    'faq.category.testing': 'Test',
+    
+    'faq.question.22': 'Online bankacılık için VPN kullanabilir miyim?',
+    'faq.answer.22': 'Evet, VPN\'ler bağlantınızı şifreleyerek bankacılık güvenliğini artırabilir. Ancak bazı bankalar VPN trafiğini engelleyebilir.',
+    'faq.category.usage': 'Kullanım',
+    
+    'faq.question.23': 'VPN sunucusu nedir?',
+    'faq.answer.23': 'VPN sunucusu, cihazınız ile internet arasında aracı olarak hareket eden, trafiğinizi şifrelenmiş bir tünel üzerinden yönlendiren bir bilgisayardır.',
+    'faq.category.technical': 'Teknik',
+    
+    'faq.question.24': 'Aynı anda birden fazla VPN kullanabilir miyim?',
+    'faq.answer.24': 'Teknik olarak mümkün olsa da, aynı anda birden fazla VPN kullanmak hızı önemli ölçüde azaltır ve genellikle gereksizdir.',
+    'faq.category.advanced': 'Gelişmiş',
+    
+    'faq.question.25': 'VPN tüneli nedir?',
+    'faq.answer.25': 'VPN tüneli, verilerinizin ele geçirilmesini önleyen cihazınız ile VPN sunucusu arasındaki şifrelenmiş bir bağlantıdır.',
+    'faq.category.technical': 'Teknik',
+    
+    'faq.question.26': 'Router\'ımda VPN kullanabilir miyim?',
+    'faq.answer.26': 'Evet, ağınızdaki tüm cihazları tek bir bağlantıyla korumak için router\'ınıza VPN kurabilirsiniz.',
+    'faq.category.devices': 'Cihazlar',
+    
+    'faq.question.27': 'VPN zincirleme nedir?',
+    'faq.answer.27': 'VPN zincirleme, trafiğinizi ekstra güvenlik için birden fazla VPN sunucusu üzerinden yönlendirir, ancak hızı önemli ölçüde azaltır.',
+    'faq.category.advanced': 'Gelişmiş',
+    
+    'faq.question.28': 'İş için VPN kullanabilir miyim?',
+    'faq.answer.28': 'Evet, VPN\'ler uzaktan çalışma bağlantılarını güvence altına alabilir ve şirket kaynaklarına erişim sağlayabilir. Önce işvereninizin BT politikasını kontrol edin.',
+    'faq.category.usage': 'Kullanım',
+    
+    'faq.question.29': 'Yeni başlayanlar için en iyi VPN hangisi?',
+    'faq.answer.29': 'NordVPN ve Surfshark, kullanımı kolay uygulamalar, güvenilir bağlantılar ve iyi müşteri desteği ile yeni başlayanlar için mükemmeldir.',
+    'faq.category.gaming': 'Oyun',
+    
+    'faq.question.30': 'VPN\'ler malware\'e karşı korur mu?',
+    'faq.answer.30': 'VPN\'ler öncelikle şifreleme yoluyla veri aktarımını korur, malware\'e karşı değil. Hala ayrı antivirüs korumasına ihtiyacınız var.',
+    'faq.category.security': 'Güvenlik'
   },
   nb: {
     // FAQ Page UI
@@ -422,6 +664,188 @@ export const faqTranslations: AllTranslations = {
     'faq.cantFindAnswer': "आप जो उत्तर खोज रहे हैं वह नहीं मिल रहा? हमारे VPN विशेषज्ञ आपको सही समाधान चुनने में मदद करने के लिए यहाँ हैं।",
     'faq.contactExperts': 'हमारे विशेषज्ञों से संपर्क करें',
     'faq.relatedGuides': 'संबंधित गाइड:'
+  },
+  ar: {
+    // FAQ Page UI
+    'faq.title': 'الأسئلة الشائعة',
+    'faq.subtitle': 'اعثر على إجابات للأسئلة الأكثر شيوعاً حول VPN والخصوصية والأمان الرقمي.',
+    'faq.searchPlaceholder': 'البحث في الأسئلة الشائعة...',
+    'faq.allCategories': 'جميع الفئات',
+    'faq.noFaqsFound': 'لم يتم العثور على أسئلة شائعة',
+    'faq.adjustSearch': 'حاول تعديل مصطلحات البحث أو مرشح الفئة.',
+    'faq.showingResults': 'عرض {count} من {total} نتيجة',
+    'faq.stillHaveQuestions': 'لا تزال لديك أسئلة؟',
+    'faq.cantFindAnswer': "لا يمكنك العثور على الإجابة التي تبحث عنها؟ خبراء VPN لدينا هنا لمساعدتك في اختيار الحل المثالي.",
+    'faq.contactExperts': 'اتصل بخبرائنا',
+    'faq.relatedGuides': 'أدلة ذات صلة:'
+  },
+  tl: {
+    // FAQ Page UI
+    'faq.title': 'Mga Madalas na Tanong',
+    'faq.subtitle': 'Hanapin ang mga sagot sa mga pinakakaraniwang tanong tungkol sa VPN, privacy, at online security.',
+    'faq.searchPlaceholder': 'Maghanap sa FAQ...',
+    'faq.allCategories': 'Lahat ng Kategorya',
+    'faq.noFaqsFound': 'Walang nahanap na FAQ',
+    'faq.adjustSearch': 'Subukang i-adjust ang inyong search terms o category filter.',
+    'faq.showingResults': 'Nagpapakita ng {count} sa {total} na resulta',
+    'faq.stillHaveQuestions': 'May mga tanong pa rin?',
+    'faq.cantFindAnswer': "Hindi mahanap ang sagot na hinahanap ninyo? Ang aming mga VPN expert ay nandito para tulungan kayong pumili ng perpektong solusyon.",
+    'faq.contactExperts': 'Makipag-ugnayan sa aming mga Eksperto',
+    'faq.relatedGuides': 'Mga Kaugnay na Gabay:'
+  },
+  id: {
+    // FAQ Page UI
+    'faq.title': 'Pertanyaan yang Sering Diajukan',
+    'faq.subtitle': 'Temukan jawaban untuk pertanyaan paling umum tentang VPN, privasi, dan keamanan online.',
+    'faq.searchPlaceholder': 'Cari FAQ...',
+    'faq.allCategories': 'Semua Kategori',
+    'faq.noFaqsFound': 'Tidak ada FAQ yang ditemukan',
+    'faq.adjustSearch': 'Coba sesuaikan istilah pencarian atau filter kategori Anda.',
+    'faq.showingResults': 'Menampilkan {count} dari {total} hasil',
+    'faq.stillHaveQuestions': 'Masih Ada Pertanyaan?',
+    'faq.cantFindAnswer': "Tidak dapat menemukan jawaban yang Anda cari? Para ahli VPN kami siap membantu Anda memilih solusi yang sempurna.",
+    'faq.contactExperts': 'Hubungi Para Ahli Kami',
+    'faq.relatedGuides': 'Panduan Terkait:'
+  },
+  fa: {
+    // FAQ Page UI
+    'faq.title': 'سوالات متداول',
+    'faq.subtitle': 'پاسخ‌های سوالات رایج درباره VPN، حریم خصوصی و امنیت آنلاین را پیدا کنید.',
+    'faq.searchPlaceholder': 'جستجو در سوالات متداول...',
+    'faq.allCategories': 'همه دسته‌بندی‌ها',
+    'faq.noFaqsFound': 'هیچ سوال متداولی یافت نشد',
+    'faq.adjustSearch': 'سعی کنید عبارات جستجو یا فیلتر دسته‌بندی خود را تنظیم کنید.',
+    'faq.showingResults': 'نمایش {count} از {total} نتیجه',
+    'faq.stillHaveQuestions': 'هنوز سوال دارید؟',
+    'faq.cantFindAnswer': "نمی‌توانید پاسخ مورد نظرتان را پیدا کنید؟ متخصصان VPN ما اینجا هستند تا به شما در انتخاب راه‌حل مناسب کمک کنند.",
+    'faq.contactExperts': 'با متخصصان ما تماس بگیرید',
+    'faq.relatedGuides': 'راهنماهای مرتبط:'
+  },
+  pl: {
+    // FAQ Page UI
+    'faq.title': 'Często zadawane pytania',
+    'faq.subtitle': 'Znajdź odpowiedzi na najczęstsze pytania dotyczące VPN, prywatności i bezpieczeństwa online.',
+    'faq.searchPlaceholder': 'Szukaj w FAQ...',
+    'faq.allCategories': 'Wszystkie kategorie',
+    'faq.noFaqsFound': 'Nie znaleziono FAQ',
+    'faq.adjustSearch': 'Spróbuj dostosować wyszukiwane hasła lub filtr kategorii.',
+    'faq.showingResults': 'Pokazuje {count} z {total} wyników',
+    'faq.stillHaveQuestions': 'Nadal masz pytania?',
+    'faq.cantFindAnswer': "Nie możesz znaleźć odpowiedzi, której szukasz? Nasi eksperci VPN są tutaj, aby pomóc Ci wybrać idealne rozwiązanie.",
+    'faq.contactExperts': 'Skontaktuj się z naszymi ekspertami',
+    'faq.relatedGuides': 'Powiązane przewodniki:'
+  },
+  pt: {
+    // FAQ Page UI
+    'faq.title': 'Perguntas Frequentes',
+    'faq.subtitle': 'Encontre respostas para as perguntas mais comuns sobre VPN, privacidade e segurança online.',
+    'faq.searchPlaceholder': 'Pesquisar FAQ...',
+    'faq.allCategories': 'Todas as Categorias',
+    'faq.noFaqsFound': 'Nenhum FAQ encontrado',
+    'faq.adjustSearch': 'Tente ajustar seus termos de pesquisa ou filtro de categoria.',
+    'faq.showingResults': 'Mostrando {count} de {total} resultados',
+    'faq.stillHaveQuestions': 'Ainda tem dúvidas?',
+    'faq.cantFindAnswer': "Não consegue encontrar a resposta que procura? Nossos especialistas em VPN estão aqui para ajudá-lo a escolher a solução perfeita.",
+    'faq.contactExperts': 'Entre em contato com nossos especialistas',
+    'faq.relatedGuides': 'Guias relacionados:'
+  },
+  es: {
+    // FAQ Page UI
+    'faq.title': 'Preguntas Frecuentes',
+    'faq.subtitle': 'Encuentra respuestas a las preguntas más comunes sobre VPN, privacidad y seguridad en línea.',
+    'faq.searchPlaceholder': 'Buscar en FAQ...',
+    'faq.allCategories': 'Todas las Categorías',
+    'faq.noFaqsFound': 'No se encontraron FAQ',
+    'faq.adjustSearch': 'Intenta ajustar tus términos de búsqueda o filtro de categoría.',
+    'faq.showingResults': 'Mostrando {count} de {total} resultados',
+    'faq.stillHaveQuestions': '¿Aún tienes preguntas?',
+    'faq.cantFindAnswer': "¿No puedes encontrar la respuesta que buscas? Nuestros expertos en VPN están aquí para ayudarte a elegir la solución perfecta.",
+    'faq.contactExperts': 'Contacta a nuestros expertos',
+    'faq.relatedGuides': 'Guías relacionadas:'
+  },
+  th: {
+    // FAQ Page UI
+    'faq.title': 'คำถามที่พบบ่อย',
+    'faq.subtitle': 'ค้นหาคำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับ VPN ความเป็นส่วนตัว และความปลอดภัยออนไลน์',
+    'faq.searchPlaceholder': 'ค้นหา FAQ...',
+    'faq.allCategories': 'หมวดหมู่ทั้งหมด',
+    'faq.noFaqsFound': 'ไม่พบ FAQ',
+    'faq.adjustSearch': 'ลองปรับคำค้นหาหรือตัวกรองหมวดหมู่ของคุณ',
+    'faq.showingResults': 'แสดง {count} จาก {total} ผลลัพธ์',
+    'faq.stillHaveQuestions': 'ยังมีคำถามอยู่ไหม?',
+    'faq.cantFindAnswer': "หาคำตอบที่คุณต้องการไม่เจอใช่ไหม? ผู้เชี่ยวชาญ VPN ของเราพร้อมช่วยคุณเลือกโซลูชันที่เหมาะสม",
+    'faq.contactExperts': 'ติดต่อผู้เชี่ยวชาญของเรา',
+    'faq.relatedGuides': 'คู่มือที่เกี่ยวข้อง:'
+  },
+  vi: {
+    // FAQ Page UI
+    'faq.title': 'Câu hỏi thường gặp',
+    'faq.subtitle': 'Tìm câu trả lời cho những câu hỏi phổ biến nhất về VPN, quyền riêng tư và bảo mật trực tuyến.',
+    'faq.searchPlaceholder': 'Tìm kiếm FAQ...',
+    'faq.allCategories': 'Tất cả danh mục',
+    'faq.noFaqsFound': 'Không tìm thấy FAQ',
+    'faq.adjustSearch': 'Hãy thử điều chỉnh từ khóa tìm kiếm hoặc bộ lọc danh mục của bạn.',
+    'faq.showingResults': 'Hiển thị {count} trong số {total} kết quả',
+    'faq.stillHaveQuestions': 'Vẫn còn câu hỏi?',
+    'faq.cantFindAnswer': "Không thể tìm thấy câu trả lời bạn đang tìm kiếm? Các chuyên gia VPN của chúng tôi sẵn sàng giúp bạn chọn giải pháp hoàn hảo.",
+    'faq.contactExperts': 'Liên hệ với chuyên gia của chúng tôi',
+    'faq.relatedGuides': 'Hướng dẫn liên quan:'
+  },
+  fr: {
+    // FAQ Page UI
+    'faq.title': 'Questions fréquemment posées',
+    'faq.subtitle': 'Trouvez des réponses aux questions les plus courantes sur les VPN, la confidentialité et la sécurité en ligne.',
+    'faq.searchPlaceholder': 'Rechercher dans la FAQ...',
+    'faq.allCategories': 'Toutes les catégories',
+    'faq.noFaqsFound': 'Aucune FAQ trouvée',
+    'faq.adjustSearch': 'Essayez d\'ajuster vos termes de recherche ou votre filtre de catégorie.',
+    'faq.showingResults': 'Affichage de {count} sur {total} résultats',
+    'faq.stillHaveQuestions': 'Vous avez encore des questions ?',
+    'faq.cantFindAnswer': "Vous ne trouvez pas la réponse que vous cherchez ? Nos experts VPN sont là pour vous aider à choisir la solution parfaite.",
+    'faq.contactExperts': 'Contactez nos experts',
+    'faq.relatedGuides': 'Guides connexes :'
+  },
+  it: {
+    // FAQ Page UI
+    'faq.title': 'Domande frequenti',
+    'faq.subtitle': 'Trova le risposte alle domande più comuni su VPN, privacy e sicurezza online.',
+    'faq.searchPlaceholder': 'Cerca nelle FAQ...',
+    'faq.allCategories': 'Tutte le categorie',
+    'faq.noFaqsFound': 'Nessuna FAQ trovata',
+    'faq.adjustSearch': 'Prova ad aggiustare i tuoi termini di ricerca o il filtro categoria.',
+    'faq.showingResults': 'Mostrando {count} di {total} risultati',
+    'faq.stillHaveQuestions': 'Hai ancora domande?',
+    'faq.cantFindAnswer': "Non riesci a trovare la risposta che stai cercando? I nostri esperti VPN sono qui per aiutarti a scegliere la soluzione perfetta.",
+    'faq.contactExperts': 'Contatta i nostri esperti',
+    'faq.relatedGuides': 'Guide correlate:'
+  },
+  ru: {
+    // FAQ Page UI
+    'faq.title': 'Часто задаваемые вопросы',
+    'faq.subtitle': 'Найдите ответы на самые распространенные вопросы о VPN, конфиденциальности и онлайн-безопасности.',
+    'faq.searchPlaceholder': 'Поиск в FAQ...',
+    'faq.allCategories': 'Все категории',
+    'faq.noFaqsFound': 'FAQ не найдены',
+    'faq.adjustSearch': 'Попробуйте изменить поисковые запросы или фильтр категорий.',
+    'faq.showingResults': 'Показано {count} из {total} результатов',
+    'faq.stillHaveQuestions': 'Остались вопросы?',
+    'faq.cantFindAnswer': "Не можете найти нужный ответ? Наши эксперты по VPN готовы помочь вам выбрать идеальное решение.",
+    'faq.contactExperts': 'Связаться с экспертами',
+    'faq.relatedGuides': 'Связанные руководства:'
+  },
+  zh: {
+    // FAQ Page UI
+    'faq.title': '常见问题',
+    'faq.subtitle': '查找关于VPN、隐私和在线安全最常见问题的答案。',
+    'faq.searchPlaceholder': '搜索常见问题...',
+    'faq.allCategories': '所有类别',
+    'faq.noFaqsFound': '未找到常见问题',
+    'faq.adjustSearch': '尝试调整您的搜索词或类别筛选器。',
+    'faq.showingResults': '显示{total}个结果中的{count}个',
+    'faq.stillHaveQuestions': '还有问题吗？',
+    'faq.cantFindAnswer': "找不到您要找的答案？我们的VPN专家在这里帮助您选择完美的解决方案。",
+    'faq.contactExperts': '联系我们的专家',
+    'faq.relatedGuides': '相关指南：'
   }
 };
 

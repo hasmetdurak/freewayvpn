@@ -164,7 +164,7 @@ const SurfsharkNordVPNComparisonBlogPost: React.FC = () => {
                 </div>
               </div>
               <a 
-                href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902" target="_blank" rel="noopener noreferrer"
+                href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902"
                 className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded-full transition-colors duration-200 inline-block"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -183,7 +183,7 @@ const SurfsharkNordVPNComparisonBlogPost: React.FC = () => {
                 </div>
               </div>
               <a 
-                href="https://my.surfshark.com/home" target="_blank" rel="noopener noreferrer"
+                href="https://my.surfshark.com/home"
                 className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-200 inline-block"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -39,6 +39,25 @@ export const premiumPartners: AffiliatePartner[] = [
     }
   },
   {
+    id: 'surfshark',
+    name: 'Surfshark',
+    displayName: 'Surfshark',
+    affiliateLink: 'https://surfshark.com/?aid=bestvpndigital',
+    commission: 'Premium Commission',
+    tier: 'premium',
+    isActive: true,
+    description: 'Our #2 premium affiliate partner with unlimited device connections',
+    specialOffers: [
+      '86% discount on 2-year plan',
+      '30-day money-back guarantee',
+      'Unlimited simultaneous connections',
+      'CleanWeb ad blocker included'
+    ],
+    trackingParams: {
+      aid: 'bestvpndigital'
+    }
+  },
+  {
     id: 'vpnac',
     name: 'VPN.ac',
     displayName: 'VPN.ac',
@@ -55,6 +74,38 @@ export const premiumPartners: AffiliatePartner[] = [
     trackingParams: {
       aff: '3464'
     }
+  },
+  {
+    id: 'hideme',
+    name: 'Hide.me',
+    displayName: 'Hide.me',
+    affiliateLink: 'https://member.hide.me/en/user/login',
+    commission: 'Premium Commission',
+    tier: 'premium',
+    isActive: true,
+    description: 'Our #4 premium affiliate partner with privacy-focused features and generous free tier',
+    specialOffers: [
+      'Starting from $2.59/month',
+      '30-day money-back guarantee',
+      'Generous free tier available'
+    ],
+    trackingParams: {}
+  },
+  {
+    id: 'protonvpn',
+    name: 'Proton VPN',
+    displayName: 'Proton VPN',
+    affiliateLink: 'https://account.protonvpn.com/login',
+    commission: 'Premium Commission',
+    tier: 'premium',
+    isActive: true,
+    description: 'Our #5 premium affiliate partner with Swiss-based privacy and strong security focus',
+    specialOffers: [
+      'Starting from $4.99/month',
+      'Free tier available',
+      'Swiss privacy laws protection'
+    ],
+    trackingParams: {}
   }
 ];
 

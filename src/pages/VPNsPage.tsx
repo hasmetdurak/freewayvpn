@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, Star, Award, Shield, Zap, Users, Globe, ChevronDown, ChevronUp } from 'lucide-react';
-import { vpnData, VPN } from '../data/vpnData';
+import { Search, Filter, Star, Award, Shield, Zap, Users, Globe, ChevronDown, ChevronUp, ArrowUpDown, TrendingUp, DollarSign, ExternalLink } from 'lucide-react';
+import { vpnData, VPN, allVPNs } from '../data/vpnData';
 import { useLanguage } from '../contexts/LanguageContext';
 import AffiliateButton from '../components/AffiliateButton';
 
@@ -13,11 +13,11 @@ const VPNsPage: React.FC = () => {
   const [filterPrice, setFilterPrice] = useState('all');
   const [hoveredVPN, setHoveredVPN] = useState<number | null>(null);
 
-  const countries = Array.from(new Set(vpnData.map(vpn => vpn.country))).sort();
+  const countries = Array.from(new Set(allVPNs.map(vpn => vpn.country))).sort();
   
   // Localize VPN data
   const localizedVPNs = useMemo(() => {
-    return vpnData.map(vpn => {
+    return allVPNs.map(vpn => {
       const translation = vpn.translations?.[currentLanguage.code];
       if (translation) {
         return {

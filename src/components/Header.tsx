@@ -11,10 +11,10 @@ const Header: React.FC = () => {
   const { lang } = useParams<{ lang: string }>();
 
   const navigation = [
-    { name: t('vpns'), key: 'vpns', path: '/' },
-    { name: t('faq'), key: 'faq', path: '/faq' },
-    { name: t('blog'), key: 'blog', path: '/blog' },
-    { name: t('contact'), key: 'contact', path: '/contact' },
+    { name: t('nav.vpns'), key: 'vpns', path: '/' },
+    { name: t('nav.faq'), key: 'faq', path: '/faq' },
+    { name: t('nav.blog'), key: 'blog', path: '/blog' },
+    { name: t('nav.contact'), key: 'contact', path: '/contact' },
   ];
 
   const getCurrentPage = () => {

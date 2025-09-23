@@ -16,7 +16,8 @@ interface FAQ {
 }
 
 // Consolidated and optimized FAQ list - duplicates removed and content enhanced
-const getFAQs = (language: string): FAQ[] => [
+const getFAQs = (language: string): FAQ[] => {
+  return [
   {
     id: 1,
     question: getTranslation('faq.question.1', language),
@@ -421,315 +422,308 @@ const getFAQs = (language: string): FAQ[] => [
   },
   {
     id: 68,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is split tunneling in VPNs?",
+    answer: "Split tunneling allows you to route some traffic through the VPN while other traffic uses your regular internet connection. This is useful for accessing local services while protecting sensitive activities through the VPN.",
+    category: "Advanced"
   },
   {
     id: 69,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN on my smart TV?",
+    answer: "Yes, many smart TVs support VPN apps directly, or you can install a VPN on your router to protect all connected devices including smart TVs. Some VPNs offer dedicated smart TV apps.",
+    category: "Devices"
   },
   {
     id: 70,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN kill switch?",
+    answer: "A kill switch automatically disconnects your internet if the VPN connection drops, preventing your real IP address from being exposed. This is crucial for maintaining privacy and security.",
+    category: "Security"
   },
   {
     id: 71,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Do VPNs slow down internet speed?",
+    answer: "VPNs can reduce speed by 5-20% due to encryption overhead and server distance. However, premium VPNs with optimized servers often provide speeds close to your original connection.",
+    category: "Performance"
   },
   {
     id: 72,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use multiple VPN servers simultaneously?",
+    answer: "Most VPNs don't support multiple simultaneous connections to different servers. However, you can use VPN chaining with some advanced setups, though this significantly reduces speed.",
+    category: "Advanced"
   },
   {
     id: 73,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is DNS leak protection?",
+    answer: "DNS leak protection ensures your DNS queries go through the VPN's secure servers instead of your ISP's servers, preventing your browsing activity from being tracked through DNS requests.",
+    category: "Privacy"
   },
   {
     id: 74,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Are VPNs legal in my country?",
+    answer: "VPN legality varies by country. Most countries allow VPNs for legitimate purposes, but some restrict or ban them entirely. Check your local laws before using a VPN.",
+    category: "Legal"
   },
   {
     id: 75,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for online banking?",
+    answer: "Yes, VPNs can enhance banking security by encrypting your connection. However, some banks may block VPN traffic, so you might need to whitelist your VPN's IP addresses.",
+    category: "Security"
   },
   {
     id: 76,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is the difference between VPN protocols?",
+    answer: "Different protocols (OpenVPN, WireGuard, IKEv2) offer varying levels of speed, security, and compatibility. WireGuard is fastest, OpenVPN is most secure, and IKEv2 is best for mobile devices.",
+    category: "Technical"
   },
   {
     id: 77,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I get a free VPN?",
+    answer: "Yes, but free VPNs often have limitations like data caps, slower speeds, fewer servers, and may compromise your privacy. Premium VPNs offer better security and performance.",
+    category: "Pricing"
   },
   {
     id: 78,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "How do I know if my VPN is secure?",
+    answer: "Look for features like AES-256 encryption, no-logs policy, kill switch, DNS leak protection, and independent security audits. Check if the VPN has been audited by third-party security firms.",
+    category: "Security"
   },
   {
     id: 79,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN on public Wi-Fi?",
+    answer: "Yes, using a VPN on public Wi-Fi is highly recommended. It encrypts your connection and protects your data from hackers who might be monitoring the network.",
+    category: "Security"
   },
   {
     id: 80,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a dedicated IP address?",
+    answer: "A dedicated IP is an IP address assigned only to you, reducing the chance of being blocked by websites and services. It's useful for business use or accessing services that block shared IPs.",
+    category: "Features"
   },
   {
     id: 81,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for torrenting?",
+    answer: "Yes, but choose VPNs that explicitly allow P2P traffic and have servers optimized for torrenting. Look for features like port forwarding and no bandwidth limits.",
+    category: "P2P"
   },
   {
     id: 82,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is obfuscated servers?",
+    answer: "Obfuscated servers disguise VPN traffic as regular internet traffic, helping bypass VPN blocks in restrictive countries like China or Iran.",
+    category: "Advanced"
   },
   {
     id: 83,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN on my gaming console?",
+    answer: "Yes, you can set up a VPN on your router to protect gaming consoles, or use a VPN-enabled router. Some VPNs offer specific gaming optimizations.",
+    category: "Gaming"
   },
   {
     id: 84,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is the best VPN for streaming?",
+    answer: "The best streaming VPNs have fast speeds, reliable connections, and can bypass geo-restrictions. Look for VPNs with dedicated streaming servers and good Netflix unblocking capabilities.",
+    category: "Streaming"
   },
   {
     id: 85,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for work?",
+    answer: "Yes, VPNs can secure remote work connections and access company resources. However, check with your employer's IT policy as some companies have specific VPN requirements.",
+    category: "Business"
   },
 
   {
     id: 86,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN server?",
+    answer: "A VPN server is a computer that acts as an intermediary between your device and the internet, routing your traffic through an encrypted tunnel to protect your privacy and security.",
+    category: "Technical"
   },
   {
     id: 88,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN on my mobile device?",
+    answer: "Yes, most VPNs offer mobile apps for iOS and Android. Mobile VPNs are essential for protecting your data on public Wi-Fi and maintaining privacy on mobile networks.",
+    category: "Mobile"
   },
   {
     id: 89,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is the difference between VPN and proxy?",
+    answer: "VPNs encrypt all your traffic and work at the operating system level, while proxies only handle browser traffic without encryption. VPNs provide better security and privacy protection.",
+    category: "Comparison"
   },
   {
     id: 90,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for online shopping?",
+    answer: "Yes, VPNs can protect your payment information and help you access better deals by changing your virtual location. Some retailers offer different prices based on location.",
+    category: "Shopping"
   },
   {
     id: 91,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN client?",
+    answer: "A VPN client is the software application you install on your device to connect to VPN servers. It handles the encryption and connection management for secure browsing.",
+    category: "Technical"
   },
   {
     id: 92,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for social media?",
+    answer: "Yes, VPNs can help you access social media platforms in countries where they're blocked and protect your social media activity from surveillance and tracking.",
+    category: "Privacy"
   },
   {
     id: 93,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN tunnel?",
+    answer: "A VPN tunnel is an encrypted connection between your device and the VPN server that protects your data from being intercepted by hackers, ISPs, or government surveillance.",
+    category: "Technical"
   },
   {
     id: 94,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for video calls?",
+    answer: "Yes, VPNs can secure video calls and help you access video calling services in restricted regions. However, they may slightly increase latency.",
+    category: "Communication"
   },
   {
     id: 95,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN certificate?",
+    answer: "A VPN certificate is a digital document that verifies the authenticity of the VPN server and ensures secure communication between your device and the server.",
+    category: "Security"
   },
   {
     id: 96,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for cryptocurrency trading?",
+    answer: "Yes, VPNs can protect your cryptocurrency trading activities and help you access trading platforms that might be restricted in your region.",
+    category: "Finance"
   },
   {
     id: 97,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN gateway?",
+    answer: "A VPN gateway is a network device that connects your local network to a VPN server, allowing all devices on your network to use the VPN connection.",
+    category: "Technical"
   },
   {
     id: 98,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for online dating?",
+    answer: "Yes, VPNs can protect your privacy on dating apps and websites, helping you maintain anonymity and security while meeting people online.",
+    category: "Privacy"
   },
   {
     id: 99,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN concentrator?",
+    answer: "A VPN concentrator is a hardware device that manages multiple VPN connections simultaneously, commonly used in enterprise environments for secure remote access.",
+    category: "Business"
   },
   {
     id: 100,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for online education?",
+    answer: "Yes, VPNs can help you access educational content and platforms that might be restricted in your region, and protect your learning activities from surveillance.",
+    category: "Education"
   },
   {
     id: 101,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN firewall?",
+    answer: "A VPN firewall is a security feature that monitors and controls traffic passing through the VPN connection, providing additional protection against malicious activities.",
+    category: "Security"
   },
   {
     id: 102,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for online gaming?",
+    answer: "Yes, VPNs can reduce DDoS attacks, help you access region-locked games, and provide better ping to gaming servers in different locations.",
+    category: "Gaming"
   },
   {
     id: 103,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN load balancer?",
+    answer: "A VPN load balancer distributes VPN traffic across multiple servers to improve performance and reliability, ensuring optimal connection speeds.",
+    category: "Performance"
   },
   {
     id: 104,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for online research?",
+    answer: "Yes, VPNs can help you access research databases and academic resources that might be geo-restricted, and protect your research activities from tracking.",
+    category: "Research"
   },
   {
     id: 105,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN endpoint?",
+    answer: "A VPN endpoint is the final destination of your VPN connection, typically the VPN server that your traffic is routed through for security and privacy.",
+    category: "Technical"
   },
   {
     id: 106,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for online journalism?",
+    answer: "Yes, VPNs are essential for journalists working in restrictive environments, helping them access information and communicate securely with sources.",
+    category: "Journalism"
   },
   {
     id: 107,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN mesh network?",
+    answer: "A VPN mesh network connects multiple devices in a secure, encrypted network where each device can communicate directly with others through VPN tunnels.",
+    category: "Advanced"
   },
   {
     id: 108,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for online activism?",
+    answer: "Yes, VPNs can protect activists' communications and help them access information and platforms that might be restricted in their countries.",
+    category: "Privacy"
   },
   {
     id: 109,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN failover?",
+    answer: "VPN failover automatically switches to a backup server if the primary VPN server becomes unavailable, ensuring continuous protection and connectivity.",
+    category: "Reliability"
   },
   {
     id: 110,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "Can I use a VPN for online therapy?",
+    answer: "Yes, VPNs can protect the privacy of online therapy sessions and help you access mental health services that might be restricted in your region.",
+    category: "Healthcare"
   },
 
   {
     id: 112,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN split DNS?",
+    answer: "VPN split DNS allows you to use different DNS servers for different domains, providing more control over how your DNS queries are resolved.",
+    category: "Advanced"
   },
 
   {
     id: 114,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN bandwidth throttling?",
+    answer: "VPN bandwidth throttling occurs when your ISP limits your internet speed. A VPN can help bypass this throttling by encrypting your traffic.",
+    category: "Performance"
   },
   {
     id: 115,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN session timeout?",
+    answer: "A VPN session timeout automatically disconnects your VPN after a period of inactivity to save bandwidth and maintain security.",
+    category: "Security"
   },
   {
     id: 116,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN compression?",
+    answer: "VPN compression reduces the size of data packets to improve transfer speeds, though it may slightly increase CPU usage on your device.",
+    category: "Performance"
   },
   {
     id: 117,
-    question: getTranslation('', language),
-    answer: getTranslation('', language),
-    category: getTranslation('', language)
+    question: "What is a VPN authentication?",
+    answer: "VPN authentication verifies your identity before allowing you to connect to the VPN server, typically using usernames, passwords, or certificates.",
+    category: "Security"
   }
-];
+  ];
+};
 
 const FAQPage: React.FC = () => {
-  const { t, currentLanguage, translateFAQs } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const [openItems, setOpenItems] = useState<number[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
 
   // Get FAQs for current language
-  const faqs = getFAQs(currentLanguage);
-  
-  // Get translated FAQs - this will return localized content if available, otherwise fallback to English
-  const translatedFAQs = translateFAQs(faqs);
-  
-  // Get categories from translated FAQs to ensure they're also localized
-  const categories = Array.from(new Set(translatedFAQs.map(faq => faq.category))).sort();
+  const faqs = getFAQs(currentLanguage.code);
 
   // Insert FAQ Schema on component mount and when language changes
   useEffect(() => {
-    const faqSchemaData = translatedFAQs.map(faq => ({
+    const faqSchemaData = faqs.map(faq => ({
       question: faq.question,
       answer: faq.answer
     }));
     
     insertFAQSchema(faqSchemaData);
-  }, [currentLanguage, translatedFAQs]);
+  }, [currentLanguage, faqs]);
 
   const toggleItem = (id: number) => {
     setOpenItems(prev =>
@@ -739,13 +733,6 @@ const FAQPage: React.FC = () => {
     );
   };
 
-  const filteredFAQs = translatedFAQs.filter(faq => {
-    const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
-    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Hero Section */}
@@ -753,10 +740,10 @@ const FAQPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <HelpCircle className="w-16 h-16 mx-auto mb-6 text-blue-200" />
           <h1 className="text-4xl font-bold mb-4">
-            {t('faqTitle')}
+            {t('faq.title')}
           </h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            {t('faqSubtitle')}
+            {t('faq.subtitle')}
           </p>
           
           {/* Hero Image */}
@@ -768,36 +755,9 @@ const FAQPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Search and Category Filter */}
-      <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <input
-              type="text"
-              placeholder={t('searchFaqs')}
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-          <div>
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            >
-              <option value="All">{t('allCategories')}</option>
-              {categories.map(category => (
-                <option key={category} value={category}>{category}</option>
-              ))}
-            </select>
-          </div>
-        </div>
-      </div>
-
       {/* FAQ Items */}
       <div className="space-y-4">
-        {filteredFAQs.map((faq) => (
+        {faqs.map((faq) => (
           <div
             key={faq.id}
             className="bg-white rounded-lg shadow-lg overflow-hidden"
@@ -826,10 +786,10 @@ const FAQPage: React.FC = () => {
                   
                   {/* Internal Links */}
                   {(() => {
-                    const internalLinks = getInternalLinks(faq.id, currentLanguage);
+                    const internalLinks = getInternalLinks(faq.id, currentLanguage.code);
                     return internalLinks.length > 0 ? (
                       <div className="mt-4">
-                        <h5 className="text-sm font-medium text-gray-900 mb-2">{getTranslation('', language)}</h5>
+                        <h5 className="text-sm font-medium text-gray-900 mb-2">{t('faq.relatedGuides')}</h5>
                         <div className="space-y-2">
                           {internalLinks.map((link, index) => (
                             <InternalLink
@@ -848,7 +808,7 @@ const FAQPage: React.FC = () => {
                   
                   {/* Affiliate Recommendation */}
                   {(() => {
-                    const recommendation = getAffiliateRecommendation(faq.id, currentLanguage);
+                    const recommendation = getAffiliateRecommendation(faq.id, currentLanguage.code);
                     return recommendation ? (
                       <AffiliateButton
                         provider={recommendation.provider}
@@ -868,7 +828,7 @@ const FAQPage: React.FC = () => {
         ))}
       </div>
 
-      {filteredFAQs.length === 0 && (
+      {faqs.length === 0 && (
         <div className="text-center py-12">
           <HelpCircle className="h-12 w-12 text-gray-400 mx-auto mb-4" />
           <p className="text-gray-500 text-lg">{t('noFaqsFound')}</p>
@@ -878,7 +838,7 @@ const FAQPage: React.FC = () => {
 
       {/* Results count */}
       <div className="mt-8 text-center text-sm text-gray-500">
-        {t('showingResults').replace('{count}', filteredFAQs.length.toString()).replace('{total}', faqs.length.toString())}
+        {t('showingResults').replace('{count}', faqs.length.toString()).replace('{total}', faqs.length.toString())}
       </div>
 
       {/* Contact CTA */}
