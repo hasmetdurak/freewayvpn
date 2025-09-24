@@ -59,7 +59,7 @@ const MacBookM3VPNBlogPost: React.FC = () => {
 
           {/* Featured Image */}
           <img
-            src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800"
+            src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             alt="MacBook M3 VPN Battery Performance Test"
             className="w-full h-64 object-cover rounded-lg shadow-lg mb-8"
           />

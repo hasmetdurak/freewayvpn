@@ -1,10 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useBlogTranslation } from '../hooks/useBlogTranslation';
 import { Gamepad2, Zap, Shield, Globe, Clock, CheckCircle, XCircle, AlertTriangle } from 'lucide-react';
 
 const GamingVPNBlogPost: React.FC = () => {
   const { language } = useLanguage();
+  const { getBlogContent } = useBlogTranslation('gaming-vpn-2025');
+  
+  const blogContent = getBlogContent();
 
   return (
     <>
@@ -42,7 +46,7 @@ const GamingVPNBlogPost: React.FC = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Fastest VPN for Online Gaming in 2025
+                {blogContent?.title || 'Fastest VPN for Online Gaming in 2025'}
                 <span className="block text-2xl md:text-3xl text-green-400 mt-2">
                   [Low Ping & No Lag Guide]
                 </span>
@@ -62,7 +66,7 @@ const GamingVPNBlogPost: React.FC = () => {
             {/* Introduction */}
             <section className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 mb-8 border border-gray-700">
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Online gaming has grown exponentially in 2025, with millions of players competing in titles like <strong className="text-white">Valorant, PUBG Mobile, Fortnite, Call of Duty, and Genshin Impact</strong>. While gaming, nothing is more frustrating than high ping, lag spikes, or sudden disconnections.
+                {blogContent?.content?.introduction || 'Online gaming has grown exponentially in 2025, with millions of players competing in titles like Valorant, PUBG Mobile, Fortnite, Call of Duty, and Genshin Impact. While gaming, nothing is more frustrating than high ping, lag spikes, or sudden disconnections.'}
               </p>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 A fast VPN for online gaming in 2025 is no longer optional for serious gamers. It ensures smooth gameplay, bypasses geo-restrictions, protects your privacy, and sometimes even reduces ping.

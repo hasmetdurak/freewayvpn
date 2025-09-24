@@ -46,7 +46,7 @@ const DemonSlayerNetflixVPNBlogPost: React.FC = () => {
             </div>
           </div>
           <img 
-            src="https://images.pexels.com/photos/1040160/pexels-photo-1040160.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
             alt="Demon Slayer Season 4 Netflix VPN streaming guide" 
             className="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg mb-8"
           />

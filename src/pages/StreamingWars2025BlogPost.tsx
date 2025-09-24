@@ -23,7 +23,7 @@ const StreamingWars2025BlogPost: React.FC = () => {
         {/* Hero Section */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
           <img 
-            src="https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+            src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
             alt="Streaming Wars 2025"
             className="w-full h-64 object-cover"
           />

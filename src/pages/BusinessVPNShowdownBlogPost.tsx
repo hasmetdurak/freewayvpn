@@ -2,9 +2,13 @@ import React from 'react';
 import { ArrowLeft, Clock, User, Calendar, Tag, Shield, Building, DollarSign, CheckCircle, XCircle, TrendingUp, Users, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useBlogTranslation } from '../hooks/useBlogTranslation';
 
 const BusinessVPNShowdownBlogPost: React.FC = () => {
   const { t } = useLanguage();
+  const { getBlogContent } = useBlogTranslation('business-vpn-showdown');
+  
+  const blogContent = getBlogContent();
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -31,12 +35,12 @@ const BusinessVPNShowdownBlogPost: React.FC = () => {
             </div>
             <div className="flex items-center">
               <User className="h-4 w-4 mr-1" />
-              Enterprise Security Team
+              {blogContent?.author || 'Enterprise Security Team'}
             </div>
           </div>
           
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Business VPN Showdown 2025: Perimeter 81 vs NordLayer vs Twingate – Which Delivers the Best Pricing & Security?
+            {blogContent?.title || 'Business VPN Showdown 2025: Perimeter 81 vs NordLayer vs Twingate – Which Delivers the Best Pricing & Security?'}
           </h1>
           
           <div className="flex flex-wrap gap-2 mb-6">
@@ -50,8 +54,8 @@ const BusinessVPNShowdownBlogPost: React.FC = () => {
         {/* Featured Image */}
         <div className="mb-8">
           <img 
-            src="/api/placeholder/800/400" 
-            alt="Business VPN Comparison 2025" 
+            src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            alt="Business VPN Comparison 2025 - Enterprise security team working on network infrastructure" 
             className="w-full h-64 object-cover rounded-lg shadow-lg"
           />
         </div>
@@ -59,7 +63,7 @@ const BusinessVPNShowdownBlogPost: React.FC = () => {
         {/* Article Content */}
         <article className="prose prose-lg max-w-none">
           <p className="text-xl text-gray-700 leading-relaxed mb-6">
-            In today's remote-first world, business VPNs are no longer optional—they're mission-critical. From securing hybrid workforces to protecting sensitive data across cloud platforms, companies of every size rely on VPNs tailored for enterprise needs.
+            {blogContent?.content?.introduction || 'In today\'s remote-first world, business VPNs are no longer optional—they\'re mission-critical. From securing hybrid workforces to protecting sensitive data across cloud platforms, companies of every size rely on VPNs tailored for enterprise needs.'}
           </p>
 
           <p className="mb-6">

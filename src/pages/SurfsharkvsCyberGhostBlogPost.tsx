@@ -197,7 +197,7 @@ const SurfsharkNordVPNComparisonBlogPost: React.FC = () => {
       {/* Featured Image */}
       <div className="mb-8">
         <img 
-          src="https://images.pexels.com/photos/3584994/pexels-photo-3584994.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
           alt="Surfshark vs NordVPN Price Comparison" 
           className="w-full h-64 object-cover rounded-lg shadow-lg"
         />

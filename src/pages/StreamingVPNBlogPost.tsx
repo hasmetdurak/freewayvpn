@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
 import { Calendar, Clock, User, ArrowLeft, Shield, Zap, Globe, Monitor } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useBlogTranslation } from '../hooks/useBlogTranslation';
 
 const StreamingVPNBlogPost: React.FC = () => {
   const { getTranslation } = useLanguage();
+  const { getBlogContent } = useBlogTranslation('streaming-vpn-2025');
+  
+  const blogContent = getBlogContent();
 
   useEffect(() => {
     document.title = 'Top 10 VPNs for Streaming in 2025: Netflix, Hulu & More | BestVPN.digital';
@@ -133,12 +137,12 @@ const StreamingVPNBlogPost: React.FC = () => {
           </div>
           
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Top 10 VPNs for Streaming in 2025: Netflix, Hulu & More
+            {blogContent?.title || 'Top 10 VPNs for Streaming in 2025: Netflix, Hulu & More'}
           </h1>
           
           <div className="flex items-center text-sm text-gray-600">
             <User className="h-4 w-4 mr-2" />
-            <span className="mr-4">Sarah Mitchell</span>
+            <span className="mr-4">{blogContent?.author || 'Sarah Mitchell'}</span>
             <Calendar className="h-4 w-4 mr-2" />
             <span>January 15, 2025</span>
           </div>
@@ -150,15 +154,15 @@ const StreamingVPNBlogPost: React.FC = () => {
         <div className="bg-white rounded-lg shadow-sm p-8 blog-content">
           {/* Hero Image */}
           <img
-            src="https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            alt="VPN Streaming Setup"
+            src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Streaming VPN Setup - Multiple devices showing Netflix, Hulu, and other streaming platforms"
             className="w-full h-64 object-cover rounded-lg mb-8"
           />
 
           {/* Introduction */}
           <div className="prose prose-lg max-w-none mb-8">
             <p className="text-lg text-gray-700 leading-relaxed">
-              In the fast-evolving world of online streaming, finding a VPN that consistently delivers fast speeds, reliable connections, and access to global streaming content is crucial. With 2025 bringing new streaming restrictions and geo-blocking policies, viewers are increasingly turning to virtual private networks (VPNs) to enjoy their favorite shows and movies without interruptions. This guide highlights the top 10 VPNs for streaming in 2025, helping you make an informed choice for Netflix, Hulu, and more.
+              {blogContent?.content?.introduction || 'In the fast-evolving world of online streaming, finding a VPN that consistently delivers fast speeds, reliable connections, and access to global streaming content is crucial. With 2025 bringing new streaming restrictions and geo-blocking policies, viewers are increasingly turning to virtual private networks (VPNs) to enjoy their favorite shows and movies without interruptions. This guide highlights the top 10 VPNs for streaming in 2025, helping you make an informed choice for Netflix, Hulu, and more.'}
             </p>
           </div>
 

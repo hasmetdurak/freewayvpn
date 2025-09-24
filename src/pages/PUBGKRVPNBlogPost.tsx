@@ -72,7 +72,7 @@ const PUBGKRVPNBlogPost: React.FC = () => {
           
           {/* Hero Image */}
           <img 
-            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+            src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
             alt="PUBG Mobile KR VPN Gaming Setup" 
             className="w-full h-64 object-cover rounded-xl mb-6"
           />
@@ -531,7 +531,7 @@ export default PUBGKRVPNBlogPost;
               {/* Hero Image */}
               <div className="mb-8">
                 <img 
-                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
                   alt="PUBG gaming setup with Korean elements and VPN security shield" 
                   className="w-full h-64 md:h-80 object-cover rounded-xl shadow-2xl"
                 />
@@ -546,7 +546,7 @@ export default PUBGKRVPNBlogPost;
           {/* Hero Image */}
           <div className="mb-8">
             <img 
-              src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
               alt="PUBG gaming setup with Korean elements and VPN security shield" 
               className="w-full h-64 md:h-80 object-cover rounded-xl shadow-2xl"
             />
