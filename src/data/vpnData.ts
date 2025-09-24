@@ -59,7 +59,7 @@ export const vpnData: VPN[] = [
     price: 2.30,
     isTopPick: true,
     country: "British Virgin Islands",
-    affiliateLink: "https://surfshark.hasoffers.com/signup/41263",
+    affiliateLink: "https://get.surfshark.net/aff_c?offer_id=926&aff_id=41263",
     rating: 9.7,
     translations: {
       tr: {
@@ -74,9 +74,42 @@ export const vpnData: VPN[] = [
   },
   {
     id: 3,
+    name: "PureVPN",
+    logo: "/vpn-logos/purevpn.png",
+    description: "🥉 #3 Premium VPN - Ultra-fast speeds with 6500+ servers across 78+ countries and advanced security features",
+    serverCount: 6500,
+    speed: 120,
+    deviceSupport: 10,
+    securityFeatures: ["AES-256", "Kill Switch", "Split Tunneling", "Dedicated IP", "Port Forwarding"],
+    price: 2.08,
+    isTopPick: true,
+    country: "British Virgin Islands",
+    affiliateLink: "https://billing.purevpn.com/aff.php?aff=49387047",
+    rating: 9.8,
+    translations: {
+      tr: {
+        description: "🥉 #3 Premium VPN - 78+ ülkede 6500+ sunucu ile ultra hızlı hızlar ve gelişmiş güvenlik özellikleri",
+        securityFeatures: ["AES-256", "Kill Switch", "Split Tunneling", "Dedicated IP", "Port Forwarding"]
+      },
+      hi: {
+        description: "🥉 #3 प्रीमियम VPN - 78+ देशों में 6500+ सर्वर के साथ अल्ट्रा-फास्ट स्पीड और उन्नत सुरक्षा सुविधाएं",
+        securityFeatures: ["AES-256", "Kill Switch", "Split Tunneling", "Dedicated IP", "Port Forwarding"]
+      },
+      de: {
+        description: "🥉 #3 Premium VPN - Ultra-schnelle Geschwindigkeiten mit 6500+ Servern in 78+ Ländern und erweiterten Sicherheitsfeatures",
+        securityFeatures: ["AES-256", "Kill Switch", "Split Tunneling", "Dedicated IP", "Port Forwarding"]
+      },
+      es: {
+        description: "🥉 #3 Premium VPN - Velocidades ultra rápidas con 6500+ servidores en 78+ países y características de seguridad avanzadas",
+        securityFeatures: ["AES-256", "Kill Switch", "Split Tunneling", "Dedicated IP", "Port Forwarding"]
+      }
+    }
+  },
+  {
+    id: 4,
     name: "VPN.ac",
     logo: "/vpn-logos/vpn-ac.png",
-    description: "🥉 #3 Premium VPN - Professional-grade security with advanced privacy features and excellent performance",
+    description: "🏅 #4 Premium VPN - Professional-grade security with advanced privacy features and excellent performance",
     serverCount: 2800,
     speed: 105,
     deviceSupport: 6,
@@ -88,20 +121,20 @@ export const vpnData: VPN[] = [
     rating: 9.7,
     translations: {
       tr: {
-        description: "🥉 #3 Premium VPN - Gelişmiş gizlilik özellikleri ve mükemmel performans ile profesyonel düzeyde güvenlik",
+        description: "🏅 #4 Premium VPN - Gelişmiş gizlilik özellikleri ve mükemmel performans ile profesyonel düzeyde güvenlik",
         securityFeatures: ["AES-256", "Kill Switch", "Perfect Forward Secrecy", "Multi-hop"]
       },
       hi: {
-        description: "🥉 #3 प्रीमियम VPN - उन्नत गोपनीयता सुविधाओं और उत्कृष्ट प्रदर्शन के साथ पेशेवर-ग्रेड सुरक्षा",
+        description: "🏅 #4 प्रीमियम VPN - उन्नत गोपनीयता सुविधाओं और उत्कृष्ट प्रदर्शन के साथ पेशेवर-ग्रेड सुरक्षा",
         securityFeatures: ["AES-256", "Kill Switch", "Perfect Forward Secrecy", "Multi-hop"]
       }
     }
   },
   {
-    id: 4,
+    id: 5,
     name: "Proton VPN",
     logo: "/vpn-logos/proton-vpn.png",
-    description: "🏅 #4 Premium VPN - Swiss-based VPN with strong privacy focus and free tier available",
+    description: "🏅 #5 Premium VPN - Swiss-based VPN with strong privacy focus and free tier available",
     serverCount: 1700,
     speed: 88,
     deviceSupport: 10,

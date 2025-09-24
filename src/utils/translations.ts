@@ -48,6 +48,15 @@ export const faqTranslations: AllTranslations = {
     'blog': 'Blog',
     'contact': 'Contact',
     
+    // PureVPN Affiliate Translations
+    'affiliates.purevpn.description1': 'PureVPN offers ultra-fast speeds with 6500+ servers across 78+ countries, making it perfect for high-speed internet activities.',
+    'affiliates.purevpn.feature1': 'Ultra-fast speeds up to 120 Mbps',
+    'affiliates.purevpn.feature2': '6500+ servers in 78+ countries',
+    'affiliates.purevpn.feature3': 'Split tunneling and dedicated IP',
+    'affiliates.purevpn.feature4': '31-day money-back guarantee',
+    'affiliates.purevpn.cta1': 'Get PureVPN - Starting from $2.08/month',
+    'affiliates.purevpn.discount1': 'Save up to 82% on 2-year plan',
+    
     // FAQ Categories
     'faq.category.trust': 'Trust & Security',
     'faq.category.gaming': 'Gaming',
@@ -245,6 +254,15 @@ export const faqTranslations: AllTranslations = {
     'faq': 'SSS',
     'blog': 'Blog',
     'contact': 'İletişim',
+    
+    // PureVPN Affiliate Translations
+    'affiliates.purevpn.description1': 'PureVPN, 78+ ülkede 6500+ sunucu ile ultra hızlı hızlar sunar ve yüksek hızlı internet aktiviteleri için mükemmeldir.',
+    'affiliates.purevpn.feature1': '120 Mbps\'ye kadar ultra hızlı hızlar',
+    'affiliates.purevpn.feature2': '78+ ülkede 6500+ sunucu',
+    'affiliates.purevpn.feature3': 'Split tunneling ve dedicated IP',
+    'affiliates.purevpn.feature4': '31 gün para iade garantisi',
+    'affiliates.purevpn.cta1': 'PureVPN Al - Ayda $2.08\'den başlayan fiyatlarla',
+    'affiliates.purevpn.discount1': '2 yıllık planda %82\'ye kadar tasarruf',
     
     // FAQ Categories
     'faq.category.trust': 'Güven & Güvenlik',

@@ -36,13 +36,13 @@ export const affiliateRecommendationsData: AffiliateRecommendationData[] = [
   },
   {
     faqId: 3, // "Do VPNs slow down internet speed?"
-    provider: "Surfshark",
-    descriptionKey: "affiliates.surfshark.description1",
-    featuresKeys: ["affiliates.surfshark.feature1", "affiliates.surfshark.feature2", "affiliates.surfshark.feature3", "affiliates.surfshark.feature4"],
-    ctaTextKey: "affiliates.surfshark.cta1",
-    affiliateUrl: "https://surfshark.hasoffers.com/signup/41263",
-    discountKey: "affiliates.surfshark.discount1",
-    rating: 4.7
+    provider: "PureVPN",
+    descriptionKey: "affiliates.purevpn.description1",
+    featuresKeys: ["affiliates.purevpn.feature1", "affiliates.purevpn.feature2", "affiliates.purevpn.feature3", "affiliates.purevpn.feature4"],
+    ctaTextKey: "affiliates.purevpn.cta1",
+    affiliateUrl: "https://billing.purevpn.com/aff.php?aff=49387047",
+    discountKey: "affiliates.purevpn.discount1",
+    rating: 4.9
   },
   {
     faqId: 5, // "What is the best VPN protocol?"
@@ -60,7 +60,7 @@ export const affiliateRecommendationsData: AffiliateRecommendationData[] = [
     descriptionKey: "affiliates.surfshark.description2",
     featuresKeys: ["affiliates.surfshark.feature5", "affiliates.surfshark.feature6", "affiliates.surfshark.feature7", "affiliates.surfshark.feature8"],
     ctaTextKey: "affiliates.surfshark.cta2",
-    affiliateUrl: "https://surfshark.hasoffers.com/signup/41263",
+    affiliateUrl: "https://get.surfshark.net/aff_c?offer_id=926&aff_id=41263",
     discountKey: "affiliates.surfshark.discount1",
     rating: 4.7
   },

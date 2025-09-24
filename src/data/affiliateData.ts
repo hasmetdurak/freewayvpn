@@ -42,7 +42,7 @@ export const premiumPartners: AffiliatePartner[] = [
     id: 'surfshark',
     name: 'Surfshark',
     displayName: 'Surfshark',
-    affiliateLink: 'https://surfshark.hasoffers.com/signup/41263',
+    affiliateLink: 'https://get.surfshark.net/aff_c?offer_id=926&aff_id=41263',
     commission: 'Premium Commission',
     tier: 'premium',
     isActive: true,
@@ -58,6 +58,26 @@ export const premiumPartners: AffiliatePartner[] = [
     }
   },
   {
+    id: 'purevpn',
+    name: 'PureVPN',
+    displayName: 'PureVPN',
+    affiliateLink: 'https://billing.purevpn.com/aff.php?aff=49387047',
+    commission: 'Premium Commission',
+    tier: 'premium',
+    isActive: true,
+    description: 'Our #3 premium affiliate partner with ultra-fast speeds and 6500+ servers worldwide',
+    specialOffers: [
+      'Starting from $2.08/month',
+      '31-day money-back guarantee',
+      '6500+ servers in 78+ countries',
+      'Split tunneling and dedicated IP',
+      'Port forwarding included'
+    ],
+    trackingParams: {
+      aff: '49387047'
+    }
+  },
+  {
     id: 'vpnac',
     name: 'VPN.ac',
     displayName: 'VPN.ac',
@@ -65,7 +85,7 @@ export const premiumPartners: AffiliatePartner[] = [
     commission: 'Premium Commission',
     tier: 'premium',
     isActive: true,
-    description: 'Our #3 premium affiliate partner with professional-grade security features',
+    description: 'Our #4 premium affiliate partner with professional-grade security features',
     specialOffers: [
       'Starting from $3.75/month',
       '7-day money-back guarantee',
@@ -83,7 +103,7 @@ export const premiumPartners: AffiliatePartner[] = [
     commission: 'Premium Commission',
     tier: 'premium',
     isActive: true,
-    description: 'Our #4 premium affiliate partner with privacy-focused features and generous free tier',
+    description: 'Our #5 premium affiliate partner with privacy-focused features and generous free tier',
     specialOffers: [
       'Starting from $2.59/month',
       '30-day money-back guarantee',
@@ -99,7 +119,7 @@ export const premiumPartners: AffiliatePartner[] = [
     commission: 'Premium Commission',
     tier: 'premium',
     isActive: true,
-    description: 'Our #5 premium affiliate partner with Swiss-based privacy and strong security focus',
+    description: 'Our #6 premium affiliate partner with Swiss-based privacy and strong security focus',
     specialOffers: [
       'Starting from $4.99/month',
       'Free tier available',
