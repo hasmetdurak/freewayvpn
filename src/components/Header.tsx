@@ -6,7 +6,7 @@ import { useLanguage, supportedLanguages } from '../contexts/LanguageContext';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const { currentLanguage, setLanguage, t } = useLanguage();
+  const { currentLanguage, setLanguage, t, isGeoDetected, detectedCountry } = useLanguage();
   const location = useLocation();
   const { lang } = useParams<{ lang: string }>();
 
@@ -70,6 +70,16 @@ const Header: React.FC = () => {
 
           {/* Language Selector & Mobile Menu */}
           <div className="flex items-center space-x-4">
+            {/* Geo Detection Indicator */}
+            {isGeoDetected && detectedCountry && (
+              <div className="hidden sm:flex items-center space-x-2 px-3 py-2 bg-green-50 border border-green-200 rounded-lg">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-xs text-green-700 font-medium">
+                  {t('geoDetected')}: {detectedCountry}
+                </span>
+              </div>
+            )}
+
             {/* Language Selector */}
             <div className="relative">
               <button

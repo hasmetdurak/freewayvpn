@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { translations, type Translations, type TranslationsObject } from './translations';
 import { faqTranslations } from './faqTranslations';
+import { geoRouter, subdomainManager, countryLanguageMap } from '../utils/geoDetection';
 
 interface Language {
   code: string;
@@ -40,6 +41,8 @@ interface LanguageContextType {
   setLanguage: (language: Language) => void;
   t: (key: string) => string;
   translateFAQs: (faqs: any[]) => any[];
+  isGeoDetected: boolean;
+  detectedCountry: string | null;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -50,15 +53,30 @@ interface LanguageProviderProps {
 }
 
 const LanguageProvider: React.FC<LanguageProviderProps> = ({ children, initialLanguage }) => {
-  // Initialize language from prop, URL, localStorage, or default to English
+  const [isGeoDetected, setIsGeoDetected] = useState<boolean>(false);
+  const [detectedCountry, setDetectedCountry] = useState<string | null>(null);
+
+  // Initialize language from prop, URL, localStorage, subdomain, or default to English
   const getInitialLanguage = (): Language => {
-    // First priority: initialLanguage prop (from URL)
+    // First priority: subdomain detection
+    const currentSubdomain = subdomainManager.getCurrentSubdomain();
+    if (currentSubdomain) {
+      const subdomainLanguage = subdomainManager.getLanguageFromSubdomain(currentSubdomain);
+      const langFromSubdomain = supportedLanguages.find(lang => lang.code === subdomainLanguage);
+      if (langFromSubdomain) {
+        setIsGeoDetected(true);
+        setDetectedCountry(subdomainManager.getCountryFromSubdomain(currentSubdomain));
+        return langFromSubdomain;
+      }
+    }
+
+    // Second priority: initialLanguage prop (from URL)
     if (initialLanguage) {
       const langFromParam = supportedLanguages.find(lang => lang.code === initialLanguage);
       if (langFromParam) return langFromParam;
     }
     
-    // Second priority: URL path
+    // Third priority: URL path
     const urlPath = window.location.pathname;
     const langFromUrl = urlPath.split('/')[1];
     if (langFromUrl) {
@@ -66,7 +84,7 @@ const LanguageProvider: React.FC<LanguageProviderProps> = ({ children, initialLa
       if (langFromPath) return langFromPath;
     }
     
-    // Third priority: localStorage
+    // Fourth priority: localStorage
     const savedLanguage = localStorage.getItem('preferred-language');
     if (savedLanguage) {
       const langFromStorage = supportedLanguages.find(lang => lang.code === savedLanguage);
@@ -79,6 +97,12 @@ const LanguageProvider: React.FC<LanguageProviderProps> = ({ children, initialLa
   const [currentLanguage, setCurrentLanguage] = useState<Language>(getInitialLanguage);
 
   useEffect(() => {
+    // Initialize geo routing on mount (only on main domain)
+    const currentSubdomain = subdomainManager.getCurrentSubdomain();
+    if (!currentSubdomain || currentSubdomain === 'www') {
+      geoRouter.initializeGeoRouting().catch(console.warn);
+    }
+
     // Listen for language change events
     const handleLanguageChange = (event: CustomEvent) => {
       setCurrentLanguage(event.detail);
@@ -111,13 +135,26 @@ const LanguageProvider: React.FC<LanguageProviderProps> = ({ children, initialLa
     localStorage.setItem('preferred-language', language.code);
     updateDocumentLanguage(language);
     
-    // Navigate to subdirectory URL
-    const currentPath = window.location.pathname;
-    const pathWithoutLang = currentPath.replace(/^\/[a-z]{2,3}/, '') || '/';
-    const newUrl = `/${language.code}${pathWithoutLang}`;
+    // Set manual override to prevent geo redirect
+    geoRouter.setManualOverride(language.code);
     
-    // Use history API to avoid page reload
-    window.history.pushState({}, '', newUrl);
+    // Check if we should use subdomain or path-based routing
+    const currentSubdomain = subdomainManager.getCurrentSubdomain();
+    const targetConfig = subdomainManager.subdomainConfigs.find(config => config.language === language.code);
+    
+    if (targetConfig && targetConfig.subdomain !== 'www') {
+      // Use subdomain routing
+      const newURL = subdomainManager.buildSubdomainURL(targetConfig.subdomain, window.location.pathname);
+      window.location.href = newURL;
+    } else {
+      // Use path-based routing
+      const currentPath = window.location.pathname;
+      const pathWithoutLang = currentPath.replace(/^\/[a-z]{2,3}/, '') || '/';
+      const newUrl = `/${language.code}${pathWithoutLang}`;
+      
+      // Use history API to avoid page reload
+      window.history.pushState({}, '', newUrl);
+    }
     
     // Trigger a custom event to notify components of language change
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: language }));
@@ -134,7 +171,14 @@ const LanguageProvider: React.FC<LanguageProviderProps> = ({ children, initialLa
   };
 
   return (
-    <LanguageContext.Provider value={{ currentLanguage, setLanguage, t, translateFAQs }}>
+    <LanguageContext.Provider value={{ 
+      currentLanguage, 
+      setLanguage, 
+      t, 
+      translateFAQs, 
+      isGeoDetected, 
+      detectedCountry 
+    }}>
       {children}
     </LanguageContext.Provider>
   );

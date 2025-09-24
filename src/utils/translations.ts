@@ -26,6 +26,7 @@ export const faqTranslations: AllTranslations = {
     // Language Selector
     'selectLanguage': 'Select Language',
     'moreLanguages': 'More languages available',
+    'geoDetected': 'Auto-detected',
     
     // Brand
     'brand.name': 'bestvpn.digital',
@@ -233,6 +234,7 @@ export const faqTranslations: AllTranslations = {
     // Language Selector
     'selectLanguage': 'Dil Seçin',
     'moreLanguages': 'Daha fazla dil mevcut',
+    'geoDetected': 'Otomatik algılandı',
     
     // Brand
     'brand.name': 'bestvpn.digital',
@@ -439,6 +441,7 @@ export const faqTranslations: AllTranslations = {
     // Language Selector
     'selectLanguage': 'Velg språk',
     'moreLanguages': 'Flere språk tilgjengelig',
+    'geoDetected': 'Auto-oppdaget',
     
     // Brand
     'brand.name': 'bestvpn.digital',
@@ -514,6 +517,7 @@ export const faqTranslations: AllTranslations = {
     // Language Selector
     'selectLanguage': 'Välj språk',
     'moreLanguages': 'Fler språk tillgängliga',
+    'geoDetected': 'Auto-upptäckt',
     
     // Brand
     'brand.name': 'bestvpn.digital',
@@ -589,6 +593,7 @@ export const faqTranslations: AllTranslations = {
     // Language Selector
     'selectLanguage': 'Sprache wählen',
     'moreLanguages': 'Weitere Sprachen verfügbar',
+    'geoDetected': 'Automatisch erkannt',
     
     // Brand
     'brand.name': 'bestvpn.digital',
@@ -928,6 +933,7 @@ export const faqTranslations: AllTranslations = {
     // Language Selector
     'selectLanguage': 'Seleccionar Idioma',
     'moreLanguages': 'Más idiomas disponibles',
+    'geoDetected': 'Auto-detectado',
     
     // Brand
     'brand.name': 'bestvpn.digital',
@@ -1011,6 +1017,7 @@ export const faqTranslations: AllTranslations = {
     // Language Selector
     'selectLanguage': 'Sélectionner la langue',
     'moreLanguages': 'Plus de langues disponibles',
+    'geoDetected': 'Auto-détecté',
     
     // Brand
     'brand.name': 'bestvpn.digital',
@@ -1050,6 +1057,7 @@ export const faqTranslations: AllTranslations = {
     // Language Selector
     'selectLanguage': 'Seleziona lingua',
     'moreLanguages': 'Altre lingue disponibili',
+    'geoDetected': 'Auto-rilevato',
     
     // Brand
     'brand.name': 'bestvpn.digital',
@@ -1089,6 +1097,7 @@ export const faqTranslations: AllTranslations = {
     // Language Selector
     'selectLanguage': 'Выберите язык',
     'moreLanguages': 'Доступно больше языков',
+    'geoDetected': 'Автоопределено',
     
     // Brand
     'brand.name': 'bestvpn.digital',
@@ -1128,6 +1137,7 @@ export const faqTranslations: AllTranslations = {
     // Language Selector
     'selectLanguage': '选择语言',
     'moreLanguages': '更多语言可用',
+    'geoDetected': '自动检测',
     
     // Brand
     'brand.name': 'bestvpn.digital',

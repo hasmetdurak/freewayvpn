@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:multilang": "node scripts/build-multilang.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "download-logos": "node scripts/download-vpn-logos.js"

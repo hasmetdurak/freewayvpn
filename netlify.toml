@@ -1,10 +1,277 @@
 [build]
   publish = "dist"
-  command = "npm run build"
+  command = "npm run build:multilang"
+
+# Accept-Language fallback yönlendirmeleri
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true
+  conditions = {Language = ["en"]}
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/"
+  to = "/de/"
+  status = 302
+  force = true
+  conditions = {Language = ["de"]}
+
+[[redirects]]
+  from = "/"
+  to = "/tr/"
+  status = 302
+  force = true
+  conditions = {Language = ["tr"]}
+
+[[redirects]]
+  from = "/"
+  to = "/es/"
+  status = 302
+  force = true
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/"
+  to = "/fr/"
+  status = 302
+  force = true
+  conditions = {Language = ["fr"]}
+
+[[redirects]]
+  from = "/"
+  to = "/it/"
+  status = 302
+  force = true
+  conditions = {Language = ["it"]}
+
+[[redirects]]
+  from = "/"
+  to = "/pt/"
+  status = 302
+  force = true
+  conditions = {Language = ["pt"]}
+
+[[redirects]]
+  from = "/"
+  to = "/ru/"
+  status = 302
+  force = true
+  conditions = {Language = ["ru"]}
+
+[[redirects]]
+  from = "/"
+  to = "/zh/"
+  status = 302
+  force = true
+  conditions = {Language = ["zh"]}
+
+[[redirects]]
+  from = "/"
+  to = "/ja/"
+  status = 302
+  force = true
+  conditions = {Language = ["ja"]}
+
+[[redirects]]
+  from = "/"
+  to = "/ko/"
+  status = 302
+  force = true
+  conditions = {Language = ["ko"]}
+
+[[redirects]]
+  from = "/"
+  to = "/ar/"
+  status = 302
+  force = true
+  conditions = {Language = ["ar"]}
+
+[[redirects]]
+  from = "/"
+  to = "/hi/"
+  status = 302
+  force = true
+  conditions = {Language = ["hi"]}
+
+[[redirects]]
+  from = "/"
+  to = "/id/"
+  status = 302
+  force = true
+  conditions = {Language = ["id"]}
+
+[[redirects]]
+  from = "/"
+  to = "/vi/"
+  status = 302
+  force = true
+  conditions = {Language = ["vi"]}
+
+[[redirects]]
+  from = "/"
+  to = "/th/"
+  status = 302
+  force = true
+  conditions = {Language = ["th"]}
+
+[[redirects]]
+  from = "/"
+  to = "/pl/"
+  status = 302
+  force = true
+  conditions = {Language = ["pl"]}
+
+[[redirects]]
+  from = "/"
+  to = "/nb/"
+  status = 302
+  force = true
+  conditions = {Language = ["nb"]}
+
+[[redirects]]
+  from = "/"
+  to = "/sv/"
+  status = 302
+  force = true
+  conditions = {Language = ["sv"]}
+
+[[redirects]]
+  from = "/"
+  to = "/fi/"
+  status = 302
+  force = true
+  conditions = {Language = ["fi"]}
+
+[[redirects]]
+  from = "/"
+  to = "/fa/"
+  status = 302
+  force = true
+  conditions = {Language = ["fa"]}
+
+[[redirects]]
+  from = "/"
+  to = "/tl/"
+  status = 302
+  force = true
+  conditions = {Language = ["tl"]}
+
+# fallback default
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+
+# SPA routing for language subdirectories
+[[redirects]]
+  from = "/en/*"
+  to = "/en/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/*"
+  to = "/de/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tr/*"
+  to = "/tr/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/es/*"
+  to = "/es/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/fr/*"
+  to = "/fr/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/it/*"
+  to = "/it/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pt/*"
+  to = "/pt/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ru/*"
+  to = "/ru/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/zh/*"
+  to = "/zh/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ja/*"
+  to = "/ja/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ko/*"
+  to = "/ko/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ar/*"
+  to = "/ar/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/hi/*"
+  to = "/hi/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/id/*"
+  to = "/id/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/vi/*"
+  to = "/vi/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/th/*"
+  to = "/th/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pl/*"
+  to = "/pl/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/nb/*"
+  to = "/nb/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/sv/*"
+  to = "/sv/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/fi/*"
+  to = "/fi/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/fa/*"
+  to = "/fa/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tl/*"
+  to = "/tl/index.html"
   status = 200
 
 [build.environment]
