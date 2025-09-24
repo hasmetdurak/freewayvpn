@@ -3,6 +3,8 @@ import { Search, Filter, Star, Award, Shield, Zap, Users, Globe, ChevronDown, Ch
 import { vpnData, VPN, allVPNs } from '../data/vpnData';
 import { useLanguage } from '../contexts/LanguageContext';
 import AffiliateButton from '../components/AffiliateButton';
+import NaturalAffiliate from '../components/NaturalAffiliate';
+import LocalStreamingGuide from '../components/LocalStreamingGuide';
 
 const VPNsPage: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
@@ -375,6 +377,17 @@ const VPNsPage: React.FC = () => {
       {/* Results count */}
       <div className="mt-6 text-center text-sm text-gray-500">
         Showing {filteredAndSortedVPNs.length} of {allVPNs.length} VPN services
+      </div>
+      
+      {/* Natural Affiliate Integration */}
+      <div className="mt-12">
+        <NaturalAffiliate context="streaming" className="mb-6" />
+        <NaturalAffiliate context="privacy" className="mb-6" />
+      </div>
+      
+      {/* Local Streaming Guide */}
+      <div className="mt-12">
+        <LocalStreamingGuide />
       </div>
       
       {/* Trust Signals */}

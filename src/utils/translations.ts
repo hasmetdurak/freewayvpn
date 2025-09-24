@@ -29,9 +29,28 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-detected',
     
     // Brand
-    'brand.name': 'bestvpn.digital',
-    'brand.tagline': 'Your trusted source for comprehensive VPN reviews and comparisons',
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Independent Comparison Site',
     'brand.description': 'Your trusted source for comprehensive VPN reviews and comparisons. Find the perfect VPN service for your privacy and security needs.',
+    
+    // Navigation
+    'nav.vpns': 'VPNs',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blog',
+    'nav.contact': 'Contact',
+    
+    // VPNs Page
+    'compareVpns': 'Compare VPNs',
+    'findPerfectVpn': 'Find the perfect VPN for your needs',
+    'exclusiveDeals': 'Exclusive deals and discounts',
+    
+    // Blog Page
+    'blog.title': 'VPN Blog & Guides',
+    'blog.subtitle': 'Latest VPN news, reviews, and comprehensive guides to help you stay secure online',
+    
+    // Contact Page
+    'contactTitle': 'Contact Us',
+    'contactSubtitle': 'Get in touch with our VPN experts for personalized recommendations and support',
     
     // Cultural & Localized Content - US/English
     'cultural.trust': 'Trust & Security',
@@ -54,7 +73,7 @@ export const faqTranslations: AllTranslations = {
     'footer.affiliateDisclosure': 'Affiliate Disclosure',
     'footer.affiliateText': 'We may earn a commission when you purchase through our affiliate links. This helps support our site and allows us to continue providing comprehensive VPN reviews.',
     'footer.independentDisclaimer': 'This is an independent review site. We are not affiliated with any VPN provider. All trademarks are the property of their respective owners.',
-    'footer.copyright': '© 2025 bestvpn.digital. All rights reserved.',
+    'footer.copyright': '© 2025 BestVPN Reviews. All rights reserved.',
     'footer.email': 'support@bestvpn.digital',
     'quickLinks': 'Quick Links',
     'vpns': 'VPNs',
@@ -250,9 +269,28 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Otomatik algılandı',
     
     // Brand
-    'brand.name': 'bestvpn.digital',
-    'brand.tagline': 'Kapsamlı VPN incelemeleri ve karşılaştırmaları için güvenilir kaynağınız',
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Bağımsız Karşılaştırma Sitesi',
     'brand.description': 'Kapsamlı VPN incelemeleri ve karşılaştırmaları için güvenilir kaynağınız. Gizlilik ve güvenlik ihtiyaçlarınız için mükemmel VPN hizmetini bulun.',
+    
+    // Navigation
+    'nav.vpns': 'VPN\'ler',
+    'nav.faq': 'SSS',
+    'nav.blog': 'Blog',
+    'nav.contact': 'İletişim',
+    
+    // VPNs Page
+    'compareVpns': 'VPN\'leri Karşılaştır',
+    'findPerfectVpn': 'İhtiyaçlarınız için mükemmel VPN\'i bulun',
+    'exclusiveDeals': 'Özel fırsatlar ve indirimler',
+    
+    // Blog Page
+    'blog.title': 'VPN Blog & Rehberler',
+    'blog.subtitle': 'En son VPN haberleri, incelemeler ve online güvenliğiniz için kapsamlı rehberler',
+    
+    // Contact Page
+    'contactTitle': 'İletişim',
+    'contactSubtitle': 'Kişiselleştirilmiş öneriler ve destek için VPN uzmanlarımızla iletişime geçin',
     
     // Cultural & Localized Content - Turkey/Turkish
     'cultural.trust': 'Güvenilirlik & Güvenlik',
@@ -470,9 +508,28 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-oppdaget',
     
     // Brand
-    'brand.name': 'bestvpn.digital',
-    'brand.tagline': 'Din pålitelige kilde for omfattende VPN-anmeldelser og sammenligninger',
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Uavhengig Sammenligningsside',
     'brand.description': 'Din pålitelige kilde for omfattende VPN-anmeldelser og sammenligninger. Finn den perfekte VPN-tjenesten for dine personvern- og sikkerhetsbehov.',
+    
+    // Navigation
+    'nav.vpns': 'VPNer',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blogg',
+    'nav.contact': 'Kontakt',
+    
+    // VPNs Page
+    'compareVpns': 'Sammenlign VPNer',
+    'findPerfectVpn': 'Finn den perfekte VPNen for dine behov',
+    'exclusiveDeals': 'Eksklusive tilbud og rabatter',
+    
+    // Blog Page
+    'blog.title': 'VPN Blogg og Guider',
+    'blog.subtitle': 'Siste VPN-nyheter, anmeldelser og omfattende guider for å hjelpe deg med å holde deg trygg på nettet',
+    
+    // Contact Page
+    'contactTitle': 'Kontakt oss',
+    'contactSubtitle': 'Ta kontakt med våre VPN-eksperter for personaliserte anbefalinger og støtte',
     
     // Footer
     'footer.support': 'Support',
@@ -546,8 +603,8 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-upptäckt',
     
     // Brand
-    'brand.name': 'bestvpn.digital',
-    'brand.tagline': 'Din pålitliga källa för omfattande VPN-recensioner och jämförelser',
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Oberoende Jämförelsesida',
     'brand.description': 'Din pålitliga källa för omfattande VPN-recensioner och jämförelser. Hitta den perfekta VPN-tjänsten för dina integritets- och säkerhetsbehov.',
     
     // Footer
@@ -622,12 +679,31 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Automatisch erkannt',
     
     // Brand
-    'brand.name': 'bestvpn.digital',
-    'brand.tagline': 'Ihre vertrauenswürdige Quelle für umfassende VPN-Bewertungen und -Vergleiche',
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Unabhängige Vergleichsseite',
     'brand.description': 'Ihre vertrauenswürdige Quelle für umfassende VPN-Bewertungen und -Vergleiche. Finden Sie den perfekten VPN-Service für Ihre Privatsphäre und Sicherheitsbedürfnisse.',
     
+    // Navigation
+    'nav.vpns': 'VPNs',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blog',
+    'nav.contact': 'Kontakt',
+    
+    // VPNs Page
+    'compareVpns': 'VPNs vergleichen',
+    'findPerfectVpn': 'Finden Sie das perfekte VPN für Ihre Bedürfnisse',
+    'exclusiveDeals': 'Exklusive Angebote und Rabatte',
+    
+    // Blog Page
+    'blog.title': 'VPN Blog & Anleitungen',
+    'blog.subtitle': 'Neueste VPN-Nachrichten, Bewertungen und umfassende Anleitungen für Ihre Online-Sicherheit',
+    
+    // Contact Page
+    'contactTitle': 'Kontakt',
+    'contactSubtitle': 'Kontaktieren Sie unsere VPN-Experten für personalisierte Empfehlungen und Support',
+    
     // Cultural & Localized Content - Germany/German
-    'cultural.trust': 'Datenschutz & DSGVO',
+    'cultural.trust': 'Datenschutz & DSGVO-konform',
     'cultural.privacy': 'Qualität & Vertrauen',
     'cultural.value': 'Beste Qualität',
     'cultural.speed': 'Höchste Geschwindigkeit',
@@ -635,9 +711,20 @@ export const faqTranslations: AllTranslations = {
     'cultural.moneyBack': '30 Tage Geld-zurück-Garantie',
     'cultural.cta': 'Jetzt testen - 30 Tage Geld-zurück',
     'cultural.features': 'Unbegrenzte Geräte, 24/7 Support, militärische Verschlüsselung',
-    'cultural.localContent': 'Netflix DE, ARD, ZDF, DAZN, Sky Go, Amazon Prime Video',
+    'cultural.localContent': 'Netflix DE, ARD Mediathek, ZDF Mediathek, DAZN, Sky Go, Amazon Prime Video',
     'cultural.banking': 'Online-Banking & Einkaufen',
     'cultural.gaming': 'Gaming & Streaming',
+    
+    // Local Voice & Natural Affiliate Integration - German
+    'localVoice.datenschutz': 'Datenschutz',
+    'localVoice.dsgvo': 'DSGVO-konform',
+    'localVoice.noLogs': 'No-Logs-Policy',
+    'localVoice.militaryGrade': 'Militärische Verschlüsselung',
+    'localVoice.ardZdf': 'ARD Mediathek & ZDF Mediathek',
+    'localVoice.netflixDe': 'Netflix Deutschland',
+    'localVoice.personalExperience': 'Ich nutze NordVPN seit 2022 – besonders weil es mit ARD Mediathek im Ausland funktioniert.',
+    'localVoice.streamingFocus': 'Perfekt für deutsches Streaming: ARD, ZDF, Netflix DE',
+    'localVoice.privacyFocus': 'DSGVO-konforme Datenschutz-Lösung',
     
     // Footer
     'footer.support': 'Support',
@@ -755,7 +842,32 @@ export const faqTranslations: AllTranslations = {
     'faq.question116': 'Voiko VPN piilottaa selaushistoriani ISP:ltäni?',
     'faq.answer116': 'Kyllä, VPN piilottaa selaushistoriasi ISP:ltäsi salaamalla liikenteesi ja reitittämällä sen etäpalvelimen kautta. Tämä estää ISP:täsi näkemästä, mitä verkkosivustoja vierailet tai mitä teet verkossa, suojaten yksityisyyttäsi. Vuonna 2025, kun ISP:t yhä enemmän kaupallistavat käyttäjätietoja, tämä on tärkeä etu. NordVPN tarkastetulla no-logs-käytännöllään varmistaa, että edes VPN-palveluntarjoaja ei näe toimintaasi.',
     'faq.question117': 'Tarvitsenko VPN:ää käyttäessäni koti-WiFi:täni?',
-    'faq.answer117': 'Vaikka koti-WiFi on yleensä turvallisempi kuin julkiset verkot, VPN tarjoaa silti etuja. Se estää ISP:täsi seuraamasta selailutottumuksiasi, suojaa mahdollisilta reitittimen haavoittuvuuksilta ja mahdollistaa pääsyn maantieteellisesti estettyyn sisältöön. Jos yksityisyys on sinulle tärkeää, VPN:n käyttämistä kotona suositellaan.'
+    'faq.answer117': 'Vaikka koti-WiFi on yleensä turvallisempi kuin julkiset verkot, VPN tarjoaa silti etuja. Se estää ISP:täsi seuraamasta selailutottumuksiasi, suojaa mahdollisilta reitittimen haavoittuvuuksilta ja mahdollistaa pääsyn maantieteellisesti estettyyn sisältöön. Jos yksityisyys on sinulle tärkeää, VPN:n käyttämistä kotona suositellaan.',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Riippumaton Vertailusivusto',
+    'brand.description': 'Luotettava lähteesi kattaviin VPN-arvosteluihin ja -vertailuihin. Löydä täydellinen VPN-palvelu yksityisyys- ja turvallisuustarpeisiisi.',
+    
+    // Navigation
+    'nav.vpns': 'VPN:t',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blogi',
+    'nav.contact': 'Yhteystiedot',
+    
+    // VPNs Page
+    'compareVpns': 'Vertaa VPN:itä',
+    'findPerfectVpn': 'Löydä täydellinen VPN tarpeisiisi',
+    'exclusiveDeals': 'Eksklusiiviset tarjoukset ja alennukset',
+    
+    // Blog Page
+    'blog.title': 'VPN Blogi ja Oppaat',
+    'blog.subtitle': 'Uusimmat VPN-uutiset, arvostelut ja kattavat oppaat auttamaan sinua pysymään turvassa verkossa',
+    
+    // Contact Page
+    'contactTitle': 'Ota yhteyttä',
+    'contactSubtitle': 'Ota yhteyttä VPN-asiantuntijoihimme henkilökohtaisten suositusten ja tuen saamiseksi',
+
   },
   ja: {
     // FAQ Page UI
@@ -805,7 +917,32 @@ export const faqTranslations: AllTranslations = {
     'faq.question116': 'VPNはISPから私のブラウジング履歴を隠せますか？',
     'faq.answer116': 'はい、VPNはトラフィックを暗号化し、リモートサーバー経由でルーティングすることで、ISPからブラウジング履歴を隠します。これにより、ISPがあなたが訪問するウェブサイトやオンラインでの行動を見ることを防ぎ、プライバシーを保護します。2025年、ISPがユーザーデータを収益化することが増える中、これは重要な利点です。監査されたノーログポリシーを持つNordVPNは、VPNプロバイダーでさえあなたの活動を見ることができないことを保証します。',
     'faq.question117': '自宅のWiFiを使用する際にVPNが必要ですか？',
-    'faq.answer117': '自宅のWiFiは一般的に公共ネットワークより安全ですが、VPNは依然として利点を提供します。ISPがブラウジング習慣を追跡することを防ぎ、潜在的なルーターの脆弱性から保護し、地理的にブロックされたコンテンツへのアクセスを可能にします。プライバシーが重要な場合、自宅でのVPN使用が推奨されます。'
+    'faq.answer117': '自宅のWiFiは一般的に公共ネットワークより安全ですが、VPNは依然として利点を提供します。ISPがブラウジング習慣を追跡することを防ぎ、潜在的なルーターの脆弱性から保護し、地理的にブロックされたコンテンツへのアクセスを可能にします。プライバシーが重要な場合、自宅でのVPN使用が推奨されます。',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': '独立比較サイト',
+    'brand.description': '包括的なVPNレビューと比較の信頼できるソース。プライバシーとセキュリティのニーズに最適なVPNサービスを見つけてください。',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'ブログ',
+    'nav.contact': 'お問い合わせ',
+    
+    // VPNs Page
+    'compareVpns': 'VPNを比較',
+    'findPerfectVpn': 'あなたのニーズに最適なVPNを見つける',
+    'exclusiveDeals': '限定オファーと割引',
+    
+    // Blog Page
+    'blog.title': 'VPNブログとガイド',
+    'blog.subtitle': '最新のVPNニュース、レビュー、オンラインで安全を保つための包括的なガイド',
+    
+    // Contact Page
+    'contactTitle': 'お問い合わせ',
+    'contactSubtitle': 'パーソナライズされた推奨事項とサポートのためにVPN専門家にお問い合わせください',
+
   },
   ko: {
     // FAQ Page UI
@@ -855,7 +992,32 @@ export const faqTranslations: AllTranslations = {
     'faq.question116': 'VPN이 ISP로부터 브라우징 기록을 숨길 수 있나요?',
     'faq.answer116': '네, VPN은 트래픽을 암호화하고 원격 서버를 통해 라우팅하여 ISP로부터 브라우징 기록을 숨깁니다. 이는 ISP가 당신이 방문하는 웹사이트나 온라인 활동을 보는 것을 방지하여 개인정보를 보호합니다. 2025년, ISP가 사용자 데이터를 수익화하는 것이 증가하는 가운데 이는 중요한 이점입니다. 감사된 노로그 정책을 가진 NordVPN은 VPN 제공업체조차 당신의 활동을 볼 수 없음을 보장합니다.',
     'faq.question117': '집 WiFi를 사용할 때 VPN이 필요한가요?',
-    'faq.answer117': '집 WiFi는 일반적으로 공용 네트워크보다 안전하지만, VPN은 여전히 이점을 제공합니다. ISP가 브라우징 습관을 추적하는 것을 방지하고, 잠재적인 라우터 취약점으로부터 보호하며, 지리적으로 차단된 콘텐츠에 대한 액세스를 가능하게 합니다. 개인정보 보호가 중요하다면 집에서 VPN 사용이 권장됩니다.'
+    'faq.answer117': '집 WiFi는 일반적으로 공용 네트워크보다 안전하지만, VPN은 여전히 이점을 제공합니다. ISP가 브라우징 습관을 추적하는 것을 방지하고, 잠재적인 라우터 취약점으로부터 보호하며, 지리적으로 차단된 콘텐츠에 대한 액세스를 가능하게 합니다. 개인정보 보호가 중요하다면 집에서 VPN 사용이 권장됩니다.',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': '독립 비교 사이트',
+    'brand.description': '포괄적인 VPN 리뷰와 비교를 위한 신뢰할 수 있는 소스. 프라이버시와 보안 요구사항에 완벽한 VPN 서비스를 찾아보세요.',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'FAQ',
+    'nav.blog': '블로그',
+    'nav.contact': '문의',
+    
+    // VPNs Page
+    'compareVpns': 'VPN 비교',
+    'findPerfectVpn': '당신의 요구에 맞는 완벽한 VPN 찾기',
+    'exclusiveDeals': '독점 혜택과 할인',
+    
+    // Blog Page
+    'blog.title': 'VPN 블로그 및 가이드',
+    'blog.subtitle': '최신 VPN 뉴스, 리뷰 및 온라인에서 안전하게 지내는 데 도움이 되는 포괄적인 가이드',
+    
+    // Contact Page
+    'contactTitle': '문의하기',
+    'contactSubtitle': '개인화된 추천과 지원을 위해 VPN 전문가에게 문의하세요',
+
   },
   hi: {
     // FAQ Page UI
@@ -869,7 +1031,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'अभी भी प्रश्न हैं?',
     'faq.cantFindAnswer': "आप जो उत्तर खोज रहे हैं वह नहीं मिल रहा? हमारे VPN विशेषज्ञ आपको सही समाधान चुनने में मदद करने के लिए यहाँ हैं।",
     'faq.contactExperts': 'हमारे विशेषज्ञों से संपर्क करें',
-    'faq.relatedGuides': 'संबंधित गाइड:'
+    'faq.relatedGuides': 'संबंधित गाइड:',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'स्वतंत्र तुलना साइट',
+    'brand.description': 'व्यापक VPN समीक्षाओं और तुलनाओं के लिए आपका विश्वसनीय स्रोत। अपनी गोपनीयता और सुरक्षा आवश्यकताओं के लिए सही VPN सेवा खोजें।',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'ब्लॉग',
+    'nav.contact': 'संपर्क',
+    
+    // VPNs Page
+    'compareVpns': 'VPN की तुलना करें',
+    'findPerfectVpn': 'अपनी आवश्यकताओं के लिए सही VPN खोजें',
+    'exclusiveDeals': 'विशेष ऑफर और छूट',
+    
+    // Blog Page
+    'blog.title': 'VPN ब्लॉग और गाइड',
+    'blog.subtitle': 'नवीनतम VPN समाचार, समीक्षाएं और ऑनलाइन सुरक्षित रहने में मदद करने वाले व्यापक गाइड',
+    
+    // Contact Page
+    'contactTitle': 'संपर्क करें',
+    'contactSubtitle': 'व्यक्तिगत सिफारिशों और सहायता के लिए हमारे VPN विशेषज्ञों से संपर्क करें',
+
   },
   ar: {
     // FAQ Page UI
@@ -883,7 +1070,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'لا تزال لديك أسئلة؟',
     'faq.cantFindAnswer': "لا يمكنك العثور على الإجابة التي تبحث عنها؟ خبراء VPN لدينا هنا لمساعدتك في اختيار الحل المثالي.",
     'faq.contactExperts': 'اتصل بخبرائنا',
-    'faq.relatedGuides': 'أدلة ذات صلة:'
+    'faq.relatedGuides': 'أدلة ذات صلة:',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'موقع مقارنة مستقل',
+    'brand.description': 'مصدرك الموثوق لمراجعات ومقارنات VPN الشاملة. اعثر على خدمة VPN المثالية لاحتياجات الخصوصية والأمان الخاصة بك.',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'الأسئلة الشائعة',
+    'nav.blog': 'المدونة',
+    'nav.contact': 'اتصل بنا',
+    
+    // VPNs Page
+    'compareVpns': 'قارن VPN',
+    'findPerfectVpn': 'اعثر على VPN المثالي لاحتياجاتك',
+    'exclusiveDeals': 'عروض حصرية وخصومات',
+    
+    // Blog Page
+    'blog.title': 'مدونة VPN والأدلة',
+    'blog.subtitle': 'أحدث أخبار VPN والمراجعات والأدلة الشاملة لمساعدتك في البقاء آمنًا عبر الإنترنت',
+    
+    // Contact Page
+    'contactTitle': 'اتصل بنا',
+    'contactSubtitle': 'تواصل مع خبراء VPN لدينا للحصول على توصيات مخصصة ودعم',
+
   },
   tl: {
     // FAQ Page UI
@@ -897,7 +1109,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'May mga tanong pa rin?',
     'faq.cantFindAnswer': "Hindi mahanap ang sagot na hinahanap ninyo? Ang aming mga VPN expert ay nandito para tulungan kayong pumili ng perpektong solusyon.",
     'faq.contactExperts': 'Makipag-ugnayan sa aming mga Eksperto',
-    'faq.relatedGuides': 'Mga Kaugnay na Gabay:'
+    'faq.relatedGuides': 'Mga Kaugnay na Gabay:',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Malayang Site ng Paghahambing',
+    'brand.description': 'Ang iyong mapagkakatiwalaang mapagkukunan para sa komprehensibong mga review at paghahambing ng VPN. Hanapin ang perpektong serbisyo ng VPN para sa iyong mga pangangailangan sa privacy at seguridad.',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blog',
+    'nav.contact': 'Makipag-ugnayan',
+    
+    // VPNs Page
+    'compareVpns': 'Ihambing ang mga VPN',
+    'findPerfectVpn': 'Hanapin ang perpektong VPN para sa iyong mga pangangailangan',
+    'exclusiveDeals': 'Eksklusibong mga alok at diskwento',
+    
+    // Blog Page
+    'blog.title': 'VPN Blog at Mga Gabay',
+    'blog.subtitle': 'Pinakabagong mga balita ng VPN, review at komprehensibong mga gabay upang matulungan kang manatiling ligtas online',
+    
+    // Contact Page
+    'contactTitle': 'Makipag-ugnayan sa amin',
+    'contactSubtitle': 'Makipag-ugnayan sa aming mga eksperto sa VPN para sa mga personalisadong rekomendasyon at suporta',
+
   },
   id: {
     // FAQ Page UI
@@ -911,7 +1148,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Masih Ada Pertanyaan?',
     'faq.cantFindAnswer': "Tidak dapat menemukan jawaban yang Anda cari? Para ahli VPN kami siap membantu Anda memilih solusi yang sempurna.",
     'faq.contactExperts': 'Hubungi Para Ahli Kami',
-    'faq.relatedGuides': 'Panduan Terkait:'
+    'faq.relatedGuides': 'Panduan Terkait:',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Situs Perbandingan Independen',
+    'brand.description': 'Sumber terpercaya Anda untuk ulasan dan perbandingan VPN yang komprehensif. Temukan layanan VPN yang sempurna untuk kebutuhan privasi dan keamanan Anda.',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blog',
+    'nav.contact': 'Kontak',
+    
+    // VPNs Page
+    'compareVpns': 'Bandingkan VPN',
+    'findPerfectVpn': 'Temukan VPN yang sempurna untuk kebutuhan Anda',
+    'exclusiveDeals': 'Penawaran eksklusif dan diskon',
+    
+    // Blog Page
+    'blog.title': 'Blog VPN dan Panduan',
+    'blog.subtitle': 'Berita VPN terbaru, ulasan dan panduan komprehensif untuk membantu Anda tetap aman online',
+    
+    // Contact Page
+    'contactTitle': 'Hubungi kami',
+    'contactSubtitle': 'Hubungi pakar VPN kami untuk rekomendasi yang dipersonalisasi dan dukungan',
+
   },
   fa: {
     // FAQ Page UI
@@ -925,7 +1187,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'هنوز سوال دارید؟',
     'faq.cantFindAnswer': "نمی‌توانید پاسخ مورد نظرتان را پیدا کنید؟ متخصصان VPN ما اینجا هستند تا به شما در انتخاب راه‌حل مناسب کمک کنند.",
     'faq.contactExperts': 'با متخصصان ما تماس بگیرید',
-    'faq.relatedGuides': 'راهنماهای مرتبط:'
+    'faq.relatedGuides': 'راهنماهای مرتبط:',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'سایت مقایسه مستقل',
+    'brand.description': 'منبع قابل اعتماد شما برای بررسی و مقایسه جامع VPN. سرویس VPN مناسب برای نیازهای حریم خصوصی و امنیتی خود را پیدا کنید.',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'سوالات متداول',
+    'nav.blog': 'وبلاگ',
+    'nav.contact': 'تماس با ما',
+    
+    // VPNs Page
+    'compareVpns': 'مقایسه VPN',
+    'findPerfectVpn': 'VPN مناسب برای نیازهای خود را پیدا کنید',
+    'exclusiveDeals': 'پیشنهادات انحصاری و تخفیف',
+    
+    // Blog Page
+    'blog.title': 'وبلاگ VPN و راهنماها',
+    'blog.subtitle': 'آخرین اخبار VPN، بررسی‌ها و راهنماهای جامع برای کمک به شما در امن ماندن آنلاین',
+    
+    // Contact Page
+    'contactTitle': 'با ما تماس بگیرید',
+    'contactSubtitle': 'با متخصصان VPN ما برای توصیه‌های شخصی‌سازی شده و پشتیبانی تماس بگیرید',
+
   },
   pl: {
     // FAQ Page UI
@@ -939,7 +1226,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Nadal masz pytania?',
     'faq.cantFindAnswer': "Nie możesz znaleźć odpowiedzi, której szukasz? Nasi eksperci VPN są tutaj, aby pomóc Ci wybrać idealne rozwiązanie.",
     'faq.contactExperts': 'Skontaktuj się z naszymi ekspertami',
-    'faq.relatedGuides': 'Powiązane przewodniki:'
+    'faq.relatedGuides': 'Powiązane przewodniki:',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Niezależna Strona Porównawcza',
+    'brand.description': 'Twoje zaufane źródło kompleksowych recenzji i porównań VPN. Znajdź idealną usługę VPN dla swoich potrzeb prywatności i bezpieczeństwa.',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blog',
+    'nav.contact': 'Kontakt',
+    
+    // VPNs Page
+    'compareVpns': 'Porównaj VPN',
+    'findPerfectVpn': 'Znajdź idealny VPN dla swoich potrzeb',
+    'exclusiveDeals': 'Ekskluzywne oferty i zniżki',
+    
+    // Blog Page
+    'blog.title': 'Blog VPN i Przewodniki',
+    'blog.subtitle': 'Najnowsze wiadomości VPN, recenzje i kompleksowe przewodniki, które pomogą Ci zachować bezpieczeństwo online',
+    
+    // Contact Page
+    'contactTitle': 'Skontaktuj się z nami',
+    'contactSubtitle': 'Skontaktuj się z naszymi ekspertami VPN w celu uzyskania spersonalizowanych rekomendacji i wsparcia',
+
   },
   pt: {
     // FAQ Page UI
@@ -953,7 +1265,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Ainda tem dúvidas?',
     'faq.cantFindAnswer': "Não consegue encontrar a resposta que procura? Nossos especialistas em VPN estão aqui para ajudá-lo a escolher a solução perfeita.",
     'faq.contactExperts': 'Entre em contato com nossos especialistas',
-    'faq.relatedGuides': 'Guias relacionados:'
+    'faq.relatedGuides': 'Guias relacionados:',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Site de Comparação Independente',
+    'brand.description': 'Sua fonte confiável para análises e comparações abrangentes de VPN. Encontre o serviço VPN perfeito para suas necessidades de privacidade e segurança.',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blog',
+    'nav.contact': 'Contato',
+    
+    // VPNs Page
+    'compareVpns': 'Comparar VPNs',
+    'findPerfectVpn': 'Encontre o VPN perfeito para suas necessidades',
+    'exclusiveDeals': 'Ofertas exclusivas e descontos',
+    
+    // Blog Page
+    'blog.title': 'Blog VPN e Guias',
+    'blog.subtitle': 'Últimas notícias de VPN, análises e guias abrangentes para ajudá-lo a se manter seguro online',
+    
+    // Contact Page
+    'contactTitle': 'Entre em contato',
+    'contactSubtitle': 'Entre em contato com nossos especialistas em VPN para recomendações personalizadas e suporte',
+
   },
   es: {
     // FAQ Page UI
@@ -975,9 +1312,28 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-detectado',
     
     // Brand
-    'brand.name': 'bestvpn.digital',
-    'brand.tagline': 'Tu fuente confiable para reseñas y comparaciones completas de VPN',
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Sitio de Comparación Independiente',
     'brand.description': 'Tu fuente confiable para reseñas y comparaciones completas de VPN. Encuentra el servicio VPN perfecto para tus necesidades de privacidad y seguridad.',
+    
+    // Navigation
+    'nav.vpns': 'VPNs',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blog',
+    'nav.contact': 'Contacto',
+    
+    // VPNs Page
+    'compareVpns': 'Comparar VPNs',
+    'findPerfectVpn': 'Encuentra el VPN perfecto para tus necesidades',
+    'exclusiveDeals': 'Ofertas exclusivas y descuentos',
+    
+    // Blog Page
+    'blog.title': 'Blog VPN y Guías',
+    'blog.subtitle': 'Últimas noticias de VPN, reseñas y guías completas para mantenerte seguro en línea',
+    
+    // Contact Page
+    'contactTitle': 'Contacto',
+    'contactSubtitle': 'Ponte en contacto con nuestros expertos en VPN para recomendaciones personalizadas y soporte',
     
     // Cultural & Localized Content - Latin America/Spanish
     'cultural.trust': 'Confianza & Seguridad',
@@ -991,6 +1347,17 @@ export const faqTranslations: AllTranslations = {
     'cultural.localContent': 'Netflix LATAM, Disney+, HBO Max, Amazon Prime Video, fútbol en vivo',
     'cultural.banking': 'Banca Online & Compras',
     'cultural.gaming': 'Gaming & Streaming',
+    
+    // Local Voice & Natural Affiliate Integration - Spanish
+    'localVoice.privacidad': 'Privacidad',
+    'localVoice.seguridad': 'Seguridad',
+    'localVoice.noLogs': 'Política de No Registros',
+    'localVoice.militaryGrade': 'Encriptación Militar',
+    'localVoice.futbol': 'Fútbol en Vivo',
+    'localVoice.netflixLatam': 'Netflix Latinoamérica',
+    'localVoice.personalExperience': 'Uso Surfshark desde 2022 – especialmente para ver fútbol en vivo desde cualquier país.',
+    'localVoice.streamingFocus': 'Perfecto para streaming latino: Netflix LATAM, Disney+, fútbol en vivo',
+    'localVoice.privacyFocus': 'Solución de Privacidad Confiable',
     
     // Footer
     'footer.support': 'Soporte',
@@ -1036,7 +1403,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'ยังมีคำถามอยู่ไหม?',
     'faq.cantFindAnswer': "หาคำตอบที่คุณต้องการไม่เจอใช่ไหม? ผู้เชี่ยวชาญ VPN ของเราพร้อมช่วยคุณเลือกโซลูชันที่เหมาะสม",
     'faq.contactExperts': 'ติดต่อผู้เชี่ยวชาญของเรา',
-    'faq.relatedGuides': 'คู่มือที่เกี่ยวข้อง:'
+    'faq.relatedGuides': 'คู่มือที่เกี่ยวข้อง:',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'เว็บไซต์เปรียบเทียบอิสระ',
+    'brand.description': 'แหล่งที่เชื่อถือได้ของคุณสำหรับการรีวิวและเปรียบเทียบ VPN ที่ครอบคลุม ค้นหาบริการ VPN ที่สมบูรณ์แบบสำหรับความต้องการความเป็นส่วนตัวและความปลอดภัยของคุณ',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'คำถามที่พบบ่อย',
+    'nav.blog': 'บล็อก',
+    'nav.contact': 'ติดต่อ',
+    
+    // VPNs Page
+    'compareVpns': 'เปรียบเทียบ VPN',
+    'findPerfectVpn': 'ค้นหา VPN ที่สมบูรณ์แบบสำหรับความต้องการของคุณ',
+    'exclusiveDeals': 'ข้อเสนอพิเศษและส่วนลด',
+    
+    // Blog Page
+    'blog.title': 'บล็อก VPN และคู่มือ',
+    'blog.subtitle': 'ข่าว VPN ล่าสุด บทวิจารณ์ และคู่มือที่ครอบคลุมเพื่อช่วยให้คุณปลอดภัยออนไลน์',
+    
+    // Contact Page
+    'contactTitle': 'ติดต่อเรา',
+    'contactSubtitle': 'ติดต่อผู้เชี่ยวชาญ VPN ของเราสำหรับคำแนะนำส่วนตัวและการสนับสนุน',
+
   },
   vi: {
     // FAQ Page UI
@@ -1050,7 +1442,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Vẫn còn câu hỏi?',
     'faq.cantFindAnswer': "Không thể tìm thấy câu trả lời bạn đang tìm kiếm? Các chuyên gia VPN của chúng tôi sẵn sàng giúp bạn chọn giải pháp hoàn hảo.",
     'faq.contactExperts': 'Liên hệ với chuyên gia của chúng tôi',
-    'faq.relatedGuides': 'Hướng dẫn liên quan:'
+    'faq.relatedGuides': 'Hướng dẫn liên quan:',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Trang So Sánh Độc Lập',
+    'brand.description': 'Nguồn đáng tin cậy của bạn cho các đánh giá và so sánh VPN toàn diện. Tìm dịch vụ VPN hoàn hảo cho nhu cầu riêng tư và bảo mật của bạn.',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blog',
+    'nav.contact': 'Liên hệ',
+    
+    // VPNs Page
+    'compareVpns': 'So sánh VPN',
+    'findPerfectVpn': 'Tìm VPN hoàn hảo cho nhu cầu của bạn',
+    'exclusiveDeals': 'Ưu đãi độc quyền và giảm giá',
+    
+    // Blog Page
+    'blog.title': 'Blog VPN và Hướng dẫn',
+    'blog.subtitle': 'Tin tức VPN mới nhất, đánh giá và hướng dẫn toàn diện để giúp bạn an toàn trực tuyến',
+    
+    // Contact Page
+    'contactTitle': 'Liên hệ với chúng tôi',
+    'contactSubtitle': 'Liên hệ với các chuyên gia VPN của chúng tôi để được tư vấn cá nhân hóa và hỗ trợ',
+
   },
   fr: {
     // FAQ Page UI
@@ -1072,9 +1489,52 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-détecté',
     
     // Brand
-    'brand.name': 'bestvpn.digital',
-    'brand.tagline': 'Votre source fiable pour des avis et comparaisons complets de VPN',
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Site de Comparaison Indépendant',
     'brand.description': 'Votre source fiable pour des avis et comparaisons complets de VPN. Trouvez le service VPN parfait pour vos besoins de confidentialité et de sécurité.',
+    
+    // Navigation
+    'nav.vpns': 'VPN',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blog',
+    'nav.contact': 'Contact',
+    
+    // VPNs Page
+    'compareVpns': 'Comparer les VPN',
+    'findPerfectVpn': 'Trouvez le VPN parfait pour vos besoins',
+    'exclusiveDeals': 'Offres exclusives et réductions',
+    
+    // Blog Page
+    'blog.title': 'Blog VPN et Guides',
+    'blog.subtitle': 'Dernières actualités VPN, avis et guides complets pour vous aider à rester en sécurité en ligne',
+    
+    // Contact Page
+    'contactTitle': 'Contactez-nous',
+    'contactSubtitle': 'Contactez nos experts VPN pour des recommandations personnalisées et un support',
+    
+    // Cultural & Localized Content - France/French
+    'cultural.trust': 'Vie privée & RGPD conforme',
+    'cultural.privacy': 'Qualité & Confiance',
+    'cultural.value': 'Meilleure Qualité',
+    'cultural.speed': 'Vitesse Maximale',
+    'cultural.reliability': 'Service Fiable',
+    'cultural.moneyBack': 'Garantie 30 jours satisfait ou remboursé',
+    'cultural.cta': 'Essayer maintenant - 30 jours garantis',
+    'cultural.features': 'Appareils illimités, support 24/7, chiffrement militaire',
+    'cultural.localContent': 'Netflix FR, TF1, MyCanal, France.tv, Amazon Prime Video',
+    'cultural.banking': 'Banque en ligne & Achats',
+    'cultural.gaming': 'Gaming & Streaming',
+    
+    // Local Voice & Natural Affiliate Integration - French
+    'localVoice.viePrivee': 'Vie privée',
+    'localVoice.rgpd': 'RGPD conforme',
+    'localVoice.noLogs': 'Politique de non-conservation',
+    'localVoice.militaryGrade': 'Chiffrement militaire',
+    'localVoice.tf1MyCanal': 'TF1 & MyCanal',
+    'localVoice.netflixFr': 'Netflix France',
+    'localVoice.personalExperience': 'J\'utilise NordVPN depuis 2022 – surtout pour accéder à TF1 et MyCanal depuis l\'étranger.',
+    'localVoice.streamingFocus': 'Parfait pour le streaming français: TF1, MyCanal, Netflix FR',
+    'localVoice.privacyFocus': 'Solution de confidentialité RGPD conforme',
     
     // Footer
     'footer.support': 'Support',
@@ -1112,8 +1572,8 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-rilevato',
     
     // Brand
-    'brand.name': 'bestvpn.digital',
-    'brand.tagline': 'La tua fonte affidabile per recensioni e confronti completi di VPN',
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Sito di Confronto Indipendente',
     'brand.description': 'La tua fonte affidabile per recensioni e confronti completi di VPN. Trova il servizio VPN perfetto per le tue esigenze di privacy e sicurezza.',
     
     // Footer
@@ -1152,7 +1612,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Автоопределено',
     
     // Brand
-    'brand.name': 'bestvpn.digital',
+    'brand.name': 'BestVPN Reviews',
     'brand.tagline': 'Ваш надежный источник для комплексных обзоров и сравнений VPN',
     'brand.description': 'Ваш надежный источник для комплексных обзоров и сравнений VPN. Найдите идеальный VPN-сервис для ваших потребностей в конфиденциальности и безопасности.',
     
@@ -1192,7 +1652,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': '自动检测',
     
     // Brand
-    'brand.name': 'bestvpn.digital',
+    'brand.name': 'BestVPN Reviews',
     'brand.tagline': '您值得信赖的VPN评论和比较来源',
     'brand.description': '您值得信赖的VPN评论和比较来源。为您的隐私和安全需求找到完美的VPN服务。',
     

@@ -18,7 +18,7 @@ export interface SubdomainConfig {
 // Country to Language mapping
 export const countryLanguageMap: Record<string, string> = {
   // English speaking countries
-  'US': 'en', 'GB': 'en', 'AU': 'en', 'CA': 'en', 'NZ': 'en', 'IE': 'en', 'ZA': 'en', 'IN': 'en',
+  'US': 'en', 'GB': 'en', 'AU': 'en', 'CA': 'en', 'NZ': 'en', 'IE': 'en', 'ZA': 'en',
   
   // German speaking countries
   'DE': 'de', 'AT': 'de', 'CH': 'de', 'LI': 'de',
@@ -38,7 +38,7 @@ export const countryLanguageMap: Record<string, string> = {
   'PT': 'pt', 'BR': 'pt', 'AO': 'pt', 'MZ': 'pt', 'CV': 'pt', 'GW': 'pt', 'ST': 'pt', 'TL': 'pt',
   
   // Russian speaking countries
-  'RU': 'ru', 'BY': 'ru', 'KZ': 'ru', 'KG': 'ru', 'TJ': 'ru', 'UZ': 'ru', 'AM': 'ru', 'AZ': 'ru',
+  'RU': 'ru', 'BY': 'ru', 'KZ': 'ru', 'KG': 'ru', 'UZ': 'ru', 'AM': 'ru', 'AZ': 'ru',
   'GE': 'ru', 'MD': 'ru', 'UA': 'ru',
   
   // Chinese speaking countries/regions
