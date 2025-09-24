@@ -28,8 +28,8 @@ export const faqTranslations: AllTranslations = {
     'moreLanguages': 'More languages available',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
-    'brand.tagline': 'Independent Comparison Site',
+    'brand.name': 'bestvpn.digital',
+    'brand.tagline': 'Your trusted source for comprehensive VPN reviews and comparisons',
     'brand.description': 'Your trusted source for comprehensive VPN reviews and comparisons. Find the perfect VPN service for your privacy and security needs.',
     
     // Footer
@@ -235,8 +235,8 @@ export const faqTranslations: AllTranslations = {
     'moreLanguages': 'Daha fazla dil mevcut',
     
     // Brand
-    'brand.name': 'BestVPN İncelemeleri',
-    'brand.tagline': 'Bağımsız Karşılaştırma Sitesi',
+    'brand.name': 'bestvpn.digital',
+    'brand.tagline': 'Kapsamlı VPN incelemeleri ve karşılaştırmaları için güvenilir kaynağınız',
     'brand.description': 'Kapsamlı VPN incelemeleri ve karşılaştırmaları için güvenilir kaynağınız. Gizlilik ve güvenlik ihtiyaçlarınız için mükemmel VPN hizmetini bulun.',
     
     // Footer
@@ -441,8 +441,8 @@ export const faqTranslations: AllTranslations = {
     'moreLanguages': 'Flere språk tilgjengelig',
     
     // Brand
-    'brand.name': 'BestVPN Anmeldelser',
-    'brand.tagline': 'Uavhengig sammenligningsside',
+    'brand.name': 'bestvpn.digital',
+    'brand.tagline': 'Din pålitelige kilde for omfattende VPN-anmeldelser og sammenligninger',
     'brand.description': 'Din pålitelige kilde for omfattende VPN-anmeldelser og sammenligninger. Finn den perfekte VPN-tjenesten for dine personvern- og sikkerhetsbehov.',
     
     // Footer
@@ -516,8 +516,8 @@ export const faqTranslations: AllTranslations = {
     'moreLanguages': 'Fler språk tillgängliga',
     
     // Brand
-    'brand.name': 'BestVPN Recensioner',
-    'brand.tagline': 'Oberoende jämförelsesajt',
+    'brand.name': 'bestvpn.digital',
+    'brand.tagline': 'Din pålitliga källa för omfattande VPN-recensioner och jämförelser',
     'brand.description': 'Din pålitliga källa för omfattande VPN-recensioner och jämförelser. Hitta den perfekta VPN-tjänsten för dina integritets- och säkerhetsbehov.',
     
     // Footer
@@ -591,8 +591,8 @@ export const faqTranslations: AllTranslations = {
     'moreLanguages': 'Weitere Sprachen verfügbar',
     
     // Brand
-    'brand.name': 'BestVPN Bewertungen',
-    'brand.tagline': 'Unabhängige Vergleichsseite',
+    'brand.name': 'bestvpn.digital',
+    'brand.tagline': 'Ihre vertrauenswürdige Quelle für umfassende VPN-Bewertungen und -Vergleiche',
     'brand.description': 'Ihre vertrauenswürdige Quelle für umfassende VPN-Bewertungen und -Vergleiche. Finden Sie den perfekten VPN-Service für Ihre Privatsphäre und Sicherheitsbedürfnisse.',
     
     // Footer
@@ -930,8 +930,8 @@ export const faqTranslations: AllTranslations = {
     'moreLanguages': 'Más idiomas disponibles',
     
     // Brand
-    'brand.name': 'BestVPN Reseñas',
-    'brand.tagline': 'Sitio de Comparación Independiente',
+    'brand.name': 'bestvpn.digital',
+    'brand.tagline': 'Tu fuente confiable para reseñas y comparaciones completas de VPN',
     'brand.description': 'Tu fuente confiable para reseñas y comparaciones completas de VPN. Encuentra el servicio VPN perfecto para tus necesidades de privacidad y seguridad.',
     
     // Footer
@@ -1013,8 +1013,8 @@ export const faqTranslations: AllTranslations = {
     'moreLanguages': 'Plus de langues disponibles',
     
     // Brand
-    'brand.name': 'BestVPN Avis',
-    'brand.tagline': 'Site de comparaison indépendant',
+    'brand.name': 'bestvpn.digital',
+    'brand.tagline': 'Votre source fiable pour des avis et comparaisons complets de VPN',
     'brand.description': 'Votre source fiable pour des avis et comparaisons complets de VPN. Trouvez le service VPN parfait pour vos besoins de confidentialité et de sécurité.',
     
     // Footer
@@ -1052,8 +1052,8 @@ export const faqTranslations: AllTranslations = {
     'moreLanguages': 'Altre lingue disponibili',
     
     // Brand
-    'brand.name': 'BestVPN Recensioni',
-    'brand.tagline': 'Sito di confronto indipendente',
+    'brand.name': 'bestvpn.digital',
+    'brand.tagline': 'La tua fonte affidabile per recensioni e confronti completi di VPN',
     'brand.description': 'La tua fonte affidabile per recensioni e confronti completi di VPN. Trova il servizio VPN perfetto per le tue esigenze di privacy e sicurezza.',
     
     // Footer
@@ -1091,8 +1091,8 @@ export const faqTranslations: AllTranslations = {
     'moreLanguages': 'Доступно больше языков',
     
     // Brand
-    'brand.name': 'BestVPN Обзоры',
-    'brand.tagline': 'Независимый сайт сравнения',
+    'brand.name': 'bestvpn.digital',
+    'brand.tagline': 'Ваш надежный источник для комплексных обзоров и сравнений VPN',
     'brand.description': 'Ваш надежный источник для комплексных обзоров и сравнений VPN. Найдите идеальный VPN-сервис для ваших потребностей в конфиденциальности и безопасности.',
     
     // Footer
@@ -1130,8 +1130,8 @@ export const faqTranslations: AllTranslations = {
     'moreLanguages': '更多语言可用',
     
     // Brand
-    'brand.name': 'BestVPN 评论',
-    'brand.tagline': '独立比较网站',
+    'brand.name': 'bestvpn.digital',
+    'brand.tagline': '您值得信赖的VPN评论和比较来源',
     'brand.description': '您值得信赖的VPN评论和比较来源。为您的隐私和安全需求找到完美的VPN服务。',
     
     // Footer
