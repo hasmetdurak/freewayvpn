@@ -1,24 +1,74 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getBestAffiliateOffer, getCulturalAppeal, getLocalContent } from '../utils/dynamicAffiliate';
 
 interface PremiumPartnerPromotionProps {
   className?: string;
 }
 
 const PremiumPartnerPromotion: React.FC<PremiumPartnerPromotionProps> = ({ className = '' }) => {
+  const { language, t } = useLanguage();
+  
+  // Get country from language code (simplified mapping)
+  const getCountryFromLanguage = (langCode: string): string => {
+    const mapping: { [key: string]: string } = {
+      'de': 'DE', 'tr': 'TR', 'es': 'ES', 'fr': 'FR', 'it': 'IT', 'pt': 'BR', 'ru': 'RU',
+      'zh': 'CN', 'ja': 'JP', 'ko': 'KR', 'ar': 'SA', 'hi': 'IN', 'id': 'ID', 'vi': 'VN',
+      'nb': 'NO', 'sv': 'SE', 'fi': 'FI', 'pl': 'PL', 'th': 'TH', 'fa': 'IR', 'tl': 'PH'
+    };
+    return mapping[langCode] || 'US';
+  };
+
+  const country = getCountryFromLanguage(language.code);
+  const bestOffer = getBestAffiliateOffer(country, language.code);
+  const culturalAppeal = getCulturalAppeal(country);
+  const localContent = getLocalContent(country);
+
   return (
     <div className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-lg shadow-lg ${className}`}>
       <div className="text-center">
-        <h3 className="text-2xl font-bold mb-4">🏆 Premium VPN Partners</h3>
-        <p className="text-lg mb-6">Our top-rated, thoroughly tested VPN recommendations</p>
+        <h3 className="text-2xl font-bold mb-4">🏆 {t('cultural.trust')} VPN Partners</h3>
+        <p className="text-lg mb-6">{t('cultural.reliability')} - {t('cultural.localContent')}</p>
         
         <div className="grid md:grid-cols-5 gap-4">
-          {/* NordVPN */}
+          {/* Dynamic Best Offer */}
+          {bestOffer && (
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border-2 border-yellow-400">
+              <div className="flex items-center justify-center mb-3">
+                <img src={`/vpn-logos/${bestOffer.provider.toLowerCase()}.png`} alt={bestOffer.provider} className="h-12 w-auto" />
+              </div>
+              <h4 className="text-xl font-bold text-yellow-300 mb-2">#1 {bestOffer.provider}</h4>
+              <p className="text-sm mb-3">{culturalAppeal[0]} - {culturalAppeal[1]}</p>
+              <div className="flex justify-center items-center mb-3">
+                <span className="text-2xl font-bold">9.8/10</span>
+                <div className="ml-2 flex">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-400">⭐</span>
+                  ))}
+                </div>
+              </div>
+              <div className="text-xs mb-3 text-yellow-200">
+                <p>✅ {bestOffer.discount}</p>
+                <p>✅ {t('cultural.moneyBack')}</p>
+              </div>
+              <a 
+                href={bestOffer.affiliateLink}
+                className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded-full transition-colors duration-200 inline-block w-full text-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {bestOffer.cta}
+              </a>
+            </div>
+          )}
+          
+          {/* NordVPN - Fallback */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border-2 border-yellow-400">
             <div className="flex items-center justify-center mb-3">
               <img src="/vpn-logos/nordvpn.png" alt="NordVPN" className="h-12 w-auto" />
             </div>
             <h4 className="text-xl font-bold text-yellow-300 mb-2">#1 NordVPN</h4>
-            <p className="text-sm mb-3">Advanced security with double VPN encryption</p>
+            <p className="text-sm mb-3">{t('cultural.trust')} - {t('cultural.speed')}</p>
             <div className="flex justify-center items-center mb-3">
               <span className="text-2xl font-bold">9.9/10</span>
               <div className="ml-2 flex">
@@ -29,7 +79,7 @@ const PremiumPartnerPromotion: React.FC<PremiumPartnerPromotionProps> = ({ class
             </div>
             <div className="text-xs mb-3 text-yellow-200">
               <p>✅ 68% OFF 2-year plan</p>
-              <p>✅ 30-day money-back guarantee</p>
+              <p>✅ {t('cultural.moneyBack')}</p>
             </div>
             <a 
               href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902"
@@ -37,7 +87,7 @@ const PremiumPartnerPromotion: React.FC<PremiumPartnerPromotionProps> = ({ class
               target="_blank"
               rel="noopener noreferrer"
             >
-              Get NordVPN Deal
+              {t('cultural.cta')}
             </a>
           </div>
           

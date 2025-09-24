@@ -33,6 +33,19 @@ export const faqTranslations: AllTranslations = {
     'brand.tagline': 'Your trusted source for comprehensive VPN reviews and comparisons',
     'brand.description': 'Your trusted source for comprehensive VPN reviews and comparisons. Find the perfect VPN service for your privacy and security needs.',
     
+    // Cultural & Localized Content - US/English
+    'cultural.trust': 'Trust & Security',
+    'cultural.privacy': 'Privacy Protection',
+    'cultural.value': 'Best Value',
+    'cultural.speed': 'Lightning Fast',
+    'cultural.reliability': 'Reliable Service',
+    'cultural.moneyBack': '30-Day Money Back Guarantee',
+    'cultural.cta': 'Try Now - 30 Days Money Back',
+    'cultural.features': 'Unlimited devices, 24/7 support, military-grade encryption',
+    'cultural.localContent': 'Netflix US, Hulu, Disney+, HBO Max, Amazon Prime Video',
+    'cultural.banking': 'Online Banking & Shopping',
+    'cultural.gaming': 'Gaming & Streaming',
+    
     // Footer
     'footer.support': 'Support',
     'footer.contactUs': 'Contact Us',
@@ -240,6 +253,19 @@ export const faqTranslations: AllTranslations = {
     'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Kapsamlı VPN incelemeleri ve karşılaştırmaları için güvenilir kaynağınız',
     'brand.description': 'Kapsamlı VPN incelemeleri ve karşılaştırmaları için güvenilir kaynağınız. Gizlilik ve güvenlik ihtiyaçlarınız için mükemmel VPN hizmetini bulun.',
+    
+    // Cultural & Localized Content - Turkey/Turkish
+    'cultural.trust': 'Güvenilirlik & Güvenlik',
+    'cultural.privacy': 'Gizlilik Koruması',
+    'cultural.value': 'En İyi Fiyat',
+    'cultural.speed': 'Sınırsız Hız',
+    'cultural.reliability': 'Güvenilir Hizmet',
+    'cultural.moneyBack': '30 Gün Para İade Garantisi',
+    'cultural.cta': 'Hemen Başla - 30 Gün Para İade Garantili',
+    'cultural.features': 'Sınırsız cihaz, 7/24 destek, askeri seviye şifreleme',
+    'cultural.localContent': 'Netflix TR, BluTV, Bein Sports, Turkcell TV+, Exxen',
+    'cultural.banking': 'Online Bankacılık & Alışveriş',
+    'cultural.gaming': 'Oyun & Streaming',
     
     // Footer
     'footer.support': 'Destek',
@@ -600,6 +626,19 @@ export const faqTranslations: AllTranslations = {
     'brand.tagline': 'Ihre vertrauenswürdige Quelle für umfassende VPN-Bewertungen und -Vergleiche',
     'brand.description': 'Ihre vertrauenswürdige Quelle für umfassende VPN-Bewertungen und -Vergleiche. Finden Sie den perfekten VPN-Service für Ihre Privatsphäre und Sicherheitsbedürfnisse.',
     
+    // Cultural & Localized Content - Germany/German
+    'cultural.trust': 'Datenschutz & DSGVO',
+    'cultural.privacy': 'Qualität & Vertrauen',
+    'cultural.value': 'Beste Qualität',
+    'cultural.speed': 'Höchste Geschwindigkeit',
+    'cultural.reliability': 'Zuverlässiger Service',
+    'cultural.moneyBack': '30 Tage Geld-zurück-Garantie',
+    'cultural.cta': 'Jetzt testen - 30 Tage Geld-zurück',
+    'cultural.features': 'Unbegrenzte Geräte, 24/7 Support, militärische Verschlüsselung',
+    'cultural.localContent': 'Netflix DE, ARD, ZDF, DAZN, Sky Go, Amazon Prime Video',
+    'cultural.banking': 'Online-Banking & Einkaufen',
+    'cultural.gaming': 'Gaming & Streaming',
+    
     // Footer
     'footer.support': 'Support',
     'footer.contactUs': 'Kontakt',
@@ -939,6 +978,19 @@ export const faqTranslations: AllTranslations = {
     'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Tu fuente confiable para reseñas y comparaciones completas de VPN',
     'brand.description': 'Tu fuente confiable para reseñas y comparaciones completas de VPN. Encuentra el servicio VPN perfecto para tus necesidades de privacidad y seguridad.',
+    
+    // Cultural & Localized Content - Latin America/Spanish
+    'cultural.trust': 'Confianza & Seguridad',
+    'cultural.privacy': 'Protección de Privacidad',
+    'cultural.value': 'Mejor Precio',
+    'cultural.speed': 'Velocidad Máxima',
+    'cultural.reliability': 'Servicio Confiable',
+    'cultural.moneyBack': 'Garantía de 30 días de devolución',
+    'cultural.cta': 'Probar ahora - 30 días de garantía',
+    'cultural.features': 'Dispositivos ilimitados, soporte 24/7, encriptación militar',
+    'cultural.localContent': 'Netflix LATAM, Disney+, HBO Max, Amazon Prime Video, fútbol en vivo',
+    'cultural.banking': 'Banca Online & Compras',
+    'cultural.gaming': 'Gaming & Streaming',
     
     // Footer
     'footer.support': 'Soporte',
