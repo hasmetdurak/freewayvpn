@@ -2,12 +2,17 @@ import React, { useEffect } from 'react';
 import { Calendar, Clock, User, ArrowLeft, Shield, Zap, Globe, Monitor } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useBlogTranslation } from '../hooks/useBlogTranslation';
+import AdBanner from '../components/AdBanner';
+import { useAdPlacement } from '../hooks/useAdPlacement';
 
 const StreamingVPNBlogPost: React.FC = () => {
   const { getTranslation } = useLanguage();
   const { getBlogContent } = useBlogTranslation('streaming-vpn-2025');
+  const { getAdByPosition } = useAdPlacement(1500);
   
   const blogContent = getBlogContent();
+  const topAd = getAdByPosition('top');
+  const bottomAd = getAdByPosition('bottom');
 
   useEffect(() => {
     document.title = 'Top 10 VPNs for Streaming in 2025: Netflix, Hulu & More | BestVPN.digital';
@@ -159,6 +164,17 @@ const StreamingVPNBlogPost: React.FC = () => {
             className="w-full h-64 object-cover rounded-lg mb-8"
           />
 
+          {/* Top Ad Banner */}
+          {topAd && (
+            <div className="mb-8 flex justify-center">
+              <AdBanner 
+                provider={topAd.provider} 
+                size={topAd.size}
+                className="mx-auto"
+              />
+            </div>
+          )}
+
           {/* Introduction */}
           <div className="prose prose-lg max-w-none mb-8">
             <p className="text-lg text-gray-700 leading-relaxed">
@@ -305,6 +321,17 @@ const StreamingVPNBlogPost: React.FC = () => {
               ))}
             </div>
           </div>
+
+          {/* Bottom Ad Banner */}
+          {bottomAd && (
+            <div className="mt-8 flex justify-center">
+              <AdBanner 
+                provider={bottomAd.provider} 
+                size={bottomAd.size}
+                className="mx-auto"
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

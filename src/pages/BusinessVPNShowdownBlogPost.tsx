@@ -3,12 +3,17 @@ import { ArrowLeft, Clock, User, Calendar, Tag, Shield, Building, DollarSign, Ch
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useBlogTranslation } from '../hooks/useBlogTranslation';
+import AdBanner from '../components/AdBanner';
+import { useAdPlacement } from '../hooks/useAdPlacement';
 
 const BusinessVPNShowdownBlogPost: React.FC = () => {
   const { t } = useLanguage();
   const { getBlogContent } = useBlogTranslation('business-vpn-showdown');
+  const { getAdByPosition } = useAdPlacement(2000);
   
   const blogContent = getBlogContent();
+  const topAd = getAdByPosition('top');
+  const bottomAd = getAdByPosition('bottom');
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -59,6 +64,17 @@ const BusinessVPNShowdownBlogPost: React.FC = () => {
             className="w-full h-64 object-cover rounded-lg shadow-lg"
           />
         </div>
+
+        {/* Top Ad Banner */}
+        {topAd && (
+          <div className="mb-8 flex justify-center">
+            <AdBanner 
+              provider={topAd.provider} 
+              size={topAd.size}
+              className="mx-auto"
+            />
+          </div>
+        )}
 
         {/* Article Content */}
         <article className="prose prose-lg max-w-none">
@@ -453,6 +469,17 @@ const BusinessVPNShowdownBlogPost: React.FC = () => {
             </div>
           </div>
         </article>
+
+        {/* Bottom Ad Banner */}
+        {bottomAd && (
+          <div className="mt-12 mb-8 flex justify-center">
+            <AdBanner 
+              provider={bottomAd.provider} 
+              size={bottomAd.size}
+              className="mx-auto"
+            />
+          </div>
+        )}
 
         {/* Related Articles */}
         <div className="mt-12 pt-8 border-t border-gray-200">

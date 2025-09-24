@@ -2,13 +2,18 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useBlogTranslation } from '../hooks/useBlogTranslation';
+import AdBanner from '../components/AdBanner';
+import { useAdPlacement } from '../hooks/useAdPlacement';
 import { Gamepad2, Zap, Shield, Globe, Clock, CheckCircle, XCircle, AlertTriangle } from 'lucide-react';
 
 const GamingVPNBlogPost: React.FC = () => {
   const { language } = useLanguage();
   const { getBlogContent } = useBlogTranslation('gaming-vpn-2025');
+  const { getAdByPosition } = useAdPlacement(1800);
   
   const blogContent = getBlogContent();
+  const topAd = getAdByPosition('top');
+  const bottomAd = getAdByPosition('bottom');
 
   return (
     <>
@@ -62,6 +67,17 @@ const GamingVPNBlogPost: React.FC = () => {
                 <span>Updated January 2025</span>
               </div>
             </header>
+
+            {/* Top Ad Banner */}
+            {topAd && (
+              <div className="mb-8 flex justify-center">
+                <AdBanner 
+                  provider={topAd.provider} 
+                  size={topAd.size}
+                  className="mx-auto"
+                />
+              </div>
+            )}
 
             {/* Introduction */}
             <section className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 mb-8 border border-gray-700">
@@ -363,6 +379,17 @@ const GamingVPNBlogPost: React.FC = () => {
                 </div>
               </div>
             </section>
+
+            {/* Bottom Ad Banner */}
+            {bottomAd && (
+              <div className="mt-12 mb-8 flex justify-center">
+                <AdBanner 
+                  provider={bottomAd.provider} 
+                  size={bottomAd.size}
+                  className="mx-auto"
+                />
+              </div>
+            )}
           </article>
         </div>
       </div>
