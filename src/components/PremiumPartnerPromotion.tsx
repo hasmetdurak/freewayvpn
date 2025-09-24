@@ -29,7 +29,7 @@ const PremiumPartnerPromotion: React.FC<PremiumPartnerPromotionProps> = ({ class
             </div>
             <div className="text-xs mb-3 text-yellow-200">
               <p>✅ 68% OFF 2-year plan</p>
-              <p>✅ 30-day guarantee</p>
+              <p>✅ 30-day money-back guarantee</p>
             </div>
             <a 
               href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902"
@@ -58,7 +58,7 @@ const PremiumPartnerPromotion: React.FC<PremiumPartnerPromotionProps> = ({ class
             </div>
             <div className="text-xs mb-3 text-green-200">
               <p>✅ 86% OFF 2-year plan</p>
-              <p>✅ Unlimited connections</p>
+              <p>✅ Unlimited device connections</p>
             </div>
             <a 
               href="https://surfshark.com/?aid=bestvpndigital"

@@ -45,9 +45,9 @@ const Header: React.FC = () => {
             <Shield className="h-8 w-8 text-blue-600 group-hover:text-blue-700 transition-colors" />
             <div className="ml-2">
               <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                BestVPN Reviews
+                {t('brand.name')}
               </span>
-              <div className="text-xs text-gray-500">Independent Comparison Site</div>
+              <div className="text-xs text-gray-500">{t('brand.tagline')}</div>
             </div>
           </Link>
 
@@ -74,18 +74,22 @@ const Header: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                className="flex items-center space-x-2 px-3 py-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+                className="flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 border border-transparent hover:border-blue-200"
+                title={t('selectLanguage')}
               >
                 <Languages className="h-4 w-4" />
-                <span className="hidden sm:inline">{t('selectLanguage')}</span>
-                <span className="sm:hidden">{currentLanguage.flag}</span>
-                <ChevronDown className={`h-4 w-4 transition-transform ${isLanguageOpen ? 'rotate-180' : ''}`} />
+                <span className="hidden sm:inline text-sm font-medium">{t('selectLanguage')}</span>
+                <span className="sm:hidden text-lg">{currentLanguage.flag}</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isLanguageOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {/* Language Dropdown */}
               {isLanguageOpen && (
-                <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 z-[9999] max-h-96 overflow-y-auto">
-                  <div className="p-2">
+                <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 z-[9999] max-h-96 overflow-y-auto backdrop-blur-sm">
+                  <div className="p-3">
+                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2 px-2">
+                      {t('selectLanguage')}
+                    </div>
                     {supportedLanguages.map((language) => (
                       <button
                         key={language.code}
@@ -93,31 +97,37 @@ const Header: React.FC = () => {
                           setLanguage(language);
                           setIsLanguageOpen(false);
                         }}
-                        className={`w-full flex items-center justify-between p-3 rounded-md hover:bg-gray-50 transition-colors ${
-                          currentLanguage.code === language.code ? 'bg-blue-50 border border-blue-200' : ''
+                        className={`w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-all duration-200 group ${
+                          currentLanguage.code === language.code 
+                            ? 'bg-blue-50 border border-blue-200 shadow-sm' 
+                            : 'border border-transparent hover:border-gray-200'
                         }`}
                         dir={language.dir}
                       >
                         <div className="flex items-center space-x-3">
-                          <span className="text-xl">{language.flag}</span>
+                          <span className="text-xl group-hover:scale-110 transition-transform duration-200">{language.flag}</span>
                           <div className="text-left">
-                            <div className="font-medium">{language.nativeName}</div>
-                            <div className="text-xs text-gray-500">{language.name}</div>
+                            <div className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
+                              {language.nativeName}
+                            </div>
+                            <div className="text-xs text-gray-500 group-hover:text-gray-600 transition-colors">
+                              {language.name}
+                            </div>
                           </div>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <span className="text-xs font-mono bg-gray-100 px-2 py-1 rounded">
+                          <span className="text-xs font-mono bg-gray-100 group-hover:bg-gray-200 px-2 py-1 rounded transition-colors">
                             {language.code.toUpperCase()}
                           </span>
                           {currentLanguage.code === language.code && (
-                            <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                            <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
                           )}
                         </div>
                       </button>
                     ))}
                   </div>
-                  <div className="px-3 py-2 border-t border-gray-100">
-                     <p className="text-xs text-gray-500">{t('moreLanguages')}</p>
+                  <div className="px-4 py-3 border-t border-gray-100 bg-gray-50 rounded-b-xl">
+                     <p className="text-xs text-gray-500 text-center">{t('moreLanguages')}</p>
                    </div>
                 </div>
               )}

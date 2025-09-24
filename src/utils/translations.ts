@@ -21,7 +21,48 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Still Have Questions?',
     'faq.cantFindAnswer': "Can't find the answer you're looking for? Our VPN experts are here to help you choose the perfect solution.",
     'faq.contactExperts': 'Contact Our Experts',
-    'faq.relatedGuides': 'Related Guides:',
+    'faq.relatedGuides': 'Related Guides',
+    
+    // Language Selector
+    'selectLanguage': 'Select Language',
+    'moreLanguages': 'More languages available',
+    
+    // Brand
+    'brand.name': 'BestVPN Reviews',
+    'brand.tagline': 'Independent Comparison Site',
+    'brand.description': 'Your trusted source for comprehensive VPN reviews and comparisons. Find the perfect VPN service for your privacy and security needs.',
+    
+    // Footer
+    'footer.support': 'Support',
+    'footer.contactUs': 'Contact Us',
+    'footer.privacyPolicy': 'Privacy Policy',
+    'footer.termsOfService': 'Terms of Service',
+    'footer.affiliateDisclosure': 'Affiliate Disclosure',
+    'footer.affiliateText': 'We may earn a commission when you purchase through our affiliate links. This helps support our site and allows us to continue providing comprehensive VPN reviews.',
+    'footer.independentDisclaimer': 'This is an independent review site. We are not affiliated with any VPN provider. All trademarks are the property of their respective owners.',
+    'footer.copyright': '© 2025 bestvpn.digital. All rights reserved.',
+    'footer.email': 'support@bestvpn.digital',
+    'quickLinks': 'Quick Links',
+    'vpns': 'VPNs',
+    'faq': 'FAQ',
+    'blog': 'Blog',
+    'contact': 'Contact',
+    
+    // FAQ Categories
+    'faq.category.trust': 'Trust & Security',
+    'faq.category.gaming': 'Gaming',
+    'faq.category.p2p': 'P2P & Torrenting',
+    'faq.category.business': 'Business',
+    
+    // FAQ Questions 64-67
+    'faq.question64': 'How can I verify a VPN provider is trustworthy?',
+    'faq.answer64': 'Look for independent security audits, transparent ownership, clear privacy policies, and proven no-logs policies. Check if they have been audited by reputable third-party security firms and read their transparency reports.',
+    'faq.question65': 'What is the best VPN for gaming?',
+    'faq.answer65': 'The best gaming VPNs offer low latency, DDoS protection, and servers close to gaming hubs. NordVPN, Surfshark, and ExpressVPN are excellent choices with dedicated gaming servers and optimized protocols.',
+    'faq.question66': 'Can I use a VPN for torrenting safely?',
+    'faq.answer66': 'Yes, but choose VPNs that explicitly allow P2P traffic and have servers optimized for torrenting. Look for features like port forwarding, no bandwidth limits, and a strict no-logs policy. Always use a kill switch.',
+    'faq.question67': 'What VPN features are essential for business use?',
+    'faq.answer67': 'Business VPNs should offer centralized management, dedicated IP addresses, team accounts, increased simultaneous connections, enterprise-grade security, and 24/7 support. Look for SOC 2 compliance and detailed usage reports.',
     
     // FAQ Questions 99-117
     'faq.question99': 'What is WireGuard?',
@@ -178,7 +219,48 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Hala Sorularınız Var mı?',
     'faq.cantFindAnswer': "Aradığınız cevabı bulamıyor musunuz? VPN uzmanlarımız mükemmel çözümü seçmenizde size yardımcı olmak için burada.",
     'faq.contactExperts': 'Uzmanlarımızla İletişime Geçin',
-    'faq.relatedGuides': 'İlgili Kılavuzlar:',
+    'faq.relatedGuides': 'İlgili Kılavuzlar',
+    
+    // Language Selector
+    'selectLanguage': 'Dil Seçin',
+    'moreLanguages': 'Daha fazla dil mevcut',
+    
+    // Brand
+    'brand.name': 'BestVPN İncelemeleri',
+    'brand.tagline': 'Bağımsız Karşılaştırma Sitesi',
+    'brand.description': 'Kapsamlı VPN incelemeleri ve karşılaştırmaları için güvenilir kaynağınız. Gizlilik ve güvenlik ihtiyaçlarınız için mükemmel VPN hizmetini bulun.',
+    
+    // Footer
+    'footer.support': 'Destek',
+    'footer.contactUs': 'İletişim',
+    'footer.privacyPolicy': 'Gizlilik Politikası',
+    'footer.termsOfService': 'Hizmet Şartları',
+    'footer.affiliateDisclosure': 'Ortaklık Açıklaması',
+    'footer.affiliateText': 'Ortaklık bağlantılarımız üzerinden satın aldığınızda komisyon kazanabiliriz. Bu, sitemizi desteklememize ve kapsamlı VPN incelemeleri sağlamaya devam etmemize yardımcı olur.',
+    'footer.independentDisclaimer': 'Bu bağımsız bir inceleme sitesidir. Herhangi bir VPN sağlayıcısıyla bağlantımız yoktur. Tüm ticari markalar ilgili sahiplerinin mülkiyetidir.',
+    'footer.copyright': '© 2025 bestvpn.digital. Tüm hakları saklıdır.',
+    'footer.email': 'support@bestvpn.digital',
+    'quickLinks': 'Hızlı Bağlantılar',
+    'vpns': 'VPN\'ler',
+    'faq': 'SSS',
+    'blog': 'Blog',
+    'contact': 'İletişim',
+    
+    // FAQ Categories
+    'faq.category.trust': 'Güven & Güvenlik',
+    'faq.category.gaming': 'Oyun',
+    'faq.category.p2p': 'P2P & Torrent',
+    'faq.category.business': 'İş',
+    
+    // FAQ Questions 64-67
+    'faq.question64': 'VPN sağlayıcısının güvenilir olduğunu nasıl doğrulayabilirim?',
+    'faq.answer64': 'Bağımsız güvenlik denetimleri, şeffaf sahiplik, net gizlilik politikaları ve kanıtlanmış no-logs politikaları arayın. Saygın üçüncü taraf güvenlik firmaları tarafından denetlenip denetlenmediğini kontrol edin ve şeffaflık raporlarını okuyun.',
+    'faq.question65': 'Oyun için en iyi VPN hangisi?',
+    'faq.answer65': 'En iyi oyun VPN\'leri düşük gecikme, DDoS koruması ve oyun merkezlerine yakın sunucular sunar. NordVPN, Surfshark ve ExpressVPN özel oyun sunucuları ve optimize edilmiş protokollerle mükemmel seçeneklerdir.',
+    'faq.question66': 'VPN\'i güvenli torrent indirme için kullanabilir miyim?',
+    'faq.answer66': 'Evet, ancak P2P trafiğine açıkça izin veren ve torrent için optimize edilmiş sunuculara sahip VPN\'leri seçin. Port yönlendirme, bant genişliği sınırı olmama ve katı no-logs politikası gibi özellikleri arayın. Her zaman kill switch kullanın.',
+    'faq.question67': 'İş kullanımı için hangi VPN özellikleri gereklidir?',
+    'faq.answer67': 'İş VPN\'leri merkezi yönetim, özel IP adresleri, takım hesapları, artırılmış eşzamanlı bağlantılar, kurumsal düzeyde güvenlik ve 7/24 destek sunmalıdır. SOC 2 uyumluluğu ve detaylı kullanım raporları arayın.',
     
     // FAQ Questions 99-117
     'faq.question99': 'WireGuard nedir?',
@@ -334,7 +416,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Har du fortsatt spørsmål?',
     'faq.cantFindAnswer': "Kan ikke finne svaret du leter etter? Våre VPN-eksperter hjelper deg med å velge den perfekte løsningen.",
     'faq.contactExperts': 'Kontakt eksperter',
-    'faq.relatedGuides': 'Relaterte guider:',
+    'faq.relatedGuides': 'Relaterte guider',
+    
+    // Language Selector
+    'selectLanguage': 'Velg språk',
+    'moreLanguages': 'Flere språk tilgjengelig',
+    
+    // Brand
+    'brand.name': 'BestVPN Anmeldelser',
+    'brand.tagline': 'Uavhengig sammenligningsside',
+    'brand.description': 'Din pålitelige kilde for omfattende VPN-anmeldelser og sammenligninger. Finn den perfekte VPN-tjenesten for dine personvern- og sikkerhetsbehov.',
+    
+    // Footer
+    'footer.support': 'Support',
+    'footer.contactUs': 'Kontakt oss',
+    'footer.privacyPolicy': 'Personvernpolicy',
+    'footer.termsOfService': 'Tjenestevilkår',
+    'footer.affiliateDisclosure': 'Affiliate-avsløring',
+    'footer.affiliateText': 'Vi kan tjene en provisjon når du kjøper gjennom våre affiliate-lenker. Dette hjelper til med å støtte siden vår og lar oss fortsette å gi omfattende VPN-anmeldelser.',
+    'footer.independentDisclaimer': 'Dette er en uavhengig anmeldelsesside. Vi er ikke tilknyttet noen VPN-leverandør. Alle varemerker tilhører sine respektive eiere.',
+    'footer.copyright': '© 2025 bestvpn.digital. Alle rettigheter forbeholdt.',
+    'footer.email': 'support@bestvpn.digital',
+    'quickLinks': 'Hurtiglenker',
+    'vpns': 'VPN-er',
+    'faq': 'FAQ',
+    'blog': 'Blogg',
+    'contact': 'Kontakt',
     
     // FAQ Questions 99-117
     'faq.question99': 'Hva er WireGuard?',
@@ -384,7 +491,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Har du fortfarande frågor?',
     'faq.cantFindAnswer': "Kan inte hitta svaret du letar efter? Våra VPN-experter hjälper dig att välja den perfekta lösningen.",
     'faq.contactExperts': 'Kontakta experter',
-    'faq.relatedGuides': 'Relaterade guider:',
+    'faq.relatedGuides': 'Relaterade guider',
+    
+    // Language Selector
+    'selectLanguage': 'Välj språk',
+    'moreLanguages': 'Fler språk tillgängliga',
+    
+    // Brand
+    'brand.name': 'BestVPN Recensioner',
+    'brand.tagline': 'Oberoende jämförelsesajt',
+    'brand.description': 'Din pålitliga källa för omfattande VPN-recensioner och jämförelser. Hitta den perfekta VPN-tjänsten för dina integritets- och säkerhetsbehov.',
+    
+    // Footer
+    'footer.support': 'Support',
+    'footer.contactUs': 'Kontakta oss',
+    'footer.privacyPolicy': 'Integritetspolicy',
+    'footer.termsOfService': 'Användarvillkor',
+    'footer.affiliateDisclosure': 'Affiliate-avslöjande',
+    'footer.affiliateText': 'Vi kan tjäna en provision när du köper genom våra affiliate-länkar. Detta hjälper till att stödja vår webbplats och låter oss fortsätta att tillhandahålla omfattande VPN-recensioner.',
+    'footer.independentDisclaimer': 'Detta är en oberoende recensionssajt. Vi är inte anslutna till någon VPN-leverantör. Alla varumärken tillhör sina respektive ägare.',
+    'footer.copyright': '© 2025 bestvpn.digital. Alla rättigheter förbehållna.',
+    'footer.email': 'support@bestvpn.digital',
+    'quickLinks': 'Snabb länkar',
+    'vpns': 'VPN:er',
+    'faq': 'FAQ',
+    'blog': 'Blogg',
+    'contact': 'Kontakt',
     
     // FAQ Questions 99-117
     'faq.question99': 'Vad är WireGuard?',
@@ -434,7 +566,48 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Haben Sie noch Fragen?',
     'faq.cantFindAnswer': "Können Sie die gesuchte Antwort nicht finden? Unsere VPN-Experten helfen Ihnen gerne bei der Auswahl der perfekten Lösung.",
     'faq.contactExperts': 'Kontaktieren Sie unsere Experten',
-    'faq.relatedGuides': 'Verwandte Anleitungen:',
+    'faq.relatedGuides': 'Verwandte Anleitungen',
+    
+    // Language Selector
+    'selectLanguage': 'Sprache wählen',
+    'moreLanguages': 'Weitere Sprachen verfügbar',
+    
+    // Brand
+    'brand.name': 'BestVPN Bewertungen',
+    'brand.tagline': 'Unabhängige Vergleichsseite',
+    'brand.description': 'Ihre vertrauenswürdige Quelle für umfassende VPN-Bewertungen und -Vergleiche. Finden Sie den perfekten VPN-Service für Ihre Privatsphäre und Sicherheitsbedürfnisse.',
+    
+    // Footer
+    'footer.support': 'Support',
+    'footer.contactUs': 'Kontakt',
+    'footer.privacyPolicy': 'Datenschutzrichtlinie',
+    'footer.termsOfService': 'Nutzungsbedingungen',
+    'footer.affiliateDisclosure': 'Affiliate-Offenlegung',
+    'footer.affiliateText': 'Wir können eine Provision verdienen, wenn Sie über unsere Affiliate-Links kaufen. Dies hilft, unsere Website zu unterstützen und ermöglicht es uns, umfassende VPN-Bewertungen zu liefern.',
+    'footer.independentDisclaimer': 'Dies ist eine unabhängige Bewertungsseite. Wir sind nicht mit VPN-Anbietern verbunden. Alle Marken sind Eigentum ihrer jeweiligen Inhaber.',
+    'footer.copyright': '© 2025 bestvpn.digital. Alle Rechte vorbehalten.',
+    'footer.email': 'support@bestvpn.digital',
+    'quickLinks': 'Schnelle Links',
+    'vpns': 'VPNs',
+    'faq': 'FAQ',
+    'blog': 'Blog',
+    'contact': 'Kontakt',
+    
+    // FAQ Categories
+    'faq.category.trust': 'Vertrauen & Sicherheit',
+    'faq.category.gaming': 'Gaming',
+    'faq.category.p2p': 'P2P & Torrenting',
+    'faq.category.business': 'Geschäft',
+    
+    // FAQ Questions 64-67
+    'faq.question64': 'Wie kann ich überprüfen, ob ein VPN-Anbieter vertrauenswürdig ist?',
+    'faq.answer64': 'Suchen Sie nach unabhängigen Sicherheitsaudits, transparenter Eigentümerschaft, klaren Datenschutzrichtlinien und bewährten No-Logs-Richtlinien. Prüfen Sie, ob sie von renommierten Drittanbieter-Sicherheitsfirmen auditiert wurden.',
+    'faq.question65': 'Was ist die beste VPN für Gaming?',
+    'faq.answer65': 'Die besten Gaming-VPNs bieten niedrige Latenz, DDoS-Schutz und Server in der Nähe von Gaming-Hubs. NordVPN, Surfshark und ExpressVPN sind ausgezeichnete Wahlmöglichkeiten mit dedizierten Gaming-Servern.',
+    'faq.question66': 'Kann ich eine VPN sicher für Torrenting verwenden?',
+    'faq.answer66': 'Ja, aber wählen Sie VPNs, die P2P-Traffic explizit erlauben und Server für Torrenting optimiert haben. Suchen Sie nach Features wie Port-Weiterleitung, keine Bandbreitenbeschränkungen und einer strengen No-Logs-Richtlinie.',
+    'faq.question67': 'Welche VPN-Features sind für den Geschäftsgebrauch unerlässlich?',
+    'faq.answer67': 'Business-VPNs sollten zentrale Verwaltung, dedizierte IP-Adressen, Team-Accounts, erhöhte gleichzeitige Verbindungen, Unternehmenssicherheit und 24/7-Support bieten. Suchen Sie nach SOC 2-Compliance und detaillierten Nutzungsberichten.',
     
     // FAQ Questions 99-117
     'faq.question99': 'Was ist WireGuard?',
@@ -732,7 +905,48 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': '¿Aún tienes preguntas?',
     'faq.cantFindAnswer': "¿No puedes encontrar la respuesta que buscas? Nuestros expertos en VPN están aquí para ayudarte a elegir la solución perfecta.",
     'faq.contactExperts': 'Contacta a nuestros expertos',
-    'faq.relatedGuides': 'Guías relacionadas:'
+    'faq.relatedGuides': 'Guías relacionadas',
+    
+    // Language Selector
+    'selectLanguage': 'Seleccionar Idioma',
+    'moreLanguages': 'Más idiomas disponibles',
+    
+    // Brand
+    'brand.name': 'BestVPN Reseñas',
+    'brand.tagline': 'Sitio de Comparación Independiente',
+    'brand.description': 'Tu fuente confiable para reseñas y comparaciones completas de VPN. Encuentra el servicio VPN perfecto para tus necesidades de privacidad y seguridad.',
+    
+    // Footer
+    'footer.support': 'Soporte',
+    'footer.contactUs': 'Contáctanos',
+    'footer.privacyPolicy': 'Política de Privacidad',
+    'footer.termsOfService': 'Términos de Servicio',
+    'footer.affiliateDisclosure': 'Divulgación de Afiliados',
+    'footer.affiliateText': 'Podemos ganar una comisión cuando compras a través de nuestros enlaces de afiliados. Esto ayuda a mantener nuestro sitio y nos permite continuar proporcionando reseñas completas de VPN.',
+    'footer.independentDisclaimer': 'Este es un sitio de reseñas independiente. No estamos afiliados con ningún proveedor de VPN. Todas las marcas comerciales son propiedad de sus respectivos dueños.',
+    'footer.copyright': '© 2025 bestvpn.digital. Todos los derechos reservados.',
+    'footer.email': 'support@bestvpn.digital',
+    'quickLinks': 'Enlaces Rápidos',
+    'vpns': 'VPNs',
+    'faq': 'FAQ',
+    'blog': 'Blog',
+    'contact': 'Contacto',
+    
+    // FAQ Categories
+    'faq.category.trust': 'Confianza y Seguridad',
+    'faq.category.gaming': 'Gaming',
+    'faq.category.p2p': 'P2P y Torrenting',
+    'faq.category.business': 'Negocios',
+    
+    // FAQ Questions 64-67
+    'faq.question64': '¿Cómo puedo verificar que un proveedor de VPN es confiable?',
+    'faq.answer64': 'Busque auditorías de seguridad independientes, propiedad transparente, políticas de privacidad claras y políticas de no-logs probadas. Verifique si han sido auditados por firmas de seguridad de terceros de renombre.',
+    'faq.question65': '¿Cuál es la mejor VPN para gaming?',
+    'faq.answer65': 'Las mejores VPNs para gaming ofrecen baja latencia, protección DDoS y servidores cerca de centros de gaming. NordVPN, Surfshark y ExpressVPN son excelentes opciones con servidores dedicados para gaming.',
+    'faq.question66': '¿Puedo usar una VPN de forma segura para torrenting?',
+    'faq.answer66': 'Sí, pero elija VPNs que permitan explícitamente tráfico P2P y tengan servidores optimizados para torrenting. Busque características como reenvío de puertos, sin límites de ancho de banda y una política estricta de no-logs.',
+    'faq.question67': '¿Qué características de VPN son esenciales para uso empresarial?',
+    'faq.answer67': 'Las VPNs empresariales deben ofrecer gestión centralizada, direcciones IP dedicadas, cuentas de equipo, conexiones simultáneas aumentadas, seguridad de nivel empresarial y soporte 24/7. Busque cumplimiento SOC 2 y reportes detallados de uso.'
   },
   th: {
     // FAQ Page UI
@@ -774,7 +988,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Vous avez encore des questions ?',
     'faq.cantFindAnswer': "Vous ne trouvez pas la réponse que vous cherchez ? Nos experts VPN sont là pour vous aider à choisir la solution parfaite.",
     'faq.contactExperts': 'Contactez nos experts',
-    'faq.relatedGuides': 'Guides connexes :'
+    'faq.relatedGuides': 'Guides connexes',
+    
+    // Language Selector
+    'selectLanguage': 'Sélectionner la langue',
+    'moreLanguages': 'Plus de langues disponibles',
+    
+    // Brand
+    'brand.name': 'BestVPN Avis',
+    'brand.tagline': 'Site de comparaison indépendant',
+    'brand.description': 'Votre source fiable pour des avis et comparaisons complets de VPN. Trouvez le service VPN parfait pour vos besoins de confidentialité et de sécurité.',
+    
+    // Footer
+    'footer.support': 'Support',
+    'footer.contactUs': 'Nous contacter',
+    'footer.privacyPolicy': 'Politique de confidentialité',
+    'footer.termsOfService': 'Conditions d\'utilisation',
+    'footer.affiliateDisclosure': 'Divulgation d\'affiliation',
+    'footer.affiliateText': 'Nous pouvons gagner une commission lorsque vous achetez via nos liens d\'affiliation. Cela nous aide à soutenir notre site et nous permet de continuer à fournir des avis complets sur les VPN.',
+    'footer.independentDisclaimer': 'Ceci est un site d\'avis indépendant. Nous ne sommes affiliés à aucun fournisseur de VPN. Toutes les marques sont la propriété de leurs propriétaires respectifs.',
+    'footer.copyright': '© 2025 bestvpn.digital. Tous droits réservés.',
+    'footer.email': 'support@bestvpn.digital',
+    'quickLinks': 'Liens rapides',
+    'vpns': 'VPN',
+    'faq': 'FAQ',
+    'blog': 'Blog',
+    'contact': 'Contact'
   },
   it: {
     // FAQ Page UI
@@ -788,7 +1027,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Hai ancora domande?',
     'faq.cantFindAnswer': "Non riesci a trovare la risposta che stai cercando? I nostri esperti VPN sono qui per aiutarti a scegliere la soluzione perfetta.",
     'faq.contactExperts': 'Contatta i nostri esperti',
-    'faq.relatedGuides': 'Guide correlate:'
+    'faq.relatedGuides': 'Guide correlate',
+    
+    // Language Selector
+    'selectLanguage': 'Seleziona lingua',
+    'moreLanguages': 'Altre lingue disponibili',
+    
+    // Brand
+    'brand.name': 'BestVPN Recensioni',
+    'brand.tagline': 'Sito di confronto indipendente',
+    'brand.description': 'La tua fonte affidabile per recensioni e confronti completi di VPN. Trova il servizio VPN perfetto per le tue esigenze di privacy e sicurezza.',
+    
+    // Footer
+    'footer.support': 'Supporto',
+    'footer.contactUs': 'Contattaci',
+    'footer.privacyPolicy': 'Informativa sulla privacy',
+    'footer.termsOfService': 'Termini di servizio',
+    'footer.affiliateDisclosure': 'Divulgazione di affiliazione',
+    'footer.affiliateText': 'Potremmo guadagnare una commissione quando acquisti tramite i nostri link di affiliazione. Questo ci aiuta a supportare il nostro sito e ci permette di continuare a fornire recensioni complete di VPN.',
+    'footer.independentDisclaimer': 'Questo è un sito di recensioni indipendente. Non siamo affiliati a nessun provider VPN. Tutti i marchi sono proprietà dei rispettivi proprietari.',
+    'footer.copyright': '© 2025 bestvpn.digital. Tutti i diritti riservati.',
+    'footer.email': 'support@bestvpn.digital',
+    'quickLinks': 'Link rapidi',
+    'vpns': 'VPN',
+    'faq': 'FAQ',
+    'blog': 'Blog',
+    'contact': 'Contatto'
   },
   ru: {
     // FAQ Page UI
@@ -802,7 +1066,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': 'Остались вопросы?',
     'faq.cantFindAnswer': "Не можете найти нужный ответ? Наши эксперты по VPN готовы помочь вам выбрать идеальное решение.",
     'faq.contactExperts': 'Связаться с экспертами',
-    'faq.relatedGuides': 'Связанные руководства:'
+    'faq.relatedGuides': 'Связанные руководства',
+    
+    // Language Selector
+    'selectLanguage': 'Выберите язык',
+    'moreLanguages': 'Доступно больше языков',
+    
+    // Brand
+    'brand.name': 'BestVPN Обзоры',
+    'brand.tagline': 'Независимый сайт сравнения',
+    'brand.description': 'Ваш надежный источник для комплексных обзоров и сравнений VPN. Найдите идеальный VPN-сервис для ваших потребностей в конфиденциальности и безопасности.',
+    
+    // Footer
+    'footer.support': 'Поддержка',
+    'footer.contactUs': 'Связаться с нами',
+    'footer.privacyPolicy': 'Политика конфиденциальности',
+    'footer.termsOfService': 'Условия использования',
+    'footer.affiliateDisclosure': 'Раскрытие партнерской информации',
+    'footer.affiliateText': 'Мы можем получать комиссию, когда вы покупаете по нашим партнерским ссылкам. Это помогает поддерживать наш сайт и позволяет нам продолжать предоставлять комплексные обзоры VPN.',
+    'footer.independentDisclaimer': 'Это независимый сайт обзоров. Мы не связаны с какими-либо VPN-провайдерами. Все торговые марки являются собственностью их соответствующих владельцев.',
+    'footer.copyright': '© 2025 bestvpn.digital. Все права защищены.',
+    'footer.email': 'support@bestvpn.digital',
+    'quickLinks': 'Быстрые ссылки',
+    'vpns': 'VPN',
+    'faq': 'FAQ',
+    'blog': 'Блог',
+    'contact': 'Контакты'
   },
   zh: {
     // FAQ Page UI
@@ -816,7 +1105,32 @@ export const faqTranslations: AllTranslations = {
     'faq.stillHaveQuestions': '还有问题吗？',
     'faq.cantFindAnswer': "找不到您要找的答案？我们的VPN专家在这里帮助您选择完美的解决方案。",
     'faq.contactExperts': '联系我们的专家',
-    'faq.relatedGuides': '相关指南：'
+    'faq.relatedGuides': '相关指南',
+    
+    // Language Selector
+    'selectLanguage': '选择语言',
+    'moreLanguages': '更多语言可用',
+    
+    // Brand
+    'brand.name': 'BestVPN 评论',
+    'brand.tagline': '独立比较网站',
+    'brand.description': '您值得信赖的VPN评论和比较来源。为您的隐私和安全需求找到完美的VPN服务。',
+    
+    // Footer
+    'footer.support': '支持',
+    'footer.contactUs': '联系我们',
+    'footer.privacyPolicy': '隐私政策',
+    'footer.termsOfService': '服务条款',
+    'footer.affiliateDisclosure': '联盟披露',
+    'footer.affiliateText': '当您通过我们的联盟链接购买时，我们可能会获得佣金。这有助于支持我们的网站，并允许我们继续提供全面的VPN评论。',
+    'footer.independentDisclaimer': '这是一个独立的评论网站。我们不与任何VPN提供商有关联。所有商标均为其各自所有者的财产。',
+    'footer.copyright': '© 2025 bestvpn.digital. 保留所有权利。',
+    'footer.email': 'support@bestvpn.digital',
+    'quickLinks': '快速链接',
+    'vpns': 'VPN',
+    'faq': '常见问题',
+    'blog': '博客',
+    'contact': '联系'
   }
 };
 
