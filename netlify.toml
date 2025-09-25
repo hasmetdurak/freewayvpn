@@ -8,6 +8,22 @@
   to = "/index.html"
   status = 200
 
+# /en/ yönlendirmesini engelle
+[[redirects]]
+  from = "/en"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/en/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/en/*"
+  to = "/"
+  status = 301
+
 # SPA routing - sadece mevcut klasörler için
 [[redirects]]
   from = "/tr/*"
