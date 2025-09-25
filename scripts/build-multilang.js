@@ -250,8 +250,12 @@ function buildForLanguage(language) {
       
       if (fs.existsSync(srcPath)) {
         if (fs.statSync(srcPath).isDirectory()) {
-          // Copy directory recursively
-          execSync(`cp -r "${srcPath}" "${destPath}"`, { stdio: 'inherit' });
+          // Copy directory recursively - Windows uyumlu
+          if (process.platform === 'win32') {
+            execSync(`xcopy "${srcPath}" "${destPath}" /E /I /H /Y`, { stdio: 'inherit' });
+          } else {
+            execSync(`cp -r "${srcPath}" "${destPath}"`, { stdio: 'inherit' });
+          }
         } else {
           // Copy file
           fs.copyFileSync(srcPath, destPath);
@@ -300,7 +304,12 @@ function main() {
   
   // Clean dist directory
   if (fs.existsSync('dist')) {
-    execSync('rm -rf dist', { stdio: 'inherit' });
+    // Windows uyumlu temizleme
+    if (process.platform === 'win32') {
+      execSync('rmdir /s /q dist', { stdio: 'inherit' });
+    } else {
+      execSync('rm -rf dist', { stdio: 'inherit' });
+    }
   }
   
   // Build for each language
