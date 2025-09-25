@@ -24,6 +24,118 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
+    slug: "netflix-deutschland-vpn-2025",
+    title: "Bester VPN für Netflix Deutschland 2025 – Getestet & Vergleich",
+    excerpt: "Netflix DE im Ausland schauen? Wir haben 7 VPNs getestet – nur 2 funktionieren wirklich. Erfahre jetzt, welcher VPN 2025 zuverlässig Netflix entsperrt.",
+    author: "Max Schmidt",
+    date: "2025-01-20",
+    readTime: "12 min read",
+    category: "Streaming",
+    tags: ["Netflix", "Deutschland", "Streaming", "VPN Test"],
+    image: "https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg?auto=compress&cs=tinysrgb&w=800",
+    featured: true,
+    component: "NetflixDeutschlandVPNBlogPost",
+    translations: {
+      en: {
+        title: "Best VPN for Netflix Germany 2025 – Tested & Compared",
+        excerpt: "Watch Netflix DE abroad? We tested 7 VPNs – only 2 really work. Find out which VPN reliably unblocks Netflix in 2025.",
+        category: "Streaming",
+        tags: ["Netflix", "Germany", "Streaming", "VPN Test"]
+      },
+      tr: {
+        title: "2025'te Netflix Almanya için En İyi VPN – Test Edildi ve Karşılaştırıldı",
+        excerpt: "Yurtdışında Netflix DE izlemek mi? 7 VPN test ettik – sadece 2'si gerçekten çalışıyor. 2025'te hangi VPN'in Netflix'i güvenilir şekilde açtığını öğrenin.",
+        category: "Streaming",
+        tags: ["Netflix", "Almanya", "Streaming", "VPN Testi"]
+      }
+    }
+  },
+  {
+    id: 2,
+    slug: "ard-mediathek-vpn-ausland-2025",
+    title: "ARD Mediathek im Ausland schauen – 2025 Guide",
+    excerpt: "Wie kann ich mit einem VPN ARD Mediathek im Ausland schauen? Wir haben 6 VPNs getestet – nur 2 funktionieren zuverlässig mit ARD, ZDF und Phoenix.",
+    author: "Max Schmidt",
+    date: "2025-01-19",
+    readTime: "10 min read",
+    category: "Streaming",
+    tags: ["ARD Mediathek", "ZDF", "Phoenix", "Deutschland", "Streaming"],
+    image: "https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg?auto=compress&cs=tinysrgb&w=800",
+    featured: true,
+    component: "ARDMediathekVPNBlogPost",
+    translations: {
+      en: {
+        title: "Watch ARD Mediathek Abroad – 2025 Guide",
+        excerpt: "How can I watch ARD Mediathek abroad with a VPN? We tested 6 VPNs – only 2 work reliably with ARD, ZDF and Phoenix.",
+        category: "Streaming",
+        tags: ["ARD Mediathek", "ZDF", "Phoenix", "Germany", "Streaming"]
+      },
+      tr: {
+        title: "Yurtdışında ARD Mediathek İzleme – 2025 Rehberi",
+        excerpt: "VPN ile yurtdışında ARD Mediathek'i nasıl izleyebilirim? 6 VPN test ettik – sadece 2'si ARD, ZDF ve Phoenix ile güvenilir çalışıyor.",
+        category: "Streaming",
+        tags: ["ARD Mediathek", "ZDF", "Phoenix", "Almanya", "Streaming"]
+      }
+    }
+  },
+  {
+    id: 3,
+    slug: "nordvpn-online-banking-deutschland-2025",
+    title: "Ist NordVPN sicher genug für Online-Banking in Deutschland? – Ultimativer Test 2025",
+    excerpt: "Ist NordVPN sicher genug für Online-Banking? Wir haben alle Sicherheitskriterien getestet – AES-256, Kill Switch, No-Logs und DSGVO-Konformität.",
+    author: "Max Schmidt",
+    date: "2025-01-18",
+    readTime: "15 min read",
+    category: "Security",
+    tags: ["Online-Banking", "Sicherheit", "NordVPN", "DSGVO", "AES-256"],
+    image: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800",
+    featured: true,
+    component: "NordVPNOnlineBankingBlogPost",
+    translations: {
+      en: {
+        title: "Is NordVPN Safe Enough for Online Banking in Germany? – Ultimate Test 2025",
+        excerpt: "Is NordVPN safe enough for online banking? We tested all security criteria – AES-256, Kill Switch, No-Logs and GDPR compliance.",
+        category: "Security",
+        tags: ["Online Banking", "Security", "NordVPN", "GDPR", "AES-256"]
+      },
+      tr: {
+        title: "NordVPN Almanya'da Online Bankacılık için Yeterince Güvenli mi? – 2025 Nihai Test",
+        excerpt: "NordVPN online bankacılık için yeterince güvenli mi? Tüm güvenlik kriterlerini test ettik – AES-256, Kill Switch, No-Logs ve KVKK uyumluluğu.",
+        category: "Güvenlik",
+        tags: ["Online Bankacılık", "Güvenlik", "NordVPN", "KVKK", "AES-256"]
+      }
+    }
+  },
+  {
+    id: 4,
+    slug: "rtl-plus-vpn-ausland-2025",
+    title: "RTL+ im Ausland schauen – bester VPN 2025",
+    excerpt: "Welcher VPN funktioniert mit RTL+ im Ausland ohne Probleme? Wir haben 6 VPNs getestet – nur NordVPN läuft stabil mit RTL+, VOX und N-TV.",
+    author: "Max Schmidt",
+    date: "2025-01-17",
+    readTime: "11 min read",
+    category: "Streaming",
+    tags: ["RTL+", "VOX", "N-TV", "Deutschland", "Streaming"],
+    image: "https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg?auto=compress&cs=tinysrgb&w=800",
+    featured: true,
+    component: "RTLPlusVPNBlogPost",
+    translations: {
+      en: {
+        title: "Watch RTL+ Abroad – Best VPN 2025",
+        excerpt: "Which VPN works with RTL+ abroad without problems? We tested 6 VPNs – only NordVPN runs stable with RTL+, VOX and N-TV.",
+        category: "Streaming",
+        tags: ["RTL+", "VOX", "N-TV", "Germany", "Streaming"]
+      },
+      tr: {
+        title: "Yurtdışında RTL+ İzleme – 2025 En İyi VPN",
+        excerpt: "Hangi VPN yurtdışında RTL+ ile sorunsuz çalışır? 6 VPN test ettik – sadece NordVPN RTL+, VOX ve N-TV ile stabil çalışıyor.",
+        category: "Streaming",
+        tags: ["RTL+", "VOX", "N-TV", "Almanya", "Streaming"]
+      }
+    }
+  },
+  {
+    id: 5,
     slug: "streaming-vpn-2025",
     title: "Top 10 VPNs for Streaming in 2025: Netflix, Hulu & More",
     excerpt: "Discover the best VPNs that reliably unblock popular streaming services with fast speeds and reliable connections for seamless viewing.",
