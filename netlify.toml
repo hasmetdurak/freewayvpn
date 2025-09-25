@@ -2,11 +2,11 @@
   publish = "dist"
   command = "npm run build:multilang"
 
-# Basit yönlendirme - direkt İngilizce versiyonuna
+# Basit yönlendirme - direkt ana sayfaya
 [[redirects]]
   from = "/"
-  to = "/en/"
-  status = 302
+  to = "/index.html"
+  status = 200
 
 # SPA routing for language subdirectories
 [[redirects]]

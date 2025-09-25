@@ -76,20 +76,18 @@ function log(message) {
 function createLandingPage() {
   log('Creating landing page...');
   
-  // Ana sayfa olarak İngilizce versiyonunu kullan
-  const indexPath = 'dist/en/index.html';
-  if (fs.existsSync(indexPath)) {
-    fs.copyFileSync(indexPath, 'dist/index.html');
-    log('Landing page created successfully (using English version)');
+  // Ana sayfa olarak mevcut index.html'i kullan (İngilizce)
+  if (fs.existsSync('dist/index.html')) {
+    log('Landing page already exists (using main index.html)');
   } else {
-    log('Warning: English version not found, creating simple redirect page');
+    log('Warning: No index.html found, creating simple redirect page');
     const simpleHTML = `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>bestvpn.digital</title>
   <script>
-    window.location.href = '/en/';
+    window.location.href = '/tr/';
   </script>
 </head>
 <body>
