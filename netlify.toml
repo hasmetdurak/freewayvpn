@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "npm run build:multilang"
+  command = "npm run build"
 
 # Basit yönlendirme - direkt ana sayfaya
 [[redirects]]
