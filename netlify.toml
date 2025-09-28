@@ -2,37 +2,10 @@
   publish = "dist"
   command = "npm run build"
 
-# Basit yönlendirme - direkt ana sayfaya
+# SPA routing - tüm istekleri index.html'e yönlendir
 [[redirects]]
-  from = "/"
+  from = "/*"
   to = "/index.html"
-  status = 200
-
-# /en/ yönlendirmesini engelle
-[[redirects]]
-  from = "/en"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/en/"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/en/*"
-  to = "/"
-  status = 301
-
-# SPA routing - sadece mevcut klasörler için
-[[redirects]]
-  from = "/tr/*"
-  to = "/tr/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/tl/*"
-  to = "/tl/index.html"
   status = 200
 
 [build.environment]

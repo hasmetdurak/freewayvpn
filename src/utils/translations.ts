@@ -29,7 +29,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-detected',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Independent Comparison Site',
     'brand.description': 'Your trusted source for comprehensive VPN reviews and comparisons. Find the perfect VPN service for your privacy and security needs.',
     
@@ -269,7 +269,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Otomatik algılandı',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Bağımsız Karşılaştırma Sitesi',
     'brand.description': 'Kapsamlı VPN incelemeleri ve karşılaştırmaları için güvenilir kaynağınız. Gizlilik ve güvenlik ihtiyaçlarınız için mükemmel VPN hizmetini bulun.',
     
@@ -508,7 +508,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-oppdaget',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Uavhengig Sammenligningsside',
     'brand.description': 'Din pålitelige kilde for omfattende VPN-anmeldelser og sammenligninger. Finn den perfekte VPN-tjenesten for dine personvern- og sikkerhetsbehov.',
     
@@ -603,7 +603,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-upptäckt',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Oberoende Jämförelsesida',
     'brand.description': 'Din pålitliga källa för omfattande VPN-recensioner och jämförelser. Hitta den perfekta VPN-tjänsten för dina integritets- och säkerhetsbehov.',
     
@@ -679,7 +679,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Automatisch erkannt',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Unabhängige Vergleichsseite',
     'brand.description': 'Ihre vertrauenswürdige Quelle für umfassende VPN-Bewertungen und -Vergleiche. Finden Sie den perfekten VPN-Service für Ihre Privatsphäre und Sicherheitsbedürfnisse.',
     
@@ -845,7 +845,7 @@ export const faqTranslations: AllTranslations = {
     'faq.answer117': 'Vaikka koti-WiFi on yleensä turvallisempi kuin julkiset verkot, VPN tarjoaa silti etuja. Se estää ISP:täsi seuraamasta selailutottumuksiasi, suojaa mahdollisilta reitittimen haavoittuvuuksilta ja mahdollistaa pääsyn maantieteellisesti estettyyn sisältöön. Jos yksityisyys on sinulle tärkeää, VPN:n käyttämistä kotona suositellaan.',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Riippumaton Vertailusivusto',
     'brand.description': 'Luotettava lähteesi kattaviin VPN-arvosteluihin ja -vertailuihin. Löydä täydellinen VPN-palvelu yksityisyys- ja turvallisuustarpeisiisi.',
     
@@ -920,7 +920,7 @@ export const faqTranslations: AllTranslations = {
     'faq.answer117': '自宅のWiFiは一般的に公共ネットワークより安全ですが、VPNは依然として利点を提供します。ISPがブラウジング習慣を追跡することを防ぎ、潜在的なルーターの脆弱性から保護し、地理的にブロックされたコンテンツへのアクセスを可能にします。プライバシーが重要な場合、自宅でのVPN使用が推奨されます。',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': '独立比較サイト',
     'brand.description': '包括的なVPNレビューと比較の信頼できるソース。プライバシーとセキュリティのニーズに最適なVPNサービスを見つけてください。',
     
@@ -995,7 +995,7 @@ export const faqTranslations: AllTranslations = {
     'faq.answer117': '집 WiFi는 일반적으로 공용 네트워크보다 안전하지만, VPN은 여전히 이점을 제공합니다. ISP가 브라우징 습관을 추적하는 것을 방지하고, 잠재적인 라우터 취약점으로부터 보호하며, 지리적으로 차단된 콘텐츠에 대한 액세스를 가능하게 합니다. 개인정보 보호가 중요하다면 집에서 VPN 사용이 권장됩니다.',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': '독립 비교 사이트',
     'brand.description': '포괄적인 VPN 리뷰와 비교를 위한 신뢰할 수 있는 소스. 프라이버시와 보안 요구사항에 완벽한 VPN 서비스를 찾아보세요.',
     
@@ -1034,7 +1034,7 @@ export const faqTranslations: AllTranslations = {
     'faq.relatedGuides': 'संबंधित गाइड:',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'स्वतंत्र तुलना साइट',
     'brand.description': 'व्यापक VPN समीक्षाओं और तुलनाओं के लिए आपका विश्वसनीय स्रोत। अपनी गोपनीयता और सुरक्षा आवश्यकताओं के लिए सही VPN सेवा खोजें।',
     
@@ -1073,7 +1073,7 @@ export const faqTranslations: AllTranslations = {
     'faq.relatedGuides': 'أدلة ذات صلة:',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'موقع مقارنة مستقل',
     'brand.description': 'مصدرك الموثوق لمراجعات ومقارنات VPN الشاملة. اعثر على خدمة VPN المثالية لاحتياجات الخصوصية والأمان الخاصة بك.',
     
@@ -1112,7 +1112,7 @@ export const faqTranslations: AllTranslations = {
     'faq.relatedGuides': 'Mga Kaugnay na Gabay:',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Malayang Site ng Paghahambing',
     'brand.description': 'Ang iyong mapagkakatiwalaang mapagkukunan para sa komprehensibong mga review at paghahambing ng VPN. Hanapin ang perpektong serbisyo ng VPN para sa iyong mga pangangailangan sa privacy at seguridad.',
     
@@ -1151,7 +1151,7 @@ export const faqTranslations: AllTranslations = {
     'faq.relatedGuides': 'Panduan Terkait:',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Situs Perbandingan Independen',
     'brand.description': 'Sumber terpercaya Anda untuk ulasan dan perbandingan VPN yang komprehensif. Temukan layanan VPN yang sempurna untuk kebutuhan privasi dan keamanan Anda.',
     
@@ -1190,7 +1190,7 @@ export const faqTranslations: AllTranslations = {
     'faq.relatedGuides': 'راهنماهای مرتبط:',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'سایت مقایسه مستقل',
     'brand.description': 'منبع قابل اعتماد شما برای بررسی و مقایسه جامع VPN. سرویس VPN مناسب برای نیازهای حریم خصوصی و امنیتی خود را پیدا کنید.',
     
@@ -1229,7 +1229,7 @@ export const faqTranslations: AllTranslations = {
     'faq.relatedGuides': 'Powiązane przewodniki:',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Niezależna Strona Porównawcza',
     'brand.description': 'Twoje zaufane źródło kompleksowych recenzji i porównań VPN. Znajdź idealną usługę VPN dla swoich potrzeb prywatności i bezpieczeństwa.',
     
@@ -1268,7 +1268,7 @@ export const faqTranslations: AllTranslations = {
     'faq.relatedGuides': 'Guias relacionados:',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Site de Comparação Independente',
     'brand.description': 'Sua fonte confiável para análises e comparações abrangentes de VPN. Encontre o serviço VPN perfeito para suas necessidades de privacidade e segurança.',
     
@@ -1312,7 +1312,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-detectado',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Sitio de Comparación Independiente',
     'brand.description': 'Tu fuente confiable para reseñas y comparaciones completas de VPN. Encuentra el servicio VPN perfecto para tus necesidades de privacidad y seguridad.',
     
@@ -1406,7 +1406,7 @@ export const faqTranslations: AllTranslations = {
     'faq.relatedGuides': 'คู่มือที่เกี่ยวข้อง:',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'เว็บไซต์เปรียบเทียบอิสระ',
     'brand.description': 'แหล่งที่เชื่อถือได้ของคุณสำหรับการรีวิวและเปรียบเทียบ VPN ที่ครอบคลุม ค้นหาบริการ VPN ที่สมบูรณ์แบบสำหรับความต้องการความเป็นส่วนตัวและความปลอดภัยของคุณ',
     
@@ -1445,7 +1445,7 @@ export const faqTranslations: AllTranslations = {
     'faq.relatedGuides': 'Hướng dẫn liên quan:',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Trang So Sánh Độc Lập',
     'brand.description': 'Nguồn đáng tin cậy của bạn cho các đánh giá và so sánh VPN toàn diện. Tìm dịch vụ VPN hoàn hảo cho nhu cầu riêng tư và bảo mật của bạn.',
     
@@ -1489,7 +1489,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-détecté',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Site de Comparaison Indépendant',
     'brand.description': 'Votre source fiable pour des avis et comparaisons complets de VPN. Trouvez le service VPN parfait pour vos besoins de confidentialité et de sécurité.',
     
@@ -1572,7 +1572,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Auto-rilevato',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Sito di Confronto Indipendente',
     'brand.description': 'La tua fonte affidabile per recensioni e confronti completi di VPN. Trova il servizio VPN perfetto per le tue esigenze di privacy e sicurezza.',
     
@@ -1612,7 +1612,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': 'Автоопределено',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': 'Ваш надежный источник для комплексных обзоров и сравнений VPN',
     'brand.description': 'Ваш надежный источник для комплексных обзоров и сравнений VPN. Найдите идеальный VPN-сервис для ваших потребностей в конфиденциальности и безопасности.',
     
@@ -1652,7 +1652,7 @@ export const faqTranslations: AllTranslations = {
     'geoDetected': '自动检测',
     
     // Brand
-    'brand.name': 'BestVPN Reviews',
+    'brand.name': 'bestvpn.digital',
     'brand.tagline': '您值得信赖的VPN评论和比较来源',
     'brand.description': '您值得信赖的VPN评论和比较来源。为您的隐私和安全需求找到完美的VPN服务。',
     

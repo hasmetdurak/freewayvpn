@@ -8,7 +8,7 @@ interface NaturalAffiliateProps {
 }
 
 const NaturalAffiliate: React.FC<NaturalAffiliateProps> = ({ context, className = '' }) => {
-  const { language, t } = useLanguage();
+  const { currentLanguage, t } = useLanguage();
   
   // Get country from language code
   const getCountryFromLanguage = (langCode: string): string => {
@@ -20,8 +20,8 @@ const NaturalAffiliate: React.FC<NaturalAffiliateProps> = ({ context, className 
     return mapping[langCode] || 'US';
   };
 
-  const country = getCountryFromLanguage(language.code);
-  const bestOffer = getBestAffiliateOffer(country, language.code);
+  const country = getCountryFromLanguage(currentLanguage.code);
+  const bestOffer = getBestAffiliateOffer(country, currentLanguage.code);
 
   // Natural affiliate sentences based on context and language
   const getNaturalAffiliateSentence = () => {
@@ -67,7 +67,7 @@ const NaturalAffiliate: React.FC<NaturalAffiliateProps> = ({ context, className 
       }
     };
 
-    return sentences[language.code as keyof typeof sentences]?.[context] || sentences.en[context];
+    return sentences[currentLanguage.code as keyof typeof sentences]?.[context] || sentences.en[context];
   };
 
   const getAffiliateLink = () => {

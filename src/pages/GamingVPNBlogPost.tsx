@@ -7,7 +7,7 @@ import { useAdPlacement } from '../hooks/useAdPlacement';
 import { Gamepad2, Zap, Shield, Globe, Clock, CheckCircle, XCircle, AlertTriangle } from 'lucide-react';
 
 const GamingVPNBlogPost: React.FC = () => {
-  const { language } = useLanguage();
+  const { currentLanguage } = useLanguage();
   const { getBlogContent } = useBlogTranslation('gaming-vpn-2025');
   const { getAdByPosition } = useAdPlacement(1800);
   

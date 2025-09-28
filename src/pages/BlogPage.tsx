@@ -1,14 +1,13 @@
-import React, { useState, useMemo } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { Search, Filter, Calendar, Clock, User, Tag, TrendingUp } from 'lucide-react';
+import React, { useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, Calendar, Clock, User, Tag, TrendingUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { blogPosts, categories, allTags, type BlogPost } from '../data/blogData';
+import { blogPosts } from '../data/blogData';
 
 const BlogPage: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
-  const { lang } = useParams<{ lang: string }>();
 
-  // Get localized blog posts
+  // Get localized blog posts with language-specific filtering
   const localizedPosts = useMemo(() => {
     try {
       if (!blogPosts || !Array.isArray(blogPosts)) {
@@ -16,7 +15,35 @@ const BlogPage: React.FC = () => {
         return [];
       }
       
-      return blogPosts.map(post => {
+      // Filter posts based on language
+      let filteredPosts = blogPosts;
+      
+      // Show German-specific posts only when German is selected
+      if (currentLanguage.code === 'de') {
+        // Include German-specific posts
+        filteredPosts = blogPosts.filter(post => 
+          post.slug.includes('deutschland') || 
+          post.slug.includes('ard-mediathek') || 
+          post.slug.includes('rtl-plus') ||
+          post.slug.includes('online-banking') ||
+          post.title.includes('Deutschland') ||
+          post.title.includes('ARD') ||
+          post.title.includes('RTL')
+        );
+      } else {
+        // For other languages, exclude German-specific posts
+        filteredPosts = blogPosts.filter(post => 
+          !post.slug.includes('deutschland') && 
+          !post.slug.includes('ard-mediathek') && 
+          !post.slug.includes('rtl-plus') &&
+          !post.slug.includes('online-banking') &&
+          !post.title.includes('Deutschland') &&
+          !post.title.includes('ARD') &&
+          !post.title.includes('RTL')
+        );
+      }
+      
+      return filteredPosts.map(post => {
         if (!post) return post;
         
         const translation = post.translations?.[currentLanguage.code];
@@ -69,7 +96,7 @@ const BlogPage: React.FC = () => {
             {featuredPosts.map((post) => (
               <Link
                 key={post.id}
-                to={`/${lang}/blog/${post.slug}`}
+                to={`/blog/${post.slug}`}
                 className="block"
               >
                 <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
@@ -145,7 +172,7 @@ const BlogPage: React.FC = () => {
             {regularPosts.map((post) => (
               <Link
                 key={post.id}
-                to={`/${lang}/blog/${post.slug}`}
+                to={`/blog/${post.slug}`}
                 className="block"
               >
                 <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">

@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Play, Zap, Globe, CheckCircle, AlertTriangle, Tv, Clock } from 'lucide-react';
-import { LanguageContext } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import AffiliateButton from '../components/AffiliateButton';
 
 const DemonSlayerNetflixVPNBlogPost: React.FC = () => {
-  const { language } = useContext(LanguageContext);
+  const { currentLanguage } = useLanguage();
 
   return (
     <>

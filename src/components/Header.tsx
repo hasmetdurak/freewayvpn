@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Shield, ChevronDown, Languages } from 'lucide-react';
 import { useLanguage, supportedLanguages } from '../contexts/LanguageContext';
 
@@ -8,7 +8,6 @@ const Header: React.FC = () => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const { currentLanguage, setLanguage, t, isGeoDetected, detectedCountry } = useLanguage();
   const location = useLocation();
-  const { lang } = useParams<{ lang: string }>();
 
   const navigation = [
     { name: t('nav.vpns'), key: 'vpns', path: '/' },
@@ -18,7 +17,7 @@ const Header: React.FC = () => {
   ];
 
   const getCurrentPage = () => {
-    const path = location.pathname.replace(/^\/[a-z]{2,3}/, '');
+    const path = location.pathname;
     if (path === '/' || path === '/vpns') return 'vpns';
     if (path === '/faq') return 'faq';
     if (path === '/blog') return 'blog';
@@ -39,7 +38,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link
-            to={`/${lang}/`}
+            to="/"
             className="flex items-center cursor-pointer group"
           >
             <Shield className="h-8 w-8 text-blue-600 group-hover:text-blue-700 transition-colors" />
@@ -56,7 +55,7 @@ const Header: React.FC = () => {
             {navigation.map((item) => (
               <Link
                 key={item.key}
-                to={`/${lang}${item.path}`}
+                to={item.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   currentPage === item.key
                     ? 'text-blue-600 bg-blue-50'
@@ -104,8 +103,7 @@ const Header: React.FC = () => {
                       <button
                         key={language.code}
                         onClick={() => {
-                          setLanguage(language);
-                          setIsLanguageOpen(false);
+                          handleLanguageSelect(language);
                         }}
                         className={`w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-all duration-200 group ${
                           currentLanguage.code === language.code 
@@ -162,7 +160,7 @@ const Header: React.FC = () => {
               {navigation.map((item) => (
                 <Link
                   key={item.key}
-                  to={`/${lang}${item.path}`}
+                  to={item.path}
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
                     currentPage === item.key

@@ -4,7 +4,7 @@ import { Clock, User, Calendar, Tag, Shield, Globe, Eye, CheckCircle, XCircle, A
 import { useLanguage } from '../contexts/LanguageContext';
 
 const FiveEyeFourteenEyeVPNBlogPost: React.FC = () => {
-  const { language } = useLanguage();
+  const { currentLanguage } = useLanguage();
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">

@@ -4,7 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Shield, Play, Globe, Zap, CheckCircle, AlertTriangle, Star, Clock, Users } from 'lucide-react';
 
 const KoreanDramaVPNBlogPost: React.FC = () => {
-  const { language } = useLanguage();
+  const { currentLanguage } = useLanguage();
 
   return (
     <>

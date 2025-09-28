@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const StreamingWars2025BlogPost: React.FC = () => {
-  const { language } = useLanguage();
+  const { currentLanguage } = useLanguage();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

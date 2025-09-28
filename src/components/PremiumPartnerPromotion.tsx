@@ -7,7 +7,7 @@ interface PremiumPartnerPromotionProps {
 }
 
 const PremiumPartnerPromotion: React.FC<PremiumPartnerPromotionProps> = ({ className = '' }) => {
-  const { language, t } = useLanguage();
+  const { currentLanguage, t } = useLanguage();
   
   // Get country from language code (simplified mapping)
   const getCountryFromLanguage = (langCode: string): string => {
@@ -19,8 +19,8 @@ const PremiumPartnerPromotion: React.FC<PremiumPartnerPromotionProps> = ({ class
     return mapping[langCode] || 'US';
   };
 
-  const country = getCountryFromLanguage(language.code);
-  const bestOffer = getBestAffiliateOffer(country, language.code);
+  const country = getCountryFromLanguage(currentLanguage.code);
+  const bestOffer = getBestAffiliateOffer(country, currentLanguage.code);
   const culturalAppeal = getCulturalAppeal(country);
   const localContent = getLocalContent(country);
 

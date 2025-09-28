@@ -4,7 +4,7 @@ import { Clock, User, Calendar, Tag, Shield, Zap, Terminal, Cpu, HardDrive, Netw
 import { useLanguage } from '../contexts/LanguageContext';
 
 const LinuxCLIVPNBlogPost: React.FC = () => {
-  const { language } = useLanguage();
+  const { currentLanguage } = useLanguage();
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-8">
@@ -543,7 +543,7 @@ const LinuxCLIVPNBlogPost: React.FC = () => {
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Related Articles</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <Link 
-            to={`/${language}/blog/macbook-m3-vpn-battery-drain-test-2025`}
+            to="/blog/macbook-m3-vpn-battery-drain-test-2025"
             className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors"
           >
             <h3 className="font-semibold text-blue-600 hover:text-blue-800 mb-2">
@@ -554,7 +554,7 @@ const LinuxCLIVPNBlogPost: React.FC = () => {
             </p>
           </Link>
           <Link 
-            to={`/${language}/blog/nordvpn-vs-NordVPN-2025-ultimate-comparison`}
+            to="/blog/nordvpn-vs-expressvpn-2025-ultimate-comparison"
             className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors"
           >
             <h3 className="font-semibold text-blue-600 hover:text-blue-800 mb-2">

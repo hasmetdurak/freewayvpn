@@ -6,7 +6,7 @@ interface LocalStreamingGuideProps {
 }
 
 const LocalStreamingGuide: React.FC<LocalStreamingGuideProps> = ({ className = '' }) => {
-  const { language, t } = useLanguage();
+  const { currentLanguage, t } = useLanguage();
 
   // Local streaming services by country/language
   const getLocalStreamingServices = () => {
@@ -77,7 +77,7 @@ const LocalStreamingGuide: React.FC<LocalStreamingGuideProps> = ({ className = '
       }
     };
 
-    return services[language.code as keyof typeof services] || services.en;
+    return services[currentLanguage.code as keyof typeof services] || services.en;
   };
 
   const streamingData = getLocalStreamingServices();

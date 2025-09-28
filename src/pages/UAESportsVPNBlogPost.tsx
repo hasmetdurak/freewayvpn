@@ -4,7 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Clock, User, Calendar, Tag, Shield, Zap, Globe, CheckCircle, XCircle, Star, TrendingUp } from 'lucide-react';
 
 const UAESportsVPNBlogPost: React.FC = () => {
-  const { language } = useLanguage();
+  const { currentLanguage } = useLanguage();
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
