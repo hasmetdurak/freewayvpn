@@ -53,12 +53,12 @@ const ContactPage: React.FC = () => {
   };
 
   const subjectOptions = [
-    'General Inquiry',
-    'VPN Recommendation Request',
-    'Technical Support',
-    'Partnership Inquiry',
-    'Press & Media',
-    'Feedback & Suggestions'
+    t('contact.generalInquiry'),
+    t('contact.vpnRecommendation'),
+    t('contact.technicalSupport'),
+    t('contact.partnershipInquiry'),
+    t('contact.pressMedia'),
+    t('contact.feedbackSuggestions')
   ];
 
   return (
@@ -77,13 +77,13 @@ const ContactPage: React.FC = () => {
         {/* Contact Information */}
         <div className="lg:col-span-1">
           <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.getInTouch')}</h2>
             
             <div className="space-y-6">
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-blue-600 mr-3" />
                 <div>
-                  <p className="font-medium text-gray-900">Email Support</p>
+                  <p className="font-medium text-gray-900">{t('contact.emailSupport')}</p>
                   <p className="text-gray-600">support@bestvpn.digital</p>
                 </div>
               </div>
@@ -91,7 +91,7 @@ const ContactPage: React.FC = () => {
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-blue-600 mr-3" />
                 <div>
-                  <p className="font-medium text-gray-900">Phone Support</p>
+                  <p className="font-medium text-gray-900">{t('contact.phoneSupport')}</p>
                   <p className="text-gray-600">+1 (828) 555-9876</p>
                   <p className="text-sm text-gray-500 mt-1">Mon-Fri, 9AM-6PM EST</p>
                 </div>
@@ -100,7 +100,7 @@ const ContactPage: React.FC = () => {
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 text-blue-600 mr-3" />
                 <div>
-                  <p className="font-medium text-gray-900">Office</p>
+                  <p className="font-medium text-gray-900">{t('contact.office')}</p>
                   <p className="text-gray-600">
                     742 Guardian Boulevard<br />
                     Goshen, MA 01032<br />
@@ -115,10 +115,10 @@ const ContactPage: React.FC = () => {
           <div className="bg-blue-50 rounded-lg p-6">
             <div className="flex items-center mb-4">
               <Shield className="h-6 w-6 text-blue-600 mr-2" />
-              <h3 className="text-lg font-semibold text-gray-900">Privacy First</h3>
+              <h3 className="text-lg font-semibold text-gray-900">{t('contact.privacyFirst')}</h3>
             </div>
             <p className="text-gray-700 text-sm">
-              We respect your privacy. All information submitted through this form is encrypted and handled according to our strict privacy policy. We never share your data with third parties.
+              {t('contact.privacyText')}
             </p>
           </div>
         </div>
@@ -126,15 +126,15 @@ const ContactPage: React.FC = () => {
         {/* Contact Form */}
         <div className="lg:col-span-2">
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.sendMessage')}</h2>
             
             {/* Status Messages */}
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center">
                 <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
                 <div>
-                  <p className="text-green-800 font-medium">Message sent successfully!</p>
-                  <p className="text-green-700 text-sm mt-1">We'll get back to you within 24 hours.</p>
+                  <p className="text-green-800 font-medium">{t('contact.messageSent')}</p>
+                  <p className="text-green-700 text-sm mt-1">{t('contact.messageResponse')}</p>
                 </div>
               </div>
             )}
@@ -143,7 +143,7 @@ const ContactPage: React.FC = () => {
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                 <AlertCircle className="h-5 w-5 text-red-600 mr-3" />
                 <div>
-                  <p className="text-red-800 font-medium">Please verify you're human before submitting.</p>
+                  <p className="text-red-800 font-medium">{t('contact.verifyHuman')}</p>
                 </div>
               </div>
             )}
@@ -152,7 +152,7 @@ const ContactPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
+                    {t('contact.fullName')} *
                   </label>
                   <input
                     type="text"
@@ -168,7 +168,7 @@ const ContactPage: React.FC = () => {
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
+                    {t('contact.emailAddress')} *
                   </label>
                   <input
                     type="email"
@@ -185,7 +185,7 @@ const ContactPage: React.FC = () => {
               
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Subject *
+                  {t('contact.subject')} *
                 </label>
                 <select
                   id="subject"
@@ -195,7 +195,7 @@ const ContactPage: React.FC = () => {
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                 >
-                  <option value="">Select a subject</option>
+                  <option value="">{t('contact.selectSubject')}</option>
                   {subjectOptions.map(option => (
                     <option key={option} value={option}>{option}</option>
                   ))}
@@ -204,7 +204,7 @@ const ContactPage: React.FC = () => {
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message *
+                  {t('contact.message')} *
                 </label>
                 <textarea
                   id="message"
@@ -214,7 +214,7 @@ const ContactPage: React.FC = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
-                  placeholder="Please describe your question or how we can help you..."
+                  placeholder={t('contact.messagePlaceholder')}
                 />
               </div>
               
@@ -228,10 +228,10 @@ const ContactPage: React.FC = () => {
                   className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded mt-1"
                 />
                 <label htmlFor="captcha" className="ml-3 text-sm text-gray-700">
-                  I'm not a robot and I agree to the{' '}
-                  <a href="#" className="text-blue-600 hover:text-blue-700">Privacy Policy</a>
+                  {t('contact.notRobot')}{' '}
+                  <a href="#" className="text-blue-600 hover:text-blue-700">{t('contact.privacyPolicy')}</a>
                   {' '}and{' '}
-                  <a href="#" className="text-blue-600 hover:text-blue-700">Terms of Service</a>
+                  <a href="#" className="text-blue-600 hover:text-blue-700">{t('contact.termsOfService')}</a>
                   . *
                 </label>
               </div>
@@ -245,12 +245,12 @@ const ContactPage: React.FC = () => {
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
-                      Sending...
+                      {t('contact.sending')}
                     </>
                   ) : (
                     <>
                       <Send className="h-5 w-5 mr-2" />
-                      Send Message
+                      {t('contact.sendMessageButton')}
                     </>
                   )}
                 </button>
@@ -263,36 +263,36 @@ const ContactPage: React.FC = () => {
       {/* FAQ Section */}
       <div className="mt-16">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-          <p className="text-gray-600">Quick answers to common questions before you reach out</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('contact.faqTitle')}</h2>
+          <p className="text-gray-600">{t('contact.faqSubtitle')}</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">How do I choose the right VPN?</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('contact.faq1Title')}</h3>
             <p className="text-gray-600 text-sm">
-              Consider your primary needs: streaming, privacy, speed, or price. Our comparison tool helps you filter VPNs by features, and our experts can provide personalized recommendations.
+              {t('contact.faq1Text')}
             </p>
           </div>
           
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Are your reviews unbiased?</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('contact.faq2Title')}</h3>
             <p className="text-gray-600 text-sm">
-              Yes, our reviews are based on rigorous testing and real user experiences. While we earn affiliate commissions, this doesn't influence our rankings or recommendations.
+              {t('contact.faq2Text')}
             </p>
           </div>
           
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you offer technical support?</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('contact.faq3Title')}</h3>
             <p className="text-gray-600 text-sm">
-              We provide guidance on choosing VPNs and general setup advice. For technical issues with specific VPN services, we'll direct you to the appropriate provider's support team.
+              {t('contact.faq3Text')}
             </p>
           </div>
           
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Can you help with business VPNs?</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('contact.faq4Title')}</h3>
             <p className="text-gray-600 text-sm">
-              Absolutely! We have expertise in enterprise VPN solutions and can help you find services that meet your business's security, scale, and compliance requirements.
+              {t('contact.faq4Text')}
             </p>
           </div>
         </div>
@@ -300,19 +300,19 @@ const ContactPage: React.FC = () => {
 
       {/* Social Links */}
       <div className="mt-12 text-center">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('contact.followUs')}</h3>
         <div className="flex justify-center space-x-6">
           <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-            <div className="text-sm mt-1">Newsletter</div>
+            <div className="text-sm mt-1">{t('contact.newsletter')}</div>
           </a>
           <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-            <div className="text-sm mt-1">Twitter</div>
+            <div className="text-sm mt-1">{t('contact.twitter')}</div>
           </a>
           <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-            <div className="text-sm mt-1">Facebook</div>
+            <div className="text-sm mt-1">{t('contact.facebook')}</div>
           </a>
           <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
-            <div className="text-sm mt-1">LinkedIn</div>
+            <div className="text-sm mt-1">{t('contact.linkedin')}</div>
           </a>
         </div>
       </div>
