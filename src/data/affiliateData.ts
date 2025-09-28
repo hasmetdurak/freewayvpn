@@ -14,6 +14,18 @@ export interface AffiliatePartner {
   trackingParams?: {
     [key: string]: string;
   };
+  // Language-specific affiliate links for better conversion
+  languageLinks?: {
+    [languageCode: string]: string;
+  };
+  // Country-specific recommendations
+  countryRecommendations?: {
+    [countryCode: string]: {
+      priority: number;
+      reason: string;
+      localOffers?: string[];
+    };
+  };
 }
 
 // Premium Partners - Our top earning affiliate partners
@@ -36,6 +48,19 @@ export const premiumPartners: AffiliatePartner[] = [
       offer_id: '15',
       aff_id: '132118',
       url_id: '902'
+    },
+    languageLinks: {
+      'ko': 'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902&lang=ko',
+      'de': 'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902&lang=de',
+      'tr': 'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902&lang=tr',
+      'ja': 'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902&lang=ja',
+      'zh': 'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132118&url_id=902&lang=zh'
+    },
+    countryRecommendations: {
+      'KR': { priority: 1, reason: 'Best for Korean streaming services', localOffers: ['한국 서버 최적화', 'K-Pop 콘텐츠 접근'] },
+      'DE': { priority: 1, reason: 'Perfect for German ARD/ZDF access', localOffers: ['독일 서버', 'ARD Mediathek 최적화'] },
+      'TR': { priority: 2, reason: 'Good for Turkish content', localOffers: ['터키 서버', 'BluTV 지원'] },
+      'JP': { priority: 2, reason: 'Excellent for Japanese streaming', localOffers: ['일본 서버', 'Netflix Japan 최적화'] }
     }
   },
   {

@@ -1,11 +1,20 @@
 import React, { useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Search, Calendar, Clock, User, Tag, TrendingUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { blogPosts } from '../data/blogData';
 
 const BlogPage: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
+  const { lang } = useParams<{ lang: string }>();
+
+  // Generate blog post links with language prefix
+  const getBlogPostPath = (slug: string) => {
+    if (lang) {
+      return `/${lang}/blog/${slug}`;
+    }
+    return `/blog/${slug}`;
+  };
 
   // Get localized blog posts with language-specific filtering
   const localizedPosts = useMemo(() => {
@@ -18,30 +27,52 @@ const BlogPage: React.FC = () => {
       // Filter posts based on language
       let filteredPosts = blogPosts;
       
-      // Show German-specific posts only when German is selected
-      if (currentLanguage.code === 'de') {
-        // Include German-specific posts
-        filteredPosts = blogPosts.filter(post => 
-          post.slug.includes('deutschland') || 
-          post.slug.includes('ard-mediathek') || 
-          post.slug.includes('rtl-plus') ||
-          post.slug.includes('online-banking') ||
-          post.title.includes('Deutschland') ||
-          post.title.includes('ARD') ||
-          post.title.includes('RTL')
-        );
-      } else {
-        // For other languages, exclude German-specific posts
-        filteredPosts = blogPosts.filter(post => 
-          !post.slug.includes('deutschland') && 
-          !post.slug.includes('ard-mediathek') && 
-          !post.slug.includes('rtl-plus') &&
-          !post.slug.includes('online-banking') &&
-          !post.title.includes('Deutschland') &&
-          !post.title.includes('ARD') &&
-          !post.title.includes('RTL')
-        );
-      }
+             // Language-specific filtering
+             if (currentLanguage.code === 'de') {
+               // Show German-specific posts only when German is selected
+               filteredPosts = blogPosts.filter(post =>
+                 post.slug.includes('deutschland') ||
+                 post.slug.includes('ard-mediathek') ||
+                 post.slug.includes('rtl-plus') ||
+                 post.slug.includes('online-banking') ||
+                 post.title.includes('Deutschland') ||
+                 post.title.includes('ARD') ||
+                 post.title.includes('RTL')
+               );
+             } else if (currentLanguage.code === 'ko') {
+               // Show Korean-specific posts only when Korean is selected
+               filteredPosts = blogPosts.filter(post =>
+                 post.slug.includes('korea') ||
+                 post.slug.includes('wavve') ||
+                 post.slug.includes('tving') ||
+                 post.slug.includes('coupang-play') ||
+                 post.title.includes('한국') ||
+                 post.title.includes('넷플릭스') ||
+                 post.title.includes('와브') ||
+                 post.title.includes('티빙') ||
+                 post.title.includes('쿠팡')
+               );
+             } else {
+               // For other languages, exclude language-specific posts
+               filteredPosts = blogPosts.filter(post =>
+                 !post.slug.includes('deutschland') &&
+                 !post.slug.includes('ard-mediathek') &&
+                 !post.slug.includes('rtl-plus') &&
+                 !post.slug.includes('online-banking') &&
+                 !post.slug.includes('korea') &&
+                 !post.slug.includes('wavve') &&
+                 !post.slug.includes('tving') &&
+                 !post.slug.includes('coupang-play') &&
+                 !post.title.includes('Deutschland') &&
+                 !post.title.includes('ARD') &&
+                 !post.title.includes('RTL') &&
+                 !post.title.includes('한국') &&
+                 !post.title.includes('넷플릭스') &&
+                 !post.title.includes('와브') &&
+                 !post.title.includes('티빙') &&
+                 !post.title.includes('쿠팡')
+               );
+             }
       
       return filteredPosts.map(post => {
         if (!post) return post;
@@ -96,7 +127,7 @@ const BlogPage: React.FC = () => {
             {featuredPosts.map((post) => (
               <Link
                 key={post.id}
-                to={`/blog/${post.slug}`}
+                to={getBlogPostPath(post.slug)}
                 className="block"
               >
                 <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
@@ -172,7 +203,7 @@ const BlogPage: React.FC = () => {
             {regularPosts.map((post) => (
               <Link
                 key={post.id}
-                to={`/blog/${post.slug}`}
+                to={getBlogPostPath(post.slug)}
                 className="block"
               >
                 <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">

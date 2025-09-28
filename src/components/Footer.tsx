@@ -1,10 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Shield, Mail, Twitter, Facebook, Linkedin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
+  const { lang } = useParams<{ lang: string }>();
+
+  // Generate footer links with language prefix
+  const getFooterPath = (basePath: string) => {
+    if (lang) {
+      return `/${lang}${basePath}`;
+    }
+    return basePath;
+  };
   
   return (
     <footer className="bg-gray-900 text-white">
@@ -29,16 +38,16 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t('quickLinks')}</h3>
-            <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">{t('vpns')}</Link></li>
-              <li><Link to="/faq" className="text-gray-300 hover:text-white transition-colors">{t('faq')}</Link></li>
-              <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">{t('blog')}</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">{t('contact')}</Link></li>
-            </ul>
-          </div>
+                 {/* Quick Links */}
+                 <div>
+                   <h3 className="text-lg font-semibold mb-4">{t('quickLinks')}</h3>
+                   <ul className="space-y-2">
+                     <li><Link to={getFooterPath('/vpns')} className="text-gray-300 hover:text-white transition-colors">{t('vpns')}</Link></li>
+                     <li><Link to={getFooterPath('/faq')} className="text-gray-300 hover:text-white transition-colors">{t('faq')}</Link></li>
+                     <li><Link to={getFooterPath('/blog')} className="text-gray-300 hover:text-white transition-colors">{t('blog')}</Link></li>
+                     <li><Link to={getFooterPath('/contact')} className="text-gray-300 hover:text-white transition-colors">{t('contact')}</Link></li>
+                   </ul>
+                 </div>
 
           {/* Support */}
           <div>

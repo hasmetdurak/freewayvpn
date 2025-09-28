@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { Menu, X, Shield, ChevronDown, Languages } from 'lucide-react';
 import { useLanguage, supportedLanguages } from '../contexts/LanguageContext';
 
@@ -8,20 +8,38 @@ const Header: React.FC = () => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const { currentLanguage, setLanguage, t, isGeoDetected, detectedCountry } = useLanguage();
   const location = useLocation();
+  const { lang } = useParams<{ lang: string }>();
+
+  // Get current path without language prefix
+  const getCurrentPath = () => {
+    const path = location.pathname;
+    if (lang && path.startsWith(`/${lang}`)) {
+      return path.replace(`/${lang}`, '') || '/vpns';
+    }
+    return path || '/vpns';
+  };
+
+  // Generate navigation paths with language prefix
+  const getNavigationPath = (basePath: string) => {
+    if (lang) {
+      return `/${lang}${basePath}`;
+    }
+    return basePath;
+  };
 
   const navigation = [
-    { name: t('nav.vpns'), key: 'vpns', path: '/' },
-    { name: t('nav.faq'), key: 'faq', path: '/faq' },
-    { name: t('nav.blog'), key: 'blog', path: '/blog' },
-    { name: t('nav.contact'), key: 'contact', path: '/contact' },
+    { name: t('nav.vpns'), key: 'vpns', path: getNavigationPath('/vpns') },
+    { name: t('nav.faq'), key: 'faq', path: getNavigationPath('/faq') },
+    { name: t('nav.blog'), key: 'blog', path: getNavigationPath('/blog') },
+    { name: t('nav.contact'), key: 'contact', path: getNavigationPath('/contact') },
   ];
 
   const getCurrentPage = () => {
-    const path = location.pathname;
-    if (path === '/' || path === '/vpns') return 'vpns';
-    if (path === '/faq') return 'faq';
-    if (path === '/blog') return 'blog';
-    if (path === '/contact') return 'contact';
+    const currentPath = getCurrentPath();
+    if (currentPath === '/' || currentPath === '/vpns') return 'vpns';
+    if (currentPath === '/faq') return 'faq';
+    if (currentPath === '/blog') return 'blog';
+    if (currentPath === '/contact') return 'contact';
     return 'vpns';
   };
 
@@ -30,17 +48,24 @@ const Header: React.FC = () => {
   const handleLanguageSelect = (language: any) => {
     setLanguage(language);
     setIsLanguageOpen(false);
+    
+    // Navigate to the same page in the new language
+    const currentPath = getCurrentPath();
+    const newPath = language.code === 'en' ? currentPath : `/${language.code}${currentPath}`;
+    
+    // Use window.location for full page navigation to ensure proper language switching
+    window.location.href = newPath;
   };
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="flex items-center cursor-pointer group"
-          >
+                {/* Logo */}
+                <Link
+                  to={lang ? `/${lang}/vpns` : "/"}
+                  className="flex items-center cursor-pointer group"
+                >
             <Shield className="h-8 w-8 text-blue-600 group-hover:text-blue-700 transition-colors" />
             <div className="ml-2">
               <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
