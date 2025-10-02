@@ -13,6 +13,9 @@ export const translations: TranslationsObject = {
     // Navigation
     "nav.home": "Home",
     "nav.vpns": "VPNs",
+    "nav.streamTest": "⚡ Speed Test",
+    "nav.deals": "🔥 Hot Deals",
+    "nav.quiz": "🎯 Find VPN",
     "nav.faq": "FAQ",
     "nav.blog": "Blog",
     "nav.contact": "Contact",
@@ -183,6 +186,9 @@ export const translations: TranslationsObject = {
     // Navigation
     "nav.home": "Startseite",
     "nav.vpns": "VPNs",
+    "nav.streamTest": "⚡ Speed Test",
+    "nav.deals": "🔥 Angebote",
+    "nav.quiz": "🎯 VPN Finder",
     "nav.faq": "FAQ",
     "nav.blog": "Blog",
     "nav.contact": "Kontakt",
@@ -353,6 +359,9 @@ export const translations: TranslationsObject = {
     // Navigation
     "nav.home": "Accueil",
     "nav.vpns": "VPNs",
+    "nav.streamTest": "⚡ Test Vitesse",
+    "nav.deals": "🔥 Offres",
+    "nav.quiz": "🎯 Trouver VPN",
     "nav.faq": "FAQ",
     "nav.blog": "Blog",
     "nav.contact": "Contact",
@@ -523,6 +532,9 @@ export const translations: TranslationsObject = {
     // Navigation
     "nav.home": "ホーム",
     "nav.vpns": "VPN",
+    "nav.streamTest": "⚡ 速度テスト",
+    "nav.deals": "🔥 お得情報",
+    "nav.quiz": "🎯 VPN診断",
     "nav.faq": "よくある質問",
     "nav.blog": "ブログ",
     "nav.contact": "お問い合わせ",
@@ -693,6 +705,9 @@ export const translations: TranslationsObject = {
     // Navigation
     "nav.home": "홈",
     "nav.vpns": "VPN",
+    "nav.streamTest": "⚡ 속도 테스트",
+    "nav.deals": "🔥 특가",
+    "nav.quiz": "🎯 VPN 찾기",
     "nav.faq": "자주 묻는 질문",
     "nav.blog": "블로그",
     "nav.contact": "문의",
