@@ -157,7 +157,7 @@ const Footer: React.FC = () => {
             <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600">
               <div className="flex items-center mb-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                <h4 className="font-semibold text-green-400">Independent Reviews</h4>
+                <h4 className="font-semibold text-green-400">{t('footer.independentReviews')}</h4>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed">
                 {t('footer.independentDisclaimer')}

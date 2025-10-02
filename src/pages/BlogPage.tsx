@@ -120,7 +120,7 @@ const BlogPage: React.FC = () => {
         <div className="mb-12">
           <div className="flex items-center mb-6">
             <TrendingUp className="h-6 w-6 text-orange-600 mr-2" />
-            <h2 className="text-2xl font-bold text-gray-900">Featured Articles</h2>
+            <h2 className="text-2xl font-bold text-gray-900">{t('featuredArticles')}</h2>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -140,7 +140,7 @@ const BlogPage: React.FC = () => {
                     <div className="absolute top-4 left-4">
                       <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-100 text-orange-800">
                         <TrendingUp className="h-3 w-3 mr-1" />
-                        Featured
+                        {t('featured')}
                       </span>
                     </div>
                   </div>
@@ -197,7 +197,7 @@ const BlogPage: React.FC = () => {
       {/* Regular Posts */}
       {regularPosts.length > 0 && (
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Latest Articles</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('latestArticles')}</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {regularPosts.map((post) => (
@@ -267,30 +267,30 @@ const BlogPage: React.FC = () => {
       {localizedPosts.length === 0 && (
         <div className="text-center py-12">
           <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-          <p className="text-gray-500 text-lg">No articles found matching your criteria.</p>
-          <p className="text-gray-400 text-sm mt-2">Try adjusting your search or filters.</p>
+          <p className="text-gray-500 text-lg">{t('noArticlesFound')}</p>
+          <p className="text-gray-400 text-sm mt-2">{t('adjustFilters')}</p>
         </div>
       )}
 
       {/* Results count */}
       <div className="mt-8 text-center text-sm text-gray-500">
-        Showing {localizedPosts.length} of {blogPosts.length} articles
+        {t('showingXofYArticles').replace('{0}', localizedPosts.length.toString()).replace('{1}', blogPosts.length.toString())}
       </div>
 
       {/* Newsletter CTA */}
       <div className="mt-12 bg-gradient-to-r from-blue-600 to-teal-600 rounded-lg p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-4">Stay Updated with VPN News</h2>
+        <h2 className="text-2xl font-bold mb-4">{t('stayUpdated')}</h2>
         <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-          Get the latest VPN reviews, security tips, and privacy guides delivered to your inbox weekly.
+          {t('newsletterDesc')}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
           <input
             type="email"
-            placeholder="Enter your email"
+            placeholder={t('enterEmail')}
             className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-white focus:outline-none"
           />
           <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Subscribe
+            {t('subscribe')}
           </button>
         </div>
       </div>

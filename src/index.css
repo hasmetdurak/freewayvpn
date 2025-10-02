@@ -188,3 +188,164 @@
     @apply text-base;
   }
 }
+
+/* Modern VPN Affiliate Styles */
+.vpn-card-hover {
+  @apply transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl;
+}
+
+.affiliate-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.8);
+  }
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.gradient-warning {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.gradient-premium {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* Premium Card Effect */
+.premium-card {
+  @apply relative overflow-hidden rounded-xl shadow-2xl;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(249,250,251,0.95) 100%);
+}
+
+.premium-card::before {
+  content: '';
+  @apply absolute top-0 left-0 w-full h-1;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Affiliate Button Styles */
+.btn-affiliate {
+  @apply relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.btn-affiliate::after {
+  content: '';
+  @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+}
+
+.btn-affiliate:hover::after {
+  @apply opacity-100;
+}
+
+.btn-affiliate-premium {
+  @apply relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* Deal Badge Animation */
+.deal-badge {
+  @apply inline-block px-3 py-1 rounded-full text-xs font-bold;
+  animation: bounce-slow 2s infinite;
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Trust Badge */
+.trust-badge {
+  @apply flex items-center gap-2 px-4 py-2 bg-green-50 border-2 border-green-200 rounded-lg text-green-800 font-semibold;
+}
+
+.trust-badge::before {
+  content: '✓';
+  @apply flex items-center justify-center w-6 h-6 bg-green-500 text-white rounded-full text-sm;
+}
+
+/* Pricing Card Highlight */
+.pricing-highlight {
+  @apply relative;
+}
+
+.pricing-highlight::before {
+  content: 'BEST VALUE';
+  @apply absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-orange-500 text-white text-xs font-bold rounded-full;
+}
+
+/* Loading Skeleton */
+.skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* VPN Feature Icons */
+.feature-icon {
+  @apply flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-lg;
+}
+
+/* Stats Counter Animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-number {
+  animation: countUp 0.6s ease-out;
+}
+
+/* Modern Tooltip */
+.tooltip {
+  @apply absolute z-50 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-lg;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
