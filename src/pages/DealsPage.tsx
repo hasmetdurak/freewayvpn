@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { dealsData, Deal } from '../data/dealsData';
-import { Clock, Tag, CheckCircle, ExternalLink, Copy, Check } from 'lucide-react';
+import { Clock, Tag, CheckCircle, ExternalLink, Copy, Check, Activity } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 export default function DealsPage() {
-  const { t, currentLanguage } = useLanguage();
+  const { t } = useLanguage();
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState<{ [key: string]: string }>({});
 
@@ -108,12 +108,12 @@ export default function DealsPage() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
               <Tag className="w-4 h-4" />
               {t('deals.liveDeals') || 'LIVE DEALS'}
             </div>
-            <h1 className="text-5xl font-bold text-gray-900 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-red-600">
-              {t('deals.title') || '🔥 Best VPN Deals & Coupons'}
+            <h1 className="text-5xl font-bold text-gray-900 mb-4">
+              {t('deals.title') || 'Best VPN Deals & Coupons'}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t('deals.subtitle') || 'Exclusive discounts up to 86% OFF. All deals verified and updated daily.'}
@@ -230,20 +230,20 @@ export default function DealsPage() {
 
           {/* Trust Signals */}
           <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl shadow-xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">💯 {t('deals.trustTitle') || 'Why Trust Our Deals?'}</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('deals.trustTitle') || 'Why Trust Our Deals?'}</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
               <div>
-                <div className="text-3xl mb-2">✅</div>
+                <CheckCircle className="w-12 h-12 mx-auto mb-3" />
                 <div className="font-bold">{t('deals.verified') || 'Verified Daily'}</div>
                 <div className="text-sm text-blue-100">{t('deals.verifiedDesc') || 'All codes tested before publishing'}</div>
               </div>
               <div>
-                <div className="text-3xl mb-2">🔄</div>
+                <Activity className="w-12 h-12 mx-auto mb-3" />
                 <div className="font-bold">{t('deals.updated') || 'Always Updated'}</div>
                 <div className="text-sm text-blue-100">{t('deals.updatedDesc') || 'New deals added constantly'}</div>
               </div>
               <div>
-                <div className="text-3xl mb-2">🎯</div>
+                <ExternalLink className="w-12 h-12 mx-auto mb-3" />
                 <div className="font-bold">{t('deals.exclusive') || 'Exclusive Offers'}</div>
                 <div className="text-sm text-blue-100">{t('deals.exclusiveDesc') || 'Special partnerships for better prices'}</div>
               </div>

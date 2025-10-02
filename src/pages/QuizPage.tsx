@@ -88,7 +88,7 @@ export default function QuizPage() {
                 <CheckCircle className="w-12 h-12 text-white" />
               </div>
               <h1 className="text-4xl font-bold text-gray-900 mb-2">
-                {t('quiz.resultsTitle') || '🎉 Perfect Matches Found!'}
+                {t('quiz.resultsTitle') || 'Perfect Matches Found!'}
               </h1>
               <p className="text-lg text-gray-600">
                 {t('quiz.resultsSubtitle') || 'Based on your answers, here are your top 3 personalized VPN recommendations'}
@@ -99,7 +99,7 @@ export default function QuizPage() {
             {!emailSaved && (
               <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl shadow-xl p-6 mb-8 text-white">
                 <h3 className="text-xl font-bold mb-2">
-                  💌 {t('quiz.emailCapture') || 'Get Your Results via Email'}
+                  {t('quiz.emailCapture') || 'Get Your Results via Email'}
                 </h3>
                 <p className="mb-4 text-sm">
                   {t('quiz.emailCaptureDesc') || 'Receive exclusive deals and updates for your recommended VPNs'}
@@ -134,7 +134,7 @@ export default function QuizPage() {
                 >
                   {index === 0 && (
                     <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 px-4 text-sm font-bold">
-                      🏆 {t('quiz.topMatch') || 'YOUR BEST MATCH'}
+                      {t('quiz.topMatch') || 'YOUR BEST MATCH'}
                     </div>
                   )}
                   
@@ -232,7 +232,7 @@ export default function QuizPage() {
                 }}
                 className="text-purple-600 hover:text-purple-700 font-semibold underline"
               >
-                {t('quiz.retake') || '🔄 Retake Quiz'}
+                {t('quiz.retake') || 'Retake Quiz'}
               </button>
             </div>
           </div>
@@ -253,7 +253,7 @@ export default function QuizPage() {
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-2">
-              {t('quiz.title') || '🎯 Find Your Perfect VPN'}
+              {t('quiz.title') || 'Find Your Perfect VPN'}
             </h1>
             <p className="text-lg text-gray-600">
               {t('quiz.subtitle') || 'Answer 5 quick questions to get personalized recommendations'}

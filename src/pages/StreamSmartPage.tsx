@@ -19,24 +19,20 @@ import {
   Share2, 
   Trophy,
   ExternalLink,
-  Copy,
-  Check,
   Award,
   TrendingUp
 } from 'lucide-react';
 
 export default function StreamSmartPage() {
-  const { t } = useLanguage();
   const [config, setConfig] = useState<TestConfig>({
     device: '',
     service: '',
     location: ''
   });
-  const [isTestin, setIsTesting] = useState(false);
+  const [isTesting, setIsTesting] = useState(false);
   const [progress, setProgress] = useState(0);
   const [results, setResults] = useState<TestResult[] | null>(null);
   const [testsCompleted, setTestsCompleted] = useState(0);
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [showShareModal, setShowShareModal] = useState(false);
   const [userAchievements, setUserAchievements] = useState(achievements);
   
@@ -123,11 +119,6 @@ export default function StreamSmartPage() {
     setUserAchievements(updated);
   };
 
-  const copyCode = (code: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(code);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
 
   const shareResults = (platform: string) => {
     if (!results) return;
@@ -182,16 +173,14 @@ export default function StreamSmartPage() {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-bold mb-6 animate-pulse shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg">
               <Zap className="w-5 h-5" />
               LIVE SPEED TESTING
             </div>
             <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-                Test Your VPN Speed
-              </span>
+              Test Your VPN Speed
               <br />
-              <span className="text-gray-800">Find the Fastest for Streaming</span>
+              <span className="text-gray-600 text-3xl">Find the Fastest for Streaming</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
               Real-time testing for Netflix, Disney+, Hulu & more. Get instant results with speed, ping & reliability scores.
@@ -291,14 +280,14 @@ export default function StreamSmartPage() {
                   {/* Test Button */}
                   <button
                     onClick={handleTest}
-                    disabled={isTestin || !config.device || !config.service || !config.location}
+                    disabled={isTesting || !config.device || !config.service || !config.location}
                     className={`w-full py-5 rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3 ${
-                      isTestin || !config.device || !config.service || !config.location
+                      isTesting || !config.device || !config.service || !config.location
                         ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                         : 'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white shadow-xl hover:shadow-2xl transform hover:scale-105'
                     }`}
                   >
-                    {isTestin ? (
+                    {isTesting ? (
                       <>
                         <Activity className="w-6 h-6 animate-spin" />
                         Testing... {progress}%
@@ -312,7 +301,7 @@ export default function StreamSmartPage() {
                   </button>
 
                   {/* Progress Bar */}
-                  {isTestin && (
+                  {isTesting && (
                     <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                       <div
                         className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 h-full transition-all duration-300 rounded-full"
@@ -327,7 +316,7 @@ export default function StreamSmartPage() {
               {results && (
                 <div className="mt-8 space-y-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold text-gray-900">📊 Your Results</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Your Results</h3>
                     <button
                       onClick={() => setShowShareModal(true)}
                       className="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all"
@@ -502,7 +491,7 @@ export default function StreamSmartPage() {
       {showShareModal && results && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">🎉 Share Your Results!</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Share Your Results!</h3>
             <p className="text-gray-600 mb-6">
               Help your friends find the best VPN for streaming. Share your test results and earn bonus tests!
             </p>
@@ -512,25 +501,25 @@ export default function StreamSmartPage() {
                 onClick={() => shareResults('twitter')}
                 className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors"
               >
-                🐦 Twitter
+                Twitter
               </button>
               <button
                 onClick={() => shareResults('facebook')}
                 className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-lg transition-colors"
               >
-                📘 Facebook
+                Facebook
               </button>
               <button
                 onClick={() => shareResults('whatsapp')}
                 className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition-colors"
               >
-                💬 WhatsApp
+                WhatsApp
               </button>
               <button
                 onClick={() => shareResults('reddit')}
                 className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"
               >
-                🔴 Reddit
+                Reddit
               </button>
             </div>
 
