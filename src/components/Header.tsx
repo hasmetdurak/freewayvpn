@@ -29,6 +29,9 @@ const Header: React.FC = () => {
 
   const navigation = [
     { name: t('nav.vpns'), key: 'vpns', path: getNavigationPath('/vpns') },
+    { name: t('nav.streamTest') || '⚡ Test', key: 'stream-test', path: getNavigationPath('/stream-test'), highlighted: true },
+    { name: t('nav.deals') || '🔥 Deals', key: 'deals', path: getNavigationPath('/deals'), highlighted: true },
+    { name: t('nav.quiz') || '🎯 Quiz', key: 'quiz', path: getNavigationPath('/quiz') },
     { name: t('nav.faq'), key: 'faq', path: getNavigationPath('/faq') },
     { name: t('nav.blog'), key: 'blog', path: getNavigationPath('/blog') },
     { name: t('nav.contact'), key: 'contact', path: getNavigationPath('/contact') },
@@ -40,6 +43,9 @@ const Header: React.FC = () => {
     if (currentPath === '/faq') return 'faq';
     if (currentPath === '/blog') return 'blog';
     if (currentPath === '/contact') return 'contact';
+    if (currentPath === '/deals') return 'deals';
+    if (currentPath === '/quiz') return 'quiz';
+    if (currentPath === '/stream-test') return 'stream-test';
     return 'vpns';
   };
 
@@ -77,12 +83,14 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
+            {navigation.map((item: any) => (
               <Link
                 key={item.key}
                 to={item.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  currentPage === item.key
+                  item.highlighted
+                    ? 'text-orange-600 bg-gradient-to-r from-orange-100 to-red-100 hover:from-orange-200 hover:to-red-200 font-bold'
+                    : currentPage === item.key
                     ? 'text-blue-600 bg-blue-50'
                     : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                 }`}
