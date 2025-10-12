@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { insertFAQSchema } from '../utils/faqSchema';
 import { faqTranslations } from '../utils/faqTranslations';
-
-interface FAQ {
-  id: number;
-  question: string;
-  answer: string;
-  category: string;
-}
 
 const FAQPage: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
@@ -37,9 +31,28 @@ const FAQPage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16 px-4 rounded-2xl mb-8">
+    <>
+      <Helmet>
+        <title>{`${t('faq.title')} | ${t('brand.name')} - ${currentLanguage.name}`}</title>
+        <meta name="description" content={t('faq.subtitle')} />
+        <meta name="keywords" content={`VPN FAQ, ${t('brand.name')}, VPN questions, VPN help, VPN guide, ${currentLanguage.name}`} />
+        <link rel="canonical" href={`https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}faq`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${t('faq.title')} | ${t('brand.name')}`} />
+        <meta property="og:description" content={t('faq.subtitle')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}faq`} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={`${t('faq.title')} | ${t('brand.name')}`} />
+        <meta name="twitter:description" content={t('faq.subtitle')} />
+      </Helmet>
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16 px-4 rounded-2xl mb-8">
         <div className="max-w-4xl mx-auto text-center">
           <HelpCircle className="w-16 h-16 mx-auto mb-6 text-blue-200" />
           <h1 className="text-4xl font-bold mb-4">
@@ -120,6 +133,7 @@ const FAQPage: React.FC = () => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 

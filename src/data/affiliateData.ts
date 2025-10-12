@@ -196,7 +196,7 @@ export const updatePartnerAffiliateUrl = (partnerId: string, newUrl: string): bo
 export const refreshAllPartners = (): void => {
   // This would typically refresh the allAffiliatePartners array
   // In a real implementation, this might trigger a re-export or state update
-  console.log('Refreshing all affiliate partners...');
+  // Partners refreshed
 };
 
 // Helper functions

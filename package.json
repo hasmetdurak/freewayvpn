@@ -7,9 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "build:multilang": "node scripts/build-multilang.js",
+    "build:seo": "npm run build && npm run sitemap && npm run rss",
     "lint": "eslint .",
     "preview": "vite preview",
-    "download-logos": "node scripts/download-vpn-logos.js"
+    "download-logos": "node scripts/download-vpn-logos.js",
+    "sitemap": "node scripts/generate-sitemap.js",
+    "rss": "node scripts/generate-rss.js",
+    "seo": "npm run sitemap && npm run rss"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",

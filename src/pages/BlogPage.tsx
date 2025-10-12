@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link, useParams } from 'react-router-dom';
-import { Search, Calendar, Clock, User, Tag, TrendingUp } from 'lucide-react';
+import { Calendar, Clock, User, Tag, TrendingUp, Search } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { blogPosts } from '../data/blogData';
 
@@ -39,40 +40,84 @@ const BlogPage: React.FC = () => {
                  post.title.includes('ARD') ||
                  post.title.includes('RTL')
                );
-             } else if (currentLanguage.code === 'ko') {
-               // Show Korean-specific posts only when Korean is selected
-               filteredPosts = blogPosts.filter(post =>
-                 post.slug.includes('korea') ||
-                 post.slug.includes('wavve') ||
-                 post.slug.includes('tving') ||
-                 post.slug.includes('coupang-play') ||
-                 post.title.includes('한국') ||
-                 post.title.includes('넷플릭스') ||
-                 post.title.includes('와브') ||
-                 post.title.includes('티빙') ||
-                 post.title.includes('쿠팡')
-               );
-             } else {
-               // For other languages, exclude language-specific posts
-               filteredPosts = blogPosts.filter(post =>
-                 !post.slug.includes('deutschland') &&
-                 !post.slug.includes('ard-mediathek') &&
-                 !post.slug.includes('rtl-plus') &&
-                 !post.slug.includes('online-banking') &&
-                 !post.slug.includes('korea') &&
-                 !post.slug.includes('wavve') &&
-                 !post.slug.includes('tving') &&
-                 !post.slug.includes('coupang-play') &&
-                 !post.title.includes('Deutschland') &&
-                 !post.title.includes('ARD') &&
-                 !post.title.includes('RTL') &&
-                 !post.title.includes('한국') &&
-                 !post.title.includes('넷플릭스') &&
-                 !post.title.includes('와브') &&
-                 !post.title.includes('티빙') &&
-                 !post.title.includes('쿠팡')
-               );
-             }
+           } else if (currentLanguage.code === 'ko') {
+             // Show Korean-specific posts only when Korean is selected
+             filteredPosts = blogPosts.filter(post =>
+               // Include all Korean Archive posts (dynamic content)
+               post.component === 'KoreanBlogArchive' ||
+               // Include specific Korean blog posts
+               post.slug.includes('korea') ||
+               post.slug.includes('wavve') ||
+               post.slug.includes('tving') ||
+               post.slug.includes('coupang-play') ||
+               post.slug.includes('best-vpn-korea-2025') ||
+               post.slug.includes('netflix-working-vpn-2025') ||
+               post.slug.includes('free-vpn-honest-review-2025') ||
+               post.slug.includes('fastest-vpn-2025') ||
+               post.slug.includes('budget-vpn-2025') ||
+               post.slug.includes('torrenting-p2p-2025') ||
+               post.slug.includes('gaming-2025') ||
+               post.slug.includes('windows-10-11-2025') ||
+               post.slug.includes('mac-macos-2025') ||
+               post.title.includes('한국') ||
+               post.title.includes('넷플릭스') ||
+               post.title.includes('와브') ||
+               post.title.includes('티빙') ||
+               post.title.includes('쿠팡') ||
+               post.title.includes('2025년') ||
+               post.title.includes('최고의 VPN') ||
+               post.title.includes('무료 VPN') ||
+               post.title.includes('가장 빠른') ||
+               post.title.includes('가성비') ||
+               post.title.includes('토렌트') ||
+               post.title.includes('게이머') ||
+               post.title.includes('윈도우') ||
+               post.title.includes('맥북') ||
+               post.title.includes('VPN')
+             );
+           } else {
+             // For other languages, exclude language-specific posts
+             filteredPosts = blogPosts.filter(post =>
+               // Exclude Korean Archive posts
+               post.component !== 'KoreanBlogArchive' &&
+               // Exclude German posts
+               !post.slug.includes('deutschland') &&
+               !post.slug.includes('ard-mediathek') &&
+               !post.slug.includes('rtl-plus') &&
+               !post.slug.includes('online-banking') &&
+               // Exclude other Korean posts
+               !post.slug.includes('korea') &&
+               !post.slug.includes('wavve') &&
+               !post.slug.includes('tving') &&
+               !post.slug.includes('coupang-play') &&
+               !post.slug.includes('best-vpn-korea-2025') &&
+               !post.slug.includes('netflix-working-vpn-2025') &&
+               !post.slug.includes('free-vpn-honest-review-2025') &&
+               !post.slug.includes('fastest-vpn-2025-ranking') &&
+               !post.slug.includes('budget-vpn-2025-best-value') &&
+               !post.slug.includes('torrenting-p2p-2025') &&
+               !post.slug.includes('gaming-2025') &&
+               !post.slug.includes('windows-10-11-2025') &&
+               !post.slug.includes('mac-macos-2025') &&
+               !post.title.includes('Deutschland') &&
+               !post.title.includes('ARD') &&
+               !post.title.includes('RTL') &&
+               !post.title.includes('한국') &&
+               !post.title.includes('넷플릭스') &&
+               !post.title.includes('와브') &&
+               !post.title.includes('티빙') &&
+               !post.title.includes('쿠팡') &&
+               !post.title.includes('2025년') &&
+               !post.title.includes('최고의 VPN') &&
+               !post.title.includes('무료 VPN') &&
+               !post.title.includes('가장 빠른') &&
+               !post.title.includes('가성비') &&
+               !post.title.includes('토렌트') &&
+               !post.title.includes('게이머') &&
+               !post.title.includes('윈도우') &&
+               !post.title.includes('맥북')
+             );
+           }
       
       return filteredPosts.map(post => {
         if (!post) return post;
@@ -107,9 +152,51 @@ const BlogPage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('blog.title')}</h1>
+    <>
+      <Helmet>
+        <title>{`${t('blog.title')} | ${t('brand.name')} - ${currentLanguage.name}`}</title>
+        <meta name="description" content={t('blog.subtitle')} />
+        <meta name="keywords" content={`VPN blog, ${t('brand.name')}, VPN news, VPN guides, VPN tips, ${currentLanguage.name}`} />
+        <link rel="canonical" href={`https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}blog`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${t('blog.title')} | ${t('brand.name')}`} />
+        <meta property="og:description" content={t('blog.subtitle')} />
+        <meta property="og:type" content="blog" />
+        <meta property="og:url" content={`https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}blog`} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${t('blog.title')} | ${t('brand.name')}`} />
+        <meta name="twitter:description" content={t('blog.subtitle')} />
+        
+        {/* Schema.org Blog */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": t('blog.title'),
+            "description": t('blog.subtitle'),
+            "url": `https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}blog`,
+            "inLanguage": currentLanguage.code,
+            "blogPost": localizedPosts.slice(0, 10).map(post => ({
+              "@type": "BlogPosting",
+              "headline": post.title,
+              "description": post.excerpt,
+              "author": {
+                "@type": "Person",
+                "name": post.author
+              },
+              "datePublished": post.date,
+              "image": post.image
+            }))
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('blog.title')}</h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           {t('blog.subtitle')}
         </p>
@@ -295,6 +382,7 @@ const BlogPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

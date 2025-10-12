@@ -1,0 +1,66 @@
+# robots.txt for bestvpn.digital
+# Generated: 2025-10-04
+# Purpose: Guide search engine crawlers for optimal indexing
+
+# Allow all crawlers (Google, Bing, Yandex, Baidu, etc.)
+User-agent: *
+Allow: /
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Disallow admin and private areas (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /private/
+
+# Allow CSS and JS for better rendering
+Allow: /src/*.css
+Allow: /src/*.js
+Allow: /assets/
+
+# Sitemap locations
+Sitemap: https://bestvpn.digital/sitemap.xml
+Sitemap: https://bestvpn.digital/sitemap-blog.xml
+Sitemap: https://bestvpn.digital/sitemap-en.xml
+Sitemap: https://bestvpn.digital/sitemap-tr.xml
+Sitemap: https://bestvpn.digital/sitemap-de.xml
+Sitemap: https://bestvpn.digital/sitemap-fr.xml
+Sitemap: https://bestvpn.digital/sitemap-es.xml
+Sitemap: https://bestvpn.digital/sitemap-ja.xml
+Sitemap: https://bestvpn.digital/sitemap-ko.xml
+Sitemap: https://bestvpn.digital/sitemap-zh.xml
+Sitemap: https://bestvpn.digital/sitemap-ar.xml
+Sitemap: https://bestvpn.digital/sitemap-ru.xml
+
+# Host (preferred domain)
+Host: https://bestvpn.digital
+
+# Crawl rate
+# Request: Please be gentle with our server
+

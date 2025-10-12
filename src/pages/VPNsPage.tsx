@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Search, Filter, Star, Award, Shield, Zap, Users, Globe, ChevronDown, ChevronUp, ArrowUpDown, TrendingUp, DollarSign, ExternalLink } from 'lucide-react';
 import { vpnData, VPN, allVPNs } from '../data/vpnData';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -98,9 +99,68 @@ const VPNsPage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Hero Section */}
-      <div className="mb-8 text-center">
+    <>
+      <Helmet>
+        <title>{`${t('compareVpns')} | ${t('brand.name')} - ${currentLanguage.name}`}</title>
+        <meta name="description" content={t('findPerfectVpn')} />
+        <meta name="keywords" content={`VPN, ${t('brand.name')}, VPN comparison, best VPN 2025, NordVPN, ExpressVPN, Surfshark, ${currentLanguage.name} VPN`} />
+        <link rel="canonical" href={`https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}vpns`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${t('compareVpns')} | ${t('brand.name')}`} />
+        <meta property="og:description" content={t('findPerfectVpn')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}vpns`} />
+        <meta property="og:image" content="https://bestvpn.digital/og-image.jpg" />
+        <meta property="og:locale" content={currentLanguage.code === 'en' ? 'en_US' : currentLanguage.code} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${t('compareVpns')} | ${t('brand.name')}`} />
+        <meta name="twitter:description" content={t('findPerfectVpn')} />
+        <meta name="twitter:image" content="https://bestvpn.digital/twitter-image.jpg" />
+        
+        {/* Schema.org */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": t('compareVpns'),
+            "description": t('findPerfectVpn'),
+            "url": `https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}vpns`,
+            "inLanguage": currentLanguage.code,
+            "numberOfItems": filteredAndSortedVPNs.length,
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": filteredAndSortedVPNs.slice(0, 10).map((vpn, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": vpn.name,
+                  "applicationCategory": "SecurityApplication",
+                  "operatingSystem": "Windows, MacOS, Linux, iOS, Android",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": vpn.price.toString(),
+                    "priceCurrency": "USD"
+                  },
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": vpn.rating.toString(),
+                    "bestRating": "10",
+                    "ratingCount": "1000"
+                  }
+                }
+              }))
+            }
+          })}
+        </script>
+      </Helmet>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Hero Section */}
+        <div className="mb-8 text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           {t('compareVpns')}
         </h1>
@@ -424,6 +484,7 @@ const VPNsPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

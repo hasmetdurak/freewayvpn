@@ -12,7 +12,7 @@ export const useBlogTranslation = (blogKey: string) => {
       // Fallback to English if current language not available
       const englishBlog = blogTranslations['en']?.[blogKey];
       if (!englishBlog) {
-        console.warn(`Blog translation not found for key: ${blogKey}`);
+        // Translation not found, return fallback
         return fallbackKey || key;
       }
       return englishBlog[key as keyof typeof englishBlog] || fallbackKey || key;
@@ -26,7 +26,7 @@ export const useBlogTranslation = (blogKey: string) => {
     const blog = blogTranslations[language]?.[blogKey] || blogTranslations['en']?.[blogKey];
     
     if (!blog) {
-      console.warn(`Blog content not found for key: ${blogKey}`);
+      // Content not found, return null
       return null;
     }
     

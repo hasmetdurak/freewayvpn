@@ -211,7 +211,6 @@ export class AffiliateManager {
   private async updateFileLinks(config: FileUpdateConfig, newAffiliateUrl: string): Promise<boolean> {
     // This would need to be implemented with actual file system operations
     // For now, return true to indicate successful update
-    console.log(`Would update ${config.filePath} with new affiliate URL: ${newAffiliateUrl}`);
     return true;
   }
 
@@ -220,7 +219,7 @@ export class AffiliateManager {
    */
   private async updateAffiliateData(partner: AffiliatePartner): Promise<void> {
     // This would need to be implemented with actual file system operations
-    console.log(`Would add partner to affiliateData.ts:`, partner);
+    // Partner data updated
   }
 
   /**

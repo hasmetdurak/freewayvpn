@@ -1,0 +1,15 @@
+{
+  "extends": "./eslint.config.js",
+  "rules": {
+    "no-console": ["error", { "allow": ["error"] }],
+    "no-debugger": "error",
+    "no-alert": "error",
+    "@typescript-eslint/no-unused-vars": ["error", { 
+      "argsIgnorePattern": "^_",
+      "varsIgnorePattern": "^_" 
+    }]
+  }
+}
+
+
+

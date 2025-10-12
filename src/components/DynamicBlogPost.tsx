@@ -19,6 +19,20 @@ const FiveEyeFourteenEyeVPNBlogPost = lazy(() => import('../pages/FiveEyeFourtee
 const MacBookM3VPNBlogPost = lazy(() => import('../pages/MacBookM3VPNBlogPost'));
 const LinuxCLIVPNBlogPost = lazy(() => import('../pages/LinuxCLIVPNBlogPost'));
 
+// New Korean blog posts
+const BestVPNKorea2025BlogPost = lazy(() => import('../pages/BestVPNKorea2025BlogPost'));
+const NetflixWorkingVPN2025BlogPost = lazy(() => import('../pages/NetflixWorkingVPN2025BlogPost'));
+const FreeVPNHonestReview2025BlogPost = lazy(() => import('../pages/FreeVPNHonestReview2025BlogPost'));
+const FastestVPN2025RankingBlogPost = lazy(() => import('../pages/FastestVPN2025RankingBlogPost'));
+const BudgetVPN2025BestValueBlogPost = lazy(() => import('../pages/BudgetVPN2025BestValueBlogPost'));
+const BestVPNTorrentingP2P2025BlogPost = lazy(() => import('../pages/BestVPNTorrentingP2P2025BlogPost'));
+const BestVPNGaming2025BlogPost = lazy(() => import('../pages/BestVPNGaming2025BlogPost'));
+const BestVPNWindows10112025BlogPost = lazy(() => import('../pages/BestVPNWindows10112025BlogPost'));
+const BestVPNMacMacOS2025BlogPost = lazy(() => import('../pages/BestVPNMacMacOS2025BlogPost'));
+
+// Korean Blog Archive (Blog 10-97)
+const KoreanBlogArchive = lazy(() => import('../pages/KoreanBlogArchive'));
+
 // Component mapping
 const componentMap: { [key: string]: React.LazyExoticComponent<React.ComponentType<any>> } = {
   StreamingVPNBlogPost,
@@ -33,6 +47,18 @@ const componentMap: { [key: string]: React.LazyExoticComponent<React.ComponentTy
   FiveEyeFourteenEyeVPNBlogPost,
   MacBookM3VPNBlogPost,
   LinuxCLIVPNBlogPost,
+  // New Korean blog posts
+  BestVPNKorea2025BlogPost,
+  NetflixWorkingVPN2025BlogPost,
+  FreeVPNHonestReview2025BlogPost,
+  FastestVPN2025RankingBlogPost,
+  BudgetVPN2025BestValueBlogPost,
+  BestVPNTorrentingP2P2025BlogPost,
+  BestVPNGaming2025BlogPost,
+  BestVPNWindows10112025BlogPost,
+  BestVPNMacMacOS2025BlogPost,
+  // Korean Blog Archive
+  KoreanBlogArchive,
 };
 
 // Loading component

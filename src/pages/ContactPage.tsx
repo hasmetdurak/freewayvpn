@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, MessageCircle, Shield } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -10,7 +11,7 @@ interface FormData {
 }
 
 const ContactPage: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -62,10 +63,24 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="text-center mb-12">
-        <div className="flex justify-center mb-4">
-          <MessageCircle className="h-12 w-12 text-blue-600" />
+    <>
+      <Helmet>
+        <title>{`${t('contact.title')} | ${t('brand.name')} - ${currentLanguage.name}`}</title>
+        <meta name="description" content={t('contact.subtitle')} />
+        <meta name="keywords" content={`VPN contact, ${t('brand.name')}, VPN support, VPN help, ${currentLanguage.name}`} />
+        <link rel="canonical" href={`https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}contact`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${t('contact.title')} | ${t('brand.name')}`} />
+        <meta property="og:description" content={t('contact.subtitle')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}contact`} />
+      </Helmet>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="text-center mb-12">
+          <div className="flex justify-center mb-4">
+            <MessageCircle className="h-12 w-12 text-blue-600" />
         </div>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('contactTitle')}</h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -317,6 +332,7 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
