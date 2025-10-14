@@ -57,7 +57,7 @@ export default function StickyDealsBanner() {
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="inline-flex items-center px-2 py-1 bg-white/20 rounded text-xs font-bold backdrop-blur-sm">
-                    🔥 {t('deals.hotDeal') || 'HOT DEAL'}
+                    🔥 {t('hotDeal') || 'HOT DEAL'}
                   </span>
                   <span className="text-sm md:text-base font-bold">{topDeal.provider}</span>
                 </div>
@@ -69,7 +69,7 @@ export default function StickyDealsBanner() {
               {/* Discount Badge */}
               <div className="hidden sm:flex flex-col items-center justify-center bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 min-w-[80px]">
                 <div className="text-3xl font-black">{topDeal.discountPercent}%</div>
-                <div className="text-xs">{t('deals.off') || 'OFF'}</div>
+                <div className="text-xs">{t('off') || 'OFF'}</div>
               </div>
             </div>
 
@@ -79,7 +79,7 @@ export default function StickyDealsBanner() {
               onClick={handleClick}
               className="bg-white text-orange-600 hover:bg-gray-100 font-bold px-6 py-3 rounded-lg transition-colors flex items-center gap-2 shadow-lg whitespace-nowrap"
             >
-              {t('deals.claimNow') || 'Claim Now'}
+              {t('claimNow') || 'Claim Now'}
               <ExternalLink className="w-4 h-4" />
             </a>
 
