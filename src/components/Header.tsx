@@ -57,7 +57,15 @@ const Header: React.FC = () => {
     
     // Navigate to the same page in the new language
     const currentPath = getCurrentPath();
-    const newPath = language.code === 'en' ? currentPath : `/${language.code}${currentPath}`;
+    let newPath;
+    
+    if (language.code === 'en') {
+      // For English, remove language prefix
+      newPath = currentPath;
+    } else {
+      // For other languages, add language prefix
+      newPath = `/${language.code}${currentPath}`;
+    }
     
     // Use window.location for full page navigation to ensure proper language switching
     window.location.href = newPath;

@@ -50,8 +50,15 @@ function LanguageRouter() {
             <Route path="/ko/blog/:slug" element={<DynamicBlogPost />} />
             
             {/* Japanese-specific routes */}
+            <Route path="/ja" element={<VPNsPage />} />
+            <Route path="/ja/vpns" element={<VPNsPage />} />
+            <Route path="/ja/faq" element={<FAQPage />} />
             <Route path="/ja/blog" element={<JapaneseBlogPage />} />
             <Route path="/ja/blog/:slug" element={<DynamicBlogPost />} />
+            <Route path="/ja/contact" element={<ContactPage />} />
+            <Route path="/ja/deals" element={<DealsPage />} />
+            <Route path="/ja/quiz" element={<QuizPage />} />
+            <Route path="/ja/stream-test" element={<StreamSmartPage />} />
             
             {/* Default routes (English) */}
             <Route path="/" element={<VPNsPage />} />
