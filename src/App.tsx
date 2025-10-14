@@ -11,6 +11,9 @@ import DealsPage from './pages/DealsPage';
 import QuizPage from './pages/QuizPage';
 import StreamSmartPage from './pages/StreamSmartPage';
 import DynamicBlogPost from './components/DynamicBlogPost';
+import KoreanVPNsPage from './pages/KoreanVPNsPage';
+import KoreanFAQPage from './pages/KoreanFAQPage';
+import KoreanBlogPage from './pages/KoreanBlogPage';
 
 // Language-based routing component
 function LanguageRouter() {
@@ -37,6 +40,13 @@ function LanguageRouter() {
             <Route path="/:lang/deals" element={<DealsPage />} />
             <Route path="/:lang/quiz" element={<QuizPage />} />
             <Route path="/:lang/stream-test" element={<StreamSmartPage />} />
+            
+            {/* Korean-specific routes */}
+            <Route path="/ko" element={<KoreanVPNsPage />} />
+            <Route path="/ko/vpns" element={<KoreanVPNsPage />} />
+            <Route path="/ko/faq" element={<KoreanFAQPage />} />
+            <Route path="/ko/blog" element={<KoreanBlogPage />} />
+            <Route path="/ko/blog/:slug" element={<DynamicBlogPost />} />
             
             {/* Default routes (English) */}
             <Route path="/" element={<VPNsPage />} />

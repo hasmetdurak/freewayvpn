@@ -16,7 +16,8 @@ export const supportedLanguages = [
   { code: 'ru', name: 'Русский' },
   { code: 'ar', name: 'العربية' },
   { code: 'zh', name: '中文' },
-  { code: 'ja', name: '日本語' }
+  { code: 'ja', name: '日本語' },
+  { code: 'ko', name: '한국어' }
 ];
 
 export const generateHrefLangTags = (currentPath: string = '', baseUrl: string = 'https://bestvpn.digital'): HrefLangTag[] => {
