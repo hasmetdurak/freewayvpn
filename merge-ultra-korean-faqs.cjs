@@ -108,6 +108,23 @@ superPartFiles.forEach(filename => {
   }
 });
 
+// Ultra 5 part dosyalarını oku
+const ultraPartFiles = [
+  'korean-vpn-faq-ultra-part-1.json',
+  'korean-vpn-faq-ultra-part-2.json',
+  'korean-vpn-faq-ultra-part-3.json',
+  'korean-vpn-faq-ultra-part-4.json',
+  'korean-vpn-faq-ultra-part-5.json'
+];
+
+ultraPartFiles.forEach(filename => {
+  if (fs.existsSync(filename)) {
+    const content = JSON.parse(fs.readFileSync(filename, 'utf8'));
+    koreanFAQs.push(...content);
+    console.log(`Loaded ${filename}: ${content.length} FAQs`);
+  }
+});
+
 console.log(`Total Korean FAQs loaded: ${koreanFAQs.length}`);
 
 // FAQ'leri Korece formatına çevir
@@ -118,15 +135,15 @@ const koreanFormattedFAQs = koreanFAQs.map((faq, index) => ({
 }));
 
 // JSON dosyası olarak kaydet
-fs.writeFileSync('korean-faqs-super-8000.json', JSON.stringify(koreanFormattedFAQs, null, 2));
-console.log(`Saved complete Korean FAQs to korean-faqs-super-8000.json`);
+fs.writeFileSync('korean-faqs-ultra-2000.json', JSON.stringify(koreanFormattedFAQs, null, 2));
+console.log(`Saved complete Korean FAQs to korean-faqs-ultra-2000.json`);
 
 // TypeScript formatında da kaydet
-const tsContent = `// Korean VPN FAQs - Super Collection (${koreanFormattedFAQs.length} FAQs)
+const tsContent = `// Korean VPN FAQs - Ultra Collection (${koreanFormattedFAQs.length} FAQs)
 export const koreanFAQs = ${JSON.stringify(koreanFormattedFAQs, null, 2)};`;
 
-fs.writeFileSync('korean-faqs-super-8000.ts', tsContent);
-console.log(`Saved TypeScript format to korean-faqs-super-8000.ts`);
+fs.writeFileSync('korean-faqs-ultra-2000.ts', tsContent);
+console.log(`Saved TypeScript format to korean-faqs-ultra-2000.ts`);
 
 // Kategori istatistikleri
 const categoryStats = {};
