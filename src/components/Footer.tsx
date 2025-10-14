@@ -17,9 +17,9 @@ const Footer: React.FC = () => {
   
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="responsive-container py-8 sm:py-12 lg:py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
@@ -27,31 +27,31 @@ const Footer: React.FC = () => {
                 <Shield className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   {t('brand.name')}
                 </h2>
-                <p className="text-sm text-gray-400 font-medium">{t('brand.tagline')}</p>
+                <p className="text-xs sm:text-sm text-gray-400 font-medium">{t('brand.tagline')}</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               {t('brand.description')}
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="bg-gray-700 hover:bg-blue-600 p-3 rounded-lg transition-all duration-300 transform hover:scale-110">
-                <Twitter className="h-5 w-5" />
+            <div className="flex space-x-3 sm:space-x-4">
+              <a href="#" className="touch-target bg-gray-700 hover:bg-blue-600 p-2 sm:p-3 rounded-lg transition-all duration-300 transform hover:scale-110">
+                <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
-              <a href="#" className="bg-gray-700 hover:bg-blue-600 p-3 rounded-lg transition-all duration-300 transform hover:scale-110">
-                <Facebook className="h-5 w-5" />
+              <a href="#" className="touch-target bg-gray-700 hover:bg-blue-600 p-2 sm:p-3 rounded-lg transition-all duration-300 transform hover:scale-110">
+                <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
-              <a href="#" className="bg-gray-700 hover:bg-blue-600 p-3 rounded-lg transition-all duration-300 transform hover:scale-110">
-                <Linkedin className="h-5 w-5" />
+              <a href="#" className="touch-target bg-gray-700 hover:bg-blue-600 p-2 sm:p-3 rounded-lg transition-all duration-300 transform hover:scale-110">
+                <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white border-b border-gray-600 pb-2">
+            <h3 className="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-white border-b border-gray-600 pb-2">
               {t('quickLinks')}
             </h3>
             <ul className="space-y-3">
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
 
           {/* Support & Legal */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white border-b border-gray-600 pb-2">
+            <h3 className="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-white border-b border-gray-600 pb-2">
               {t('footer.support')}
             </h3>
             <ul className="space-y-3">
@@ -141,9 +141,9 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Professional Disclosure Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {/* Affiliate Disclosure */}
-            <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600">
+            <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-4 sm:p-6 rounded-xl border border-gray-600">
               <div className="flex items-center mb-3">
                 <div className="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>
                 <h4 className="font-semibold text-yellow-400">{t('footer.affiliateDisclosure')}</h4>
@@ -154,7 +154,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Independent Review Disclaimer */}
-            <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600">
+            <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-4 sm:p-6 rounded-xl border border-gray-600">
               <div className="flex items-center mb-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                 <h4 className="font-semibold text-green-400">{t('footer.independentReviews')}</h4>

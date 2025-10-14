@@ -158,13 +158,13 @@ const VPNsPage: React.FC = () => {
         </script>
       </Helmet>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="responsive-container py-4 sm:py-6 lg:py-8">
         {/* Hero Section */}
         <div className="mb-8 text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="responsive-heading text-gray-900 mb-4">
           {t('compareVpns')}
         </h1>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
+        <p className="responsive-subheading text-gray-600 max-w-3xl mx-auto mb-6">
           {t('findPerfectVpn')}
           <span className="block mt-2 text-sm text-orange-600 font-medium">
             {t('exclusiveDeals')}
@@ -185,8 +185,8 @@ const VPNsPage: React.FC = () => {
       </div>
 
       {/* Search and Filters */}
-      <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="responsive-card mb-6 sm:mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="relative">
             <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
             <input
@@ -222,8 +222,8 @@ const VPNsPage: React.FC = () => {
         </div>
       </div>
 
-      {/* VPN Table */}
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      {/* VPN Table - Desktop */}
+      <div className="hidden lg:block bg-white rounded-lg shadow-lg overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead className="bg-gray-50">
@@ -434,6 +434,135 @@ const VPNsPage: React.FC = () => {
         )}
       </div>
 
+      {/* VPN Cards - Mobile & Tablet */}
+      <div className="lg:hidden space-y-4">
+        {filteredAndSortedVPNs.map((vpn, index) => (
+          <div
+            key={vpn.id}
+            className={`responsive-card vpn-card-hover ${
+              vpn.isTopPick ? 'border-l-4 border-l-orange-500 bg-gradient-to-r from-orange-50 to-red-50' : ''
+            }`}
+          >
+            {/* Card Header */}
+            <div className="mobile-table-card-header">
+              <div className="flex items-center space-x-3">
+                <img 
+                  src={vpn.logo} 
+                  alt={`${vpn.name} logo`} 
+                  className="w-12 h-12 object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                  }}
+                />
+                <div>
+                  <div className="flex items-center space-x-2">
+                    <h3 className="text-lg font-bold text-gray-900">{vpn.name}</h3>
+                    {vpn.isTopPick && (
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-orange-100 to-red-100 text-orange-800 animate-pulse">
+                        <TrendingUp className="h-3 w-3 mr-1" />
+                        {t('topDeal')}
+                      </span>
+                    )}
+                    {index < 3 && (
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-bold bg-yellow-100 text-yellow-800">
+                        #{index + 1}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center mt-1">
+                    {Array.from({ length: 5 }, (_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-4 w-4 ${
+                          i < Math.floor(vpn.rating)
+                            ? 'text-yellow-400 fill-current'
+                            : 'text-gray-300'
+                        }`}
+                      />
+                    ))}
+                    <span className="ml-2 text-sm text-gray-600">{vpn.rating}/10</span>
+                  </div>
+                </div>
+              </div>
+              <div className="text-right">
+                <div className="text-2xl font-bold text-gray-900">${vpn.price}</div>
+                <div className="text-sm text-gray-500">/{t('common.month')}</div>
+                {vpn.isTopPick && (
+                  <div className="text-xs text-green-600 font-bold mt-1">
+                    {t('save70')}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Card Body */}
+            <div className="mobile-table-card-body">
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="mobile-table-card-row">
+                  <span className="mobile-table-card-label">{t('servers')}</span>
+                  <span className="mobile-table-card-value">{vpn.serverCount.toLocaleString()}</span>
+                </div>
+                <div className="mobile-table-card-row">
+                  <span className="mobile-table-card-label">{t('speed')}</span>
+                  <span className="mobile-table-card-value">{vpn.speed} Mbps</span>
+                </div>
+                <div className="mobile-table-card-row">
+                  <span className="mobile-table-card-label">{t('devices')}</span>
+                  <span className="mobile-table-card-value">
+                    {vpn.deviceSupport === 999 ? t('unlimited') : vpn.deviceSupport}
+                  </span>
+                </div>
+                <div className="mobile-table-card-row">
+                  <span className="mobile-table-card-label">{t('basedIn')}</span>
+                  <span className="mobile-table-card-value">{vpn.country}</span>
+                </div>
+              </div>
+
+              {/* Description */}
+              <p className="text-sm text-gray-600 mb-4 line-clamp-2">{vpn.description}</p>
+
+              {/* Action Button */}
+              <a
+                href={vpn.affiliateLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handleAffiliateClick(vpn)}
+                className={`mobile-button w-full inline-flex items-center justify-center rounded-lg text-sm font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                  vpn.isTopPick
+                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600 shadow-lg'
+                    : 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700'
+                }`}
+              >
+                <span className="flex items-center">
+                  {vpn.isTopPick ? t('getDeal') : t('getVPN')}
+                  <ExternalLink className="h-4 w-4 ml-2" />
+                </span>
+                {vpn.isTopPick && (
+                  <div className="absolute -top-2 -right-2 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full animate-bounce">
+                    70% OFF
+                  </div>
+                )}
+              </a>
+
+              {vpn.isTopPick && (
+                <div className="text-center mt-2">
+                  <span className="text-xs text-orange-600 font-medium">
+                    ⏰ {t('limitedTime')}
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+
+        {filteredAndSortedVPNs.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-500">{t('noVPNsFound')}</p>
+          </div>
+        )}
+      </div>
+
       {/* Results count */}
       <div className="mt-6 text-center text-sm text-gray-500">
         {t('showingXofY').replace('{0}', filteredAndSortedVPNs.length.toString()).replace('{1}', allVPNs.length.toString())}
@@ -451,13 +580,13 @@ const VPNsPage: React.FC = () => {
       </div>
       
       {/* Trust Signals */}
-      <div className="mt-12 bg-gray-50 rounded-lg p-8">
+      <div className="mt-8 sm:mt-12 responsive-card bg-gray-50">
         <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">{t('whyTrustRecommendations')}</h2>
-          <p className="text-gray-600">{t('testEveryVPN')}</p>
+          <h2 className="responsive-heading text-gray-900 mb-2">{t('whyTrustRecommendations')}</h2>
+          <p className="responsive-subheading text-gray-600">{t('testEveryVPN')}</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="responsive-grid">
           <div className="text-center">
             <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
               <Shield className="h-8 w-8 text-blue-600" />

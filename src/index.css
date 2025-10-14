@@ -189,6 +189,223 @@
   }
 }
 
+/* Enhanced Mobile Responsive Styles */
+@media (max-width: 640px) {
+  /* Mobile-first typography */
+  .mobile-text-xs { @apply text-xs; }
+  .mobile-text-sm { @apply text-sm; }
+  .mobile-text-base { @apply text-base; }
+  .mobile-text-lg { @apply text-lg; }
+  .mobile-text-xl { @apply text-xl; }
+  .mobile-text-2xl { @apply text-2xl; }
+  
+  /* Mobile spacing */
+  .mobile-p-2 { @apply p-2; }
+  .mobile-p-4 { @apply p-4; }
+  .mobile-px-4 { @apply px-4; }
+  .mobile-py-2 { @apply py-2; }
+  .mobile-py-4 { @apply py-4; }
+  .mobile-mb-4 { @apply mb-4; }
+  .mobile-mb-6 { @apply mb-6; }
+  
+  /* Mobile layout */
+  .mobile-flex-col { @apply flex-col; }
+  .mobile-w-full { @apply w-full; }
+  .mobile-text-center { @apply text-center; }
+  
+  /* Mobile table to cards */
+  .mobile-table-card {
+    @apply block w-full bg-white rounded-lg shadow-md p-4 mb-4;
+  }
+  
+  .mobile-table-card-header {
+    @apply flex items-center justify-between mb-3 pb-2 border-b border-gray-200;
+  }
+  
+  .mobile-table-card-body {
+    @apply space-y-2;
+  }
+  
+  .mobile-table-card-row {
+    @apply flex justify-between items-center py-1;
+  }
+  
+  .mobile-table-card-label {
+    @apply text-sm font-medium text-gray-600;
+  }
+  
+  .mobile-table-card-value {
+    @apply text-sm text-gray-900 font-semibold;
+  }
+}
+
+/* Tablet Responsive Styles */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-grid-2 { @apply grid-cols-2; }
+  .tablet-grid-3 { @apply grid-cols-3; }
+  .tablet-text-lg { @apply text-lg; }
+  .tablet-text-xl { @apply text-xl; }
+  .tablet-p-6 { @apply p-6; }
+  .tablet-px-6 { @apply px-6; }
+  .tablet-py-4 { @apply py-4; }
+}
+
+/* Desktop Enhanced Styles */
+@media (min-width: 1025px) {
+  .desktop-grid-4 { @apply grid-cols-4; }
+  .desktop-grid-5 { @apply grid-cols-5; }
+  .desktop-text-2xl { @apply text-2xl; }
+  .desktop-text-3xl { @apply text-3xl; }
+  .desktop-p-8 { @apply p-8; }
+  .desktop-px-8 { @apply px-8; }
+  .desktop-py-6 { @apply py-6; }
+}
+
+/* Responsive Container */
+.responsive-container {
+  @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .responsive-container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive-container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .responsive-container {
+    max-width: 1536px;
+  }
+}
+
+/* Responsive Grid System */
+.responsive-grid {
+  @apply grid gap-4;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Responsive Typography */
+.responsive-heading {
+  @apply text-2xl font-bold leading-tight;
+}
+
+@media (min-width: 640px) {
+  .responsive-heading {
+    @apply text-3xl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-heading {
+    @apply text-4xl;
+  }
+}
+
+.responsive-subheading {
+  @apply text-lg leading-relaxed;
+}
+
+@media (min-width: 640px) {
+  .responsive-subheading {
+    @apply text-xl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-subheading {
+    @apply text-2xl;
+  }
+}
+
+/* Responsive Button */
+.responsive-button {
+  @apply px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200;
+}
+
+@media (min-width: 640px) {
+  .responsive-button {
+    @apply px-6 py-3 text-base;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-button {
+    @apply px-8 py-4 text-lg;
+  }
+}
+
+/* Responsive Card */
+.responsive-card {
+  @apply bg-white rounded-lg shadow-md p-4;
+}
+
+@media (min-width: 640px) {
+  .responsive-card {
+    @apply p-6 shadow-lg;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-card {
+    @apply p-8 shadow-xl;
+  }
+}
+
+/* Touch-friendly elements for mobile */
+@media (max-width: 768px) {
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  .mobile-nav-item {
+    @apply py-3 px-4 text-lg;
+  }
+  
+  .mobile-button {
+    @apply py-3 px-6 text-base font-semibold;
+  }
+}
+
 /* Modern VPN Affiliate Styles */
 .vpn-card-hover {
   @apply transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl;

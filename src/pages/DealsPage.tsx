@@ -104,24 +104,24 @@ export default function DealsPage() {
         <meta name="description" content={t('deals.metaDescription') || 'Exclusive VPN deals & coupon codes. Save up to 86% on premium VPN services. Verified daily.'} />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 py-12 px-4">
-        <div className="max-w-7xl mx-auto">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 py-6 sm:py-8 lg:py-12 px-4">
+        <div className="responsive-container">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
               <Tag className="w-4 h-4" />
               {t('deals.liveDeals') || 'LIVE DEALS'}
             </div>
-            <h1 className="text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="responsive-heading text-gray-900 mb-4">
               {t('deals.title') || 'Best VPN Deals & Coupons'}
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="responsive-subheading text-gray-600 max-w-3xl mx-auto">
               {t('deals.subtitle') || 'Exclusive discounts up to 86% OFF. All deals verified and updated daily.'}
             </p>
           </div>
 
           {/* Stats Bar */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="responsive-grid mb-8 sm:mb-12">
             <div className="bg-white rounded-xl shadow-lg p-6 text-center border-2 border-green-200">
               <div className="text-4xl font-bold text-green-600">{activeDeals.length}</div>
               <div className="text-gray-600 mt-2">{t('deals.activeDeals') || 'Active Deals'}</div>
@@ -137,7 +137,7 @@ export default function DealsPage() {
           </div>
 
           {/* Deals Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="responsive-grid">
             {activeDeals.map((deal, index) => (
               <div
                 key={deal.id}
@@ -152,12 +152,12 @@ export default function DealsPage() {
                   </div>
                 )}
 
-                <div className="p-6">
+                <div className="responsive-card p-4 sm:p-6">
                   {/* Provider & Discount */}
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-1">{deal.provider}</h3>
-                      <p className="text-gray-600">{deal.title}</p>
+                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">{deal.provider}</h3>
+                      <p className="text-sm sm:text-base text-gray-600">{deal.title}</p>
                     </div>
                     <div className="text-right">
                       <div className="text-4xl font-black text-orange-600">{deal.discountPercent}%</div>

@@ -65,29 +65,29 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="responsive-container">
+        <div className="flex justify-between items-center h-16 md:h-20">
                 {/* Logo */}
                 <Link
                   to={lang ? `/${lang}/vpns` : "/"}
                   className="flex items-center cursor-pointer group"
                 >
-            <Shield className="h-8 w-8 text-blue-600 group-hover:text-blue-700 transition-colors" />
+            <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600 group-hover:text-blue-700 transition-colors" />
             <div className="ml-2">
-              <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+              <span className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                 {t('brand.name')}
               </span>
-              <div className="text-xs text-gray-500">{t('brand.tagline')}</div>
+              <div className="text-xs text-gray-500 hidden sm:block">{t('brand.tagline')}</div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-4 xl:space-x-8">
             {navigation.map((item: any) => (
               <Link
                 key={item.key}
                 to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-2 xl:px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   item.highlighted
                     ? 'text-orange-600 bg-gradient-to-r from-orange-100 to-red-100 hover:from-orange-200 hover:to-red-200 font-bold'
                     : currentPage === item.key
@@ -175,10 +175,10 @@ const Header: React.FC = () => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+                className="touch-target p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -188,22 +188,50 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-200">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
+          <div className="lg:hidden border-t border-gray-200 bg-white shadow-lg">
+            <div className="px-4 pt-4 pb-6 space-y-2">
               {navigation.map((item) => (
                 <Link
                   key={item.key}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
-                    currentPage === item.key
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                  className={`mobile-nav-item block px-4 py-3 rounded-lg text-base font-medium w-full text-left transition-all duration-200 ${
+                    item.highlighted
+                      ? 'text-orange-600 bg-gradient-to-r from-orange-100 to-red-100 border border-orange-200 font-bold'
+                      : currentPage === item.key
+                      ? 'text-blue-600 bg-blue-50 border border-blue-200'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50 border border-transparent hover:border-gray-200'
                   }`}
                 >
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Language Selector */}
+              <div className="pt-4 border-t border-gray-200">
+                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3 px-4">
+                  {t('selectLanguage')}
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {supportedLanguages.slice(0, 6).map((language) => (
+                    <button
+                      key={language.code}
+                      onClick={() => {
+                        handleLanguageSelect(language);
+                        setIsMenuOpen(false);
+                      }}
+                      className={`flex items-center space-x-2 p-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        currentLanguage.code === language.code 
+                          ? 'bg-blue-50 border border-blue-200 text-blue-600' 
+                          : 'bg-gray-50 border border-gray-200 text-gray-700 hover:bg-gray-100'
+                      }`}
+                    >
+                      <span className="text-lg">{language.flag}</span>
+                      <span className="truncate">{language.nativeName}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         )}

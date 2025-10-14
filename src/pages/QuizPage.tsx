@@ -80,17 +80,17 @@ export default function QuizPage() {
           <meta name="description" content={t('metaDescription') || 'Take our smart VPN quiz to get personalized recommendations based on your needs.'} />
         </Helmet>
 
-        <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 py-12 px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 py-6 sm:py-8 lg:py-12 px-4">
+          <div className="responsive-container max-w-4xl">
             {/* Success Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full mb-4">
                 <CheckCircle className="w-12 h-12 text-white" />
               </div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-2">
+              <h1 className="responsive-heading text-gray-900 mb-2">
                 {t('resultsTitle') || 'Perfect Matches Found!'}
               </h1>
-              <p className="text-lg text-gray-600">
+              <p className="responsive-subheading text-gray-600">
                 {t('resultsSubtitle') || 'Based on your answers, here are your top 3 personalized VPN recommendations'}
               </p>
             </div>
@@ -248,14 +248,14 @@ export default function QuizPage() {
         <meta name="description" content={t('metaDescription') || 'Find your perfect VPN in 60 seconds'} />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 py-12 px-4">
-        <div className="max-w-3xl mx-auto">
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 py-6 sm:py-8 lg:py-12 px-4">
+        <div className="responsive-container max-w-3xl">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            <h1 className="responsive-heading text-gray-900 mb-2">
               {t('title') || 'Find Your Perfect VPN'}
             </h1>
-            <p className="text-lg text-gray-600">
+            <p className="responsive-subheading text-gray-600">
               {t('subtitle') || 'Answer 5 quick questions to get personalized recommendations'}
             </p>
           </div>
@@ -275,19 +275,19 @@ export default function QuizPage() {
           </div>
 
           {/* Question Card */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
-            <div className="text-center mb-8">
-              <div className="text-6xl mb-4">{currentQuestion.icon}</div>
-              <h2 className="text-2xl font-bold text-gray-900">{currentQuestion.question}</h2>
+          <div className="responsive-card rounded-2xl shadow-xl mb-6">
+            <div className="text-center mb-6 sm:mb-8">
+              <div className="text-4xl sm:text-6xl mb-4">{currentQuestion.icon}</div>
+              <h2 className="responsive-heading text-gray-900">{currentQuestion.question}</h2>
             </div>
 
             {/* Options */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {currentQuestion.options.map((option) => (
                 <button
                   key={option.id}
                   onClick={() => handleAnswer(currentQuestion.id, option.id)}
-                  className={`p-6 rounded-xl border-2 transition-all duration-200 text-left ${
+                  className={`touch-target p-4 sm:p-6 rounded-xl border-2 transition-all duration-200 text-left ${
                     selectedAnswer === option.id
                       ? 'border-purple-600 bg-purple-50 ring-4 ring-purple-200'
                       : 'border-gray-200 hover:border-purple-300 hover:bg-purple-50'
@@ -305,11 +305,11 @@ export default function QuizPage() {
           </div>
 
           {/* Navigation */}
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <button
               onClick={handleBack}
               disabled={currentStep === 0}
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-colors ${
+              className={`mobile-button flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-colors w-full sm:w-auto ${
                 currentStep === 0
                   ? 'text-gray-400 cursor-not-allowed'
                   : 'text-purple-600 hover:text-purple-700 hover:bg-purple-50'
@@ -322,7 +322,7 @@ export default function QuizPage() {
             <button
               onClick={handleNext}
               disabled={!selectedAnswer}
-              className={`flex items-center gap-2 px-8 py-4 rounded-lg font-bold transition-all duration-300 ${
+              className={`mobile-button flex items-center gap-2 px-8 py-4 rounded-lg font-bold transition-all duration-300 w-full sm:w-auto ${
                 selectedAnswer
                   ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-xl'
                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'
