@@ -147,6 +147,11 @@ export const translations: TranslationsObject = {
     "enterEmail": "Enter your email",
     "subscribe": "Subscribe",
     
+    // Deals
+    "deals.hotDeal": "HOT DEAL",
+    "deals.off": "OFF",
+    "deals.claimNow": "Claim Now",
+    
     // Contact Page
     "contactTitle": "Contact Us",
     "contactSubtitle": "Have questions? We're here to help you find the perfect VPN solution.",
@@ -361,6 +366,11 @@ export const translations: TranslationsObject = {
     "newsletterDesc": "Erhalten Sie die neuesten VPN-Bewertungen, Sicherheitstipps und Datenschutzleitfäden wöchentlich in Ihrem Posteingang.",
     "enterEmail": "Geben Sie Ihre E-Mail ein",
     "subscribe": "Abonnieren",
+    
+    // Deals
+    "deals.hotDeal": "HEISSES ANGEBOT",
+    "deals.off": "RABATT",
+    "deals.claimNow": "Jetzt Sichern",
     
     // Contact Page
     "contact.title": "Kontaktieren Sie uns",
@@ -881,6 +891,11 @@ export const translations: TranslationsObject = {
     "enterEmail": "이메일 입력",
     "subscribe": "구독",
     
+    // Deals
+    "deals.hotDeal": "핫딜",
+    "deals.off": "할인",
+    "deals.claimNow": "지금 받기",
+    
     // Contact Page
     "contact.title": "문의하기",
     "contact.subtitle": "질문이 있으신가요? 완벽한 VPN 솔루션을 찾는 데 도움을 드릴 것입니다.",
@@ -1153,6 +1168,11 @@ export const translations: TranslationsObject = {
     "newsletterDesc": "En son VPN incelemelerini, güvenlik ipuçlarını ve gizlilik rehberlerini her hafta gelen kutunuza alın.",
     "enterEmail": "E-postanızı girin",
     "subscribe": "Abone Ol",
+    
+    // Deals
+    "deals.hotDeal": "SICAK FIRSAT",
+    "deals.off": "İNDİRİM",
+    "deals.claimNow": "Şimdi Yakala",
     "contactTitle": "Bize Ulaşın",
     "contactSubtitle": "Sorularınız mı var? Mükemmel VPN çözümünü bulmanıza yardımcı olmak için buradayız.",
     "contact.title": "Bize Ulaşın",
