@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useMemo } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { getBlogPostBySlug } from '../data/blogData';
+import { japaneseBlogsData } from '../data/japaneseBlogsContent';
 import { Clock, User, Calendar, Tag } from 'lucide-react';
 import { generateAutoImage } from '../utils/autoImageUtils';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -33,6 +34,10 @@ const BestVPNMacMacOS2025BlogPost = lazy(() => import('../pages/BestVPNMacMacOS2
 // Korean Blog Archive (Blog 10-97)
 const KoreanBlogArchive = lazy(() => import('../pages/KoreanBlogArchive'));
 
+// Japanese blog posts
+const JapanVPNRanking2025BlogPost = lazy(() => import('../pages/JapanVPNRanking2025BlogPost'));
+const SurfsharkJapanReview2025BlogPost = lazy(() => import('../pages/SurfsharkJapanReview2025BlogPost'));
+
 // Component mapping
 const componentMap: { [key: string]: React.LazyExoticComponent<React.ComponentType<any>> } = {
   StreamingVPNBlogPost,
@@ -59,6 +64,9 @@ const componentMap: { [key: string]: React.LazyExoticComponent<React.ComponentTy
   BestVPNMacMacOS2025BlogPost,
   // Korean Blog Archive
   KoreanBlogArchive,
+  // Japanese blog posts
+  JapanVPNRanking2025BlogPost,
+  SurfsharkJapanReview2025BlogPost,
 };
 
 // Loading component
@@ -190,6 +198,26 @@ const DynamicBlogPost: React.FC = () => {
   
   if (!slug) {
     return <Navigate to="/blog" replace />;
+  }
+
+  // Check if it's a Japanese blog post first
+  const japanesePost = japaneseBlogsData[slug as keyof typeof japaneseBlogsData];
+  if (japanesePost) {
+    // Map Japanese blog posts to their components
+    const japaneseComponentMap: { [key: string]: string } = {
+      'japan-vpn-ranking-2025': 'JapanVPNRanking2025BlogPost',
+      'surfshark-japan-review-2025': 'SurfsharkJapanReview2025BlogPost',
+    };
+    
+    const componentName = japaneseComponentMap[slug];
+    if (componentName && componentMap[componentName]) {
+      const Component = componentMap[componentName];
+      return (
+        <Suspense fallback={<BlogPostSkeleton />}>
+          <Component />
+        </Suspense>
+      );
+    }
   }
 
   const post = getBlogPostBySlug(slug);

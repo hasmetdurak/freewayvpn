@@ -14,6 +14,7 @@ import DynamicBlogPost from './components/DynamicBlogPost';
 import KoreanVPNsPage from './pages/KoreanVPNsPage';
 import KoreanFAQPage from './pages/KoreanFAQPage';
 import KoreanBlogPage from './pages/KoreanBlogPage';
+import JapaneseBlogPage from './pages/JapaneseBlogPage';
 
 // Language-based routing component
 function LanguageRouter() {
@@ -47,6 +48,10 @@ function LanguageRouter() {
             <Route path="/ko/faq" element={<KoreanFAQPage />} />
             <Route path="/ko/blog" element={<KoreanBlogPage />} />
             <Route path="/ko/blog/:slug" element={<DynamicBlogPost />} />
+            
+            {/* Japanese-specific routes */}
+            <Route path="/ja/blog" element={<JapaneseBlogPage />} />
+            <Route path="/ja/blog/:slug" element={<DynamicBlogPost />} />
             
             {/* Default routes (English) */}
             <Route path="/" element={<VPNsPage />} />
