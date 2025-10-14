@@ -1,14 +1,14 @@
 const fs = require('fs');
 
 // Yeni Korece FAQ'leri oku
-const newKoreanFAQs = JSON.parse(fs.readFileSync('korean-faqs-complete-2000.json', 'utf8'));
+const newKoreanFAQs = JSON.parse(fs.readFileSync('korean-faqs-final-2000.json', 'utf8'));
 
 // Mevcut faqTranslations.ts dosyasını oku
 let faqTranslationsContent = fs.readFileSync('src/contexts/faqTranslations.ts', 'utf8');
 
 // Korece bölümün başlangıç ve bitiş pozisyonlarını bul
 const koStartPattern = /  ko: \[/;
-const koEndPattern = /  \],\s*\n\s*vi: \[/;
+const koEndPattern = /  \],\s*vi: \[/;
 
 const koStartMatch = faqTranslationsContent.match(koStartPattern);
 const koEndMatch = faqTranslationsContent.match(koEndPattern);
@@ -23,7 +23,7 @@ const koEndIndex = koEndMatch.index + koEndMatch[0].length - 6; // 'vi: [' kısm
 
 // Yeni Korece FAQ'leri TypeScript formatına çevir
 const newKoreanSection = `  ko: [
-    // Korean VPN FAQs - Complete Collection (${newKoreanFAQs.length} FAQs)
+    // Korean VPN FAQs - Final Collection (${newKoreanFAQs.length} FAQs)
 ${newKoreanFAQs.map(faq => `    {
       question: "${faq.question.replace(/"/g, '\\"')}",
       answer: "${faq.answer.replace(/"/g, '\\"')}",

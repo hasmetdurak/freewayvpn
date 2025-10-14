@@ -45,11 +45,14 @@ hundredPartFiles.forEach(filename => {
   }
 });
 
-// Yeni 3 part dosyalarını oku
+// Yeni 6 part dosyalarını oku
 const newPartFiles = [
   'korean-vpn-faq-part-476-975.json',
   'korean-vpn-faq-part-976-1475.json',
-  'korean-vpn-faq-part-1476-2000.json'
+  'korean-vpn-faq-part-1476-2000.json',
+  'korean-vpn-faq-part-491-990.json',
+  'korean-vpn-faq-part-991-1490.json',
+  'korean-vpn-faq-part-1491-2000.json'
 ];
 
 newPartFiles.forEach(filename => {
@@ -70,15 +73,15 @@ const koreanFormattedFAQs = koreanFAQs.map((faq, index) => ({
 }));
 
 // JSON dosyası olarak kaydet
-fs.writeFileSync('korean-faqs-complete-2000.json', JSON.stringify(koreanFormattedFAQs, null, 2));
-console.log(`Saved complete Korean FAQs to korean-faqs-complete-2000.json`);
+fs.writeFileSync('korean-faqs-final-2000.json', JSON.stringify(koreanFormattedFAQs, null, 2));
+console.log(`Saved complete Korean FAQs to korean-faqs-final-2000.json`);
 
 // TypeScript formatında da kaydet
-const tsContent = `// Korean VPN FAQs - Complete Collection (${koreanFormattedFAQs.length} FAQs)
+const tsContent = `// Korean VPN FAQs - Final Collection (${koreanFormattedFAQs.length} FAQs)
 export const koreanFAQs = ${JSON.stringify(koreanFormattedFAQs, null, 2)};`;
 
-fs.writeFileSync('korean-faqs-complete-2000.ts', tsContent);
-console.log(`Saved TypeScript format to korean-faqs-complete-2000.ts`);
+fs.writeFileSync('korean-faqs-final-2000.ts', tsContent);
+console.log(`Saved TypeScript format to korean-faqs-final-2000.ts`);
 
 // Kategori istatistikleri
 const categoryStats = {};
