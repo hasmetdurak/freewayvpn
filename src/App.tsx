@@ -73,7 +73,9 @@ function LanguageRouter() {
             
             {/* Redirects for language-specific root paths */}
             <Route path="/:lang" element={<Navigate to="/:lang/vpns" replace />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            
+            {/* Catch-all route for 404 */}
+            <Route path="*" element={<Navigate to="/vpns" replace />} />
           </Routes>
         </main>
         <Footer />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams, useNavigate } from 'react-router-dom';
 import { Menu, X, Shield, ChevronDown, Languages } from 'lucide-react';
 import { useLanguage, supportedLanguages } from '../contexts/LanguageContext';
 
@@ -8,6 +8,7 @@ const Header: React.FC = () => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const { currentLanguage, setLanguage, t, isGeoDetected, detectedCountry } = useLanguage();
   const location = useLocation();
+  const navigate = useNavigate();
   const { lang } = useParams<{ lang: string }>();
 
   // Get current path without language prefix
@@ -61,14 +62,14 @@ const Header: React.FC = () => {
     
     if (language.code === 'en') {
       // For English, remove language prefix
-      newPath = currentPath;
+      newPath = currentPath === '/' ? '/vpns' : currentPath;
     } else {
       // For other languages, add language prefix
-      newPath = `/${language.code}${currentPath}`;
+      newPath = `/${language.code}${currentPath === '/' ? '/vpns' : currentPath}`;
     }
     
-    // Use window.location for full page navigation to ensure proper language switching
-    window.location.href = newPath;
+    // Use React Router navigate for smooth language switching
+    navigate(newPath, { replace: true });
   };
 
   return (

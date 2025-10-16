@@ -118,6 +118,7 @@ export const runStreamTest = (config: TestConfig): Promise<TestResult[]> => {
           features: ['Free plan available', 'Premium features', 'No logs'],
           discount: 70
         },
+        {
           speed: Math.floor(Math.random() * 35) + 120, // 120-155 Mbps
           ping: Math.floor(Math.random() * 30) + 25, // 25-55 ms
           reliability: Math.floor(Math.random() * 15) + 85, // 85-100%
