@@ -12299,33 +12299,6 @@ export const faqTranslations: FAQTranslations = {
     }
   ],
   
-  nb: [
-    {
-      question: "Hva er en VPN og hvordan fungerer den?",
-      answer: "En VPN (Virtual Private Network) oppretter en sikker og kryptert tilkobling mellom enheten din og en VPN-server. Dette skjuler IP-adressen din og krypterer internettrafikken din, og gir online personvern og sikkerhet.",
-      category: "Grunnleggende"
-    },
-    {
-      question: "Er det lovlig å bruke VPN?",
-      answer: "VPN er lovlig i de fleste land i verden, inkludert USA, Canada, Storbritannia og de fleste europeiske land. Imidlertid har noen land som Kina, Russland og Iran restriksjoner eller forbud mot VPN-bruk. Sjekk alltid lokale lover før du bruker en VPN.",
-      category: "Grunnleggende"
-    },
-    {
-      question: "Gjør VPN internethastigheten tregere?",
-      answer: "VPN kan redusere internethastigheten på grunn av krypteringsoverhead og serveravstand. Premium VPN forårsaker imidlertid vanligvis bare minimal hastighetstap (5-15%). Noen VPN kan til og med forbedre hastigheten ved å omgå ISP-båndbreddebegrensninger.",
-      category: "Ytelse"
-    },
-    {
-      question: "Kan jeg bruke VPN for streaming?",
-      answer: "Ja, mange VPN fungerer med strømmetjenester som Netflix, Hulu og BBC iPlayer. Strømmeplattformer blokkerer imidlertid aktivt VPN-trafikk, så du trenger en VPN med dedikerte strømmeservere og regelmessige IP-oppdateringer.",
-      category: "Streaming"
-    },
-    {
-      question: "Hvor mye koster VPN?",
-      answer: "VPN-priser varierer fra $2-15 per måned avhengig av leverandør og planlengde. Årlige planer gir bedre verdi enn månedlige abonnementer. Mange leverandører tilbyr pengene-tilbake-garantier og gratis prøveversjoner.",
-      category: "Priser"
-    }
-  ],
   
   sv: [
     {
