@@ -270,6 +270,3 @@ Für gelegentliche Nutzung ist NordVPN die beste Wahl. ExpressVPN bietet höchst
 };
 
 export default germanBlogsData;
-
-
-

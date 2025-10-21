@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Was ist ein VPN und wie funktioniert es im Detail?",
+    "answer": "Ein VPN (Virtual Private Network) ist eine verschlüsselte Verbindung zwischen Ihrem Gerät und dem Internet. Stellen Sie sich vor, Sie schicken einen Brief in einem versiegelten Umschlag statt auf einer Postkarte – genau so schützt ein VPN Ihre Daten. Wenn Sie sich mit einem VPN-Server verbinden, wird Ihre echte IP-Adresse maskiert und Ihr gesamter Datenverkehr durch einen verschlüsselten Tunnel geleitet. Das bedeutet: Ihr Internetanbieter, Hacker in öffentlichen WLAN-Netzen oder sogar staatliche Überwachung können nicht sehen, welche Websites Sie besuchen oder welche Daten Sie übertragen. In Deutschland ist das besonders wichtig, da die Vorratsdatenspeicherung immer wieder diskutiert wird. Ein gutes VPN nutzt militärische AES-256-Verschlüsselung und speichert keine Logs Ihrer Aktivitäten. Profi-Tipp: Achten Sie bei der Auswahl auf Anbieter mit Sitz außerhalb der 14-Eyes-Allianz, um maximalen Datenschutz zu gewährleisten.",
+    "category": "Grundlagen"
+  },
+  {
+    "id": 2,
+    "question": "Kann ich mit einem VPN wirklich Netflix Deutschland im Ausland schauen?",
+    "answer": "Ja, das funktioniert tatsächlich – allerdings nicht mit jedem VPN. Netflix blockiert aktiv viele VPN-Server, weshalb Sie einen Premium-Anbieter benötigen, der seine Server regelmäßig aktualisiert. Wenn Sie beispielsweise im Urlaub in Spanien sind und Ihre deutschen Lieblingsserien weiterschauen möchten, verbinden Sie sich einfach mit einem deutschen VPN-Server. Netflix erkennt dann eine deutsche IP-Adresse und schaltet die deutschen Inhalte frei. Wichtig: Kostenlose VPNs funktionieren hier fast nie, da Netflix deren Server-IPs kennt und sperrt. ExpressVPN, NordVPN und Surfshark haben sich in Tests als besonders zuverlässig erwiesen. Diese Dienste investieren kontinuierlich in neue Server-Infrastruktur, um den Streaming-Zugang aufrechtzuerhalten. Profi-Tipp: Wenn ein Server blockiert wird, wechseln Sie einfach zu einem anderen Server in Deutschland – die meisten Premium-VPNs bieten mehrere Standorte an.",
+    "category": "Streaming"
+  },
+  {
+    "id": 3,
+    "question": "Ist die Nutzung eines VPN in Deutschland legal?",
+    "answer": "Die Nutzung von VPNs ist in Deutschland vollkommen legal und wird sogar von vielen Unternehmen für sichere Heimarbeit eingesetzt. Es gibt kein Gesetz, das die Verwendung von VPN-Diensten verbietet oder einschränkt. Allerdings gilt: Was Sie mit dem VPN machen, muss legal sein. Ein VPN zu nutzen, um Ihre Privatsphäre zu schützen, sicher im öffentlichen WLAN zu surfen oder auf Ihre Bankdaten zuzugreifen, ist absolut in Ordnung. Problematisch wird es nur, wenn Sie das VPN für illegale Aktivitäten wie Urheberrechtsverletzungen, Betrug oder den Zugriff auf verbotene Inhalte verwenden. Deutsche Gerichte haben mehrfach bestätigt, dass VPN-Nutzung an sich rechtmäßig ist. Viele Datenschutzexperten empfehlen sogar ausdrücklich die Verwendung von VPNs zum Schutz der digitalen Privatsphäre. Profi-Tipp: Wählen Sie einen VPN-Anbieter mit strikter No-Logs-Politik und Sitz in einem datenschutzfreundlichen Land.",
+    "category": "Rechtliches"
+  },
+  {
+    "id": 4,
+    "question": "Verlangsamt ein VPN meine Internetgeschwindigkeit spürbar?",
+    "answer": "Diese Frage beschäftigt viele potenzielle VPN-Nutzer, und die Antwort lautet: Es kommt darauf an. Technisch gesehen führt die Verschlüsselung und der Umweg über einen VPN-Server zu einer gewissen Verlangsamung. Bei modernen Premium-VPNs ist dieser Effekt jedoch minimal. Tests zeigen, dass Sie mit Diensten wie NordVPN oder ExpressVPN nur etwa 5-15% Geschwindigkeitsverlust erleben – bei einer 100 Mbit/s-Leitung also kaum spürbar. Entscheidend ist die Wahl des richtigen Servers: Ein Server in Frankfurt wird von Berlin aus deutlich schneller sein als einer in Tokio. Moderne Protokolle wie WireGuard haben die Geschwindigkeit nochmals verbessert. Interessanterweise kann ein VPN Ihre Verbindung sogar beschleunigen, wenn Ihr Internetanbieter bestimmte Dienste drosselt. Viele Nutzer berichten von schnellerem Streaming, da ISP-Drosselung umgangen wird. Profi-Tipp: Testen Sie verschiedene Server-Standorte und Protokolle, um die optimale Geschwindigkeit zu finden.",
+    "category": "Performance"
+  },
+  {
+    "id": 5,
+    "question": "Was bedeutet No-Logs-Policy und warum ist sie wichtig?",
+    "answer": "Eine No-Logs-Policy bedeutet, dass Ihr VPN-Anbieter keinerlei Aufzeichnungen über Ihre Online-Aktivitäten speichert. Das ist der Kern des VPN-Datenschutzes. Ohne diese Richtlinie könnte der Anbieter theoretisch nachvollziehen, welche Websites Sie besuchen, wann Sie online waren und welche Daten Sie übertragen haben. Bei einem echten No-Logs-VPN werden weder Ihre IP-Adresse, noch Verbindungszeiten, Bandbreitennutzung oder besuchte Websites protokolliert. Das ist besonders wichtig, falls Behörden den VPN-Anbieter zur Herausgabe von Daten auffordern – wenn keine Logs existieren, gibt es nichts herauszugeben. Seriöse Anbieter lassen ihre No-Logs-Policy von unabhängigen Prüfern wie PwC oder Deloitte zertifizieren. ExpressVPN musste beispielsweise 2017 beweisen, dass wirklich keine Daten gespeichert wurden, als türkische Behörden Server beschlagnahmten. Profi-Tipp: Achten Sie auf VPNs mit Sitz in datenschutzfreundlichen Ländern wie Panama oder den Britischen Jungferninseln.",
+    "category": "Datenschutz"
+  },
+  {
+    "id": 6,
+    "question": "Welches VPN-Protokoll sollte ich wählen: OpenVPN, WireGuard oder IKEv2?",
+    "answer": "Die Wahl des richtigen Protokolls hängt von Ihren Prioritäten ab. WireGuard ist der modernste Standard und bietet die beste Balance aus Geschwindigkeit und Sicherheit – perfekt für Streaming und alltägliche Nutzung. Es verwendet schlanken Code, was weniger Angriffsfläche bedeutet und gleichzeitig schneller ist als ältere Protokolle. OpenVPN gilt als der Goldstandard für Sicherheit und ist extrem zuverlässig, allerdings etwas langsamer. Es funktioniert auf praktisch allen Geräten und kann Firewalls besonders gut umgehen. IKEv2 ist ideal für mobile Geräte, da es Netzwerkwechsel (z.B. von WLAN zu mobilen Daten) nahtlos handhabt. Für maximale Sicherheit bei sensiblen Daten empfiehlt sich OpenVPN, für schnelles Streaming WireGuard, und für unterwegs IKEv2. Die meisten modernen VPNs wie NordVPN bieten alle drei Protokolle an. Profi-Tipp: Nutzen Sie WireGuard als Standard und wechseln Sie zu OpenVPN, wenn Sie auf Reisen Geo-Blocking umgehen müssen.",
+    "category": "Technik"
+  },
+  {
+    "id": 7,
+    "question": "Sind kostenlose VPNs wirklich so gefährlich wie behauptet wird?",
+    "answer": "Leider ja – die meisten kostenlosen VPNs sind tatsächlich problematisch. Das Sprichwort \"Wenn das Produkt kostenlos ist, sind Sie das Produkt\" trifft hier voll zu. Kostenlose VPN-Anbieter müssen irgendwie Geld verdienen, und das tun sie oft durch den Verkauf Ihrer Daten an Werbetreibende oder durch das Einblenden aggressiver Werbung. Untersuchungen haben gezeigt, dass viele kostenlose VPNs Malware enthalten, Ihre Bandbreite an andere verkaufen oder Ihre Browsing-Daten sammeln. Einige chinesische kostenlose VPNs wurden sogar dabei erwischt, Nutzerdaten an Regierungsbehörden weiterzugeben. Zudem sind kostenlose VPNs meist extrem langsam, haben Datenlimits und bieten nur wenige Server. Für gelegentliche Nutzung mag das ausreichen, aber für echten Schutz nicht. Es gibt Ausnahmen wie ProtonVPN Free, das ein legitimes kostenloses Angebot mit Einschränkungen bietet. Profi-Tipp: Investieren Sie lieber 3-5 Euro monatlich in ein seriöses VPN – Ihre Privatsphäre ist es wert.",
+    "category": "Sicherheit"
+  },
+  {
+    "id": 8,
+    "question": "Kann ich mit einem VPN ARD und ZDF im Ausland streamen?",
+    "answer": "Ja, das ist möglich und funktioniert ähnlich wie bei Netflix. Die öffentlich-rechtlichen Sender ARD und ZDF sperren ihre Mediatheken für Zugriffe aus dem Ausland, da sie nur für in Deutschland lebende und GEZ-zahlende Bürger gedacht sind. Mit einem VPN können Sie diese Sperre umgehen, indem Sie sich mit einem deutschen Server verbinden. Ihr Datenverkehr erscheint dann so, als kämen Sie aus Deutschland, und Sie erhalten vollen Zugang zu Tatort, Tagesschau und allen anderen Inhalten. Wichtig ist, dass Sie einen VPN-Anbieter wählen, dessen deutsche Server nicht von den Sendern blockiert werden. NordVPN und ExpressVPN funktionieren hier besonders zuverlässig. Beachten Sie, dass auch andere deutsche Streaming-Dienste wie Joyn, RTL+ oder DAZN mit dieser Methode zugänglich werden. Die Bildqualität bleibt dabei in der Regel unbeeinträchtigt. Profi-Tipp: Löschen Sie vor dem ersten Zugriff Ihre Browser-Cookies, damit keine alten Standortdaten gespeichert sind.",
+    "category": "Streaming"
+  },
+  {
+    "id": 9,
+    "question": "Was ist ein Kill Switch und brauche ich diese Funktion wirklich?",
+    "answer": "Ein Kill Switch ist eine essenzielle Sicherheitsfunktion, die Ihre Internetverbindung automatisch kappt, falls die VPN-Verbindung unerwartet abbricht. Stellen Sie sich vor, Sie laden sensible Dokumente herunter oder greifen auf Ihr Bankkonto zu, während das VPN aktiv ist. Plötzlich bricht die VPN-Verbindung ab – ohne Kill Switch würde Ihr Gerät sofort zur normalen, ungeschützten Internetverbindung wechseln und Ihre echte IP-Adresse preisgeben. Der Kill Switch verhindert genau das, indem er jeglichen Datenverkehr blockiert, bis die VPN-Verbindung wiederhergestellt ist. Das ist besonders wichtig bei instabilen Internetverbindungen oder wenn Sie häufig zwischen WLAN-Netzen wechseln. Für Torrenting ist ein Kill Switch praktisch unverzichtbar, da sonst Ihre IP-Adresse bei Verbindungsabbrüchen sichtbar wird. Die meisten Premium-VPNs wie NordVPN, ExpressVPN und Surfshark bieten diese Funktion standardmäßig an. Profi-Tipp: Aktivieren Sie den Kill Switch in den Einstellungen und testen Sie ihn, indem Sie die VPN-Verbindung manuell unterbrechen.",
+    "category": "Sicherheit"
+  },
+  {
+    "id": 10,
+    "question": "Wie viele Geräte kann ich gleichzeitig mit einem VPN-Account schützen?",
+    "answer": "Die Anzahl gleichzeitiger Verbindungen variiert je nach Anbieter erheblich. Die meisten Premium-VPNs erlauben zwischen 5 und 10 gleichzeitige Geräteverbindungen pro Account. NordVPN bietet beispielsweise 6 parallele Verbindungen, ExpressVPN 5, während Surfshark mit unbegrenzten Verbindungen wirbt – ideal für große Familien oder kleine Unternehmen. Das bedeutet, Sie können Ihr Smartphone, Laptop, Tablet, Smart-TV und sogar Ihren Router gleichzeitig schützen. Ein cleverer Trick: Wenn Sie das VPN direkt auf Ihrem Router installieren, zählt das als eine Verbindung, schützt aber alle Geräte in Ihrem Heimnetzwerk. So umgehen Sie das Gerätelimit elegant. Für Familien lohnt sich oft ein Anbieter mit vielen Verbindungen oder unbegrenztem Zugang. Beachten Sie, dass mehr Verbindungen nicht unbedingt besser sind – wichtiger ist die Qualität und Geschwindigkeit jeder einzelnen Verbindung. Profi-Tipp: Nutzen Sie die Router-Installation für stationäre Geräte und sparen Sie mobile Slots für unterwegs.",
+    "category": "Nutzung"
+  }
+]

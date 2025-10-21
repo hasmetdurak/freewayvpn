@@ -1,0 +1,62 @@
+[
+  {
+    "id": 11,
+    "question": "Schützt ein VPN mich wirklich vor Hackern in öffentlichen WLANs?",
+    "answer": "Absolut, und das ist einer der wichtigsten Anwendungsfälle für VPNs. Öffentliche WLAN-Netze in Cafés, Flughäfen oder Hotels sind notorisch unsicher. Hacker nutzen oft sogenannte Man-in-the-Middle-Angriffe, bei denen sie sich zwischen Ihr Gerät und den Router schalten und Ihren Datenverkehr abfangen können. Ohne Verschlüsselung können sie Passwörter, Kreditkartendaten oder persönliche Nachrichten mitlesen. Ein VPN verschlüsselt Ihren gesamten Datenverkehr mit AES-256-Verschlüsselung – selbst wenn ein Hacker Ihre Daten abfängt, sieht er nur unlesbaren Datensalat. Das gilt auch für gefälschte WLAN-Hotspots, die Hacker einrichten, um ahnungslose Nutzer anzulocken. Mit aktivem VPN sind Sie selbst in diesen Fallen geschützt. Besonders wichtig ist das beim Online-Banking oder Shopping unterwegs. Studien zeigen, dass über 40% der öffentlichen WLANs unsicher sind. Profi-Tipp: Aktivieren Sie Ihr VPN automatisch, sobald Sie sich mit einem öffentlichen Netzwerk verbinden – viele Apps bieten diese Funktion.",
+    "category": "Sicherheit"
+  },
+  {
+    "id": 12,
+    "question": "Kann mein Internetanbieter sehen, dass ich ein VPN benutze?",
+    "answer": "Ja, Ihr Internetanbieter (ISP) kann erkennen, dass Sie eine VPN-Verbindung nutzen, aber er kann nicht sehen, was Sie damit machen. Das ist ein wichtiger Unterschied. Der ISP sieht, dass verschlüsselter Datenverkehr zu einem VPN-Server fließt, aber der Inhalt bleibt verborgen. Er weiß also nicht, welche Websites Sie besuchen, welche Dateien Sie herunterladen oder welche Dienste Sie nutzen. In Deutschland ist das normalerweise kein Problem, da VPN-Nutzung legal ist. Manche ISPs drosseln allerdings VPN-Verbindungen, weil sie vermuten, dass Sie Bandbreite-intensive Aktivitäten durchführen. Wenn Sie auch die Tatsache der VPN-Nutzung verbergen möchten, nutzen Sie Obfuskation (Verschleierung). Dienste wie NordVPN bieten spezielle obfuskierte Server, die VPN-Traffic als normalen HTTPS-Verkehr tarnen. Das ist besonders in Ländern mit VPN-Beschränkungen wichtig. Profi-Tipp: Kombinieren Sie Ihr VPN mit dem Tor-Browser für maximale Anonymität, wenn Sie besonders sensible Recherchen durchführen.",
+    "category": "Datenschutz"
+  },
+  {
+    "id": 13,
+    "question": "Funktionieren VPNs auch auf meinem Smartphone und Tablet?",
+    "answer": "Ja, moderne VPNs funktionieren hervorragend auf mobilen Geräten und sind dort besonders wichtig. Alle großen VPN-Anbieter bieten dedizierte Apps für iOS und Android, die genauso leistungsstark sind wie die Desktop-Versionen. Die Installation ist denkbar einfach: App herunterladen, anmelden, Server wählen, verbinden – fertig. Mobile VPNs sind besonders wertvoll, weil Smartphones ständig zwischen verschiedenen Netzwerken wechseln und oft öffentliche WLANs nutzen. Die Apps bieten meist zusätzliche Funktionen wie automatische Verbindung bei unsicheren Netzwerken oder Batterie-Sparmodi. Das IKEv2-Protokoll ist speziell für mobile Geräte optimiert und handhabt Netzwerkwechsel nahtlos – Sie merken kaum einen Unterschied, wenn Sie von WLAN zu mobilen Daten wechseln. Beachten Sie, dass VPNs auf iOS etwas eingeschränkter sind als auf Android, da Apple strengere Sicherheitsrichtlinien hat. Profi-Tipp: Aktivieren Sie den Always-On-VPN-Modus in den Einstellungen, damit Ihr Smartphone nie ungeschützt online geht.",
+    "category": "Mobile"
+  },
+  {
+    "id": 14,
+    "question": "Was ist Split-Tunneling und wann sollte ich es nutzen?",
+    "answer": "Split-Tunneling ist eine clevere Funktion, die Ihnen erlaubt, auszuwählen, welche Apps oder Websites durch den VPN-Tunnel laufen und welche Ihre normale Internetverbindung nutzen. Stellen Sie sich vor, Sie möchten Netflix USA über VPN streamen, aber gleichzeitig auf Ihr deutsches Online-Banking zugreifen – mit Split-Tunneling kein Problem. Sie leiten Netflix durch den VPN-Tunnel, während Ihre Banking-App die normale Verbindung nutzt. Das hat mehrere Vorteile: bessere Geschwindigkeit für lokale Dienste, Zugriff auf lokale und internationale Inhalte gleichzeitig, und manche Websites oder Apps funktionieren besser ohne VPN. Besonders nützlich ist das für Smart-Home-Geräte, die oft lokale Verbindungen benötigen, oder für Online-Gaming, wo jede Millisekunde zählt. NordVPN, ExpressVPN und Surfshark bieten alle Split-Tunneling an. Beachten Sie aber: Apps außerhalb des Tunnels sind nicht geschützt. Profi-Tipp: Nutzen Sie Split-Tunneling für Streaming-Apps im VPN und alltägliche Browsing-Apps außerhalb für optimale Performance.",
+    "category": "Funktionen"
+  },
+  {
+    "id": 15,
+    "question": "Kann ich mit einem VPN günstiger online einkaufen?",
+    "answer": "Ja, das ist ein oft übersehener Vorteil von VPNs. Viele Online-Shops und Buchungsportale zeigen unterschiedliche Preise basierend auf Ihrem Standort. Fluggesellschaften sind dafür berüchtigt – ein Flug von Frankfurt nach New York kann 200 Euro teurer sein, wenn Sie von einer deutschen IP aus buchen, verglichen mit einer indischen oder türkischen IP. Das gleiche gilt für Hotels, Mietwagen, Software-Abonnements und sogar Streaming-Dienste. Netflix kostet in der Türkei deutlich weniger als in Deutschland. Mit einem VPN können Sie verschiedene Standorte testen und den günstigsten Preis finden. Wichtig: Löschen Sie vorher Ihre Browser-Cookies, da Websites Ihre vorherigen Besuche tracken. Auch bei Software wie Microsoft Office oder Adobe Creative Cloud gibt es oft regionale Preisunterschiede. Manche Nutzer berichten von Ersparnissen von 30-50% bei Flugbuchungen. Profi-Tipp: Vergleichen Sie Preise von Servern in Indien, Argentinien, der Türkei und Polen – dort sind digitale Produkte oft am günstigsten. Achten Sie aber auf Zahlungsmethoden, die international funktionieren.",
+    "category": "Sparen"
+  },
+  {
+    "id": 16,
+    "question": "Was ist der Unterschied zwischen einem VPN und dem Tor-Browser?",
+    "answer": "VPN und Tor verfolgen ähnliche Ziele, funktionieren aber grundlegend anders. Ein VPN leitet Ihren gesamten Internetverkehr durch einen verschlüsselten Tunnel zu einem VPN-Server, der dann in Ihrem Namen mit dem Internet kommuniziert. Das ist schnell, einfach und schützt alle Ihre Apps. Tor (The Onion Router) hingegen leitet Ihren Verkehr durch mehrere zufällige Server weltweit, wobei jede Schicht einzeln verschlüsselt wird – wie eine Zwiebel. Das macht Tor extrem anonym, aber auch sehr langsam. Tor ist ideal für maximale Anonymität bei sensiblen Recherchen oder Whistleblowing, während VPNs besser für alltägliche Nutzung, Streaming und Geschwindigkeit sind. Ein großer Unterschied: Bei VPNs vertrauen Sie einem Anbieter, bei Tor niemandem einzeln. Manche Nutzer kombinieren beide: VPN zu Tor für maximale Sicherheit. Beachten Sie, dass viele Websites Tor-Exits blockieren. Profi-Tipp: Nutzen Sie Tor für hochsensible Aktivitäten und VPN für den Alltag – oder kombinieren Sie beide mit NordVPNs Onion-over-VPN-Funktion.",
+    "category": "Vergleich"
+  },
+  {
+    "id": 17,
+    "question": "Wie richte ich ein VPN auf meinem Router ein?",
+    "answer": "Die Router-Installation ist etwas technischer, bietet aber enorme Vorteile: Alle Geräte in Ihrem Heimnetzwerk sind automatisch geschützt, ohne einzelne Apps installieren zu müssen. Zunächst müssen Sie prüfen, ob Ihr Router VPN-fähig ist – die meisten modernen Router von Asus, Netgear oder TP-Link unterstützen VPNs. Alternativ können Sie einen vorkonfigurierten VPN-Router kaufen. Die Einrichtung erfolgt über die Router-Admin-Oberfläche: Loggen Sie sich ein (meist über 192.168.1.1), navigieren Sie zu den VPN-Einstellungen, und geben Sie die Konfigurationsdaten Ihres VPN-Anbieters ein. Die meisten Premium-VPNs bieten detaillierte Anleitungen für verschiedene Router-Modelle. Nach der Einrichtung läuft der gesamte Netzwerkverkehr durch das VPN – Smart-TVs, Spielkonsolen, IoT-Geräte, alles. Der Nachteil: Sie können nicht einfach zwischen Ländern wechseln, und die Geschwindigkeit kann leiden, wenn Ihr Router nicht leistungsstark genug ist. Profi-Tipp: Richten Sie einen zweiten Router als VPN-Gateway ein und lassen Sie Ihren Hauptrouter normal laufen – so können Sie wählen, welche Geräte VPN nutzen.",
+    "category": "Installation"
+  },
+  {
+    "id": 18,
+    "question": "Sind VPNs wirklich sicher oder können sie gehackt werden?",
+    "answer": "Kein System ist zu 100% unknackbar, aber moderne VPNs mit AES-256-Verschlüsselung gelten als praktisch unknackbar mit heutiger Technologie. Die gleiche Verschlüsselung nutzen Militär und Geheimdienste weltweit. Selbst mit den leistungsstärksten Supercomputern würde es Milliarden Jahre dauern, diese Verschlüsselung durch Brute-Force zu knacken. Die größeren Risiken liegen woanders: schwache Passwörter, kompromittierte Geräte, oder unseriöse VPN-Anbieter, die Hintertüren einbauen. Deshalb ist die Wahl eines vertrauenswürdigen Anbieters entscheidend. Achten Sie auf Open-Source-Protokolle wie OpenVPN oder WireGuard, die von Sicherheitsexperten weltweit geprüft werden. Vermeiden Sie proprietäre Protokolle, deren Code niemand einsehen kann. Auch wichtig: Aktivieren Sie Zwei-Faktor-Authentifizierung für Ihren VPN-Account. Historisch gab es VPN-Lecks (DNS, IPv6, WebRTC), aber moderne Premium-VPNs haben Schutzmechanismen dagegen. Profi-Tipp: Testen Sie Ihr VPN regelmäßig auf Lecks mit Tools wie ipleak.net oder dnsleaktest.com.",
+    "category": "Sicherheit"
+  },
+  {
+    "id": 19,
+    "question": "Kann ich mit einem VPN Geoblocking bei Sportereignissen umgehen?",
+    "answer": "Ja, und das ist einer der beliebtesten Anwendungsfälle. Sportereignisse sind oft regional lizenziert – die Bundesliga läuft in Deutschland auf Sky und DAZN, in England auf anderen Plattformen, manchmal sogar kostenlos. Mit einem VPN können Sie auf diese verschiedenen Streams zugreifen. Beispiel: Die Formel 1 läuft in Österreich auf ORF kostenlos, während Sie in Deutschland ein teures Sky-Abo bräuchten. Verbinden Sie sich einfach mit einem österreichischen VPN-Server und schauen Sie kostenlos. Das gleiche gilt für die Champions League, NFL, NBA oder Olympische Spiele. Wichtig ist, dass Sie einen VPN-Anbieter mit schnellen Servern wählen, da Live-Sport hohe Bandbreite erfordert. ExpressVPN und NordVPN sind hier besonders zuverlässig. Beachten Sie, dass manche Streaming-Plattformen wie DAZN aktiv VPNs blockieren, weshalb Sie möglicherweise verschiedene Server ausprobieren müssen. Profi-Tipp: Verbinden Sie sich 10-15 Minuten vor Spielbeginn, um sicherzustellen, dass alles funktioniert, und nutzen Sie das WireGuard-Protokoll für minimale Latenz.",
+    "category": "Sport"
+  },
+  {
+    "id": 20,
+    "question": "Was bedeutet Double VPN und brauche ich das wirklich?",
+    "answer": "Double VPN (auch Multi-Hop genannt) leitet Ihren Datenverkehr durch zwei VPN-Server statt nur einen, was eine doppelte Verschlüsselung bedeutet. Ihr Verkehr geht von Ihrem Gerät zum ersten VPN-Server, wird dort verschlüsselt, dann zum zweiten Server, nochmals verschlüsselt, und erst dann ins Internet. Das bietet eine zusätzliche Sicherheitsebene: Selbst wenn ein Server kompromittiert wäre, bliebe Ihre Identität geschützt. Klingt großartig, aber es gibt Nachteile: Die Geschwindigkeit wird deutlich reduziert (oft 50% oder mehr), und für die meisten Nutzer ist es übertrieben. Double VPN macht Sinn für Journalisten in gefährlichen Regionen, Whistleblower, Aktivisten oder bei extrem sensiblen Daten. Für normales Streaming, Surfen oder Online-Shopping ist es unnötig und macht die Verbindung nur langsamer. NordVPN und Surfshark bieten Double VPN als Option. Die einfache Verschlüsselung eines guten VPNs reicht für 99% der Nutzer völlig aus. Profi-Tipp: Nutzen Sie Double VPN nur, wenn Sie wirklich maximale Anonymität brauchen, und wählen Sie Server-Kombinationen mit geringer geografischer Distanz für bessere Geschwindigkeit.",
+    "category": "Erweitert"
+  }
+]

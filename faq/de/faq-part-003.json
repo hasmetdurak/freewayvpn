@@ -1,0 +1,62 @@
+[
+  {
+    "id": 21,
+    "question": "Wie wähle ich den besten VPN-Server-Standort aus?",
+    "answer": "Die Wahl des richtigen Server-Standorts hängt von Ihrem Ziel ab. Für maximale Geschwindigkeit wählen Sie immer den geografisch nächstgelegenen Server – von München aus wäre das Frankfurt, Zürich oder Wien. Je kürzer die physische Distanz, desto geringer die Latenz. Für Streaming wählen Sie den Server im Land des gewünschten Inhalts: US-Server für US-Netflix, UK-Server für BBC iPlayer, Japan-Server für japanische Anime-Plattformen. Für maximale Privatsphäre wählen Sie Server in datenschutzfreundlichen Ländern wie der Schweiz, Island oder Panama, die außerhalb der 14-Eyes-Überwachungsallianz liegen. Manche Länder haben bessere Internetinfrastruktur – niederländische oder schwedische Server sind oft schneller als solche in Entwicklungsländern. Für Torrenting wählen Sie Länder mit lockeren Copyright-Gesetzen wie die Niederlande oder die Schweiz. Die meisten VPN-Apps zeigen die aktuelle Serverauslastung an – wählen Sie Server unter 50% für beste Performance. Profi-Tipp: Speichern Sie Ihre Lieblingsserver als Favoriten für schnellen Zugriff.",
+    "category": "Nutzung"
+  },
+  {
+    "id": 22,
+    "question": "Funktioniert VPN auch für Online-Gaming und wie beeinflusst es den Ping?",
+    "answer": "VPNs und Gaming haben eine komplizierte Beziehung. Einerseits kann ein VPN DDoS-Angriffe verhindern, Geo-Beschränkungen umgehen und frühen Zugang zu Spielen in anderen Regionen ermöglichen. Andererseits fügt die VPN-Verschlüsselung Latenz hinzu, was Ihren Ping erhöhen kann – fatal bei kompetitiven Shootern wie CS:GO oder Valorant, wo jede Millisekunde zählt. Die Auswirkung hängt stark vom VPN-Anbieter und Server-Standort ab. Mit einem Premium-VPN wie NordVPN oder ExpressVPN und einem nahegelegenen Server können Sie nur 5-10ms zusätzlichen Ping erleben – kaum spürbar. Interessanterweise kann ein VPN Ihren Ping sogar verbessern, wenn Ihr ISP schlechtes Routing hat oder Gaming-Traffic drosselt. Manche Spieler berichten von besserem Ping mit VPN. Für MMORPGs oder Strategiespiele, wo Ping weniger kritisch ist, sind VPNs unproblematisch. Profi-Tipp: Nutzen Sie das WireGuard-Protokoll für Gaming, da es die geringste Latenz bietet, und testen Sie verschiedene Server, um den schnellsten zu finden.",
+    "category": "Gaming"
+  },
+  {
+    "id": 23,
+    "question": "Was sind die 5-Eyes, 9-Eyes und 14-Eyes Allianzen und warum sind sie wichtig?",
+    "answer": "Diese Allianzen sind internationale Überwachungsabkommen zwischen verschiedenen Ländern, die Geheimdienstinformationen teilen. Die 5-Eyes (USA, UK, Kanada, Australien, Neuseeland) ist die älteste und engste Allianz, entstanden nach dem Zweiten Weltkrieg. Die 9-Eyes erweitern dies um Dänemark, Frankreich, Niederlande und Norwegen, während die 14-Eyes zusätzlich Deutschland, Belgien, Italien, Spanien und Schweden umfassen. Für VPN-Nutzer ist das relevant, weil VPN-Anbieter mit Sitz in diesen Ländern theoretisch gezwungen werden könnten, Nutzerdaten zu sammeln und mit Partnerbehörden zu teilen. Deshalb bevorzugen Datenschutz-Bewusste VPNs aus Ländern wie Panama (NordVPN), den Britischen Jungferninseln (ExpressVPN) oder der Schweiz (ProtonVPN), die außerhalb dieser Allianzen liegen. Wichtig: Eine strikte No-Logs-Policy ist wichtiger als der Firmensitz – wenn keine Daten gespeichert werden, gibt es nichts zu teilen. Profi-Tipp: Kombinieren Sie einen VPN-Anbieter außerhalb der 14-Eyes mit Servern in datenschutzfreundlichen Ländern für maximalen Schutz.",
+    "category": "Datenschutz"
+  },
+  {
+    "id": 24,
+    "question": "Kann ich mein VPN für Torrenting und P2P-Downloads nutzen?",
+    "answer": "Ja, aber mit wichtigen Einschränkungen. Nicht alle VPN-Anbieter erlauben P2P-Traffic, und manche beschränken ihn auf spezielle Server. Torrenting ohne VPN ist in Deutschland extrem riskant – Abmahnanwälte überwachen aktiv Torrent-Schwärme und verschicken teure Abmahnungen. Ein VPN maskiert Ihre IP-Adresse, sodass niemand Ihre Downloads zurückverfolgen kann. Wichtig: Wählen Sie einen VPN-Anbieter, der P2P explizit erlaubt und eine strikte No-Logs-Policy hat. NordVPN, ExpressVPN und Surfshark sind alle torrent-freundlich. Nutzen Sie Server in Ländern mit lockeren Copyright-Gesetzen wie den Niederlanden, der Schweiz oder Rumänien. Aktivieren Sie unbedingt den Kill Switch – falls die VPN-Verbindung abbricht, stoppt Ihr Torrent-Client sofort und Ihre echte IP wird nicht preisgegeben. Manche VPNs bieten SOCKS5-Proxies für noch schnellere Torrent-Geschwindigkeiten. Beachten Sie: Ein VPN macht illegales Torrenting nicht legal, es schützt nur Ihre Identität. Profi-Tipp: Binden Sie Ihren Torrent-Client an die VPN-Netzwerkschnittstelle, sodass er nur über VPN funktioniert.",
+    "category": "Torrenting"
+  },
+  {
+    "id": 25,
+    "question": "Wie erkenne ich, ob mein VPN wirklich funktioniert und keine Daten leckt?",
+    "answer": "Es gibt mehrere einfache Tests, um Ihr VPN zu überprüfen. Zunächst der IP-Test: Besuchen Sie whatismyipaddress.com ohne VPN und notieren Sie Ihre echte IP und Ihren Standort. Aktivieren Sie dann das VPN und laden Sie die Seite neu – Sie sollten eine andere IP und den Standort Ihres VPN-Servers sehen. Für DNS-Lecks nutzen Sie dnsleaktest.com: Wenn Ihre ISP-DNS-Server auftauchen, haben Sie ein Leck. Ein gutes VPN sollte nur seine eigenen DNS-Server zeigen. WebRTC-Lecks testen Sie auf browserleaks.com/webrtc – Ihre echte IP sollte nicht sichtbar sein. Für IPv6-Lecks besuchen Sie test-ipv6.com. Manche VPNs deaktivieren IPv6 automatisch, da es schwer zu verschlüsseln ist. Ein umfassender Test ist ipleak.net, der alle Leckarten gleichzeitig prüft. Testen Sie auch den Kill Switch: Trennen Sie die VPN-Verbindung während eines Downloads – der Download sollte sofort stoppen. Profi-Tipp: Führen Sie diese Tests regelmäßig durch, besonders nach VPN-Updates, und nutzen Sie verschiedene Browser für vollständige Sicherheit.",
+    "category": "Testing"
+  },
+  {
+    "id": 26,
+    "question": "Was ist der Unterschied zwischen einem VPN und einem Proxy-Server?",
+    "answer": "Obwohl beide Ihre IP-Adresse maskieren, sind VPNs und Proxies grundverschieden. Ein Proxy leitet nur Ihren Browser-Traffic um, ohne Verschlüsselung – andere Apps bleiben ungeschützt. Ein VPN verschlüsselt Ihren gesamten Internetverkehr auf Betriebssystemebene, schützt also alle Anwendungen. Proxies sind schneller, da keine Verschlüsselung stattfindet, bieten aber keinen echten Schutz. Ihr ISP und Hacker können Ihren Traffic immer noch sehen. VPNs sind langsamer wegen der Verschlüsselung, aber deutlich sicherer. Proxies sind gut für einfaches Geo-Unblocking, etwa um YouTube-Videos aus anderen Ländern zu schauen. Für sensible Daten, Online-Banking oder Privatsphäre sind sie ungeeignet. SOCKS5-Proxies sind fortgeschrittener und unterstützen mehr Protokolle, bleiben aber unverschlüsselt. Manche VPNs bieten SOCKS5-Proxies als Zusatzfunktion für Torrenting. Kostenlose Proxies sind oft unsicher und können Malware enthalten. Profi-Tipp: Nutzen Sie Proxies nur für unkritisches Geo-Unblocking und VPNs für alles, was Sicherheit erfordert.",
+    "category": "Vergleich"
+  },
+  {
+    "id": 27,
+    "question": "Wie viel kostet ein gutes VPN und gibt es versteckte Gebühren?",
+    "answer": "Die Preise variieren erheblich, aber Sie bekommen meist, wofür Sie zahlen. Premium-VPNs kosten zwischen 2 und 12 Euro pro Monat, abhängig von der Vertragslänge. Monatsabos sind am teuersten (10-12€), während Jahres- oder Zweijahresverträge oft auf 3-5€ monatlich fallen. NordVPN kostet etwa 3,29€/Monat bei einem 2-Jahres-Abo, ExpressVPN liegt bei 6,67€/Monat (Jahresabo), Surfshark bei etwa 2,49€/Monat. Diese Preise beinhalten normalerweise alle Funktionen ohne versteckte Kosten. Vorsicht bei VPNs, die zusätzliche Gebühren für Features wie dedizierte IPs, Port-Forwarding oder mehr Geräte verlangen. Seriöse Anbieter bieten 30-Tage-Geld-zurück-Garantien, sodass Sie risikofrei testen können. Lifetime-Angebote (einmalig zahlen, lebenslang nutzen) klingen verlockend, sind aber oft unseriös – VPNs haben laufende Kosten, wie soll das funktionieren? Viele bieten Rabatte für längere Laufzeiten oder Studentenrabatte. Profi-Tipp: Warten Sie auf Black Friday oder Cyber Monday – viele VPNs bieten dann 70-80% Rabatt auf Mehrjahresabos.",
+    "category": "Preise"
+  },
+  {
+    "id": 28,
+    "question": "Kann ich ein VPN auf meinem Smart-TV oder meiner Spielkonsole nutzen?",
+    "answer": "Ja, aber die Methode variiert je nach Gerät. Die meisten Smart-TVs und Konsolen (PlayStation, Xbox, Nintendo Switch) unterstützen keine nativen VPN-Apps. Sie haben drei Optionen: Erstens, installieren Sie das VPN auf Ihrem Router – dann sind alle verbundenen Geräte automatisch geschützt. Das ist die einfachste Lösung für mehrere Geräte. Zweitens, nutzen Sie die Smart DNS-Funktion Ihres VPN-Anbieters – das ist kein echtes VPN, aber ermöglicht Geo-Unblocking auf Geräten ohne VPN-Support. ExpressVPN und NordVPN bieten das an. Drittens, teilen Sie die VPN-Verbindung Ihres Computers: Verbinden Sie Ihren PC per VPN, dann teilen Sie diese Verbindung via Ethernet oder als WLAN-Hotspot mit Ihrer Konsole oder TV. Manche Android-TVs wie Nvidia Shield unterstützen VPN-Apps direkt. Für Amazon Fire TV Stick gibt es native Apps von den meisten Anbietern. Profi-Tipp: Die Router-Methode ist am zuverlässigsten, aber Smart DNS ist am schnellsten für reines Streaming ohne Geschwindigkeitsverlust.",
+    "category": "Geräte"
+  },
+  {
+    "id": 29,
+    "question": "Was ist eine dedizierte IP-Adresse und brauche ich eine?",
+    "answer": "Eine dedizierte (statische) IP ist eine IP-Adresse, die nur Sie nutzen, im Gegensatz zu den geteilten IPs, die Hunderte Nutzer gleichzeitig verwenden. Normalerweise teilen Sie sich VPN-Server-IPs mit vielen anderen, was die Anonymität erhöht. Eine dedizierte IP hat spezifische Vorteile: Sie werden seltener von Websites als VPN erkannt und blockiert, was bei Banking-Apps oder Zahlungsdiensten wie PayPal wichtig sein kann. Manche Websites blockieren geteilte VPN-IPs, weil sie von vielen Nutzern kommen. Mit einer dedizierten IP vermeiden Sie CAPTCHAs und Sicherheitswarnungen. Sie ist auch wichtig, wenn Sie einen Server betreiben oder Remote-Zugriff auf Ihr Büronetzwerk benötigen. Der Nachteil: Sie kostet extra (3-5€/Monat zusätzlich) und reduziert Ihre Anonymität, da die IP nur Ihnen zugeordnet ist. Für die meisten Nutzer ist eine dedizierte IP unnötig – geteilte IPs bieten bessere Privatsphäre. Profi-Tipp: Nutzen Sie dedizierte IPs nur für spezifische Anwendungsfälle wie Business-Zugriff, und behalten Sie eine normale VPN-Verbindung für alltägliches Surfen.",
+    "category": "Erweitert"
+  },
+  {
+    "id": 30,
+    "question": "Wie schützt ein VPN mich vor ISP-Drosselung und Bandbreitenlimitierung?",
+    "answer": "ISP-Drosselung ist ein häufiges Problem: Ihr Internetanbieter erkennt, dass Sie Streaming-Dienste oder Torrents nutzen, und reduziert absichtlich Ihre Geschwindigkeit. Das ist legal, aber frustrierend. Ein VPN verschlüsselt Ihren Datenverkehr, sodass Ihr ISP nicht sehen kann, welche Dienste Sie nutzen – er sieht nur verschlüsselte Daten zu einem VPN-Server. Ohne diese Information kann er nicht gezielt drosseln. Viele Nutzer berichten von deutlich schnellerem Netflix oder YouTube mit aktivem VPN, weil die ISP-Drosselung umgangen wird. Das gilt besonders für Mobilfunkanbieter, die oft Video-Streaming auf 480p oder 720p begrenzen. Mit VPN läuft es in voller Qualität. Auch bei Datenlimits kann ein VPN helfen: Manche ISPs zählen bestimmten Traffic nicht zum Limit (Zero-Rating), aber mit VPN sehen sie nicht, was Sie machen, und können nicht unterscheiden. Beachten Sie: Das VPN selbst kann nicht mehr Bandbreite erzeugen – wenn Ihre Leitung grundsätzlich langsam ist, hilft auch ein VPN nicht. Profi-Tipp: Testen Sie Ihre Geschwindigkeit mit und ohne VPN auf fast.com, um ISP-Drosselung zu erkennen.",
+    "category": "Performance"
+  }
+]

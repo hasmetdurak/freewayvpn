@@ -178,6 +178,3 @@ Düzenli olarak yurtdışında Alman Netflix içeriklerini izlemek istiyorsanız
 };
 
 export default turkishBlogsData;
-
-
-
