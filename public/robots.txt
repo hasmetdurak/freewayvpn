@@ -33,6 +33,75 @@ User-agent: YandexBot
 Allow: /
 Crawl-delay: 1
 
+# Naver crawler
+User-agent: Yeti
+Allow: /
+Crawl-delay: 1
+
+# Special rules for Asian search engines
+User-agent: NaverBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yeti/NaverBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: BaiduSpider
+Allow: /
+Crawl-delay: 2
+
+User-agent: BaiduSpider-ads
+Allow: /
+Crawl-delay: 2
+
+User-agent: YisouSpider
+Allow: /
+Crawl-delay: 2
+
+User-agent: Sogou web spider
+Allow: /
+Crawl-delay: 2
+
+User-agent: Sogou inst spider
+Allow: /
+Crawl-delay: 2
+
+# Yandex specific rules
+User-agent: YandexBot/3.0
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexImages
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexVideo
+Allow: /
+Crawl-delay: 1
+
+# Naver specific rules
+User-agent: Yeti/1.1
+Allow: /
+Crawl-delay: 1
+
+# Baidu specific rules
+User-agent: baidu
+Allow: /
+Crawl-delay: 2
+
+User-agent: baiduimage
+Allow: /
+Crawl-delay: 2
+
+User-agent: baiduspider
+Allow: /
+Crawl-delay: 2
+
 # Disallow admin and private areas (if any)
 Disallow: /admin/
 Disallow: /api/
@@ -57,6 +126,17 @@ Sitemap: https://bestvpn.digital/sitemap-ko.xml
 Sitemap: https://bestvpn.digital/sitemap-zh.xml
 Sitemap: https://bestvpn.digital/sitemap-ar.xml
 Sitemap: https://bestvpn.digital/sitemap-ru.xml
+
+# Additional sitemaps for Asian markets
+Sitemap: https://bestvpn.digital/sitemap-ko.xml
+Sitemap: https://bestvpn.digital/sitemap-zh.xml
+Sitemap: https://bestvpn.digital/sitemap-ja.xml
+Sitemap: https://bestvpn.digital/sitemap-asian-ko.xml
+Sitemap: https://bestvpn.digital/sitemap-asian-zh.xml
+Sitemap: https://bestvpn.digital/sitemap-asian-ja.xml
+Sitemap: https://bestvpn.digital/sitemap-naver.xml
+Sitemap: https://bestvpn.digital/sitemap-baidu.xml
+Sitemap: https://bestvpn.digital/sitemap-yandex.xml
 
 # Host (preferred domain)
 Host: https://bestvpn.digital

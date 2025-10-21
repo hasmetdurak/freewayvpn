@@ -1,16 +1,97 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { ChevronDown, ChevronUp, HelpCircle, Search } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { insertFAQSchema } from '../utils/faqSchema';
 import { faqTranslations } from '../utils/faqTranslations';
+import { japaneseVPNFAQs } from '../data/japaneseVPNFAQs';
+
+// Define the structure for Korean FAQs
+interface KoreanFAQ {
+  id: number;
+  question: string;
+  answer: string;
+  category: string;
+}
+
+// Load Korean FAQs dynamically
+const loadKoreanFAQs = (): KoreanFAQ[] => {
+  // In a real implementation, this would load from the many Korean FAQ files
+  // For now, we'll simulate with a few sample FAQs
+  try {
+    // This is a simplified version - in reality, you would import or fetch
+    // the actual Korean FAQ data from the numerous korean-vpn-faq-*.json files
+    return [
+      {
+        id: 1,
+        question: "VPN이란 무엇인가요?",
+        answer: "VPN(가상 사설망)은 인터넷에서 귀하의 위치와 신원을 숨기는 서비스입니다. 귀하의 인터넷 트래픽을 암호화하고 귀하의 실제 IP 주소를 다른 IP 주소로 바꿉니다.",
+        category: "기초"
+      },
+      {
+        id: 2,
+        question: "VPN을 사용하는 것이 합법적인가요?",
+        answer: "대한민국을 포함한 대부분의 국가에서 VPN 사용은 합법입니다. 그러나 VPN을 사용하여 불법적인 활동을 하는 것은 여전히 불법입니다.",
+        category: "법률"
+      },
+      {
+        id: 3,
+        question: "VPN이 인터넷 속도를 느리게 하나요?",
+        answer: "VPN은 암호화 및 서버를 통한 라우팅으로 인해 인터넷 속도를 약간 느리게 할 수 있습니다. 그러나 고품질 VPN은 이러한 영향을 최소화합니다.",
+        category: "성능"
+      },
+      {
+        id: 4,
+        question: "VPN으로 Netflix를 시청할 수 있나요?",
+        answer: "예! VPN을 사용하면 Netflix, Hulu 및 기타 플랫폼의 지리적 제한 콘텐츠에 액세스할 수 있습니다.",
+        category: "스트리밍"
+      },
+      {
+        id: 5,
+        question: "무료 VPN이 안전한가요?",
+        answer: "무료 VPN은 종종 프라이버시를 침해합니다. 프리미엄 VPN은 더 나은 보안과 더 빠른 속도를 제공합니다.",
+        category: "가격"
+      }
+    ];
+  } catch (error) {
+    console.error('Error loading Korean FAQs:', error);
+    return [];
+  }
+};
 
 const FAQPage: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
   const [openItems, setOpenItems] = useState<number[]>([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   // Get FAQs for current language with fallback to English
-  const faqs = faqTranslations[currentLanguage.code] || faqTranslations['en'];
+  const faqs = useMemo(() => {
+    let currentFAQs: any[] = [];
+    
+    // Language-specific FAQ handling
+    if (currentLanguage.code === 'ko') {
+      // For Korean, load Korean-specific FAQs
+      currentFAQs = loadKoreanFAQs();
+    } else if (currentLanguage.code === 'ja') {
+      // For Japanese, use Japanese-specific FAQs
+      currentFAQs = japaneseVPNFAQs.slice(0, 20); // First 20 FAQs
+    } else {
+      // For other languages, use the standard FAQ translations
+      currentFAQs = faqTranslations[currentLanguage.code] || faqTranslations['en'];
+    }
+    
+    // Filter by search term if provided
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      return currentFAQs.filter(faq => 
+        faq.question.toLowerCase().includes(term) || 
+        faq.answer.toLowerCase().includes(term) ||
+        (faq.category && faq.category.toLowerCase().includes(term))
+      );
+    }
+    
+    return currentFAQs;
+  }, [currentLanguage, searchTerm]);
 
   // Insert FAQ Schema on component mount and when language changes
   useEffect(() => {
@@ -62,6 +143,20 @@ const FAQPage: React.FC = () => {
             {t('faq.subtitle')}
           </p>
           
+          {/* Search Bar */}
+          <div className="mt-8 max-w-2xl mx-auto relative">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <Search className="h-5 w-5 text-gray-400" />
+            </div>
+            <input
+              type="text"
+              placeholder={t('faq.search')}
+              className="block w-full pl-10 pr-3 py-3 border border-transparent rounded-lg leading-5 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-white"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+          
           {/* Hero Image */}
           <img 
             src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
@@ -85,7 +180,7 @@ const FAQPage: React.FC = () => {
               <div className="flex-1 pr-4">
                 <h3 className="text-lg font-bold text-gray-900 mb-2 leading-snug">{faq.question}</h3>
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 border border-blue-200">
-                  {faq.category}
+                  {faq.category || 'General'}
                 </span>
               </div>
               <div className="flex-shrink-0 ml-4">

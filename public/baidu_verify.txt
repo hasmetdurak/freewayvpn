@@ -1,0 +1,10 @@
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: baidu
+Allow: /
+Crawl-delay: 2
+
+Sitemap: https://bestvpn.digital/sitemap.xml
+Sitemap: https://bestvpn.digital/sitemap-baidu.xml

@@ -1,0 +1,28 @@
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: BaiduSpider-ads
+Allow: /
+Crawl-delay: 2
+
+User-agent: YisouSpider
+Allow: /
+Crawl-delay: 2
+
+User-agent: Sogou web spider
+Allow: /
+Crawl-delay: 2
+
+User-agent: Sogou inst spider
+Allow: /
+Crawl-delay: 2
+
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+
+Sitemap: https://bestvpn.digital/sitemap.xml
+Sitemap: https://bestvpn.digital/sitemap-baidu.xml
+Sitemap: https://bestvpn.digital/sitemap-zh.xml
+Sitemap: https://bestvpn.digital/sitemap-asian-zh.xml

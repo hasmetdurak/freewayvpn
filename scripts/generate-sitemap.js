@@ -23,6 +23,9 @@ const LANGUAGES = [
   'pl', 'th', 'tl', 'pt'
 ];
 
+// Asian market languages (special focus for Naver, Baidu, Yandex)
+const ASIAN_LANGUAGES = ['ko', 'zh', 'ja'];
+
 // Static pages
 const STATIC_PAGES = [
   { path: '', priority: 1.0, changefreq: 'daily' },
@@ -213,6 +216,30 @@ function generateSitemapIndex() {
 `;
   });
 
+  // Add Asian market sitemaps
+  ASIAN_LANGUAGES.forEach(lang => {
+    index += `  <sitemap>
+    <loc>${DOMAIN}/sitemap-asian-${lang}.xml</loc>
+    <lastmod>${CURRENT_DATE}</lastmod>
+  </sitemap>
+`;
+  });
+
+  // Add specialized sitemaps
+  index += `  <sitemap>
+    <loc>${DOMAIN}/sitemap-naver.xml</loc>
+    <lastmod>${CURRENT_DATE}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${DOMAIN}/sitemap-baidu.xml</loc>
+    <lastmod>${CURRENT_DATE}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${DOMAIN}/sitemap-yandex.xml</loc>
+    <lastmod>${CURRENT_DATE}</lastmod>
+  </sitemap>
+`;
+
   index += '</sitemapindex>';
   return index;
 }
@@ -236,6 +263,168 @@ function generateLanguageSitemap(lang) {
   BLOG_POSTS.forEach(slug => {
     sitemap += generateUrlEntry(
       `${DOMAIN}${langPrefix}/blog/${slug}`,
+      0.8,
+      'weekly',
+      CURRENT_DATE
+    );
+  });
+
+  sitemap += '</urlset>';
+  return sitemap;
+}
+
+/**
+ * Generate specialized sitemap for Asian markets (Naver, Baidu, Yandex)
+ */
+function generateAsianMarketSitemap(lang) {
+  let sitemap = generateSitemapHeader();
+  const langPrefix = lang === 'en' ? '' : `/${lang}`;
+  
+  // Add special priority for Asian market content
+  STATIC_PAGES.forEach(page => {
+    // Increase priority for Asian markets
+    const priority = page.priority < 1.0 ? Math.min(1.0, page.priority + 0.1) : page.priority;
+    
+    sitemap += generateUrlEntry(
+      `${DOMAIN}${langPrefix}${page.path}`,
+      priority,
+      page.changefreq,
+      CURRENT_DATE
+    );
+  });
+
+  // Special focus on blog posts relevant to Asian markets
+  BLOG_POSTS.forEach(slug => {
+    // Increase priority for Asian market related content
+    let priority = 0.8;
+    
+    // Boost priority for Asia-related content
+    if (slug.includes('korean') || slug.includes('japan') || slug.includes('china') || 
+        slug.includes('korea') || slug.includes('japanese') || slug.includes('chinese')) {
+      priority = 0.9;
+    }
+    
+    sitemap += generateUrlEntry(
+      `${DOMAIN}${langPrefix}/blog/${slug}`,
+      priority,
+      'weekly',
+      CURRENT_DATE
+    );
+  });
+
+  sitemap += '</urlset>';
+  return sitemap;
+}
+
+/**
+ * Generate Naver-specific sitemap
+ */
+function generateNaverSitemap() {
+  let sitemap = generateSitemapHeader();
+  
+  // Focus on Korean content
+  const koreanPages = STATIC_PAGES.map(page => ({
+    ...page,
+    priority: page.priority < 1.0 ? Math.min(1.0, page.priority + 0.2) : page.priority
+  }));
+  
+  koreanPages.forEach(page => {
+    sitemap += generateUrlEntry(
+      `${DOMAIN}/ko${page.path}`,
+      page.priority,
+      page.changefreq,
+      CURRENT_DATE
+    );
+  });
+
+  // Korean-specific blog posts with higher priority
+  BLOG_POSTS.forEach(slug => {
+    let priority = 0.8;
+    
+    // Boost Korean-related content
+    if (slug.includes('korean') || slug.includes('korea') || slug.includes('kr')) {
+      priority = 1.0;
+    }
+    
+    sitemap += generateUrlEntry(
+      `${DOMAIN}/ko/blog/${slug}`,
+      priority,
+      'weekly',
+      CURRENT_DATE
+    );
+  });
+
+  sitemap += '</urlset>';
+  return sitemap;
+}
+
+/**
+ * Generate Baidu-specific sitemap
+ */
+function generateBaiduSitemap() {
+  let sitemap = generateSitemapHeader();
+  
+  // Focus on Chinese content
+  const chinesePages = STATIC_PAGES.map(page => ({
+    ...page,
+    priority: page.priority < 1.0 ? Math.min(1.0, page.priority + 0.2) : page.priority
+  }));
+  
+  chinesePages.forEach(page => {
+    sitemap += generateUrlEntry(
+      `${DOMAIN}/zh${page.path}`,
+      page.priority,
+      page.changefreq,
+      CURRENT_DATE
+    );
+  });
+
+  // Chinese-specific blog posts with higher priority
+  BLOG_POSTS.forEach(slug => {
+    let priority = 0.8;
+    
+    // Boost Chinese-related content
+    if (slug.includes('china') || slug.includes('chinese')) {
+      priority = 1.0;
+    }
+    
+    sitemap += generateUrlEntry(
+      `${DOMAIN}/zh/blog/${slug}`,
+      priority,
+      'weekly',
+      CURRENT_DATE
+    );
+  });
+
+  sitemap += '</urlset>';
+  return sitemap;
+}
+
+/**
+ * Generate Yandex-specific sitemap
+ */
+function generateYandexSitemap() {
+  let sitemap = generateSitemapHeader();
+  
+  // Focus on Russian content
+  const russianPages = STATIC_PAGES.map(page => ({
+    ...page,
+    priority: page.priority < 1.0 ? Math.min(1.0, page.priority + 0.1) : page.priority
+  }));
+  
+  russianPages.forEach(page => {
+    sitemap += generateUrlEntry(
+      `${DOMAIN}/ru${page.path}`,
+      page.priority,
+      page.changefreq,
+      CURRENT_DATE
+    );
+  });
+
+  // Russian-specific blog posts
+  BLOG_POSTS.forEach(slug => {
+    sitemap += generateUrlEntry(
+      `${DOMAIN}/ru/blog/${slug}`,
       0.8,
       'weekly',
       CURRENT_DATE
@@ -278,6 +467,32 @@ function main() {
       console.log(`✅ sitemap-${lang}.xml created`);
     });
 
+    // Generate specialized sitemaps for Asian markets
+    console.log('📝 Generating Asian market sitemaps...');
+    ASIAN_LANGUAGES.forEach(lang => {
+      const asianSitemap = generateAsianMarketSitemap(lang);
+      fs.writeFileSync(path.join(OUTPUT_DIR, `sitemap-asian-${lang}.xml`), asianSitemap);
+      console.log(`✅ sitemap-asian-${lang}.xml created`);
+    });
+
+    // Generate Naver-specific sitemap
+    console.log('📝 Generating Naver sitemap...');
+    const naverSitemap = generateNaverSitemap();
+    fs.writeFileSync(path.join(OUTPUT_DIR, 'sitemap-naver.xml'), naverSitemap);
+    console.log('✅ sitemap-naver.xml created');
+
+    // Generate Baidu-specific sitemap
+    console.log('📝 Generating Baidu sitemap...');
+    const baiduSitemap = generateBaiduSitemap();
+    fs.writeFileSync(path.join(OUTPUT_DIR, 'sitemap-baidu.xml'), baiduSitemap);
+    console.log('✅ sitemap-baidu.xml created');
+
+    // Generate Yandex-specific sitemap
+    console.log('📝 Generating Yandex sitemap...');
+    const yandexSitemap = generateYandexSitemap();
+    fs.writeFileSync(path.join(OUTPUT_DIR, 'sitemap-yandex.xml'), yandexSitemap);
+    console.log('✅ sitemap-yandex.xml created');
+
     // Generate sitemap index
     console.log('📝 Generating sitemap index...');
     const sitemapIndex = generateSitemapIndex();
@@ -286,13 +501,14 @@ function main() {
 
     console.log('\n🎉 All sitemaps generated successfully!');
     console.log(`📍 Location: ${OUTPUT_DIR}`);
-    console.log(`📊 Total sitemaps: ${3 + LANGUAGES.length}`);
+    console.log(`📊 Total sitemaps: ${6 + LANGUAGES.length + ASIAN_LANGUAGES.length}`);
     console.log(`📄 Total URLs: ~${(STATIC_PAGES.length + BLOG_POSTS.length) * (LANGUAGES.length + 1)}`);
     console.log('\n🔗 Submit to:');
     console.log('   - Google Search Console: https://search.google.com/search-console');
     console.log('   - Bing Webmaster Tools: https://www.bing.com/webmasters');
     console.log('   - Yandex Webmaster: https://webmaster.yandex.com');
     console.log('   - Baidu Webmaster Tools: https://ziyuan.baidu.com');
+    console.log('   - Naver Webmaster Tools: https://webmastertool.naver.com');
 
   } catch (error) {
     console.error('❌ Error generating sitemaps:', error);

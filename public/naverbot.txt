@@ -1,0 +1,10 @@
+User-agent: NaverBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Yeti
+Allow: /
+Crawl-delay: 1
+
+Sitemap: https://bestvpn.digital/sitemap.xml
+Sitemap: https://bestvpn.digital/sitemap-naver.xml

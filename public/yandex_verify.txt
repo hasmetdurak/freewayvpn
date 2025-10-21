@@ -1,0 +1,14 @@
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexImages
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexVideo
+Allow: /
+Crawl-delay: 1
+
+Sitemap: https://bestvpn.digital/sitemap.xml
+Sitemap: https://bestvpn.digital/sitemap-yandex.xml
