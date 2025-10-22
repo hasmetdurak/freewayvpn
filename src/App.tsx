@@ -15,6 +15,27 @@ import KoreanVPNsPage from './pages/KoreanVPNsPage';
 import KoreanFAQPage from './pages/KoreanFAQPage';
 import KoreanBlogPage from './pages/KoreanBlogPage';
 import JapaneseBlogPage from './pages/JapaneseBlogPage';
+import VPNPlansPage from './pages/VPNPlansPage';
+
+// German Pages
+import GermanBlogPage from './pages/GermanBlogPage';
+import GermanFAQPage from './pages/GermanFAQPage';
+import GermanSitemapPage from './pages/GermanSitemapPage';
+import GermanVPNsPage from './pages/GermanVPNsPage';
+import GermanContactPage from './pages/GermanContactPage';
+import GermanDealsPage from './pages/GermanDealsPage';
+import GermanQuizPage from './pages/GermanQuizPage';
+import GermanVPNDealsPage from './pages/GermanVPNDealsPage';
+import BestVPN2026VergleichBlogPost from './pages/BestVPN2026VergleichBlogPost';
+
+// Spanish Pages
+import SpanishVPNDealsPage from './pages/SpanishVPNDealsPage';
+
+// Portuguese Pages
+import PortugueseVPNDealsPage from './pages/PortugueseVPNDealsPage';
+
+// Test Pages
+import FAQTestPage from './pages/FAQTestPage';
 
 // Language-based routing component
 function LanguageRouter() {
@@ -33,14 +54,27 @@ function LanguageRouter() {
         <main className="flex-grow">
           <Routes>
             {/* Language-specific routes */}
-            <Route path="/:lang/vpns" element={<VPNsPage />} />
-            <Route path="/:lang/faq" element={<FAQPage />} />
-            <Route path="/:lang/blog" element={<BlogPage />} />
+            <Route path="/:lang/vpns" element={<GermanVPNsPage />} />
+            <Route path="/:lang/faq" element={<GermanFAQPage />} />
+            <Route path="/:lang/blog" element={<GermanBlogPage />} />
             <Route path="/:lang/blog/:slug" element={<DynamicBlogPost />} />
-            <Route path="/:lang/contact" element={<ContactPage />} />
-            <Route path="/:lang/deals" element={<DealsPage />} />
-            <Route path="/:lang/quiz" element={<QuizPage />} />
+            <Route path="/:lang/blog/vpn-vergleich-2026" element={<BestVPN2026VergleichBlogPost />} />
+            <Route path="/:lang/contact" element={<GermanContactPage />} />
+            <Route path="/:lang/deals" element={<GermanDealsPage />} />
+            <Route path="/:lang/quiz" element={<GermanQuizPage />} />
             <Route path="/:lang/stream-test" element={<StreamSmartPage />} />
+            <Route path="/:lang/sitemap" element={<GermanSitemapPage />} />
+            <Route path="/:lang/vpn-plans" element={<VPNPlansPage />} />
+            <Route path="/:lang/vpn-angebote" element={<GermanVPNDealsPage />} />
+            
+            {/* Spanish routes */}
+            <Route path="/:lang/ofertas-vpn" element={<SpanishVPNDealsPage />} />
+            
+            {/* Portuguese routes */}
+            <Route path="/:lang/promocoes-vpn" element={<PortugueseVPNDealsPage />} />
+            
+            {/* Test routes */}
+            <Route path="/:lang/faq-test" element={<FAQTestPage />} />
             
             {/* Korean-specific routes */}
             <Route path="/ko" element={<KoreanVPNsPage />} />
@@ -70,6 +104,7 @@ function LanguageRouter() {
             <Route path="/deals" element={<DealsPage />} />
             <Route path="/quiz" element={<QuizPage />} />
             <Route path="/stream-test" element={<StreamSmartPage />} />
+            <Route path="/vpn-plans" element={<VPNPlansPage />} />
             
             {/* Redirects for language-specific root paths */}
             <Route path="/:lang" element={<Navigate to="/:lang/vpns" replace />} />

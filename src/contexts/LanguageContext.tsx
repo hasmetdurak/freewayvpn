@@ -29,7 +29,7 @@ const supportedLanguages: Language[] = [
 interface LanguageContextType {
   currentLanguage: Language;
   setLanguage: (language: Language) => void;
-  t: (key: string) => string;
+  t: (key: string, params?: Record<string, string | number>) => string;
   translateFAQs: (faqs: any[]) => any[];
   isGeoDetected: boolean;
   detectedCountry: string | null;
@@ -103,8 +103,17 @@ const LanguageProvider: React.FC<LanguageProviderProps> = ({ children, initialLa
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: language }));
   };
 
-  const t = (key: string): string => {
-    return translations[currentLanguage.code]?.[key] || translations.en[key] || key;
+  const t = (key: string, params?: Record<string, string | number>): string => {
+    let translation = translations[currentLanguage.code]?.[key] || translations.en[key] || key;
+    
+    // Replace parameters in the translation string
+    if (params) {
+      Object.keys(params).forEach(param => {
+        translation = translation.replace(new RegExp(`{${param}}`, 'g'), String(params[param]));
+      });
+    }
+    
+    return translation;
   };
 
   const translateFAQs = (faqs: any[]): any[] => {

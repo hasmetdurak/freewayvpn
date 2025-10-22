@@ -12,8 +12,9 @@
     "preview": "vite preview",
     "download-logos": "node scripts/download-vpn-logos.js",
     "sitemap": "node scripts/generate-sitemap.js",
+    "sitemap:de": "node scripts/generate-german-sitemap.js",
     "rss": "node scripts/generate-rss.js",
-    "seo": "npm run sitemap && npm run rss"
+    "seo": "npm run sitemap && npm run sitemap:de && npm run rss"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",

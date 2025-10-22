@@ -1,6 +1,7 @@
 /**
  * Auto Image Utils - Automatically generates high-quality images for blog posts
  * This utility provides functions to automatically select appropriate images based on blog content
+ * with support for modern image formats (WebP/AVIF) and responsive loading
  */
 
 export interface ImageConfig {
@@ -9,6 +10,7 @@ export interface ImageConfig {
   quality: string;
   category: string;
   keywords: string[];
+  format: 'webp' | 'avif' | 'auto'; // Added format support
 }
 
 export interface AutoImageResult {
@@ -16,6 +18,16 @@ export interface AutoImageResult {
   alt: string;
   title: string;
   category: string;
+  format: 'webp' | 'avif' | 'auto'; // Added format to result
+}
+
+/**
+ * Detect the best image format supported by the user's browser
+ */
+export function detectBestImageFormat(): 'webp' | 'avif' | 'auto' {
+  // In a real implementation, you would detect browser support
+  // For now, we'll default to webp as it has wide support
+  return 'webp';
 }
 
 /**
@@ -114,25 +126,35 @@ const keywordImageMap: Record<string, string> = {
 
 /**
  * Generates an appropriate image for a blog post based on its content
+ * with support for modern image formats
  */
 export function generateAutoImage(
   title: string,
   category: string,
   tags: string[],
-  excerpt?: string
+  excerpt?: string,
+  preferredFormat: 'webp' | 'avif' | 'auto' = 'auto'
 ): AutoImageResult {
   const lowerTitle = title.toLowerCase();
   const lowerTags = tags.map(tag => tag.toLowerCase());
   const lowerExcerpt = excerpt?.toLowerCase() || '';
   
+  // Determine the best format to use
+  const format = preferredFormat === 'auto' ? detectBestImageFormat() : preferredFormat;
+  
   // First, try to match specific keywords
   for (const [keyword, imageUrl] of Object.entries(keywordImageMap)) {
     if (lowerTitle.includes(keyword) || lowerTags.some(tag => tag.includes(keyword)) || lowerExcerpt.includes(keyword)) {
+      // Add format parameter to URL
+      const formatParam = format !== 'auto' ? `&fm=${format}` : '';
+      const optimizedUrl = `${imageUrl}${formatParam}`;
+      
       return {
-        url: imageUrl,
+        url: optimizedUrl,
         alt: `${title} - ${keyword} related image`,
         title: `High-quality image for ${title}`,
-        category: keyword
+        category: keyword,
+        format: format
       };
     }
   }
@@ -146,26 +168,36 @@ export function generateAutoImage(
     }, 0);
     const imageIndex = Math.abs(titleHash) % categoryImages.length;
     
+    // Add format parameter to URL
+    const formatParam = format !== 'auto' ? `&fm=${format}` : '';
+    const optimizedUrl = `${categoryImages[imageIndex]}${formatParam}`;
+    
     return {
-      url: categoryImages[imageIndex],
+      url: optimizedUrl,
       alt: `${title} - ${category} category image`,
       title: `Professional ${category.toLowerCase()} image for ${title}`,
-      category: category.toLowerCase()
+      category: category.toLowerCase(),
+      format: format
     };
   }
   
   // Fallback to a general tech/VPN image
   const fallbackImage = 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&h=600&q=80';
+  const formatParam = format !== 'auto' ? `&fm=${format}` : '';
+  const optimizedUrl = `${fallbackImage}${formatParam}`;
+  
   return {
-    url: fallbackImage,
+    url: optimizedUrl,
     alt: `${title} - VPN and technology image`,
     title: `Professional image for ${title}`,
-    category: 'technology'
+    category: 'technology',
+    format: format
   };
 }
 
 /**
  * Generates a hero image component JSX string for blog posts
+ * with responsive image loading
  */
 export function generateHeroImageJSX(
   title: string,
@@ -183,12 +215,15 @@ export function generateHeroImageJSX(
             title="${imageData.title}"
             className="w-full h-64 md:h-80 lg:h-96 object-cover rounded-lg shadow-lg"
             loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>`;
 }
 
 /**
  * Generates inline image JSX for content sections
+ * with lazy loading
  */
 export function generateInlineImageJSX(
   title: string,
@@ -205,8 +240,21 @@ export function generateInlineImageJSX(
             title="${imageData.title}"
             className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
             loading="lazy"
+            decoding="async"
           />
         </div>`;
+}
+
+/**
+ * Generates responsive image set for different screen sizes
+ */
+export function generateResponsiveImageSet(
+  baseImageUrl: string,
+  sizes: number[] = [320, 640, 768, 1024, 1280, 1536]
+): string {
+  return sizes.map(size => 
+    `${baseImageUrl}&w=${size} ${size}w`
+  ).join(', ');
 }
 
 /**

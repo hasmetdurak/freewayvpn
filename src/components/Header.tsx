@@ -32,6 +32,7 @@ const Header: React.FC = () => {
     { name: t('nav.vpns'), key: 'vpns', path: getNavigationPath('/vpns') },
     { name: t('nav.streamTest') || 'Speed Test', key: 'stream-test', path: getNavigationPath('/stream-test'), highlighted: true },
     { name: t('nav.deals') || 'Deals', key: 'deals', path: getNavigationPath('/deals'), highlighted: true },
+    { name: t('nav.vpnPlans') || 'VPN Plans', key: 'vpn-plans', path: getNavigationPath('/vpn-plans') },
     { name: t('nav.quiz') || 'VPN Finder', key: 'quiz', path: getNavigationPath('/quiz') },
     { name: t('nav.faq'), key: 'faq', path: getNavigationPath('/faq') },
     { name: t('nav.blog'), key: 'blog', path: getNavigationPath('/blog') },
@@ -47,6 +48,7 @@ const Header: React.FC = () => {
     if (currentPath === '/deals') return 'deals';
     if (currentPath === '/quiz') return 'quiz';
     if (currentPath === '/stream-test') return 'stream-test';
+    if (currentPath === '/vpn-plans') return 'vpn-plans';
     return 'vpns';
   };
 

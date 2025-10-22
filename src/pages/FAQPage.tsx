@@ -1,234 +1,229 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp, HelpCircle, Search } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { insertFAQSchema } from '../utils/faqSchema';
-import { faqTranslations } from '../utils/faqTranslations';
-import { japaneseVPNFAQs } from '../data/japaneseVPNFAQs';
-
-// Define the structure for Korean FAQs
-interface KoreanFAQ {
-  id: number;
-  question: string;
-  answer: string;
-  category: string;
-}
-
-// Load Korean FAQs dynamically
-const loadKoreanFAQs = (): KoreanFAQ[] => {
-  // In a real implementation, this would load from the many Korean FAQ files
-  // For now, we'll simulate with a few sample FAQs
-  try {
-    // This is a simplified version - in reality, you would import or fetch
-    // the actual Korean FAQ data from the numerous korean-vpn-faq-*.json files
-    return [
-      {
-        id: 1,
-        question: "VPN이란 무엇인가요?",
-        answer: "VPN(가상 사설망)은 인터넷에서 귀하의 위치와 신원을 숨기는 서비스입니다. 귀하의 인터넷 트래픽을 암호화하고 귀하의 실제 IP 주소를 다른 IP 주소로 바꿉니다.",
-        category: "기초"
-      },
-      {
-        id: 2,
-        question: "VPN을 사용하는 것이 합법적인가요?",
-        answer: "대한민국을 포함한 대부분의 국가에서 VPN 사용은 합법입니다. 그러나 VPN을 사용하여 불법적인 활동을 하는 것은 여전히 불법입니다.",
-        category: "법률"
-      },
-      {
-        id: 3,
-        question: "VPN이 인터넷 속도를 느리게 하나요?",
-        answer: "VPN은 암호화 및 서버를 통한 라우팅으로 인해 인터넷 속도를 약간 느리게 할 수 있습니다. 그러나 고품질 VPN은 이러한 영향을 최소화합니다.",
-        category: "성능"
-      },
-      {
-        id: 4,
-        question: "VPN으로 Netflix를 시청할 수 있나요?",
-        answer: "예! VPN을 사용하면 Netflix, Hulu 및 기타 플랫폼의 지리적 제한 콘텐츠에 액세스할 수 있습니다.",
-        category: "스트리밍"
-      },
-      {
-        id: 5,
-        question: "무료 VPN이 안전한가요?",
-        answer: "무료 VPN은 종종 프라이버시를 침해합니다. 프리미엄 VPN은 더 나은 보안과 더 빠른 속도를 제공합니다.",
-        category: "가격"
-      }
-    ];
-  } catch (error) {
-    console.error('Error loading Korean FAQs:', error);
-    return [];
-  }
-};
+import { FAQItem } from '../data/faqData';
+import { getLocalizedFAQs } from '../utils/contentLocalization';
+import { generateBidirectionalLink } from '../utils/contentLinkingUtils';
+import Breadcrumb from '../components/Breadcrumb';
 
 const FAQPage: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [faqs, setFaqs] = useState<FAQItem[]>([]);
+  const [filteredFaqs, setFilteredFaqs] = useState<FAQItem[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [openFaqId, setOpenFaqId] = useState<number | null>(null);
+  
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const faqsPerPage = 50; // Show 50 FAQs per page
 
-  // Get FAQs for current language with fallback to English
-  const faqs = useMemo(() => {
-    let currentFAQs: any[] = [];
+  useEffect(() => {
+    const localizedFAQs = getLocalizedFAQs(currentLanguage.code);
+    setFaqs(localizedFAQs);
+    setFilteredFaqs(localizedFAQs);
+    setCurrentPage(1); // Reset to first page when language changes
+  }, [currentLanguage]);
+
+  useEffect(() => {
+    let result = faqs;
     
-    // Language-specific FAQ handling
-    if (currentLanguage.code === 'ko') {
-      // For Korean, load Korean-specific FAQs
-      currentFAQs = loadKoreanFAQs();
-    } else if (currentLanguage.code === 'ja') {
-      // For Japanese, use Japanese-specific FAQs
-      currentFAQs = japaneseVPNFAQs.slice(0, 20); // First 20 FAQs
-    } else {
-      // For other languages, use the standard FAQ translations
-      currentFAQs = faqTranslations[currentLanguage.code] || faqTranslations['en'];
-    }
-    
-    // Filter by search term if provided
     if (searchTerm) {
-      const term = searchTerm.toLowerCase();
-      return currentFAQs.filter(faq => 
-        faq.question.toLowerCase().includes(term) || 
-        faq.answer.toLowerCase().includes(term) ||
-        (faq.category && faq.category.toLowerCase().includes(term))
+      result = result.filter(faq => 
+        faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
     
-    return currentFAQs;
-  }, [currentLanguage, searchTerm]);
-
-  // Insert FAQ Schema on component mount and when language changes
-  useEffect(() => {
-    const faqSchemaData = faqs.map(faq => ({
-      question: faq.question,
-      answer: faq.answer
-    }));
+    if (selectedCategory !== 'all') {
+      result = result.filter(faq => faq.category === selectedCategory);
+    }
     
-    insertFAQSchema(faqSchemaData);
-  }, [currentLanguage, faqs]);
+    setFilteredFaqs(result);
+    setCurrentPage(1); // Reset to first page when filters change
+  }, [searchTerm, selectedCategory, faqs]);
 
-  const toggleItem = (id: number) => {
-    setOpenItems(prev =>
-      prev.includes(id)
-        ? prev.filter(item => item !== id)
-        : [...prev, id]
-    );
+  const toggleFaq = (id: number) => {
+    setOpenFaqId(openFaqId === id ? null : id);
+  };
+
+  const categories = ['all', ...Array.from(new Set(faqs.map(faq => faq.category)))];
+
+  // Pagination logic
+  const indexOfLastFAQ = currentPage * faqsPerPage;
+  const indexOfFirstFAQ = indexOfLastFAQ - faqsPerPage;
+  const currentFAQs = filteredFaqs.slice(indexOfFirstFAQ, indexOfLastFAQ);
+  const totalPages = Math.ceil(filteredFaqs.length / faqsPerPage);
+
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+    // Scroll to top of FAQ list when changing pages
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <>
-      <Helmet>
-        <title>{`${t('faq.title')} | ${t('brand.name')} - ${currentLanguage.name}`}</title>
-        <meta name="description" content={t('faq.subtitle')} />
-        <meta name="keywords" content={`VPN FAQ, ${t('brand.name')}, VPN questions, VPN help, VPN guide, ${currentLanguage.name}`} />
-        <link rel="canonical" href={`https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}faq`} />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={`${t('faq.title')} | ${t('brand.name')}`} />
-        <meta property="og:description" content={t('faq.subtitle')} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}faq`} />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={`${t('faq.title')} | ${t('brand.name')}`} />
-        <meta name="twitter:description" content={t('faq.subtitle')} />
-      </Helmet>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <Breadcrumb 
+        items={[
+          { label: t('navigation.home'), url: `/${currentLanguage.code}` },
+          { label: t('navigation.faq'), url: `/${currentLanguage.code}/faq` }
+        ]} 
+      />
       
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16 px-4 rounded-2xl mb-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <HelpCircle className="w-16 h-16 mx-auto mb-6 text-blue-200" />
-          <h1 className="text-4xl font-bold mb-4">
-            {t('faq.title')}
-          </h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            {t('faq.subtitle')}
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('faq.title')}</h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          {t('faq.subtitle')}
+        </p>
+        {filteredFaqs.length > 0 && (
+          <p className="text-gray-500 mt-2">
+            {t('faq.showingResults', { 
+              count: currentFAQs.length, 
+              total: filteredFaqs.length 
+            })}
           </p>
-          
-          {/* Search Bar */}
-          <div className="mt-8 max-w-2xl mx-auto relative">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <Search className="h-5 w-5 text-gray-400" />
-            </div>
+        )}
+      </div>
+
+      {/* Search and Filter */}
+      <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
             <input
               type="text"
-              placeholder={t('faq.search')}
-              className="block w-full pl-10 pr-3 py-3 border border-transparent rounded-lg leading-5 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-white"
+              placeholder={t('faq.searchPlaceholder')}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          
-          {/* Hero Image */}
-          <img 
-            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-            alt="VPN FAQ Help Center" 
-            className="w-full max-w-2xl mx-auto mt-8 rounded-xl shadow-2xl"
-          />
+          <div>
+            <select
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+            >
+              {categories.map(category => (
+                <option key={category} value={category}>
+                  {category === 'all' ? t('faq.allCategories') : category}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
 
-      {/* FAQ Items */}
+      {/* FAQ List */}
       <div className="space-y-4">
-        {faqs.map((faq) => (
-          <div
-            key={faq.id}
-            className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300"
-          >
+        {currentFAQs.map((faq) => (
+          <div key={faq.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
             <button
-              onClick={() => toggleItem(faq.id)}
-              className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300"
+              className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+              onClick={() => toggleFaq(faq.id)}
             >
-              <div className="flex-1 pr-4">
-                <h3 className="text-lg font-bold text-gray-900 mb-2 leading-snug">{faq.question}</h3>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 border border-blue-200">
-                  {faq.category || 'General'}
-                </span>
-              </div>
-              <div className="flex-shrink-0 ml-4">
-                {openItems.includes(faq.id) ? (
-                  <ChevronUp className="h-6 w-6 text-blue-600" />
-                ) : (
-                  <ChevronDown className="h-6 w-6 text-gray-400" />
-                )}
-              </div>
+              <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
+              <svg
+                className={`h-5 w-5 text-gray-500 transform transition-transform ${
+                  openFaqId === faq.id ? 'rotate-180' : ''
+                }`}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
             </button>
             
-            {openItems.includes(faq.id) && (
-              <div className="px-6 pb-6 bg-gradient-to-b from-transparent to-gray-50">
-                <div className="border-t-2 border-gray-100 pt-5">
-                  <p className="text-gray-700 leading-relaxed text-base">{faq.answer}</p>
-                </div>
+            {openFaqId === faq.id && (
+              <div className="px-6 pb-6 pt-2 border-t border-gray-200">
+                <div 
+                  className="prose max-w-none text-gray-600"
+                  dangerouslySetInnerHTML={{ __html: faq.answer }} 
+                />
+                {/* Add bidirectional link to related blog content */}
+                <div 
+                  className="mt-4"
+                  dangerouslySetInnerHTML={{ 
+                    __html: generateBidirectionalLink('vpn-guide', currentLanguage.code) 
+                  }} 
+                />
               </div>
             )}
           </div>
         ))}
       </div>
 
-      {faqs.length === 0 && (
-        <div className="text-center py-12">
-          <HelpCircle className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-          <p className="text-gray-500 text-lg">{t('noFaqsFound')}</p>
-          <p className="text-gray-400 text-sm mt-2">{t('adjustSearch')}</p>
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex justify-center mt-8">
+          <nav className="flex items-center space-x-2">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`px-4 py-2 rounded-md ${
+                currentPage === 1 
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+              }`}
+            >
+              {t('pagination.previous')}
+            </button>
+            
+            {/* Page numbers */}
+            {[...Array(totalPages)].map((_, index) => {
+              const pageNumber = index + 1;
+              // Only show first, last, current, and nearby pages
+              if (
+                pageNumber === 1 ||
+                pageNumber === totalPages ||
+                (pageNumber >= currentPage - 2 && pageNumber <= currentPage + 2)
+              ) {
+                return (
+                  <button
+                    key={pageNumber}
+                    onClick={() => handlePageChange(pageNumber)}
+                    className={`px-4 py-2 rounded-md ${
+                      currentPage === pageNumber
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                    }`}
+                  >
+                    {pageNumber}
+                  </button>
+                );
+              } else if (
+                pageNumber === currentPage - 3 ||
+                pageNumber === currentPage + 3
+              ) {
+                return (
+                  <span key={pageNumber} className="px-2 py-2 text-gray-400">
+                    ...
+                  </span>
+                );
+              }
+              return null;
+            })}
+            
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`px-4 py-2 rounded-md ${
+                currentPage === totalPages 
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+              }`}
+            >
+              {t('pagination.next')}
+            </button>
+          </nav>
         </div>
       )}
 
-      {/* Results count */}
-      <div className="mt-8 text-center text-sm text-gray-500">
-        {t('showingResults').replace('{count}', faqs.length.toString()).replace('{total}', faqs.length.toString())}
-      </div>
-
-      {/* Contact CTA */}
-      <div className="mt-12 bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl p-8 text-center text-white shadow-2xl">
-        <HelpCircle className="w-12 h-12 mx-auto mb-4 text-blue-100" />
-        <h2 className="text-2xl font-bold mb-4">{t('stillHaveQuestions')}</h2>
-        <p className="text-blue-100 mb-6 max-w-2xl mx-auto text-lg">
-          {t('cantFindAnswer')}
-        </p>
-        <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
-          {t('contactExperts')}
-        </button>
-      </div>
+      {filteredFaqs.length === 0 && (
+        <div className="text-center py-12">
+          <p className="text-gray-500">{t('faq.noResults')}</p>
+        </div>
+      )}
     </div>
-    </>
   );
 };
 

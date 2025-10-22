@@ -4,30 +4,8 @@ import { Link, useParams } from 'react-router-dom';
 import { Calendar, Clock, User, Tag, TrendingUp, Search } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { blogPosts } from '../data/blogData';
-import { koreanBlogsData } from '../data/koreanBlogsContent';
-import { japaneseBlogsData } from '../data/japaneseBlogsContent';
-
-// Define the structure for Korean blog posts
-interface KoreanBlogPost {
-  id: number;
-  slug: string;
-  title: string;
-  excerpt: string;
-  content: string;
-}
-
-// Define the structure for Japanese blog posts
-interface JapaneseBlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  tags: string[];
-  publishedAt: string;
-  readTime: string;
-  author: string;
-  content: string;
-}
+import { loadLocalizedBlogPosts } from '../utils/contentLocalization';
+import { generateResponsiveImageSet } from '../utils/autoImageUtils';
 
 const BlogPage: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
@@ -42,123 +20,9 @@ const BlogPage: React.FC = () => {
   };
 
   // Get localized blog posts with language-specific filtering
+  // ONLY show content in the selected language for 100% localization
   const localizedPosts = useMemo(() => {
-    try {
-      let filteredPosts: any[] = [];
-      
-      // Language-specific content handling
-      if (currentLanguage.code === 'ko') {
-        // For Korean, use Korean-specific blog data
-        filteredPosts = koreanBlogsData.map((post: KoreanBlogPost) => ({
-          id: post.id,
-          slug: post.slug,
-          title: post.title,
-          excerpt: post.excerpt,
-          author: 'VPN 전문가 팀',
-          date: '2025-02-09',
-          readTime: '8 min read',
-          category: 'VPN Guides',
-          tags: ['VPN', 'Korean', 'Guide'],
-          image: 'https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg?auto=compress&cs=tinysrgb&w=800',
-          featured: post.id <= 20 // First 10 posts as featured
-        }));
-      } else if (currentLanguage.code === 'ja') {
-        // For Japanese, use Japanese-specific blog data
-        const japanesePosts = Object.values(japaneseBlogsData);
-        filteredPosts = japanesePosts.map((post: any, index) => ({
-          id: index + 1,
-          slug: post.slug,
-          title: post.title,
-          excerpt: post.excerpt,
-          author: post.author,
-          date: post.publishedAt,
-          readTime: post.readTime,
-          category: post.category,
-          tags: post.tags,
-          image: 'https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg?auto=compress&cs=tinysrgb&w=800',
-          featured: index < 3 // First 3 posts as featured
-        }));
-      } else if (currentLanguage.code === 'de') {
-        // Show German-specific posts only when German is selected
-        filteredPosts = blogPosts.filter(post =>
-          post.slug.includes('deutschland') ||
-          post.slug.includes('ard-mediathek') ||
-          post.slug.includes('rtl-plus') ||
-          post.slug.includes('online-banking') ||
-          (post.title && (post.title.includes('Deutschland') ||
-          post.title.includes('ARD') ||
-          post.title.includes('RTL')))
-        );
-      } else {
-        // For other languages, use general blog posts but exclude language-specific ones
-        filteredPosts = blogPosts.filter(post =>
-          // Exclude Korean Archive posts
-          post.component !== 'KoreanBlogArchive' &&
-          // Exclude German posts
-          !post.slug.includes('deutschland') &&
-          !post.slug.includes('ard-mediathek') &&
-          !post.slug.includes('rtl-plus') &&
-          !post.slug.includes('online-banking') &&
-          // Exclude other Korean posts
-          !post.slug.includes('korea') &&
-          !post.slug.includes('wavve') &&
-          !post.slug.includes('tving') &&
-          !post.slug.includes('coupang-play') &&
-          !post.slug.includes('best-vpn-korea-2025') &&
-          !post.slug.includes('netflix-working-vpn-2025') &&
-          !post.slug.includes('free-vpn-honest-review-2025') &&
-          !post.slug.includes('fastest-vpn-2025-ranking') &&
-          !post.slug.includes('budget-vpn-2025-best-value') &&
-          !post.slug.includes('torrenting-p2p-2025') &&
-          !post.slug.includes('gaming-2025') &&
-          !post.slug.includes('windows-10-11-2025') &&
-          !post.slug.includes('mac-macos-2025') &&
-          !(post.title && (
-            post.title.includes('Deutschland') ||
-            post.title.includes('ARD') ||
-            post.title.includes('RTL') ||
-            post.title.includes('한국') ||
-            post.title.includes('넷플릭스') ||
-            post.title.includes('와브') ||
-            post.title.includes('티빙') ||
-            post.title.includes('쿠팡') ||
-            post.title.includes('2025년') ||
-            post.title.includes('최고의 VPN') ||
-            post.title.includes('무료 VPN') ||
-            post.title.includes('가장 빠른') ||
-            post.title.includes('가성비') ||
-            post.title.includes('토렌트') ||
-            post.title.includes('게이머') ||
-            post.title.includes('윈도우') ||
-            post.title.includes('맥북')
-          ))
-        );
-      }
-      
-      // Apply translations for non-Korean/Japanese content
-      if (currentLanguage.code !== 'ko' && currentLanguage.code !== 'ja') {
-        return filteredPosts.map(post => {
-          if (!post) return post;
-          
-          const translation = post.translations?.[currentLanguage.code];
-          if (translation) {
-            return {
-              ...post,
-              title: translation.title,
-              excerpt: translation.excerpt,
-              category: translation.category,
-              tags: translation.tags
-            };
-          }
-          return post;
-        });
-      }
-      
-      return filteredPosts;
-    } catch (error) {
-      console.error('Error processing localized posts:', error);
-      return [];
-    }
+    return loadLocalizedBlogPosts(currentLanguage.code, blogPosts);
   }, [currentLanguage.code]);
 
   const featuredPosts = localizedPosts.filter(post => post.featured);
@@ -242,8 +106,13 @@ const BlogPage: React.FC = () => {
                   <div className="relative">
                     <img
                       src={post.image}
+                      srcSet={generateResponsiveImageSet(post.image)}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={post.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="eager"
+                      decoding="async"
+                      fetchPriority="high"
                     />
                     <div className="absolute top-4 left-4">
                       <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-100 text-orange-800">
@@ -318,8 +187,12 @@ const BlogPage: React.FC = () => {
                   <div className="relative">
                     <img
                       src={post.image}
+                      srcSet={generateResponsiveImageSet(post.image)}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={post.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   

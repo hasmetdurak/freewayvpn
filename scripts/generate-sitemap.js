@@ -499,6 +499,12 @@ function main() {
     fs.writeFileSync(path.join(OUTPUT_DIR, 'sitemap.xml'), sitemapIndex);
     console.log('✅ sitemap.xml (index) created');
 
+    // Copy German sitemap to output directory
+    console.log('📝 Copying German sitemap...');
+    const germanSitemap = fs.readFileSync(path.join(OUTPUT_DIR, 'sitemap-de.xml'), 'utf8');
+    fs.writeFileSync(path.join(OUTPUT_DIR, 'sitemap-de.xml'), germanSitemap);
+    console.log('✅ sitemap-de.xml copied');
+
     console.log('\n🎉 All sitemaps generated successfully!');
     console.log(`📍 Location: ${OUTPUT_DIR}`);
     console.log(`📊 Total sitemaps: ${6 + LANGUAGES.length + ASIAN_LANGUAGES.length}`);

@@ -6,6 +6,14 @@ import { useLanguage } from '../contexts/LanguageContext';
 import AffiliateButton from '../components/AffiliateButton';
 import NaturalAffiliate from '../components/NaturalAffiliate';
 import LocalStreamingGuide from '../components/LocalStreamingGuide';
+import { insertCollectionPageSchema } from '../utils/reviewSchema';
+
+// Declare gtag for TypeScript
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
 
 const VPNsPage: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
@@ -88,8 +96,8 @@ const VPNsPage: React.FC = () => {
 
   const handleAffiliateClick = (vpn: VPN) => {
     // Track conversion for analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'affiliate_click', {
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('event', 'affiliate_click', {
         'vpn_name': vpn.name,
         'vpn_price': vpn.price,
         'is_top_pick': vpn.isTopPick,
@@ -97,6 +105,11 @@ const VPNsPage: React.FC = () => {
       });
     }
   };
+
+  // Insert CollectionPage schema for SEO
+  React.useEffect(() => {
+    insertCollectionPageSchema(localizedVPNs);
+  }, [localizedVPNs]);
 
   return (
     <>
@@ -119,43 +132,6 @@ const VPNsPage: React.FC = () => {
         <meta name="twitter:title" content={`${t('compareVpns')} | ${t('brand.name')}`} />
         <meta name="twitter:description" content={t('findPerfectVpn')} />
         <meta name="twitter:image" content="https://bestvpn.digital/twitter-image.jpg" />
-        
-        {/* Schema.org */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": t('compareVpns'),
-            "description": t('findPerfectVpn'),
-            "url": `https://bestvpn.digital/${currentLanguage.code === 'en' ? '' : currentLanguage.code + '/'}vpns`,
-            "inLanguage": currentLanguage.code,
-            "numberOfItems": filteredAndSortedVPNs.length,
-            "mainEntity": {
-              "@type": "ItemList",
-              "itemListElement": filteredAndSortedVPNs.slice(0, 10).map((vpn, index) => ({
-                "@type": "ListItem",
-                "position": index + 1,
-                "item": {
-                  "@type": "SoftwareApplication",
-                  "name": vpn.name,
-                  "applicationCategory": "SecurityApplication",
-                  "operatingSystem": "Windows, MacOS, Linux, iOS, Android",
-                  "offers": {
-                    "@type": "Offer",
-                    "price": vpn.price.toString(),
-                    "priceCurrency": "USD"
-                  },
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": vpn.rating.toString(),
-                    "bestRating": "10",
-                    "ratingCount": "1000"
-                  }
-                }
-              }))
-            }
-          })}
-        </script>
       </Helmet>
       
       <div className="responsive-container py-4 sm:py-6 lg:py-8">

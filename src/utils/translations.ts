@@ -16,12 +16,17 @@ export const faqTranslations: AllTranslations = {
     'faq.searchPlaceholder': 'Search FAQs...',
     'faq.allCategories': 'All Categories',
     'faq.noFaqsFound': 'No FAQs found',
+    'faq.noResults': 'No FAQs found',
     'faq.adjustSearch': 'Try adjusting your search terms or category filter.',
     'faq.showingResults': 'Showing {count} of {total} results',
     'faq.stillHaveQuestions': 'Still Have Questions?',
     'faq.cantFindAnswer': "Can't find the answer you're looking for? Our VPN experts are here to help you choose the perfect solution.",
     'faq.contactExperts': 'Contact Our Experts',
     'faq.relatedGuides': 'Related Guides',
+    
+    // Pagination
+    'pagination.previous': 'Previous',
+    'pagination.next': 'Next',
     
     // Language Selector
     'selectLanguage': 'Select Language',
@@ -1050,16 +1055,21 @@ export const faqTranslations: AllTranslations = {
   de: {
     // FAQ Page UI
     'faq.title': 'Häufig gestellte Fragen',
-    'faq.subtitle': 'Finden Sie Antworten auf die häufigsten Fragen zu VPNs, Datenschutz und Online-Sicherheit.',
-    'faq.searchPlaceholder': 'FAQ durchsuchen...',
+    'faq.subtitle': 'Finden Sie Antworten auf die häufigsten Fragen zu VPNs, Datenschutz und Onlinesicherheit.',
+    'faq.searchPlaceholder': 'FAQs durchsuchen...',
     'faq.allCategories': 'Alle Kategorien',
-    'faq.noFaqsFound': 'Keine FAQ gefunden',
+    'faq.noFaqsFound': 'Keine FAQs gefunden',
+    'faq.noResults': 'Keine FAQs gefunden',
     'faq.adjustSearch': 'Versuchen Sie, Ihre Suchbegriffe oder Kategoriefilter anzupassen.',
     'faq.showingResults': 'Zeige {count} von {total} Ergebnissen',
-    'faq.stillHaveQuestions': 'Haben Sie noch Fragen?',
-    'faq.cantFindAnswer': "Können Sie die gesuchte Antwort nicht finden? Unsere VPN-Experten helfen Ihnen gerne bei der Auswahl der perfekten Lösung.",
+    'faq.stillHaveQuestions': 'Noch Fragen?',
+    'faq.cantFindAnswer': "Sie finden nicht die Antwort, die Sie suchen? Unsere VPN-Experten helfen Ihnen bei der Auswahl der perfekten Lösung.",
     'faq.contactExperts': 'Kontaktieren Sie unsere Experten',
-    'faq.relatedGuides': 'Verwandte Anleitungen',
+    'faq.relatedGuides': 'Verwandte Leitfäden:',
+    
+    // Pagination
+    'pagination.previous': 'Zurück',
+    'pagination.next': 'Weiter',
     
     // Language Selector
     'selectLanguage': 'Sprache wählen',
@@ -1410,6 +1420,7 @@ export const faqTranslations: AllTranslations = {
     'faq.searchPlaceholder': 'FAQを検索...',
     'faq.allCategories': 'すべてのカテゴリ',
     'faq.noFaqsFound': 'FAQが見つかりません',
+    'faq.noResults': 'FAQが見つかりません',
     'faq.adjustSearch': '検索用語やカテゴリフィルターを調整してみてください。',
     'faq.showingResults': '{total}件中{count}件を表示',
     'faq.stillHaveQuestions': 'まだ質問がありますか？',
@@ -1417,11 +1428,18 @@ export const faqTranslations: AllTranslations = {
     'faq.contactExperts': 'エキスパートに連絡',
     'faq.relatedGuides': '関連ガイド：',
     
+    // Pagination
+    'pagination.previous': '前へ',
+    'pagination.next': '次へ',
+    
     // FAQ Questions 99-117
     'faq.question99': 'WireGuardとは何ですか？',
     'faq.answer99': 'WireGuardは最新のVPNプロトコルで、OpenVPNよりも高速で強力な暗号化を提供します。現在、ほとんどのトップVPNがサポートしています（例：NordVPNのNordLynx）。',
+    'faq.category.comparison': '比較',
+    
     'faq.question100': 'VPNが機能しているかどうかを確認するには？',
-    'faq.answer100': '接続前後にipleak.netにアクセスしてください。IPとDNSが変更されていれば機能しています。ブラウザでWebRTCリークも確認してください。',
+    'faq.answer100': '接続前後でipleak.netをチェックしてください。IPとDNSが変更されていれば、VPNが機能しています。',
+    'faq.category.testing': 'テスト',
     'faq.question101': 'ゲームにVPNを使用できますか？',
     'faq.answer101': 'はい！VPNはDDoS攻撃を軽減し、IP禁止を回避し、地域制限されたゲームへの早期アクセスを可能にします。NordVPNやSurfsharkなど、低遅延サーバーを持つVPNを選択してください。',
     'faq.question102': '難読化とは何ですか？',
@@ -1558,12 +1576,17 @@ export const faqTranslations: AllTranslations = {
     'faq.searchPlaceholder': 'FAQ 검색...',
     'faq.allCategories': '모든 카테고리',
     'faq.noFaqsFound': 'FAQ를 찾을 수 없습니다',
+    'faq.noResults': 'FAQ를 찾을 수 없습니다',
     'faq.adjustSearch': '검색어나 카테고리 필터를 조정해 보세요.',
     'faq.showingResults': '{total}개 중 {count}개 결과 표시',
     'faq.stillHaveQuestions': '아직 질문이 있으신가요?',
     'faq.cantFindAnswer': "찾고 있는 답변을 찾을 수 없나요? VPN 전문가들이 완벽한 솔루션 선택을 도와드립니다.",
     'faq.contactExperts': '전문가에게 문의',
     'faq.relatedGuides': '관련 가이드:',
+    
+    // Pagination
+    'pagination.previous': '이전',
+    'pagination.next': '다음',
     
     // FAQ Questions 99-117
     'faq.question99': 'WireGuard란 무엇인가요?',
@@ -2374,16 +2397,21 @@ export const faqTranslations: AllTranslations = {
   pt: {
     // FAQ Page UI
     'faq.title': 'Perguntas Frequentes',
-    'faq.subtitle': 'Encontre respostas para as perguntas mais comuns sobre VPN, privacidade e segurança online.',
-    'faq.searchPlaceholder': 'Pesquisar FAQ...',
+    'faq.subtitle': 'Encontre respostas para as perguntas mais comuns sobre VPNs, privacidade e segurança online.',
+    'faq.searchPlaceholder': 'Pesquisar FAQs...',
     'faq.allCategories': 'Todas as Categorias',
-    'faq.noFaqsFound': 'Nenhum FAQ encontrado',
+    'faq.noFaqsFound': 'Nenhuma FAQ encontrada',
+    'faq.noResults': 'Nenhuma FAQ encontrada',
     'faq.adjustSearch': 'Tente ajustar seus termos de pesquisa ou filtro de categoria.',
     'faq.showingResults': 'Mostrando {count} de {total} resultados',
-    'faq.stillHaveQuestions': 'Ainda tem dúvidas?',
+    'faq.stillHaveQuestions': 'Ainda tem perguntas?',
     'faq.cantFindAnswer': "Não consegue encontrar a resposta que procura? Nossos especialistas em VPN estão aqui para ajudá-lo a escolher a solução perfeita.",
-    'faq.contactExperts': 'Entre em contato com nossos especialistas',
+    'faq.contactExperts': 'Contate nossos especialistas',
     'faq.relatedGuides': 'Guias relacionados:',
+    
+    // Pagination
+    'pagination.previous': 'Anterior',
+    'pagination.next': 'Próximo',
     
     // Brand
     'brand.name': 'BESTVPN.DIGITAL',
@@ -2486,16 +2514,21 @@ export const faqTranslations: AllTranslations = {
   es: {
     // FAQ Page UI
     'faq.title': 'Preguntas Frecuentes',
-    'faq.subtitle': 'Encuentra respuestas a las preguntas más comunes sobre VPN, privacidad y seguridad en línea.',
-    'faq.searchPlaceholder': 'Buscar en FAQ...',
+    'faq.subtitle': 'Encuentre respuestas a las preguntas más comunes sobre VPNs, privacidad y seguridad en línea.',
+    'faq.searchPlaceholder': 'Buscar FAQs...',
     'faq.allCategories': 'Todas las Categorías',
-    'faq.noFaqsFound': 'No se encontraron FAQ',
-    'faq.adjustSearch': 'Intenta ajustar tus términos de búsqueda o filtro de categoría.',
+    'faq.noFaqsFound': 'No se encontraron FAQs',
+    'faq.noResults': 'No se encontraron FAQs',
+    'faq.adjustSearch': 'Intente ajustar sus términos de búsqueda o filtro de categoría.',
     'faq.showingResults': 'Mostrando {count} de {total} resultados',
-    'faq.stillHaveQuestions': '¿Aún tienes preguntas?',
-    'faq.cantFindAnswer': "¿No puedes encontrar la respuesta que buscas? Nuestros expertos en VPN están aquí para ayudarte a elegir la solución perfecta.",
-    'faq.contactExperts': 'Contacta a nuestros expertos',
-    'faq.relatedGuides': 'Guías relacionadas',
+    'faq.stillHaveQuestions': '¿Todavía tiene preguntas?',
+    'faq.cantFindAnswer': "¿No encuentra la respuesta que busca? Nuestros expertos en VPN están aquí para ayudarle a elegir la solución perfecta.",
+    'faq.contactExperts': 'Contacte a nuestros expertos',
+    'faq.relatedGuides': 'Guías relacionadas:',
+    
+    // Pagination
+    'pagination.previous': 'Anterior',
+    'pagination.next': 'Siguiente',
     
     // Language Selector
     'selectLanguage': 'Seleccionar Idioma',
@@ -2881,17 +2914,22 @@ export const faqTranslations: AllTranslations = {
   },
   fr: {
     // FAQ Page UI
-    'faq.title': 'Questions fréquemment posées',
-    'faq.subtitle': 'Trouvez des réponses aux questions les plus courantes sur les VPN, la confidentialité et la sécurité en ligne.',
-    'faq.searchPlaceholder': 'Rechercher dans la FAQ...',
+    'faq.title': 'Foire Aux Questions',
+    'faq.subtitle': 'Trouvez des réponses aux questions les plus fréquentes sur les VPN, la confidentialité et la sécurité en ligne.',
+    'faq.searchPlaceholder': 'Rechercher dans les FAQ...',
     'faq.allCategories': 'Toutes les catégories',
     'faq.noFaqsFound': 'Aucune FAQ trouvée',
+    'faq.noResults': 'Aucune FAQ trouvée',
     'faq.adjustSearch': 'Essayez d\'ajuster vos termes de recherche ou votre filtre de catégorie.',
     'faq.showingResults': 'Affichage de {count} sur {total} résultats',
     'faq.stillHaveQuestions': 'Vous avez encore des questions ?',
     'faq.cantFindAnswer': "Vous ne trouvez pas la réponse que vous cherchez ? Nos experts VPN sont là pour vous aider à choisir la solution parfaite.",
     'faq.contactExperts': 'Contactez nos experts',
-    'faq.relatedGuides': 'Guides connexes',
+    'faq.relatedGuides': 'Guides associés :',
+    
+    // Pagination
+    'pagination.previous': 'Précédent',
+    'pagination.next': 'Suivant',
     
     // Language Selector
     'selectLanguage': 'Sélectionner la langue',
@@ -2913,7 +2951,6 @@ export const faqTranslations: AllTranslations = {
     'compareVpns': 'Comparer les VPN',
     'findPerfectVpn': 'Trouvez le VPN parfait pour vos besoins',
     'exclusiveDeals': 'Offres exclusives et réductions',
-    
     // Blog Page
     'blog.title': 'Blog VPN et Guides',
     'blog.subtitle': 'Dernières actualités VPN, avis et guides complets pour vous aider à rester en sécurité en ligne',

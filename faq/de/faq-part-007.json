@@ -1,7 +1,122 @@
-[
-  {"id":46,"question":"Was passiert wenn mein VPN-Anbieter gehackt wird?","answer":"Ein guter VPN-Anbieter mit echter No-Logs-Policy speichert keine Daten, die gestohlen werden könnten. Selbst wenn Hacker Server kompromittieren, finden sie keine Browsing-Historie, IP-Adressen oder Verbindungsprotokolle. Das ist der Kern einer Zero-Knowledge-Architektur. Ihre Zahlungsinformationen sind separat gespeichert und verschlüsselt. Die größte Gefahr wäre der Diebstahl von VPN-Zugangsdaten – deshalb ist Zwei-Faktor-Authentifizierung wichtig. Seriöse Anbieter nutzen RAM-only-Server, die bei jedem Neustart alle Daten löschen – es gibt nichts Persistentes zu stehlen. ExpressVPN wurde 2017 getestet, als türkische Behörden Server beschlagnahmten und nichts fanden. NordVPN hatte 2018 einen Sicherheitsvorfall, bei dem ein Rechenzentrum kompromittiert wurde, aber keine Nutzerdaten betroffen waren. Nach Vorfällen führen gute Anbieter unabhängige Audits durch. Profi-Tipp: Wählen Sie VPNs mit nachgewiesener No-Logs-Policy, aktivieren Sie 2FA, und ändern Sie Ihr Passwort regelmäßig.","category":"Sicherheit"},
-  {"id":47,"question":"Wie funktioniert VPN auf einem Raspberry Pi?","answer":"Ein Raspberry Pi ist perfekt als VPN-Gateway für Ihr gesamtes Heimnetzwerk. Sie können OpenVPN oder WireGuard direkt auf Raspbian/Raspberry Pi OS installieren. Für OpenVPN: Installieren Sie das openvpn-Paket, laden Sie Konfigurationsdateien von Ihrem VPN-Anbieter, und starten Sie den Dienst mit systemd. Für WireGuard: Installieren Sie wireguard, importieren Sie die Konfiguration, und aktivieren Sie die Schnittstelle. Alternativ nutzen Sie PiVPN, ein Skript das die Installation automatisiert. Sie können den Pi auch als VPN-Server einrichten, um von unterwegs sicher auf Ihr Heimnetzwerk zuzugreifen. Mit Pi-hole kombiniert wird Ihr Raspberry Pi zum ultimativen Netzwerk-Schutz: VPN für Verschlüsselung, Pi-hole für Werbeblocker. Der Vorteil: Alle Geräte im Netzwerk sind geschützt, ohne einzelne Apps. Der Nachteil: Der Pi wird zum Single Point of Failure. Profi-Tipp: Nutzen Sie einen Raspberry Pi 4 mit mindestens 2GB RAM für beste Performance, und konfigurieren Sie automatische Updates.","category":"DIY"},
-  {"id":48,"question":"Kann ich ein VPN nutzen um Zensur in autoritären Ländern zu umgehen?","answer":"Ja, VPNs sind ein wichtiges Werkzeug gegen Internetzensur, aber nicht alle funktionieren überall. China, Iran, Russland und andere Länder setzen Deep Packet Inspection ein, um VPN-Traffic zu erkennen und zu blockieren. Sie brauchen VPNs mit Obfuskation-Technologie, die VPN-Traffic als normalen HTTPS-Verkehr tarnen. ExpressVPN, Astrill und VyprVPN funktionieren oft in China, während viele andere blockiert sind. Laden Sie die VPN-App herunter, bevor Sie in ein zensiertes Land reisen – viele VPN-Websites sind dort blockiert. Nutzen Sie Shadowsocks oder V2Ray als Backup. In manchen Ländern ist VPN-Nutzung illegal oder riskant – informieren Sie sich über lokale Gesetze. Journalisten und Aktivisten sollten zusätzlich Tor nutzen. Wichtig: Kein VPN ist 100% zuverlässig gegen staatliche Zensur – haben Sie immer einen Backup-Plan. Profi-Tipp: Nutzen Sie mehrere VPN-Anbieter gleichzeitig, speichern Sie Konfigurationsdateien offline, und lernen Sie manuelle Einrichtung für Notfälle.","category":"Zensur"},
-  {"id":49,"question":"Was ist der Unterschied zwischen einem VPN und Smart DNS?","answer":"Smart DNS und VPN verfolgen ähnliche Ziele, funktionieren aber völlig unterschiedlich. Ein VPN verschlüsselt Ihren gesamten Traffic und leitet ihn durch einen Server um, was Ihre IP maskiert und Sicherheit bietet. Smart DNS ändert nur Ihre DNS-Anfragen, ohne Verschlüsselung oder IP-Maskierung – es täuscht Websites über Ihren Standort, bietet aber keinen Schutz. Der Vorteil von Smart DNS: Es ist schneller, da keine Verschlüsselung stattfindet, ideal für Streaming in 4K ohne Geschwindigkeitsverlust. Es funktioniert auf Geräten, die keine VPN-Apps unterstützen, wie älteren Smart-TVs oder Spielkonsolen. Der Nachteil: Kein Sicherheitsschutz, Ihr ISP sieht alles, und es funktioniert nicht in Netzwerken mit DNS-Hijacking. Smart DNS ist gut für reines Geo-Unblocking zu Hause, VPN für Sicherheit und Privatsphäre. Viele Premium-VPNs wie ExpressVPN bieten Smart DNS als Zusatzfunktion. Profi-Tipp: Nutzen Sie Smart DNS auf Ihrem Smart-TV für Netflix, und VPN auf Laptop und Smartphone für Sicherheit.","category":"Vergleich"},
-  {"id":50,"question":"Wie teste ich die Geschwindigkeit meines VPNs richtig?","answer":"Für aussagekräftige Geschwindigkeitstests folgen Sie dieser Methode: Testen Sie zuerst ohne VPN auf fast.com oder speedtest.net und notieren Sie Download, Upload und Ping. Verbinden Sie sich dann mit einem nahegelegenen VPN-Server und testen Sie erneut. Wiederholen Sie den Test dreimal und nehmen Sie den Durchschnitt, da Geschwindigkeiten schwanken. Testen Sie verschiedene Server-Standorte und Protokolle (WireGuard vs OpenVPN). Schließen Sie andere Programme und Geräte, die Bandbreite nutzen. Nutzen Sie eine Ethernet-Verbindung statt WLAN für genauere Ergebnisse. Beachten Sie: Die Tageszeit beeinflusst Geschwindigkeiten – Server sind abends ausgelasteter. Ein gutes VPN sollte maximal 20% Geschwindigkeitsverlust haben. Wenn Ihr VPN deutlich langsamer ist, probieren Sie andere Server oder Protokolle. Manche ISPs drosseln Speedtest-Traffic, nutzen Sie daher auch fast.com (gehört Netflix). Profi-Tipp: Dokumentieren Sie Ihre Tests in einer Tabelle, um Muster zu erkennen, und testen Sie zu verschiedenen Tageszeiten.","category":"Performance"}
+﻿[
+    {
+        "id":  121,
+        "question":  "Wie oft sollte ich mein VPN-Passwort Ã¤ndern?",
+        "answer":  "Mindestens alle 90 Tage â€“ oder sofort nach Verdacht auf Kompromittierung. Doch Passwort allein reicht 2026 nicht mehr. Aktivieren Sie zwingend Zwei-Faktor-Authentifizierung (2FA), idealerweise per Authenticator-App oder Hardware-SchlÃ¼ssel (YubiKey). Noch besser: Nutzen Sie Passkey-UnterstÃ¼tzung, falls Ihr Anbieter sie anbietet. Passkeys basieren auf FIDO2-Standard, nutzen biometrische Daten und sind phishingsicher. RegelmÃ¤ÃŸige PasswortÃ¤nderung ohne moderne Authentifizierung ist eine Illusion â€“ Angreifer stehlen heute Sessions, nicht PasswÃ¶rter.",
+        "category":  "Sicherheit"
+    },
+    {
+        "id":  122,
+        "question":  "Wie oft sollte ich meinen VPN-Server wechseln?",
+        "answer":  "Bei normaler Nutzung reicht einmal pro Sitzung. FÃ¼r maximale AnonymitÃ¤t: alle 15â€“30 Minuten. Moderne Apps bieten Auto-Rotate-Funktionen.",
+        "category":  "Nutzung"
+    },
+    {
+        "id":  123,
+        "question":  "Wie richte ich automatische VPN-Verbindung beim Systemstart ein?",
+        "answer":  "Die meisten VPN-Apps bieten eine Auto-Connect-Funktion in den Einstellungen. Bei NordVPN aktivieren Sie \u0027Automatisch verbinden\u0027 und wÃ¤hlen den bevorzugten Server. ExpressVPN hat \u0027Launch on startup\u0027 und \u0027Connect on launch\u0027. Surfshark bietet Ã¤hnliche Optionen. FÃ¼r Windows kÃ¶nnen Sie die VPN-App auch in den Autostart-Ordner legen oder Ã¼ber Task Scheduler konfigurieren. Unter macOS fÃ¼gen Sie die App zu den Login Items in den Systemeinstellungen hinzu. Linux-Nutzer kÃ¶nnen systemd-Services erstellen: Erstellen Sie eine Unit-Datei unter /etc/systemd/system/, aktivieren Sie sie mit systemctl enable. Wichtig: Kombinieren Sie Auto-Connect mit Kill Switch, damit Sie nie ungeschÃ¼tzt online sind, auch nicht fÃ¼r Sekunden beim Booten. Manche VPNs bieten \u0027Connect to fastest server\u0027 oder \u0027Connect to last used server\u0027. Profi-Tipp: Richten Sie verschiedene Profile ein â€“ eines fÃ¼r Arbeit (lokaler Server), eines fÃ¼r Streaming (US-Server), und wechseln Sie je nach Bedarf.",
+        "category":  "Konfiguration"
+    },
+    {
+        "id":  124,
+        "question":  "Wie richte ich ein VPN auf Linux ein?",
+        "answer":  "Linux-Nutzer haben mehrere Optionen fÃ¼r VPN-Einrichtung. Die meisten Premium-VPNs bieten native Linux-Apps fÃ¼r Ubuntu, Debian, Fedora und andere Distributionen. NordVPN und ExpressVPN haben grafische BenutzeroberflÃ¤chen, wÃ¤hrend andere nur Kommandozeilen-Tools anbieten. Installation Ã¼ber Terminal: Laden Sie das .deb oder .rpm Paket herunter, installieren Sie es mit dpkg oder rpm, dann nutzen Sie Befehle wie \u0027nordvpn connect\u0027 oder \u0027expressvpn connect\u0027. Alternativ kÃ¶nnen Sie OpenVPN manuell konfigurieren: Installieren Sie das openvpn-Paket, laden Sie Konfigurationsdateien von Ihrem Anbieter herunter, und verbinden Sie mit \u0027sudo openvpn --config dateiname.ovpn\u0027. FÃ¼r WireGuard installieren Sie wireguard-tools und importieren die Konfiguration. NetworkManager in GNOME und KDE unterstÃ¼tzt VPNs nativ â€“ Sie kÃ¶nnen Profile dort direkt hinzufÃ¼gen. Profi-Tipp: Erstellen Sie Shell-Aliase fÃ¼r hÃ¤ufige VPN-Befehle, und nutzen Sie systemd fÃ¼r automatischen VPN-Start beim Booten.",
+        "category":  "Linux"
+    },
+    {
+        "id":  125,
+        "question":  "Wie richte ich ein VPN auf meinem Router ein?",
+        "answer":  "Die Router-Installation ist etwas technischer, bietet aber enorme Vorteile: Alle GerÃ¤te in Ihrem Heimnetzwerk sind automatisch geschÃ¼tzt, ohne einzelne Apps installieren zu mÃ¼ssen. ZunÃ¤chst mÃ¼ssen Sie prÃ¼fen, ob Ihr Router VPN-fÃ¤hig ist â€“ die meisten modernen Router von Asus, Netgear oder TP-Link unterstÃ¼tzen VPNs. Alternativ kÃ¶nnen Sie einen vorkonfigurierten VPN-Router kaufen. Die Einrichtung erfolgt Ã¼ber die Router-Admin-OberflÃ¤che: Loggen Sie sich ein (meist Ã¼ber 192.168.1.1), navigieren Sie zu den VPN-Einstellungen, und geben Sie die Konfigurationsdaten Ihres VPN-Anbieters ein. Die meisten Premium-VPNs bieten detaillierte Anleitungen fÃ¼r verschiedene Router-Modelle. Nach der Einrichtung lÃ¤uft der gesamte Netzwerkverkehr durch das VPN â€“ Smart-TVs, Spielkonsolen, IoT-GerÃ¤te, alles. Der Nachteil: Sie kÃ¶nnen nicht einfach zwischen LÃ¤ndern wechseln, und die Geschwindigkeit kann leiden, wenn Ihr Router nicht leistungsstark genug ist. Profi-Tipp: Richten Sie einen zweiten Router als VPN-Gateway ein und lassen Sie Ihren Hauptrouter normal laufen â€“ so kÃ¶nnen Sie wÃ¤hlen, welche GerÃ¤te VPN nutzen.",
+        "category":  "Installation"
+    },
+    {
+        "id":  126,
+        "question":  "Wie richte ich ein VPN fÃ¼r mein gesamtes Heimnetzwerk ein?",
+        "answer":  "Die beste Methode ist VPN-Installation auf Ihrem Router. PrÃ¼fen Sie zuerst ob Ihr Router VPN-fÃ¤hig ist â€“ die meisten modernen Router von Asus, Netgear, Linksys unterstÃ¼tzen es. Loggen Sie sich in die Router-Admin-OberflÃ¤che ein (meist 192.168.1.1), navigieren Sie zu VPN-Einstellungen, und wÃ¤hlen Sie Ihren VPN-Typ (OpenVPN empfohlen). Laden Sie Konfigurationsdateien von Ihrem VPN-Anbieter herunter, importieren Sie sie in den Router, geben Sie Ihre Zugangsdaten ein, und verbinden Sie. Alle GerÃ¤te im Netzwerk nutzen nun automatisch das VPN. Vorteile: Schutz fÃ¼r alle GerÃ¤te einschlieÃŸlich Smart-TVs und IoT, keine Software-Installation nÃ¶tig, zÃ¤hlt als eine Verbindung zu Ihrem VPN-Account. Nachteile: Kann Router Ã¼berlasten, schwierig zwischen LÃ¤ndern zu wechseln, alle GerÃ¤te nutzen dasselbe VPN. Alternative: Kaufen Sie einen vorkonfigurierten VPN-Router oder flashen Sie DD-WRT/Tomato Firmware auf einen kompatiblen Router. Profi-Tipp: Nutzen Sie einen leistungsstarken Router mit Hardware-VerschlÃ¼sselung wie Asus RT-AX88U, und richten Sie Split-Tunneling ein fÃ¼r GerÃ¤te, die kein VPN brauchen.",
+        "category":  "Heimnetzwerk"
+    },
+    {
+        "id":  127,
+        "question":  "Wie schÃ¼tze ich mein VPN-Passwort und Account vor Hackern?",
+        "answer":  "VPN-Account-Sicherheit ist kritisch, da Hacker mit Zugriff Ihre Verbindung Ã¼berwachen kÃ¶nnten. Grundregeln: Nutzen Sie ein einzigartiges, starkes Passwort (mindestens 16 Zeichen, Buchstaben, Zahlen, Sonderzeichen) â€“ niemals dasselbe wie fÃ¼r andere Dienste. Verwenden Sie einen Passwort-Manager wie Bitwarden oder 1Password. Aktivieren Sie Zwei-Faktor-Authentifizierung (2FA) â€“ die meisten Premium-VPNs bieten das an. Nutzen Sie Authenticator-Apps (Google Authenticator, Authy) statt SMS, da SMS-2FA gehackt werden kann. Ã„ndern Sie Ihr VPN-Passwort alle 3-6 Monate. Melden Sie sich von ungenutzten GerÃ¤ten ab â€“ prÃ¼fen Sie aktive Sessions in Ihrem VPN-Account. Nutzen Sie niemals Ã¶ffentliche Computer fÃ¼r VPN-Login. Achten Sie auf Phishing-E-Mails, die vorgeben, von Ihrem VPN-Anbieter zu sein â€“ prÃ¼fen Sie immer die Absender-Adresse. Speichern Sie Notfall-Backup-Codes offline. Profi-Tipp: Nutzen Sie eine separate E-Mail-Adresse nur fÃ¼r Ihren VPN-Account, aktivieren Sie Login-Benachrichtigungen, und prÃ¼fen Sie regelmÃ¤ÃŸig Ihre Account-AktivitÃ¤t.",
+        "category":  "Sicherheit"
+    },
+    {
+        "id":  128,
+        "question":  "Wie schÃ¼tze ich meine Kinder online mit einem VPN?",
+        "answer":  "VPN ist ein wichtiger Teil der Kinder-Online-Sicherheit, aber nicht die einzige LÃ¶sung. Ein VPN schÃ¼tzt die Verbindung und PrivatsphÃ¤re Ihrer Kinder, verhindert ISP-Tracking, und schÃ¼tzt in Ã¶ffentlichen WLANs (Schule, Bibliothek). Installieren Sie VPN auf dem Router, sodass alle GerÃ¤te automatisch geschÃ¼tzt sind, einschlieÃŸlich Tablets und Smartphones der Kinder. Kombinieren Sie VPN mit Kindersicherungs-Software wie Qustodio oder Norton Family fÃ¼r Content-Filtering, Zeitlimits, und AktivitÃ¤ts-Monitoring. Manche VPNs wie Surfshark bieten integrierte Malware- und Phishing-Blocker. Wichtig: Sprechen Sie mit Ihren Kindern Ã¼ber Online-Sicherheit â€“ Technologie allein reicht nicht. ErklÃ¤ren Sie Gefahren, setzen Sie Regeln, und bleiben Sie involviert. VPN verhindert nicht, dass Kinder unangemessene Inhalte aktiv suchen oder mit Fremden chatten. Nutzen Sie Router-basierte Content-Filter zusÃ¤tzlich zum VPN. Profi-Tipp: Erstellen Sie separate Netzwerk-Profile fÃ¼r Kinder mit strengeren EinschrÃ¤nkungen, und nutzen Sie VPN mit DNS-basiertem Content-Filtering wie NextDNS.",
+        "category":  "Familie"
+    },
+    {
+        "id":  129,
+        "question":  "Wie schÃ¼tze ich meine Smart-Home-GerÃ¤te mit einem VPN?",
+        "answer":  "Smart-Home-GerÃ¤te wie Alexa, Google Home, smarte GlÃ¼hbirnen oder Thermostate sind notorisch unsicher und senden oft Daten unverschlÃ¼sselt. Die beste LÃ¶sung: Installieren Sie ein VPN auf Ihrem Router, sodass alle verbundenen GerÃ¤te automatisch geschÃ¼tzt sind. Das verschlÃ¼sselt den Traffic Ihrer Smart-Home-GerÃ¤te und verhindert, dass Ihr ISP oder Hacker sehen, was sie tun. Alternativ: Richten Sie ein separates VLAN (Virtual LAN) fÃ¼r IoT-GerÃ¤te ein, isoliert vom Hauptnetzwerk, und leiten Sie nur dieses VLAN durch das VPN. Beachten Sie: Manche Smart-Home-GerÃ¤te funktionieren nicht richtig mit VPN, da sie lokale Verbindungen oder Cloud-Services benÃ¶tigen. Nutzen Sie Split-Tunneling auf Router-Ebene, um problematische GerÃ¤te auszuschlieÃŸen. FÃ¼r maximale Sicherheit: Kaufen Sie nur GerÃ¤te von vertrauenswÃ¼rdigen Herstellern, halten Sie Firmware aktuell, und Ã¤ndern Sie Standard-PasswÃ¶rter. Profi-Tipp: Kombinieren Sie Router-VPN mit einem Netzwerk-Firewall wie pfSense fÃ¼r mehrschichtigen Schutz Ihrer Smart-Home-GerÃ¤te.",
+        "category":  "IoT"
+    },
+    {
+        "id":  130,
+        "question":  "Wie schÃ¼tze ich mich vor WebRTC-Lecks bei VPN-Nutzung?",
+        "answer":  "WebRTC (Web Real-Time Communication) ist eine Browser-Technologie fÃ¼r Video-Calls, die aber Ihre echte IP-Adresse preisgeben kann, selbst wenn ein VPN aktiv ist. Das passiert, weil WebRTC direkte Peer-to-Peer-Verbindungen aufbaut und dabei Ihre lokale IP nutzt. Um sich zu schÃ¼tzen: Deaktivieren Sie WebRTC in Ihren Browser-Einstellungen. In Firefox geben Sie about:config ein und setzen media.peerconnection.enabled auf false. In Chrome installieren Sie die Erweiterung WebRTC Leak Prevent oder uBlock Origin (hat WebRTC-Schutz integriert). Opera hat eine eingebaute Option unter Datenschutz. Manche VPNs wie NordVPN bieten Browser-Erweiterungen mit integriertem WebRTC-Schutz. Testen Sie Lecks auf browserleaks.com/webrtc. Beachten Sie: WebRTC komplett zu deaktivieren kann manche Websites wie Discord oder Google Meet beeintrÃ¤chtigen. Profi-Tipp: Nutzen Sie die VPN-Browser-Erweiterung zusÃ¤tzlich zur Desktop-App fÃ¼r doppelten Schutz, oder wechseln Sie zu Brave Browser, der WebRTC standardmÃ¤ÃŸig blockiert.",
+        "category":  "Sicherheit"
+    },
+    {
+        "id":  131,
+        "question":  "Wie schÃ¼tzt ein VPN mich vor ISP-Drosselung und Bandbreitenlimitierung?",
+        "answer":  "ISP-Drosselung ist ein hÃ¤ufiges Problem: Ihr Internetanbieter erkennt, dass Sie Streaming-Dienste oder Torrents nutzen, und reduziert absichtlich Ihre Geschwindigkeit. Das ist legal, aber frustrierend. Ein VPN verschlÃ¼sselt Ihren Datenverkehr, sodass Ihr ISP nicht sehen kann, welche Dienste Sie nutzen â€“ er sieht nur verschlÃ¼sselte Daten zu einem VPN-Server. Ohne diese Information kann er nicht gezielt drosseln. Viele Nutzer berichten von deutlich schnellerem Netflix oder YouTube mit aktivem VPN, weil die ISP-Drosselung umgangen wird. Das gilt besonders fÃ¼r Mobilfunkanbieter, die oft Video-Streaming auf 480p oder 720p begrenzen. Mit VPN lÃ¤uft es in voller QualitÃ¤t. Auch bei Datenlimits kann ein VPN helfen: Manche ISPs zÃ¤hlen bestimmten Traffic nicht zum Limit (Zero-Rating), aber mit VPN sehen sie nicht, was Sie machen, und kÃ¶nnen nicht unterscheiden. Beachten Sie: Das VPN selbst kann nicht mehr Bandbreite erzeugen â€“ wenn Ihre Leitung grundsÃ¤tzlich langsam ist, hilft auch ein VPN nicht. Profi-Tipp: Testen Sie Ihre Geschwindigkeit mit und ohne VPN auf fast.com, um ISP-Drosselung zu erkennen.",
+        "category":  "Performance"
+    },
+    {
+        "id":  132,
+        "question":  "Wie schÃ¼tzt ein VPN mich vor Phishing und Online-Betrug?",
+        "answer":  "Ein VPN bietet begrenzten Schutz gegen Phishing â€“ es ist kein Ersatz fÃ¼r gesunden Menschenverstand. VPNs mit integrierten Bedrohungsschutz-Funktionen wie NordVPN CyberSec oder Surfshark CleanWeb blockieren bekannte Phishing-Domains auf DNS-Ebene, bevor Sie sie erreichen. Wenn Sie versehentlich auf einen Phishing-Link klicken, verhindert das VPN den Zugriff. Allerdings schÃ¼tzt ein VPN nicht vor neuen, unbekannten Phishing-Seiten oder Social-Engineering-Angriffen. Die VerschlÃ¼sselung verhindert, dass Dritte Ihre eingegebenen Daten abfangen, aber wenn Sie freiwillig Ihr Passwort auf einer gefÃ¤lschten Website eingeben, hilft auch ein VPN nicht. FÃ¼r echten Phishing-Schutz brauchen Sie: Antivirus mit Web-Schutz, Browser-Erweiterungen wie Bitdefender TrafficLight, und vor allem Aufmerksamkeit â€“ prÃ¼fen Sie URLs, achten Sie auf HTTPS, und seien Sie skeptisch bei unerwarteten E-Mails. Profi-Tipp: Aktivieren Sie den Bedrohungsschutz Ihres VPNs, nutzen Sie einen Passwort-Manager mit Phishing-Schutz, und aktivieren Sie Zwei-Faktor-Authentifizierung Ã¼berall.",
+        "category":  "Sicherheit"
+    },
+    {
+        "id":  133,
+        "question":  "Wie schÃ¼tzt ein VPN vor KI-gestÃ¼tztem Tracking?",
+        "answer":  "KI-Tracker analysieren heute nicht nur Cookies, sondern auch Mausbewegungen, Tippverhalten und Netzwerklatenz. Ein modernes VPN 2026 blockiert diese Angriffsvektoren durch Traffic-Obfuscation, Randomized Packet Padding und Browser-Isolierung. Zudem maskiert es Timing-Informationen, die sonst RÃ¼ckschlÃ¼sse auf Nutzerverhalten zulassen. Hochwertige Anbieter integrieren zudem Anti-Fingerprinting-Module, die Browser-Konfigurationen standardisieren. So wird selbst KI-unterstÃ¼tztes Profiling wirkungslos â€“ denn ohne konsistente digitale Merkmale kann kein Profil erstellt werden.",
+        "category":  "Datenschutz"
+    },
+    {
+        "id":  134,
+        "question":  "Wie teste ich die Geschwindigkeit meines VPNs richtig?",
+        "answer":  "FÃ¼r aussagekrÃ¤ftige Geschwindigkeitstests folgen Sie dieser Methode: Testen Sie zuerst ohne VPN auf fast.com oder speedtest.net und notieren Sie Download, Upload und Ping. Verbinden Sie sich dann mit einem nahegelegenen VPN-Server und testen Sie erneut. Wiederholen Sie den Test dreimal und nehmen Sie den Durchschnitt, da Geschwindigkeiten schwanken. Testen Sie verschiedene Server-Standorte und Protokolle (WireGuard vs OpenVPN). SchlieÃŸen Sie andere Programme und GerÃ¤te, die Bandbreite nutzen. Nutzen Sie eine Ethernet-Verbindung statt WLAN fÃ¼r genauere Ergebnisse. Beachten Sie: Die Tageszeit beeinflusst Geschwindigkeiten â€“ Server sind abends ausgelasteter. Ein gutes VPN sollte maximal 20% Geschwindigkeitsverlust haben. Wenn Ihr VPN deutlich langsamer ist, probieren Sie andere Server oder Protokolle. Manche ISPs drosseln Speedtest-Traffic, nutzen Sie daher auch fast.com (gehÃ¶rt Netflix). Profi-Tipp: Dokumentieren Sie Ihre Tests in einer Tabelle, um Muster zu erkennen, und testen Sie zu verschiedenen Tageszeiten.",
+        "category":  "Performance"
+    },
+    {
+        "id":  135,
+        "question":  "Wie teste ich, ob mein VPN wirklich funktioniert?",
+        "answer":  "FÃ¼hren Sie IP-Leak-, DNS-Leak- und WebRTC-Leak-Tests auf ipleak.net oder dnsleaktest.com durch. PrÃ¼fen Sie zudem, ob Ihr IPv6 deaktiviert ist. SeriÃ¶se Anbieter bieten integrierte Leak-Checks.",
+        "category":  "Troubleshooting"
+    },
+    {
+        "id":  136,
+        "question":  "Wie verhindere ich DNS-Leaks zuverlÃ¤ssig?",
+        "answer":  "Ein DNS-Leak tritt auf, wenn Ihr GerÃ¤t DNS-Anfragen auÃŸerhalb des VPN-Tunnels sendet â€“ oft an Ihren ISP. Um dies zu verhindern, muss Ihr VPN DNS-Traffic zwingend Ã¼ber verschlÃ¼sselte KanÃ¤le leiten. 2026 nutzen Premium-Anbieter DNS-over-HTTPS (DoH) oder DNS-over-TLS (DoT) standardmÃ¤ÃŸig. Zudem blockieren sie alternative DNS-Resolver wie Google Public DNS (8.8.8.8). FÃ¼hren Sie regelmÃ¤ÃŸig DNS-Leak-Tests auf dnsleaktest.com durch. Wichtig: Deaktivieren Sie IPv6, sofern Ihr Anbieter es nicht sicher tunneln kann â€“ sonst umgeht der Traffic den Tunnel.",
+        "category":  "Sicherheit"
+    },
+    {
+        "id":  137,
+        "question":  "Wie verhindere ich WebRTC-Leaks zuverlÃ¤ssig?",
+        "answer":  "Deaktivieren Sie WebRTC im Browser â€“ oder nutzen Sie ein VPN mit integriertem WebRTC-Leak-Schutz. 2026 blockieren Premium-Anbieter WebRTC standardmÃ¤ÃŸig oder leiten es durch den VPN-Tunnel. Alternativ verwenden Sie Browser wie Brave oder Firefox mit strikten WebRTC-Einstellungen. RegelmÃ¤ÃŸige Leak-Tests auf browserleaks.com sind essenziell.",
+        "category":  "Sicherheit"
+    },
+    {
+        "id":  138,
+        "question":  "Wie verhindere ich, dass mein VPN meine Daten verkauft?",
+        "answer":  "WÃ¤hlen Sie ausschlieÃŸlich Anbieter mit juristisch bindender No-Logs-Politik, die durch unabhÃ¤ngige Dritte (z.â€¯B. PwC, Cure53) bestÃ¤tigt wurde. PrÃ¼fen Sie, ob der Anbieter Open-Source-Clients anbietet â€“ so kann die Community den Code auf HintertÃ¼ren prÃ¼fen. Zudem sollten Transparenzberichte vierteljÃ¤hrlich verÃ¶ffentlicht werden, inklusive Anzahl und Art staatlicher Anfragen. Vermeiden Sie Anbieter mit Sitz in den USA, UK oder Australien â€“ LÃ¤nder, die Teil der 14-Eyes-Allianz sind und rechtlich zur Datenweitergabe verpflichtet werden kÃ¶nnen. Bonus: Nutzen Sie Anbieter, die kryptobasierte Zahlungsoptionen anbieten, um Zahlungsdaten zu entkoppeln.",
+        "category":  "Datenschutz"
+    },
+    {
+        "id":  139,
+        "question":  "Wie viele GerÃ¤te kann ich gleichzeitig mit einem VPN-Account schÃ¼tzen?",
+        "answer":  "Die Anzahl gleichzeitiger Verbindungen variiert je nach Anbieter erheblich. Die meisten Premium-VPNs erlauben zwischen 5 und 10 gleichzeitige GerÃ¤teverbindungen pro Account. NordVPN bietet beispielsweise 6 parallele Verbindungen, ExpressVPN 5, wÃ¤hrend Surfshark mit unbegrenzten Verbindungen wirbt â€“ ideal fÃ¼r groÃŸe Familien oder kleine Unternehmen. Das bedeutet, Sie kÃ¶nnen Ihr Smartphone, Laptop, Tablet, Smart-TV und sogar Ihren Router gleichzeitig schÃ¼tzen. Ein cleverer Trick: Wenn Sie das VPN direkt auf Ihrem Router installieren, zÃ¤hlt das als eine Verbindung, schÃ¼tzt aber alle GerÃ¤te in Ihrem Heimnetzwerk. So umgehen Sie das GerÃ¤telimit elegant. FÃ¼r Familien lohnt sich oft ein Anbieter mit vielen Verbindungen oder unbegrenztem Zugang. Beachten Sie, dass mehr Verbindungen nicht unbedingt besser sind â€“ wichtiger ist die QualitÃ¤t und Geschwindigkeit jeder einzelnen Verbindung. Profi-Tipp: Nutzen Sie die Router-Installation fÃ¼r stationÃ¤re GerÃ¤te und sparen Sie mobile Slots fÃ¼r unterwegs.",
+        "category":  "Nutzung"
+    },
+    {
+        "id":  140,
+        "question":  "Wie viele GerÃ¤te kann ich mit einem VPN-Account schÃ¼tzen?",
+        "answer":  "2026 erlauben Premium-Anbieter 10â€“20 gleichzeitige Verbindungen â€“ genug fÃ¼r Familie und IoT. Business-PlÃ¤ne bieten unbegrenzte GerÃ¤te mit zentraler Verwaltung.",
+        "category":  "Nutzung"
+    }
 ]
