@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { FAQItem } from '../data/faqData';
-import { getLocalizedFAQs } from '../utils/contentLocalization';
+import { getAllFAQs } from '../utils/contentLocalization';
 import { generateBidirectionalLink } from '../utils/contentLinkingUtils';
 import Breadcrumb from '../components/Breadcrumb';
 
@@ -18,11 +18,12 @@ const FAQPage: React.FC = () => {
   const faqsPerPage = 50; // Show 50 FAQs per page
 
   useEffect(() => {
-    const localizedFAQs = getLocalizedFAQs(currentLanguage.code);
-    setFaqs(localizedFAQs);
-    setFilteredFaqs(localizedFAQs);
+    // Load ALL FAQs from all languages
+    const allFAQs = getAllFAQs();
+    setFaqs(allFAQs);
+    setFilteredFaqs(allFAQs);
     setCurrentPage(1); // Reset to first page when language changes
-  }, [currentLanguage]);
+  }, []);
 
   useEffect(() => {
     let result = faqs;
@@ -46,6 +47,7 @@ const FAQPage: React.FC = () => {
     setOpenFaqId(openFaqId === id ? null : id);
   };
 
+  // Get all unique categories from all FAQs
   const categories = ['all', ...Array.from(new Set(faqs.map(faq => faq.category)))];
 
   // Pagination logic
@@ -115,12 +117,20 @@ const FAQPage: React.FC = () => {
       {/* FAQ List */}
       <div className="space-y-4">
         {currentFAQs.map((faq) => (
-          <div key={faq.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div key={`${faq.id}-${faq.language || 'unknown'}`} className="bg-white rounded-xl shadow-lg overflow-hidden">
             <button
               className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
               onClick={() => toggleFaq(faq.id)}
             >
-              <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
+                {/* Display language indicator */}
+                {faq.language && (
+                  <span className="inline-block mt-1 px-2 py-1 text-xs bg-gray-100 rounded">
+                    {faq.language.toUpperCase()}
+                  </span>
+                )}
+              </div>
               <svg
                 className={`h-5 w-5 text-gray-500 transform transition-transform ${
                   openFaqId === faq.id ? 'rotate-180' : ''
@@ -141,11 +151,16 @@ const FAQPage: React.FC = () => {
                 />
                 {/* Add bidirectional link to related blog content */}
                 <div 
-                  className="mt-4"
-                  dangerouslySetInnerHTML={{ 
-                    __html: generateBidirectionalLink('vpn-guide', currentLanguage.code) 
-                  }} 
-                />
+                  className="mt-4 text-blue-600 hover:text-blue-800 cursor-pointer"
+                  onClick={() => {
+                    const link = generateBidirectionalLink(faq.question, currentLanguage.code);
+                    if (link) {
+                      window.open(link, '_blank');
+                    }
+                  }}
+                >
+                  {t('faq.relatedContent')}
+                </div>
               </div>
             )}
           </div>
@@ -154,7 +169,7 @@ const FAQPage: React.FC = () => {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex justify-center mt-8">
+        <div className="mt-12 flex justify-center">
           <nav className="flex items-center space-x-2">
             <button
               onClick={() => handlePageChange(currentPage - 1)}
@@ -168,10 +183,7 @@ const FAQPage: React.FC = () => {
               {t('pagination.previous')}
             </button>
             
-            {/* Page numbers */}
-            {[...Array(totalPages)].map((_, index) => {
-              const pageNumber = index + 1;
-              // Only show first, last, current, and nearby pages
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(pageNumber => {
               if (
                 pageNumber === 1 ||
                 pageNumber === totalPages ||

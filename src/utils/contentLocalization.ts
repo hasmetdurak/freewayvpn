@@ -12,6 +12,7 @@ interface LocalizedFAQ {
   question: string;
   answer: string;
   category: string;
+  language?: string;
 }
 
 interface LocalizedBlogPost {
@@ -26,6 +27,7 @@ interface LocalizedBlogPost {
   tags: string[];
   image: string;
   featured: boolean;
+  language?: string;
 }
 
 /**
@@ -35,6 +37,31 @@ interface LocalizedBlogPost {
  */
 export const getLocalizedFAQs = (languageCode: string): LocalizedFAQ[] => {
   return loadLocalizedFAQs(languageCode);
+};
+
+/**
+ * Load ALL FAQs from all languages
+ * @returns Array of all FAQs from all languages
+ */
+export const getAllFAQs = (): LocalizedFAQ[] => {
+  const allFAQs: LocalizedFAQ[] = [];
+  const supportedLanguages = ['en', 'ko', 'ja', 'de', 'fr', 'nl', 'nb'];
+  
+  supportedLanguages.forEach(lang => {
+    try {
+      const langFAQs = loadLocalizedFAQs(lang);
+      // Add language indicator to each FAQ
+      const faqsWithLanguage = langFAQs.map(faq => ({
+        ...faq,
+        language: lang
+      }));
+      allFAQs.push(...faqsWithLanguage);
+    } catch (error) {
+      console.warn(`Could not load FAQs for language: ${lang}`, error);
+    }
+  });
+  
+  return allFAQs;
 };
 
 /**
@@ -64,14 +91,68 @@ export const loadLocalizedFAQs = (languageCode: string): LocalizedFAQ[] => {
         // For English, load English FAQs
         return faqTranslations.en || [];
       
+      case 'fr':
+        // For French, load French FAQs if available
+        return faqTranslations.fr || [];
+      
+      case 'nl':
+        // For Dutch, load Dutch FAQs if available
+        return faqTranslations.nl || [];
+      
+      case 'nb':
+        // For Norwegian, load Norwegian FAQs if available
+        return faqTranslations.nb || [];
+      
       default:
-        // For other languages, load translated FAQs if available
-        return faqTranslations[languageCode] || [];
+        // For unsupported languages, return empty array
+        return [];
     }
   } catch (error) {
     console.error(`Error loading FAQs for language ${languageCode}:`, error);
     return [];
   }
+};
+
+/**
+ * Load ALL blog posts from all languages
+ * @param blogPosts The main blog posts data
+ * @returns Array of all blog posts from all languages
+ */
+export const getAllBlogPosts = (blogPosts: any[]): LocalizedBlogPost[] => {
+  const allPosts: LocalizedBlogPost[] = [];
+  const supportedLanguages = ['en', 'ko', 'ja', 'de', 'fr', 'nl', 'nb'];
+  
+  // Add English posts (base content)
+  const englishPosts = blogPosts.map((post, index) => ({
+    ...post,
+    id: index + 1,
+    language: 'en'
+  }));
+  allPosts.push(...englishPosts);
+  
+  // Load language-specific posts
+  supportedLanguages.forEach(langCode => {
+    if (langCode !== 'en') {
+      try {
+        const localizedPosts = loadLocalizedBlogPosts(langCode, blogPosts);
+        // Add language indicator to each post
+        const postsWithLanguage = localizedPosts.map(post => ({
+          ...post,
+          language: langCode
+        }));
+        allPosts.push(...postsWithLanguage);
+      } catch (error) {
+        console.warn(`Could not load blog posts for language: ${langCode}`, error);
+      }
+    }
+  });
+  
+  // Remove duplicates based on slug
+  const uniquePosts = Array.from(
+    new Map(allPosts.map(post => [post.slug, post])).values()
+  );
+  
+  return uniquePosts;
 };
 
 /**
@@ -103,7 +184,7 @@ export const loadLocalizedBlogPosts = (languageCode: string, blogPosts: any[]): 
       
       case 'ja':
         // For Japanese, use Japanese-specific blog data
-        const { japaneseBlogsData } = require('../data/japaneseBlogsContent.backup');
+        const { japaneseBlogsData } = require('../data/japaneseBlogsContent');
         const japanesePosts = Object.values(japaneseBlogsData);
         return japanesePosts.map((post: any, index: number) => ({
           id: index + 1,
@@ -117,7 +198,7 @@ export const loadLocalizedBlogPosts = (languageCode: string, blogPosts: any[]): 
           tags: post.tags,
           image: 'https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg?auto=compress&cs=tinysrgb&w=800',
           featured: index < 3
-        }));
+        })) || [];
       
       case 'de':
         // Show German-specific posts only when German is selected
@@ -131,34 +212,12 @@ export const loadLocalizedBlogPosts = (languageCode: string, blogPosts: any[]): 
             post.title.includes('ARD') ||
             post.title.includes('RTL')
           ))
-        );
+        ).map((post, index) => ({
+          ...post,
+          id: index + 1
+        }));
       
-      case 'tr':
-        // Show Turkish-specific posts only when Turkish is selected
-        try {
-          const { turkishBlogsData } = require('../data/turkishBlogsContent');
-          const turkishPosts = Object.values(turkishBlogsData);
-          return turkishPosts.map((post: any, index: number) => ({
-            id: index + 1,
-            slug: post.slug,
-            title: post.title,
-            excerpt: post.excerpt,
-            author: post.author,
-            date: post.publishedAt,
-            readTime: post.readTime,
-            category: post.category,
-            tags: post.tags,
-            image: 'https://images.pexels.com/photos/4009402/pexels-photo-4009402.jpeg?auto=compress&cs=tinysrgb&w=800',
-            featured: index < 3
-          })) || [];
-        } catch (error) {
-          console.error('Error loading Turkish blog posts:', error);
-          return [];
-        }
-      
-      case 'hi':
-        // Hindi content is not yet available
-        return [];
+      // Other languages will use the default translation handling
       
       case 'en':
         // For English, show only English-specific posts (exclude all language-specific content)
@@ -203,14 +262,17 @@ export const loadLocalizedBlogPosts = (languageCode: string, blogPosts: any[]): 
             post.title.includes('윈도우') ||
             post.title.includes('맥북')
           ))
-        );
+        ).map((post, index) => ({
+          ...post,
+          id: index + 1
+        }));
       
-      default:
-        // For other languages, show only content that has been translated to that language
+      case 'fr':
+        // For French, show only content that has been translated to French
         return blogPosts
-          .filter(post => post.translations?.[languageCode]) // Only posts with translations
+          .filter(post => post.translations?.fr) // Only posts with French translations
           .map(post => {
-            const translation = post.translations[languageCode];
+            const translation = post.translations.fr;
             return {
               ...post,
               title: translation.title,
@@ -219,6 +281,42 @@ export const loadLocalizedBlogPosts = (languageCode: string, blogPosts: any[]): 
               tags: translation.tags
             };
           });
+      
+      case 'nl':
+        // For Dutch, show only content that has been translated to Dutch
+        return blogPosts
+          .filter(post => post.translations?.nl) // Only posts with Dutch translations
+          .map(post => {
+            const translation = post.translations.nl;
+            return {
+              ...post,
+              title: translation.title,
+              excerpt: translation.excerpt,
+              category: translation.category,
+              tags: translation.tags
+            };
+          });
+      
+      case 'nb':
+        // For Norwegian, use Norwegian-specific blog data
+        const { norwegianBlogsData } = require('../data/norwegianBlogsContent');
+        return norwegianBlogsData.map((post: any) => ({
+          id: post.id,
+          slug: post.slug,
+          title: post.title,
+          excerpt: post.excerpt,
+          author: post.author,
+          date: post.date,
+          readTime: post.readTime,
+          category: post.category,
+          tags: post.tags,
+          image: post.image,
+          featured: post.featured
+        }));
+      
+      default:
+        // For unsupported languages, return empty array
+        return [];
     }
   } catch (error) {
     console.error(`Error loading blog posts for language ${languageCode}:`, error);
@@ -248,21 +346,9 @@ const loadKoreanFAQs = (): LocalizedFAQ[] => {
       },
       {
         id: 3,
-        question: "VPN이 인터넷 속도를 느리게 하나요?",
-        answer: "VPN은 암호화 및 서버를 통한 라우팅으로 인해 인터넷 속도를 약간 느리게 할 수 있습니다. 그러나 고품질 VPN은 이러한 영향을 최소화합니다.",
-        category: "성능"
-      },
-      {
-        id: 4,
-        question: "VPN으로 Netflix를 시청할 수 있나요?",
-        answer: "예! VPN을 사용하면 Netflix, Hulu 및 기타 플랫폼의 지리적 제한 콘텐츠에 액세스할 수 있습니다.",
-        category: "스트리밍"
-      },
-      {
-        id: 5,
-        question: "무료 VPN이 안전한가요?",
-        answer: "무료 VPN은 종종 프라이버시를 침해합니다. 프리미엄 VPN은 더 나은 보안과 더 빠른 속도를 제공합니다.",
-        category: "가격"
+        question: "VPN은 내 개인정보를 100% 보호할 수 있나요?",
+        answer: "VPN은 인터넷 트래픽을 암호화하고 IP 주소를 숨기지만, 100% 보호는 아닙니다. 추가 보안 조치(예: 암호 관리, 정기적인 소프트웨어 업데이트 등)를 함께 사용해야 합니다.",
+        category: "보안"
       }
     ];
   } catch (error) {
@@ -272,14 +358,13 @@ const loadKoreanFAQs = (): LocalizedFAQ[] => {
 };
 
 /**
- * Load German FAQs from multiple JSON files
+ * Load German FAQs from JSON files
  */
 const loadGermanFAQs = (): LocalizedFAQ[] => {
   try {
-    // Dynamically import all German FAQ JSON files
-    const germanFAQs: LocalizedFAQ[] = [];
+    let germanFAQs: any[] = [];
     
-    // Load all German FAQ parts
+    // Load German FAQ parts
     const faqPart1 = require('../../faq/de/faq-part-001.json');
     const faqPart2 = require('../../faq/de/faq-part-002.json');
     const faqPart3 = require('../../faq/de/faq-part-003.json');
@@ -317,11 +402,11 @@ export const filterContentBySearchTerm = (content: any[], searchTerm: string): a
   
   const term = searchTerm.toLowerCase();
   return content.filter(item => 
-    (item.question && item.question.toLowerCase().includes(term)) || 
-    (item.answer && item.answer.toLowerCase().includes(term)) ||
-    (item.title && item.title.toLowerCase().includes(term)) ||
-    (item.excerpt && item.excerpt.toLowerCase().includes(term)) ||
-    (item.category && item.category.toLowerCase().includes(term)) ||
-    (item.tags && Array.isArray(item.tags) && item.tags.some((tag: string) => tag.toLowerCase().includes(term)))
+    item.question?.toLowerCase().includes(term) || 
+    item.answer?.toLowerCase().includes(term) ||
+    item.title?.toLowerCase().includes(term) ||
+    item.excerpt?.toLowerCase().includes(term) ||
+    item.category?.toLowerCase().includes(term) ||
+    item.tags?.some((tag: string) => tag.toLowerCase().includes(term))
   );
 };

@@ -479,6 +479,12 @@ export const blogPosts: BlogPost[] = [
         excerpt: "12 क्षेत्रों में NordVPN और Surfshark की तुलना करने वाला पूर्ण Netflix लाइब्रेरी अनलॉक टेस्ट। अंतिम स्ट्रीमिंग VPN गाइड के लिए स्पीड टेस्ट, 4K स्ट्रीमिंग प्रदर्शन और प्लेटफॉर्म संगतता विश्लेषण।",
         category: "स्ट्रीमिंग",
         tags: ["Netflix", "NordVPN", "Surfshark", "स्ट्रीमिंग", "लाइब्रेरी"]
+      },
+      nb: {
+        title: "Streamingkrigene 2025: NordVPN vs Surfshark – Hvem låser opp flest Netflix-bibliotek?",
+        excerpt: "Fullstendig Netflix-bibliotek opplåsingstest som sammenligner NordVPN og Surfshark på tvers av 12 regioner. Hastighetstester, 4K-streamingytelse og plattformkompatibilitetsanalyse for den ultimate streaming VPN-guiden.",
+        category: "Streaming",
+        tags: ["Netflix", "NordVPN", "Surfshark", "Streaming", "Biblioteker"]
       }
     }
   },
@@ -507,6 +513,12 @@ export const blogPosts: BlogPost[] = [
         excerpt: "दक्षिण पूर्व एशिया में सबसे कम पिंग, स्थिरता और प्रतिस्पर्धी प्रदर्शन के लिए NordVPN और Surfshark की तुलना करने वाला 200 Mobile Legends मैचों में व्यापक गेमिंग VPN टेस्ट।",
         category: "गेमिंग",
         tags: ["Mobile Legends", "गेमिंग", "लो पिंग", "NordVPN", "Surfshark"]
+      },
+      nb: {
+        title: "Mobile Legends VPN Lav-Ping Test 2025: NordVPN vs Surfshark Spillytelse",
+        excerpt: "Omfattende gaming VPN-test på tvers av 200 Mobile Legends-kamper som sammenligner NordVPN og Surfshark for lavest ping, stabilitet og konkurranseprestasjon i Sørøst-Asia.",
+        category: "Gaming",
+        tags: ["Mobile Legends", "Gaming", "Lav Ping", "NordVPN", "Surfshark"]
       }
     }
   },
@@ -521,7 +533,15 @@ export const blogPosts: BlogPost[] = [
     category: "Security",
     tags: ["Free VPN", "Privacy", "Security"],
     image: "https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=800",
-    featured: false
+    featured: false,
+    translations: {
+      nb: {
+        title: "Gratis vs Betalte VPN-er: De skjulte kostnadene ved 'gratis' tjenester",
+        excerpt: "Utforsk hvorfor gratis VPN-er kan koste deg mer enn du tror når det gjelder personvern, sikkerhet og ytelse sammenlignet med premiumtjenester.",
+        category: "Sikkerhet",
+        tags: ["Gratis VPN", "Personvern", "Sikkerhet"]
+      }
+    }
   },
   {
     id: 9,
@@ -534,7 +554,15 @@ export const blogPosts: BlogPost[] = [
     category: "Technical",
     tags: ["WireGuard", "OpenVPN", "Protocols"],
     image: "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800",
-    featured: false
+    featured: false,
+    translations: {
+      nb: {
+        title: "WireGuard vs OpenVPN: Protokoll ytelsessammenligning",
+        excerpt: "Dypdykk i de tekniske forskjellene mellom WireGuard og OpenVPN-protokoller, inkludert hastighet, sikkerhet og kompatibilitetsfaktorer.",
+        category: "Teknisk",
+        tags: ["WireGuard", "OpenVPN", "Protokoller"]
+      }
+    }
   },
   {
     id: 10,
@@ -547,7 +575,15 @@ export const blogPosts: BlogPost[] = [
     category: "Security",
     tags: ["Kill Switch", "Privacy", "Features"],
     image: "https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=800",
-    featured: false
+    featured: false,
+    translations: {
+      nb: {
+        title: "VPN Kill Switch: Hva er det og hvorfor trenger du det?",
+        excerpt: "Lær om VPN kill switches, hvordan de beskytter personvernet ditt når tilkoblinger går ned, og hvilke VPN-er som tilbyr de mest pålitelige kill switch-funksjonene.",
+        category: "Sikkerhet",
+        tags: ["Kill Switch", "Personvern", "Funksjoner"]
+      }
+    }
   },
   {
     id: 11,
@@ -560,7 +596,15 @@ export const blogPosts: BlogPost[] = [
     category: "P2P",
     tags: ["Torrenting", "P2P", "File Sharing"],
     image: "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800",
-    featured: false
+    featured: false,
+    translations: {
+      nb: {
+        title: "De beste VPN-ene for Torrenting og P2P-fildeling",
+        excerpt: "Oppdag VPN-tjenester som støtter P2P-trafikk med høy hastighet, sterk kryptering og retningslinjer som beskytter personvernet ditt mens du torrenter.",
+        category: "P2P",
+        tags: ["Torrenting", "P2P", "Fildeling"]
+      }
+    }
   },
   {
     id: 12,
@@ -573,7 +617,15 @@ export const blogPosts: BlogPost[] = [
     category: "Guides",
     tags: ["Router", "Setup", "Network"],
     image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=800",
-    featured: false
+    featured: false,
+    translations: {
+      nb: {
+        title: "Hvordan sette opp en VPN på ruteren din",
+        excerpt: "Trinn-for-trinn guide til å installere og konfigurere en VPN på ruteren din for å beskytte alle enheter på nettverket ditt med en enkelt tilkobling.",
+        category: "Guider",
+        tags: ["Router", "Oppsett", "Nettverk"]
+      }
+    }
   },
   {
     id: 13,
@@ -586,7 +638,15 @@ export const blogPosts: BlogPost[] = [
     category: "Privacy",
     tags: ["No-logs", "Privacy Policy", "Audits"],
     image: "https://images.pexels.com/photos/1181433/pexels-photo-1181433.jpeg?auto=compress&cs=tinysrgb&w=800",
-    featured: false
+    featured: false,
+    translations: {
+      nb: {
+        title: "VPN Logger: Hva slags informasjon lagrer tilbydere egentlig?",
+        excerpt: "Forstå ulike typer VPN-logging, hvordan evaluere no-logs policyer og hvilke tilbydere som har blitt uavhengig revidert for sine personvernskrav.",
+        category: "Personvern",
+        tags: ["No-logs", "Personvern Policy", "Revisjoner"]
+      }
+    }
   },
   {
     id: 14,
