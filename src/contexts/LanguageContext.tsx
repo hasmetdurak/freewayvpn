@@ -23,7 +23,8 @@ const supportedLanguages: Language[] = [
   { code: 'fr', name: 'French', nativeName: 'Français', flag: '🇫🇷', dir: 'ltr' },
   { code: 'it', name: 'Italian', nativeName: 'Italiano', flag: '🇮🇹', dir: 'ltr' },
   { code: 'ru', name: 'Russian', nativeName: 'Русский', flag: '🇷🇺', dir: 'ltr' },
-  { code: 'zh', name: 'Chinese', nativeName: '中文', flag: '🇨🇳', dir: 'ltr' }
+  { code: 'zh', name: 'Chinese', nativeName: '中文', flag: '🇨🇳', dir: 'ltr' },
+  { code: 'nb', name: 'Norwegian', nativeName: 'Norsk', flag: '🇳🇴', dir: 'ltr' }
 ];
 
 interface LanguageContextType {

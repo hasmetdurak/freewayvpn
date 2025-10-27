@@ -16,6 +16,7 @@ import KoreanFAQPage from './pages/KoreanFAQPage';
 import KoreanBlogPage from './pages/KoreanBlogPage';
 import JapaneseBlogPage from './pages/JapaneseBlogPage';
 import VPNPlansPage from './pages/VPNPlansPage';
+import NorwegianBlogPage from './pages/NorwegianBlogPage';
 
 // German Pages
 import GermanBlogPage from './pages/GermanBlogPage';
@@ -93,6 +94,17 @@ function LanguageRouter() {
             <Route path="/ja/deals" element={<DealsPage />} />
             <Route path="/ja/quiz" element={<QuizPage />} />
             <Route path="/ja/stream-test" element={<StreamSmartPage />} />
+            
+            {/* Norwegian-specific routes */}
+            <Route path="/nb" element={<VPNsPage />} />
+            <Route path="/nb/vpns" element={<VPNsPage />} />
+            <Route path="/nb/faq" element={<FAQPage />} />
+            <Route path="/nb/blog" element={<NorwegianBlogPage />} />
+            <Route path="/nb/blog/:slug" element={<DynamicBlogPost />} />
+            <Route path="/nb/contact" element={<ContactPage />} />
+            <Route path="/nb/deals" element={<DealsPage />} />
+            <Route path="/nb/quiz" element={<QuizPage />} />
+            <Route path="/nb/stream-test" element={<StreamSmartPage />} />
             
             {/* Default routes (English) */}
             <Route path="/" element={<VPNsPage />} />
