@@ -1,0 +1,1 @@
+import { getTopDeal } from '../data/dealsData';  

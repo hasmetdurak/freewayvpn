@@ -1,0 +1,1 @@
+const dealsData = [{ id: 1, provider: "NordVPN", discount: "68% OFF", price: "$39/mo", rating: 4.5, features: ["servers", "locations"], link: "https://nordvpn.com/", popular: true }]; export const getTopDeal = () =; export default dealsData; 
