@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { FAQItem } from '../data/faqData';
-import { getAllFAQs } from '../utils/contentLocalization';
+import { getLocalizedFAQs } from '../utils/contentLocalization';
 import { generateBidirectionalLink } from '../utils/contentLinkingUtils';
 import Breadcrumb from '../components/Breadcrumb';
 
@@ -18,12 +18,12 @@ const FAQPage: React.FC = () => {
   const faqsPerPage = 50; // Show 50 FAQs per page
 
   useEffect(() => {
-    // Load ALL FAQs from all languages
-    const allFAQs = getAllFAQs();
-    setFaqs(allFAQs);
-    setFilteredFaqs(allFAQs);
+    // Load FAQs only for the current language
+    const localizedFAQs = getLocalizedFAQs(currentLanguage.code);
+    setFaqs(localizedFAQs);
+    setFilteredFaqs(localizedFAQs);
     setCurrentPage(1); // Reset to first page when language changes
-  }, []);
+  }, [currentLanguage.code]); // Add currentLanguage.code as dependency
 
   useEffect(() => {
     let result = faqs;

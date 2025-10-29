@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { Calendar, Clock, User, Tag, TrendingUp, Search } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { blogPosts } from '../data/blogData';
-import { getAllBlogPosts } from '../utils/contentLocalization';
+import { getAllBlogPosts, loadLocalizedBlogPosts } from '../utils/contentLocalization';
 import { generateResponsiveImageSet } from '../utils/autoImageUtils';
 
 const BlogPage: React.FC = () => {
@@ -19,10 +19,10 @@ const BlogPage: React.FC = () => {
     return `/blog/${slug}`;
   };
 
-  // Get ALL blog posts without language-specific filtering
+  // Get blog posts for current language only
   const allBlogPosts = useMemo(() => {
-    return getAllBlogPosts(blogPosts);
-  }, []);
+    return loadLocalizedBlogPosts(currentLanguage.code, blogPosts);
+  }, [currentLanguage.code, blogPosts]); // Add currentLanguage.code and blogPosts as dependencies
 
   const featuredPosts = allBlogPosts.filter(post => post.featured);
   const regularPosts = allBlogPosts.filter(post => !post.featured);
